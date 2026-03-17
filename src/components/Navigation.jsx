@@ -21,14 +21,14 @@ export default function Navigation({ activeSection, onSectionChange }) {
   const { t } = useTranslation()
 
   return (
-    <nav className="sticky top-0 z-50 bg-[var(--bg)]/95 backdrop-blur-xl py-3 px-5 overflow-x-auto nav-scroll flex gap-2.5 justify-start">
+    <nav className="sticky top-0 z-50 bg-[var(--bg)]/95 backdrop-blur-xl py-2.5 px-3 overflow-x-auto nav-scroll flex gap-2 justify-start">
       {sections.map((sec) => (
         <motion.button
           key={sec.id}
           onClick={() => onSectionChange(sec.id)}
           whileTap={{ scale: 0.95 }}
           className={`
-            flex-shrink-0 flex items-center gap-1.5 px-4 py-2.5 rounded-2xl text-[0.72rem]
+            flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-[14px] text-[0.68rem]
             font-medium whitespace-nowrap cursor-pointer border transition-all duration-300
             ${activeSection === sec.id
               ? 'bg-[var(--primary)] text-white border-[var(--primary)] shadow-lg'

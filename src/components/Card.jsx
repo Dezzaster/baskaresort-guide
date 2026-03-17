@@ -7,18 +7,18 @@ export default function Card({ children, icon, title, label, className = '', del
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: delay * 0.1, ease: 'easeOut' }}
       whileHover={{ y: -2 }}
-      className={`bg-[var(--card-cream)] rounded-2xl p-6 mb-5 shadow-[var(--shadow)] transition-all duration-300 hover:shadow-[var(--shadow-hover)] ${className}`}
+      className={`bg-[var(--card-cream)] rounded-2xl p-4 mb-3 shadow-[var(--shadow)] transition-all duration-300 hover:shadow-[var(--shadow-hover)] ${className}`}
     >
       {(icon || title) && (
-        <div className="flex items-center gap-3 mb-4">
+        <div className="flex items-center gap-2.5 mb-2">
           {icon && (
-            <div className="w-10 h-10 rounded-xl bg-white/70 flex items-center justify-center text-lg flex-shrink-0">
+            <div className="w-[34px] h-[34px] rounded-xl bg-white/70 flex items-center justify-center text-base flex-shrink-0">
               {icon}
             </div>
           )}
           <div>
-            {title && <div className="font-semibold text-[0.88rem] text-[var(--text-dark)]">{title}</div>}
-            {label && <div className="text-[0.65rem] text-[var(--text-muted)] mt-0.5">{label}</div>}
+            {title && <div className="font-semibold text-[0.82rem] text-[var(--text-dark)]">{title}</div>}
+            {label && <div className="text-[0.63rem] text-[var(--text-muted)] mt-0.5">{label}</div>}
           </div>
         </div>
       )}

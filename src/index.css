@@ -38,9 +38,9 @@ body {
   line-height: 1.7;
 }
 
-::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar { width: 2px; height: 2px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(0, 51, 160, 0.15); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: rgba(0, 51, 160, 0.15); border-radius: 2px; }
 
 .stripe-bar {
   height: 6px;

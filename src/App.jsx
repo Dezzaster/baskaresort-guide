@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--bg)]">
       {/* Hero / Header */}
-      <header className="relative text-center pt-12 pb-6 px-8 bg-gradient-to-b from-white to-[var(--bg)]">
+      <header className="relative text-center pt-10 pb-5 px-5 bg-gradient-to-b from-white to-[var(--bg)]">
         {/* Decorative stripe at top */}
         <div className="absolute top-0 left-0 right-0 h-[6px]" style={{
           background: 'repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px)'
@@ -62,7 +62,7 @@ function App() {
           <img
             src={`${basePath}logobaska.png`}
             alt="BAŞKA Resort Bodrum"
-            className="h-28 w-auto object-contain"
+            className="h-24 w-auto object-contain"
           />
         </motion.div>
 
@@ -81,7 +81,7 @@ function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="font-['Cormorant_Garamond'] text-base text-[var(--primary)] mt-5 italic leading-relaxed"
+          className="font-['Cormorant_Garamond'] text-[0.95rem] text-[var(--primary)] mt-4 italic leading-relaxed"
         >
           {t('hero.tagline')}
         </motion.p>
@@ -91,7 +91,7 @@ function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.1 }}
-          className="text-[0.7rem] text-[var(--text-muted)] tracking-[0.35em] uppercase mt-6"
+          className="text-[0.68rem] text-[var(--text-muted)] tracking-[0.35em] uppercase mt-5"
         >
           {t('hero.subtitle')}
         </motion.p>
@@ -101,7 +101,7 @@ function App() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.3 }}
-          className="mt-8"
+          className="mt-6"
         >
           <LanguageSelector />
         </motion.div>
@@ -111,12 +111,12 @@ function App() {
       <div className="stripe-bar" />
 
       {/* Navigation - generous space from stripe */}
-      <div className="pt-4 pb-1">
+      <div className="pt-2 pb-0">
         <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
       </div>
 
       {/* Content */}
-      <main className="max-w-[540px] mx-auto px-7 py-10">
+      <main className="max-w-[540px] mx-auto px-4 py-6">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}
@@ -131,9 +131,9 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-12">
+      <footer className="mt-4">
         <div className="stripe-bar-thick" />
-        <div className="bg-[var(--primary)] text-white py-12 px-8 text-center">
+        <div className="bg-[var(--primary)] text-white py-8 px-5 text-center">
           <motion.div
             className="flex justify-center"
             initial={{ opacity: 0 }}

@@ -8,10 +8,10 @@ export default function ImportantSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-2xl text-[var(--primary)] mb-2">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.4rem] text-[var(--primary)] mb-1">
         {t('important.title')}
       </h2>
-      <p className="text-[0.75rem] text-[var(--text-muted)] mb-6">{t('important.subtitle')}</p>
+      <p className="text-[0.72rem] text-[var(--text-muted)] mb-[18px]">{t('important.subtitle')}</p>
 
       <Card icon="⚠️" title={t('important.title')} delay={0}>
         <div className="space-y-2">

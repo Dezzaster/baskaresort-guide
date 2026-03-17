@@ -13,13 +13,13 @@ export default function DiningSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-2xl text-[var(--primary)] mb-2">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.4rem] text-[var(--primary)] mb-1">
         {t('dining.title')}
       </h2>
-      <p className="text-[0.75rem] text-[var(--text-muted)] mb-6">{t('dining.subtitle')}</p>
+      <p className="text-[0.72rem] text-[var(--text-muted)] mb-[18px]">{t('dining.subtitle')}</p>
 
       <Card icon="🍽️" title={t('dining.mainRestaurant')} delay={0}>
-        <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed mb-3">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed mb-3">
           {t('dining.mainDesc')}
         </p>
         <div className="space-y-1">
@@ -33,7 +33,7 @@ export default function DiningSection() {
       </Card>
 
       <Card icon="🌿" title="" delay={1}>
-        <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed italic">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed italic">
           {t('dining.concept')}
         </p>
       </Card>

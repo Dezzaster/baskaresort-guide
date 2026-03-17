@@ -69,7 +69,7 @@ export default function InstagramFeed() {
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
-      className="mt-8"
+      className="mt-4 pt-3.5 border-t border-[var(--card-border)]"
     >
       <a
         href="https://www.instagram.com/baskaresortbodrum/"
