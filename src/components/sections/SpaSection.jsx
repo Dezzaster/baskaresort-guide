@@ -14,20 +14,20 @@ export default function SpaSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-2xl text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-2xl text-[var(--primary)] mb-2">
         {t('spa.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-5">{t('spa.subtitle')}</p>
+      <p className="text-[0.75rem] text-[var(--text-muted)] mb-6">{t('spa.subtitle')}</p>
 
       <Card icon="🧘" title="Soul Spa" delay={0}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed">
           {t('spa.spaDesc')}
         </p>
       </Card>
 
       {spaItems.map((item, i) => (
         <Card key={item.key} icon={item.icon} title={t(`spa.${item.key}`)} delay={i + 1}>
-          <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+          <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed">
             {t(`spa.${item.key}Desc`)}
           </p>
         </Card>

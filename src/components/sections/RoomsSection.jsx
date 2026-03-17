@@ -19,20 +19,20 @@ export default function RoomsSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-2xl text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-2xl text-[var(--primary)] mb-2">
         {t('rooms.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-5">{t('rooms.subtitle')}</p>
+      <p className="text-[0.75rem] text-[var(--text-muted)] mb-6">{t('rooms.subtitle')}</p>
 
       <Card icon="✨" title="Standard Amenities" delay={0}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed">
           {t('rooms.description')}
         </p>
       </Card>
 
       {rooms.map((room, i) => (
         <Card key={room.key} icon={room.icon} title={t(`rooms.${room.key}`)} delay={i + 1}>
-          <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed mb-2">
+          <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed mb-2">
             {t(`rooms.${room.key}Desc`)}
           </p>
           <div className="flex gap-2 flex-wrap">

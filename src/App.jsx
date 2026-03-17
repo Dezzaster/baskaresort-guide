@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import './App.css'
 
-import BaskaLogo from './components/BaskaLogo'
 import LanguageSelector from './components/LanguageSelector'
 import Navigation from './components/Navigation'
 
@@ -40,11 +39,12 @@ function App() {
   const [activeSection, setActiveSection] = useState('info')
 
   const ActiveComponent = sectionComponents[activeSection]
+  const basePath = import.meta.env.BASE_URL
 
   return (
     <div className="min-h-screen bg-[var(--bg)]">
       {/* Hero / Header */}
-      <header className="relative text-center pt-8 pb-4 px-5 bg-gradient-to-b from-white to-[var(--bg)]">
+      <header className="relative text-center pt-10 pb-6 px-5 bg-gradient-to-b from-white to-[var(--bg)]">
         {/* Decorative stripe at top */}
         <div className="absolute top-0 left-0 right-0 h-[6px]" style={{
           background: 'repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px)'
@@ -52,30 +52,42 @@ function App() {
 
         {/* Logo */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
           className="flex justify-center"
         >
-          <BaskaLogo size={80} color="#0033A0" />
+          <img
+            src={`${basePath}logobaska.png`}
+            alt="BAŞKA Resort Bodrum"
+            className="h-24 w-auto object-contain"
+          />
         </motion.div>
 
         {/* Resort subtitle */}
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-[0.6rem] text-[var(--text-muted)] tracking-[0.25em] uppercase mt-1"
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+          className="text-[0.6rem] text-[var(--text-muted)] tracking-[0.3em] uppercase mt-3"
         >
           RESORT — BODRUM
         </motion.p>
+
+        {/* Divider line */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="w-16 h-[1px] bg-[var(--gold)] mx-auto mt-3"
+        />
 
         {/* Tagline */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="font-['Cormorant_Garamond'] text-sm text-[var(--primary)] mt-2 italic"
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="font-['Cormorant_Garamond'] text-base text-[var(--primary)] mt-4 italic leading-relaxed"
         >
           {t('hero.tagline')}
         </motion.p>
@@ -84,19 +96,20 @@ function App() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4, delay: 0.9 }}
-          className="mt-3"
+          transition={{ duration: 0.5, delay: 1.2 }}
+          className="mt-5"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--primary)] text-white text-[0.65rem] font-medium tracking-wider">
+          <span className="inline-block px-5 py-2 rounded-full bg-[var(--primary)] text-white text-[0.65rem] font-medium tracking-wider uppercase">
             {t('hero.subtitle')}
           </span>
         </motion.div>
 
         {/* Language Selector */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 1.1 }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+          className="mt-5"
         >
           <LanguageSelector />
         </motion.div>
@@ -109,14 +122,14 @@ function App() {
       <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
 
       {/* Content */}
-      <main className="max-w-[540px] mx-auto px-4 py-6">
+      <main className="max-w-[540px] mx-auto px-5 py-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.3 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
           >
             {ActiveComponent && <ActiveComponent />}
           </motion.div>
@@ -124,20 +137,38 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-8">
+      <footer className="mt-12">
         <div className="stripe-bar-thick" />
-        <div className="bg-[var(--primary)] text-white py-8 px-6 text-center">
-          <BaskaLogo size={50} color="#FFFFFF" className="mx-auto" />
-          <p className="text-[0.6rem] tracking-[0.2em] uppercase mt-2 opacity-50">
+        <div className="bg-[var(--primary)] text-white py-10 px-6 text-center">
+          <motion.img
+            src={`${basePath}logobaska.png`}
+            alt="BAŞKA"
+            className="h-14 w-auto mx-auto brightness-0 invert"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          />
+          <p className="text-[0.6rem] tracking-[0.25em] uppercase mt-3 opacity-50">
             RESORT — BODRUM
           </p>
-          <p className="font-['Cormorant_Garamond'] text-sm italic mt-2 opacity-70">
+          <p className="font-['Cormorant_Garamond'] text-sm italic mt-3 opacity-70">
             {t('footer.tagline')}
           </p>
-          <p className="text-[0.62rem] opacity-40 mt-4">
+
+          {/* Website link */}
+          <a
+            href="https://www.baskaresort.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-4 px-4 py-1.5 rounded-full border border-white/30 text-[0.65rem] tracking-wider uppercase text-white/80 hover:bg-white/10 transition-all duration-300"
+          >
+            www.baskaresort.com
+          </a>
+
+          <p className="text-[0.62rem] opacity-40 mt-5">
             {t('footer.address')}
           </p>
-          <p className="text-[0.58rem] opacity-30 mt-1">
+          <p className="text-[0.58rem] opacity-30 mt-1.5">
             © {new Date().getFullYear()} BAŞKA Resort Bodrum. {t('footer.rights')}
           </p>
         </div>

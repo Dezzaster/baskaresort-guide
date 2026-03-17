@@ -6,31 +6,31 @@ export default function ActivitiesSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-2xl text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-2xl text-[var(--primary)] mb-2">
         {t('activities.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-5">{t('activities.subtitle')}</p>
+      <p className="text-[0.75rem] text-[var(--text-muted)] mb-6">{t('activities.subtitle')}</p>
 
       <Card icon="⛵" title={t('activities.sailing')} delay={0}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed">
           {t('activities.sailingDesc')}
         </p>
       </Card>
 
       <Card icon="🎵" title={t('activities.entertainment')} delay={1}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed">
           {t('activities.entertainmentDesc')}
         </p>
       </Card>
 
       <Card icon="🎸" title={t('activities.acoustic')} delay={2}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed">
           {t('activities.acousticDesc')}
         </p>
       </Card>
 
       <Card icon="🎶" title={t('activities.nightclub')} delay={3}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed">
           {t('activities.nightclubDesc')}
         </p>
       </Card>

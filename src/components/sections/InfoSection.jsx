@@ -8,10 +8,10 @@ function InfoRow({ label, value, delay = 0 }) {
       initial={{ opacity: 0, x: -10 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.3, delay: delay * 0.05 }}
-      className="flex justify-between items-start py-2 px-3 rounded-[var(--radius-sm)] bg-[var(--bg-blue)] mb-1 hover:bg-[rgba(0,51,160,0.06)] transition-colors"
+      className="flex justify-between items-start py-2.5 px-3.5 rounded-xl bg-[var(--bg-blue)] mb-1.5 hover:bg-[rgba(0,51,160,0.06)] transition-colors"
     >
-      <span className="text-[0.74rem] text-[var(--text-muted)] font-medium">{label}</span>
-      <span className="text-[0.74rem] text-[var(--primary)] font-semibold text-right ml-3 max-w-[55%]">{value}</span>
+      <span className="text-[0.76rem] text-[var(--text-muted)] font-medium">{label}</span>
+      <span className="text-[0.76rem] text-[var(--primary)] font-semibold text-right ml-3 max-w-[55%]">{value}</span>
     </motion.div>
   )
 }
@@ -21,25 +21,25 @@ export default function InfoSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-2xl text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-2xl text-[var(--primary)] mb-2">
         {t('info.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-5">{t('info.subtitle')}</p>
+      <p className="text-[0.75rem] text-[var(--text-muted)] mb-6">{t('info.subtitle')}</p>
 
       <Card icon="🌊" title="BAŞKA Resort Bodrum" delay={0}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed mb-3">
+        <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed mb-3">
           {t('info.description')}
         </p>
       </Card>
 
       <Card icon="📍" title={t('info.address')} delay={1}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed">
           {t('info.addressVal')}
         </p>
       </Card>
 
       <Card delay={2}>
-        <div className="space-y-1">
+        <div className="space-y-1.5">
           <InfoRow label={t('info.phone')} value="+90 252 3132207" delay={0} />
           <InfoRow label={t('info.email')} value="info@baskaresort.com" delay={1} />
           <InfoRow label={t('info.web')} value="www.baskaresort.com" delay={2} />
@@ -57,7 +57,7 @@ export default function InfoSection() {
       </Card>
 
       <Card icon="📌" title={t('info.location')} delay={3}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed">
           {t('info.locationVal')}
         </p>
       </Card>
