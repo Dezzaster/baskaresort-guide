@@ -21,7 +21,6 @@ import ImportantSection from './components/sections/ImportantSection'
 
 const sectionComponents = {
   info: InfoSection,
-  rooms: RoomsSection,
   dining: DiningSection,
   alacarte: AlacarteSection,
   bars: BarsSection,
@@ -31,6 +30,7 @@ const sectionComponents = {
   kids: KidsSection,
   services: ServicesSection,
   map: MapSection,
+  rooms: RoomsSection,
   important: ImportantSection
 }
 
@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--bg)]">
       {/* Hero / Header */}
-      <header className="relative text-center pt-10 pb-6 px-5 bg-gradient-to-b from-white to-[var(--bg)]">
+      <header className="relative text-center pt-10 pb-8 px-6 bg-gradient-to-b from-white to-[var(--bg)]">
         {/* Decorative stripe at top */}
         <div className="absolute top-0 left-0 right-0 h-[6px]" style={{
           background: 'repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px)'
@@ -104,12 +104,12 @@ function App() {
           </span>
         </motion.div>
 
-        {/* Language Selector */}
+        {/* Language Selector - more space from badge */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.4 }}
-          className="mt-5"
+          className="mt-7"
         >
           <LanguageSelector />
         </motion.div>
@@ -118,11 +118,13 @@ function App() {
       {/* Yellow stripe separator */}
       <div className="stripe-bar" />
 
-      {/* Navigation */}
-      <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
+      {/* Navigation - more padding top from stripe */}
+      <div className="pt-3">
+        <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
+      </div>
 
       {/* Content */}
-      <main className="max-w-[540px] mx-auto px-5 py-8">
+      <main className="max-w-[540px] mx-auto px-6 py-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}

@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Card from '../Card'
+import InstagramFeed from '../InstagramFeed'
 
 function InfoRow({ label, value, delay = 0 }) {
   return (
@@ -61,6 +62,9 @@ export default function InfoSection() {
           {t('info.locationVal')}
         </p>
       </Card>
+
+      {/* Instagram Feed */}
+      <InstagramFeed />
     </div>
   )
 }
