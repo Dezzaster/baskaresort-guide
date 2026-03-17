@@ -7,10 +7,10 @@ export default function WifiSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-2">
         {t('wifi.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-6">{t('wifi.subtitle')}</p>
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-7">{t('wifi.subtitle')}</p>
 
       <Card title={t('wifi.connection')} delay={0}>
         <div className="space-y-3 mt-2">

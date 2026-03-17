@@ -6,10 +6,10 @@ export default function ActivitiesSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-2">
         {t('activities.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-6">{t('activities.subtitle')}</p>
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-7">{t('activities.subtitle')}</p>
 
       <Card title={t('activities.sailing')} delay={0}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">

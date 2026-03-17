@@ -2,11 +2,11 @@ import { useTranslation } from 'react-i18next'
 import Card from '../Card'
 
 const spaItems = [
-  { key: 'hammam' },
-  { key: 'sauna' },
-  { key: 'fitness' },
-  { key: 'massage' },
-  { key: 'skincare' }
+  { key: 'hammam', icon: '🛁' },
+  { key: 'sauna', icon: '🧖' },
+  { key: 'fitness', icon: '💪' },
+  { key: 'massage', icon: '💆' },
+  { key: 'skincare', icon: '✨' }
 ]
 
 export default function SpaSection() {
@@ -14,19 +14,19 @@ export default function SpaSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-2">
         {t('spa.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-6">{t('spa.subtitle')}</p>
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-7">{t('spa.subtitle')}</p>
 
-      <Card title="Soul Spa" delay={0}>
+      <Card icon="🧘" title="Soul Spa" delay={0}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
           {t('spa.spaDesc')}
         </p>
       </Card>
 
       {spaItems.map((item, i) => (
-        <Card key={item.key} title={t(`spa.${item.key}`)} delay={i + 1}>
+        <Card key={item.key} icon={item.icon} title={t(`spa.${item.key}`)} delay={i + 1}>
           <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
             {t(`spa.${item.key}Desc`)}
           </p>

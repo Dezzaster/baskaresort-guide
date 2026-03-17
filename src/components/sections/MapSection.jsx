@@ -6,10 +6,10 @@ export default function MapSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-2">
         {t('map.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-6">{t('map.subtitle')}</p>
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-7">{t('map.subtitle')}</p>
 
       <Card title={t('map.title')} delay={0}>
         <div className="flex items-center justify-center py-16 rounded-xl bg-[var(--bg-blue)] border-2 border-dashed border-[var(--card-border)]">

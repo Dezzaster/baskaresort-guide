@@ -13,10 +13,10 @@ export default function DiningSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-2">
         {t('dining.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-6">{t('dining.subtitle')}</p>
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-7">{t('dining.subtitle')}</p>
 
       <Card title={t('dining.mainRestaurant')} delay={0}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed mb-3">
@@ -40,10 +40,10 @@ export default function DiningSection() {
 
       {/* Street Food Section */}
       <div className="mt-6">
-        <h3 className="font-['Cormorant_Garamond'] font-normal text-xl text-[var(--primary)] mb-1">
+        <h3 className="font-['Cormorant_Garamond'] font-normal text-xl text-[var(--primary)] mb-2">
           {t('streetFood.title')}
         </h3>
-        <p className="text-[0.72rem] text-[var(--text-muted)] mb-4">{t('streetFood.subtitle')}</p>
+        <p className="text-[0.74rem] text-[var(--text-muted)] mb-4">{t('streetFood.subtitle')}</p>
 
         <div className="grid grid-cols-2 gap-3">
           {[

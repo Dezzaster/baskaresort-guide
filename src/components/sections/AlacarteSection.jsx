@@ -15,10 +15,10 @@ export default function AlacarteSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-2">
         {t('alacarte.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-6">{t('alacarte.subtitle')}</p>
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-7">{t('alacarte.subtitle')}</p>
 
       {restaurants.map((r, i) => (
         <Card key={r.key} title={t(`alacarte.${r.key}`)} label={r.code} delay={i}>
