@@ -7,7 +7,8 @@
     "select": "Sprache wählen"
   },
   "nav": {
-    "info": "Info",
+    "info": "Allgemein",
+    "wifi": "Wi-Fi",
     "rooms": "Zimmer",
     "dining": "Gastronomie",
     "alacarte": "A La Carte",
@@ -46,8 +47,19 @@
     "parkingVal": "Kostenloser offener Parkplatz, Parkservice verfügbar, EV-Ladestation (kostenpflichtig)",
     "location": "Lage",
     "locationVal": "Burg Bodrum 1,5 km, Stadtzentrum 1,2 km, Flughafen 35 km",
+    "reception": "Rezeption",
+    "receptionVal": "0 vom Zimmertelefon wählen",
     "petFriendly": "Haustierfreundlich",
     "petVal": "Haustiere bis 12 kg in ausgewiesenen Zimmern — €45/Tag"
+  },
+  "wifi": {
+    "title": "Wi-Fi Verbindung",
+    "subtitle": "Bleiben Sie während Ihres Aufenthalts verbunden",
+    "connection": "Wi-Fi Anmeldung",
+    "network": "Netzwerk",
+    "password": "Passwort",
+    "coverage": "Abdeckung",
+    "coverageDesc": "Kostenloses WLAN in der gesamten Anlage — Zimmer, Lobby, Pool, Strand und alle öffentlichen Bereiche."
   },
   "rooms": {
     "title": "Zimmertypen & Ausstattung",

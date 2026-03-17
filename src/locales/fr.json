@@ -7,7 +7,8 @@
     "select": "Choisir la langue"
   },
   "nav": {
-    "info": "Infos",
+    "info": "Général",
+    "wifi": "Wi-Fi",
     "rooms": "Chambres",
     "dining": "Restauration",
     "alacarte": "A La Carte",
@@ -46,8 +47,19 @@
     "parkingVal": "Parking extérieur gratuit, voiturier disponible, borne de recharge EV (payant)",
     "location": "Emplacement",
     "locationVal": "Château de Bodrum 1,5 km, Centre-ville 1,2 km, Aéroport 35 km",
+    "reception": "Réception",
+    "receptionVal": "Composez le 0 depuis le téléphone de la chambre",
     "petFriendly": "Animaux acceptés",
     "petVal": "Animaux jusqu'à 12 kg dans les chambres désignées — 45€/jour"
+  },
+  "wifi": {
+    "title": "Connexion Wi-Fi",
+    "subtitle": "Restez connecté pendant votre séjour",
+    "connection": "Identifiants Wi-Fi",
+    "network": "Réseau",
+    "password": "Mot de passe",
+    "coverage": "Couverture",
+    "coverageDesc": "Wi-Fi gratuit dans tout le complexe — chambres, lobby, piscine, plage et tous les espaces publics."
   },
   "rooms": {
     "title": "Types de chambres et équipements",

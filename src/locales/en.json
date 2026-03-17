@@ -7,7 +7,8 @@
     "select": "Select Language"
   },
   "nav": {
-    "info": "Info",
+    "info": "General",
+    "wifi": "Wi-Fi",
     "rooms": "Rooms",
     "dining": "Dining",
     "alacarte": "A La Carte",
@@ -46,8 +47,19 @@
     "parkingVal": "Free open parking, valet available, EV charging (paid)",
     "location": "Location",
     "locationVal": "Bodrum Castle 1.5 km, City Center 1.2 km, Airport 35 km",
+    "reception": "Reception",
+    "receptionVal": "Dial 0 from room phone",
     "petFriendly": "Pet Friendly",
     "petVal": "Pets up to 12 kg in designated rooms — €45/day"
+  },
+  "wifi": {
+    "title": "Wi-Fi Connection",
+    "subtitle": "Stay connected throughout your stay",
+    "connection": "Wi-Fi Login",
+    "network": "Network",
+    "password": "Password",
+    "coverage": "Coverage",
+    "coverageDesc": "Free Wi-Fi available throughout the entire resort — rooms, lobby, pool, beach and all public areas."
   },
   "rooms": {
     "title": "Room Types & Features",
