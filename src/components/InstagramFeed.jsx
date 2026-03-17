@@ -26,7 +26,6 @@ function InstagramEmbed({ url, index }) {
     >
       <blockquote
         className="instagram-media"
-        data-instgrm-captioned
         data-instgrm-permalink={url}
         data-instgrm-version="14"
         style={{

@@ -9,7 +9,7 @@ function InfoRow({ label, value, delay = 0 }) {
       initial={{ opacity: 0, x: -10 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.3, delay: delay * 0.05 }}
-      className="flex justify-between items-start py-2.5 px-4 rounded-xl bg-white/60"
+      className="flex justify-between items-start py-2.5 px-4 rounded-xl bg-white/40 backdrop-blur-md border border-white/50"
     >
       <span className="text-[0.76rem] text-[var(--text-muted)] font-medium">{label}</span>
       <span className="text-[0.76rem] text-[var(--primary)] font-semibold text-right ml-3 max-w-[55%]">{value}</span>
@@ -22,10 +22,10 @@ export default function InfoSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-2">
         {t('info.title')}
       </h2>
-      <p className="text-[0.74rem] text-[var(--text-muted)] mb-6">{t('info.subtitle')}</p>
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-7">{t('info.subtitle')}</p>
 
       <Card title="BAŞKA Resort Bodrum" delay={0}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.65]">
@@ -34,7 +34,7 @@ export default function InfoSection() {
       </Card>
 
       <Card delay={1}>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1.5">
           <InfoRow label={t('info.phone')} value="+90 252 3132207" delay={0} />
           <InfoRow label={t('info.reception')} value={t('info.receptionVal')} delay={1} />
           <InfoRow label={t('info.email')} value="info@baskaresort.com" delay={2} />
