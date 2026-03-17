@@ -31,7 +31,6 @@ export default function AlacarteSection() {
               <span className="text-[0.7rem] text-[var(--primary)] font-medium">{t(`alacarte.${r.key}Hours`)}</span>
             </div>
             <div className="flex justify-between items-center py-1.5 px-3 rounded-lg bg-[var(--bg-warm)]">
-              <span className="text-[0.68rem] text-[var(--text-muted)]">💰</span>
               <span className="text-[0.7rem] text-[var(--gold-dark)] font-medium">{t(`alacarte.${r.key}Price`)}</span>
             </div>
           </div>
