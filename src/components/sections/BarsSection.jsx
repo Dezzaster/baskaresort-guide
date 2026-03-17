@@ -17,14 +17,14 @@ export default function BarsSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-2xl text-[var(--primary)] mb-2">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.4rem] text-[var(--primary)] mb-1">
         {t('bars.title')}
       </h2>
-      <p className="text-[0.75rem] text-[var(--text-muted)] mb-6">{t('bars.subtitle')}</p>
+      <p className="text-[0.72rem] text-[var(--text-muted)] mb-[18px]">{t('bars.subtitle')}</p>
 
       {bars.map((bar, i) => (
         <Card key={bar.key} icon={bar.icon} title={t(`bars.${bar.key}`)} delay={i}>
-          <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed">
+          <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
             {t(`bars.${bar.key}Desc`)}
           </p>
         </Card>

@@ -7,10 +7,10 @@ export default function WifiSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-2xl text-[var(--primary)] mb-2">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.4rem] text-[var(--primary)] mb-1">
         {t('wifi.title')}
       </h2>
-      <p className="text-[0.75rem] text-[var(--text-muted)] mb-6">{t('wifi.subtitle')}</p>
+      <p className="text-[0.72rem] text-[var(--text-muted)] mb-[18px]">{t('wifi.subtitle')}</p>
 
       <Card icon="📶" title={t('wifi.connection')} delay={0}>
         <div className="space-y-3 mt-2">
@@ -20,7 +20,7 @@ export default function WifiSection() {
             transition={{ delay: 0.15 }}
             className="flex justify-between items-center py-3 px-4 rounded-xl bg-white/70"
           >
-            <span className="text-[0.78rem] text-[var(--text-muted)] font-medium">{t('wifi.network')}</span>
+            <span className="text-[0.76rem] text-[var(--text-muted)] font-medium">{t('wifi.network')}</span>
             <span className="text-[0.82rem] text-[var(--primary)] font-bold tracking-wide">Başka Resort</span>
           </motion.div>
           <motion.div
@@ -29,14 +29,14 @@ export default function WifiSection() {
             transition={{ delay: 0.25 }}
             className="flex justify-between items-center py-3 px-4 rounded-xl bg-white/70"
           >
-            <span className="text-[0.78rem] text-[var(--text-muted)] font-medium">{t('wifi.password')}</span>
+            <span className="text-[0.76rem] text-[var(--text-muted)] font-medium">{t('wifi.password')}</span>
             <span className="text-[0.82rem] text-[var(--primary)] font-bold tracking-wide font-mono">Bodrum2026</span>
           </motion.div>
         </div>
       </Card>
 
       <Card icon="📡" title={t('wifi.coverage')} delay={1}>
-        <p className="text-[0.78rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
           {t('wifi.coverageDesc')}
         </p>
       </Card>
