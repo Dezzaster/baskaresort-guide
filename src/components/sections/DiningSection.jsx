@@ -13,16 +13,16 @@ export default function DiningSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.4rem] text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-1">
         {t('dining.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-[18px]">{t('dining.subtitle')}</p>
+      <p className="text-[0.72rem] text-[var(--text-muted)] mb-6">{t('dining.subtitle')}</p>
 
-      <Card icon="🍽️" title={t('dining.mainRestaurant')} delay={0}>
+      <Card title={t('dining.mainRestaurant')} delay={0}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed mb-3">
           {t('dining.mainDesc')}
         </p>
-        <div className="space-y-1">
+        <div className="space-y-1.5">
           {meals.map((meal, i) => (
             <div key={i} className="flex justify-between items-center py-2 px-3 rounded-[var(--radius-sm)] bg-[var(--bg-blue)]">
               <span className="text-[0.74rem] text-[var(--primary)] font-medium">{meal.label}</span>
@@ -32,7 +32,7 @@ export default function DiningSection() {
         </div>
       </Card>
 
-      <Card icon="🌿" title="" delay={1}>
+      <Card title="" delay={1}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed italic">
           {t('dining.concept')}
         </p>
@@ -45,16 +45,16 @@ export default function DiningSection() {
         </h3>
         <p className="text-[0.72rem] text-[var(--text-muted)] mb-4">{t('streetFood.subtitle')}</p>
 
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-3">
           {[
-            { key: 'fishSandwich', icon: '🐟' },
-            { key: 'musselBar', icon: '🦪' },
-            { key: 'fruitStand', icon: '🍉' },
-            { key: 'chickenRice', icon: '🍗' },
-            { key: 'meatballKokorec', icon: '🥙' },
-            { key: 'gelato', icon: '🍨' }
+            { key: 'fishSandwich' },
+            { key: 'musselBar' },
+            { key: 'fruitStand' },
+            { key: 'chickenRice' },
+            { key: 'meatballKokorec' },
+            { key: 'gelato' }
           ].map((item, i) => (
-            <Card key={item.key} icon={item.icon} title={t(`streetFood.${item.key}`)} delay={i + 2}>
+            <Card key={item.key} title={t(`streetFood.${item.key}`)} delay={i + 2}>
               <p className="text-[0.65rem] text-[var(--gold-dark)] font-medium">
                 {t(`streetFood.${item.key}Time`)}
               </p>

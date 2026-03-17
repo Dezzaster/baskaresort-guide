@@ -45,8 +45,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)]">
-      {/* Hero / Header */}
-      <header className="relative text-center pt-10 pb-5 px-5 bg-gradient-to-b from-white to-[var(--bg)]">
+      {/* Hero / Header — 1.2x scaled */}
+      <header className="relative text-center pt-14 pb-8 px-6 bg-gradient-to-b from-white to-[var(--bg)]">
         {/* Decorative stripe at top */}
         <div className="absolute top-0 left-0 right-0 h-[6px]" style={{
           background: 'repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px)'
@@ -62,7 +62,7 @@ function App() {
           <img
             src={`${basePath}logobaska.png`}
             alt="BAŞKA Resort Bodrum"
-            className="h-24 w-auto object-contain"
+            className="h-32 w-auto object-contain"
           />
         </motion.div>
 
@@ -71,7 +71,7 @@ function App() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="text-[0.6rem] text-[var(--text-muted)] tracking-[0.3em] uppercase mt-2"
+          className="text-[0.7rem] text-[var(--text-muted)] tracking-[0.3em] uppercase mt-4"
         >
           RESORT — BODRUM
         </motion.p>
@@ -81,27 +81,27 @@ function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="font-['Cormorant_Garamond'] text-[0.95rem] text-[var(--primary)] mt-4 italic leading-relaxed"
+          className="font-['Cormorant_Garamond'] text-[1.1rem] text-[var(--primary)] mt-6 italic leading-relaxed"
         >
           {t('hero.tagline')}
         </motion.p>
 
-        {/* Guest Guide - plain text like Rose Garden */}
+        {/* Guest Guide */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.1 }}
-          className="text-[0.68rem] text-[var(--text-muted)] tracking-[0.35em] uppercase mt-5"
+          className="text-[0.75rem] text-[var(--text-muted)] tracking-[0.35em] uppercase mt-7"
         >
           {t('hero.subtitle')}
         </motion.p>
 
-        {/* Language Selector - generous space from guest guide */}
+        {/* Language Selector */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.3 }}
-          className="mt-6"
+          className="mt-8"
         >
           <LanguageSelector />
         </motion.div>
@@ -110,13 +110,11 @@ function App() {
       {/* Yellow stripe separator */}
       <div className="stripe-bar" />
 
-      {/* Navigation - generous space from stripe */}
-      <div className="pt-2 pb-0">
-        <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
-      </div>
+      {/* Sticky Navigation */}
+      <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
 
       {/* Content */}
-      <main className="max-w-[540px] mx-auto px-4 py-6">
+      <main className="max-w-[540px] mx-auto px-5 pt-8 pb-10">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}
@@ -130,10 +128,10 @@ function App() {
         </AnimatePresence>
       </main>
 
-      {/* Footer */}
-      <footer className="mt-4">
+      {/* Footer — 1.2x scaled */}
+      <footer className="mt-8">
         <div className="stripe-bar-thick" />
-        <div className="bg-[var(--primary)] text-white py-8 px-5 text-center">
+        <div className="bg-[var(--primary)] text-white py-14 px-8 text-center">
           <motion.div
             className="flex justify-center"
             initial={{ opacity: 0 }}
@@ -143,13 +141,13 @@ function App() {
             <img
               src={`${basePath}logobaska.png`}
               alt="BAŞKA"
-              className="h-16 w-auto brightness-0 invert"
+              className="h-20 w-auto brightness-0 invert"
             />
           </motion.div>
-          <p className="text-[0.6rem] tracking-[0.25em] uppercase mt-4 opacity-50">
+          <p className="text-[0.7rem] tracking-[0.25em] uppercase mt-6 opacity-50">
             RESORT — BODRUM
           </p>
-          <p className="font-['Cormorant_Garamond'] text-sm italic mt-3 opacity-70">
+          <p className="font-['Cormorant_Garamond'] text-base italic mt-5 opacity-70">
             {t('footer.tagline')}
           </p>
 
@@ -158,15 +156,12 @@ function App() {
             href="https://www.baskaresort.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-5 px-5 py-2 rounded-full border border-white/30 text-[0.65rem] tracking-wider uppercase text-white/80 hover:bg-white/10 transition-all duration-300"
+            className="inline-block mt-7 px-6 py-2.5 rounded-full border border-white/30 text-[0.72rem] tracking-wider uppercase text-white/80 hover:bg-white/10 transition-all duration-300"
           >
             www.baskaresort.com
           </a>
 
-          <p className="text-[0.62rem] opacity-40 mt-6">
-            {t('footer.address')}
-          </p>
-          <p className="text-[0.58rem] opacity-30 mt-2">
+          <p className="text-[0.65rem] opacity-30 mt-8">
             © {new Date().getFullYear()} BAŞKA Resort Bodrum. {t('footer.rights')}
           </p>
         </div>

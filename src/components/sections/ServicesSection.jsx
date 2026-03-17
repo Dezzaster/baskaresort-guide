@@ -10,12 +10,12 @@ export default function ServicesSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.4rem] text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-1">
         {t('services.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-[18px]">{t('services.subtitle')}</p>
+      <p className="text-[0.72rem] text-[var(--text-muted)] mb-6">{t('services.subtitle')}</p>
 
-      <Card icon="✅" title={t('services.freeTitle')} delay={0}>
+      <Card title={t('services.freeTitle')} delay={0}>
         <div className="space-y-1.5">
           {freeItems.map((item, i) => (
             <motion.div
@@ -32,7 +32,7 @@ export default function ServicesSection() {
         </div>
       </Card>
 
-      <Card icon="💳" title={t('services.paidTitle')} delay={1}>
+      <Card title={t('services.paidTitle')} delay={1}>
         <div className="space-y-1.5">
           {paidItems.map((item, i) => (
             <motion.div
@@ -55,7 +55,7 @@ export default function ServicesSection() {
           {t('shops.title')}
         </h3>
         {['market', 'boutique', 'artisan', 'florist'].map((key, i) => (
-          <Card key={key} icon={key === 'market' ? '🛒' : key === 'boutique' ? '👗' : key === 'artisan' ? '🎨' : '💐'} title={t(`shops.${key}`)} delay={i + 2}>
+          <Card key={key} title={t(`shops.${key}`)} delay={i + 2}>
             <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
               {t(`shops.${key}Desc`)}
             </p>

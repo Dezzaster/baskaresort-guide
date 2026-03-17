@@ -2,12 +2,12 @@ import { useTranslation } from 'react-i18next'
 import Card from '../Card'
 
 const restaurants = [
-  { key: 'fish', icon: '🐠', code: 'A-1' },
-  { key: 'teppanyaki', icon: '🍣', code: 'A-2' },
-  { key: 'italian', icon: '🍕', code: 'A-3' },
-  { key: 'theme', icon: '🍷', code: 'A-4' },
-  { key: 'gulet', icon: '⛵', code: 'A-5' },
-  { key: 'bistro', icon: '🌙', code: 'A-6' }
+  { key: 'fish', code: 'A-1' },
+  { key: 'teppanyaki', code: 'A-2' },
+  { key: 'italian', code: 'A-3' },
+  { key: 'theme', code: 'A-4' },
+  { key: 'gulet', code: 'A-5' },
+  { key: 'bistro', code: 'A-6' }
 ]
 
 export default function AlacarteSection() {
@@ -15,19 +15,19 @@ export default function AlacarteSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.4rem] text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-1">
         {t('alacarte.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-[18px]">{t('alacarte.subtitle')}</p>
+      <p className="text-[0.72rem] text-[var(--text-muted)] mb-6">{t('alacarte.subtitle')}</p>
 
       {restaurants.map((r, i) => (
-        <Card key={r.key} icon={r.icon} title={t(`alacarte.${r.key}`)} label={r.code} delay={i}>
+        <Card key={r.key} title={t(`alacarte.${r.key}`)} label={r.code} delay={i}>
           <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed mb-2">
             {t(`alacarte.${r.key}Desc`)}
           </p>
           <div className="space-y-1">
             <div className="flex justify-between items-center py-1.5 px-3 rounded-lg bg-[var(--bg-blue)]">
-              <span className="text-[0.68rem] text-[var(--text-muted)]">🕐</span>
+              <span className="text-[0.68rem] text-[var(--text-muted)]">Time</span>
               <span className="text-[0.7rem] text-[var(--primary)] font-medium">{t(`alacarte.${r.key}Hours`)}</span>
             </div>
             <div className="flex justify-between items-center py-1.5 px-3 rounded-lg bg-[var(--bg-warm)]">
