@@ -3,17 +3,17 @@ import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const primaryLanguages = [
-  { code: 'en', label: 'English', flag: '🇬🇧' },
-  { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
-  { code: 'ru', label: 'Русский', flag: '🇷🇺' },
-  { code: 'de', label: 'Deutsch', flag: '🇩🇪' }
+  { code: 'en', label: 'English' },
+  { code: 'tr', label: 'Türkçe' },
+  { code: 'ru', label: 'Русский' },
+  { code: 'de', label: 'Deutsch' }
 ]
 
 const secondaryLanguages = [
-  { code: 'fr', label: 'Français', flag: '🇫🇷' },
-  { code: 'ar', label: 'العربية', flag: '🇸🇦' },
-  { code: 'pl', label: 'Polski', flag: '🇵🇱' },
-  { code: 'nl', label: 'Nederlands', flag: '🇳🇱' }
+  { code: 'fr', label: 'Français' },
+  { code: 'ar', label: 'العربية' },
+  { code: 'pl', label: 'Polski' },
+  { code: 'nl', label: 'Nederlands' }
 ]
 
 export default function LanguageSelector() {
@@ -27,7 +27,7 @@ export default function LanguageSelector() {
     <button
       onClick={() => i18n.changeLanguage(lang.code)}
       className={`
-        flex items-center gap-1.5 px-3.5 py-2 rounded-full text-[0.7rem]
+        px-4 py-2 rounded-full text-[0.72rem]
         font-medium transition-all duration-300 cursor-pointer border
         ${isActive(lang.code)
           ? 'border-[var(--primary)] text-[var(--primary)] bg-[var(--bg-blue)] scale-105 shadow-sm'
@@ -35,14 +35,13 @@ export default function LanguageSelector() {
         }
       `}
     >
-      <span className="text-sm">{lang.flag}</span>
-      <span>{lang.label}</span>
+      {lang.label}
     </button>
   )
 
   return (
-    <div className="flex flex-col items-center gap-2.5 px-4">
-      <div className="flex justify-center gap-2 flex-wrap">
+    <div className="flex flex-col items-center gap-3 px-4">
+      <div className="flex justify-center gap-2.5 flex-wrap">
         {primaryLanguages.map((lang) => (
           <LangButton key={lang.code} lang={lang} />
         ))}
@@ -51,7 +50,7 @@ export default function LanguageSelector() {
       {!showMore && (
         <button
           onClick={() => setShowMore(true)}
-          className="text-[0.65rem] text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors duration-300 flex items-center gap-1"
+          className="text-[0.68rem] text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors duration-300 flex items-center gap-1"
         >
           <span>+4</span>
           <span className="opacity-60">more languages</span>
@@ -65,7 +64,7 @@ export default function LanguageSelector() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="flex justify-center gap-2 flex-wrap overflow-hidden"
+            className="flex justify-center gap-2.5 flex-wrap overflow-hidden"
           >
             {secondaryLanguages.map((lang) => (
               <LangButton key={lang.code} lang={lang} />

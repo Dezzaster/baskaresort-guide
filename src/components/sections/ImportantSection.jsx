@@ -8,12 +8,12 @@ export default function ImportantSection() {
 
   return (
     <div>
-      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.4rem] text-[var(--primary)] mb-1">
+      <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-1">
         {t('important.title')}
       </h2>
-      <p className="text-[0.72rem] text-[var(--text-muted)] mb-[18px]">{t('important.subtitle')}</p>
+      <p className="text-[0.72rem] text-[var(--text-muted)] mb-6">{t('important.subtitle')}</p>
 
-      <Card icon="⚠️" title={t('important.title')} delay={0}>
+      <Card title={t('important.title')} delay={0}>
         <div className="space-y-2">
           {Array.isArray(items) && items.map((item, i) => (
             <motion.div
