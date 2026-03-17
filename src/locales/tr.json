@@ -7,7 +7,8 @@
     "select": "Dil Seçin"
   },
   "nav": {
-    "info": "Bilgi",
+    "info": "Genel",
+    "wifi": "Wi-Fi",
     "rooms": "Odalar",
     "dining": "Yeme-İçme",
     "alacarte": "A La Carte",
@@ -46,8 +47,19 @@
     "parkingVal": "Ücretsiz açık otopark, vale mevcut, EV şarj (ücretli)",
     "location": "Konum",
     "locationVal": "Bodrum Kalesi 1,5 km, Şehir Merkezi 1,2 km, Havalimanı 35 km",
+    "reception": "Resepsiyon",
+    "receptionVal": "Oda telefonundan 0 tuşlayın",
     "petFriendly": "Evcil Hayvan Dostu",
     "petVal": "Belirlenen odalarda 12 kg'a kadar evcil hayvan kabul edilir — €45/gün"
+  },
+  "wifi": {
+    "title": "Wi-Fi Bağlantısı",
+    "subtitle": "Konaklamanız boyunca bağlı kalın",
+    "connection": "Wi-Fi Girişi",
+    "network": "Ağ Adı",
+    "password": "Şifre",
+    "coverage": "Kapsama",
+    "coverageDesc": "Tesis genelinde ücretsiz Wi-Fi — odalar, lobi, havuz, plaj ve tüm ortak alanlarda."
   },
   "rooms": {
     "title": "Oda Tipleri ve Özellikleri",
