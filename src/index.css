@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0033A0;
+  --primary-light: #1a4dbf;
+  --primary-dark: #002070;
+  --gold: #F5C518;
+  --gold-light: #FFD84D;
+  --gold-dark: #D4A800;
+  --accent: #2ec4b6;
+  --bg: #FFFEF9;
+  --bg-warm: #FFF9E6;
+  --bg-blue: #F0F4FF;
+  --text: #0033A0;
+  --text-dark: #001A52;
+  --text-muted: #5A7099;
+  --white: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --card-border: rgba(0, 51, 160, 0.08);
+  --shadow: 0 2px 12px rgba(0, 51, 160, 0.06);
+  --shadow-hover: 0 8px 30px rgba(0, 51, 160, 0.12);
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0, 51, 160, 0.15); border-radius: 4px; }
+
+.stripe-bar {
+  height: 6px;
+  background: repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px);
+}
+
+.stripe-bar-thick {
+  height: 10px;
+  background: repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 14px, #fff 14px, #fff 28px);
+}
