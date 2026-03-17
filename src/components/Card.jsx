@@ -3,21 +3,22 @@ import { motion } from 'framer-motion'
 export default function Card({ children, icon, title, label, className = '', delay = 0 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 18 }}
+      initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: delay * 0.08, ease: 'easeOut' }}
-      className={`bg-white rounded-2xl p-4 mb-3 border border-[var(--card-border)] shadow-[var(--shadow)] transition-all duration-300 hover:shadow-[var(--shadow-hover)] hover:scale-[1.01] hover:-translate-y-0.5 ${className}`}
+      transition={{ duration: 0.5, delay: delay * 0.1, ease: 'easeOut' }}
+      whileHover={{ y: -3, boxShadow: '0 12px 36px rgba(0, 51, 160, 0.12)' }}
+      className={`bg-white rounded-2xl p-5 mb-4 border border-[var(--card-border)] shadow-[var(--shadow)] transition-colors duration-300 ${className}`}
     >
       {(icon || title) && (
-        <div className="flex items-center gap-2.5 mb-2">
+        <div className="flex items-center gap-3 mb-3">
           {icon && (
-            <div className="w-9 h-9 rounded-[var(--radius-sm)] bg-[var(--bg-blue)] flex items-center justify-center text-base flex-shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-[var(--bg-blue)] flex items-center justify-center text-lg flex-shrink-0">
               {icon}
             </div>
           )}
           <div>
-            {title && <div className="font-semibold text-[0.82rem] text-[var(--primary)]">{title}</div>}
-            {label && <div className="text-[0.63rem] text-[var(--text-muted)] mt-0.5">{label}</div>}
+            {title && <div className="font-semibold text-[0.85rem] text-[var(--primary)]">{title}</div>}
+            {label && <div className="text-[0.65rem] text-[var(--text-muted)] mt-0.5">{label}</div>}
           </div>
         </div>
       )}

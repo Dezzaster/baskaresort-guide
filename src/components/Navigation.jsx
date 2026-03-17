@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 
 const sections = [
   { id: 'info', icon: '🏨' },
@@ -19,23 +20,24 @@ export default function Navigation({ activeSection, onSectionChange }) {
   const { t } = useTranslation()
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[var(--card-border)] py-2.5 px-3 overflow-x-auto nav-scroll flex gap-1.5 justify-start">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-[var(--card-border)] py-3 px-3 overflow-x-auto nav-scroll flex gap-2 justify-start">
       {sections.map((sec) => (
-        <button
+        <motion.button
           key={sec.id}
           onClick={() => onSectionChange(sec.id)}
+          whileTap={{ scale: 0.95 }}
           className={`
-            flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[0.68rem]
+            flex-shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full text-[0.7rem]
             font-medium whitespace-nowrap cursor-pointer border transition-all duration-300
             ${activeSection === sec.id
-              ? 'bg-[var(--primary)] text-white border-[var(--primary)] scale-105'
-              : 'bg-transparent text-[var(--text-muted)] border-[var(--card-border)] hover:bg-[var(--bg-blue)] hover:text-[var(--primary)] hover:scale-105'
+              ? 'bg-[var(--primary)] text-white border-[var(--primary)] shadow-md'
+              : 'bg-transparent text-[var(--text-muted)] border-[var(--card-border)] hover:bg-[var(--bg-blue)] hover:text-[var(--primary)]'
             }
           `}
         >
           <span className="text-xs">{sec.icon}</span>
           {t(`nav.${sec.id}`)}
-        </button>
+        </motion.button>
       ))}
     </nav>
   )

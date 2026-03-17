@@ -17,7 +17,7 @@
   --white: #FFFFFF;
   --card-bg: #FFFFFF;
   --card-border: rgba(0, 51, 160, 0.08);
-  --shadow: 0 2px 12px rgba(0, 51, 160, 0.06);
+  --shadow: 0 2px 16px rgba(0, 51, 160, 0.06);
   --shadow-hover: 0 8px 30px rgba(0, 51, 160, 0.12);
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'DM Sans', system-ui, sans-serif;
@@ -34,7 +34,7 @@ body {
   min-height: 100dvh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 ::-webkit-scrollbar { width: 4px; height: 4px; }
@@ -49,4 +49,15 @@ body {
 .stripe-bar-thick {
   height: 10px;
   background: repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 14px, #fff 14px, #fff 28px);
+}
+
+/* Elegant section titles */
+h2 {
+  letter-spacing: 0.01em;
+}
+
+/* Smooth nav scrollbar */
+.nav-scroll::-webkit-scrollbar {
+  height: 0;
+  display: none;
 }
