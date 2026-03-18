@@ -35,7 +35,7 @@ export default function ActivitiesSection() {
         </p>
       </Card>
 
-      <div className="grid grid-cols-2 gap-3 mt-4">
+      <div className="grid grid-cols-2 gap-3" style={{ marginTop: '24px' }}>
         {[
           { label: t('activities.padel') },
           { label: t('activities.tableTennis') },

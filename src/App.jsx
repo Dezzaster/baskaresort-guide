@@ -51,7 +51,7 @@ function App() {
           background: 'repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px)'
         }} />
 
-        <div className="max-w-[480px] mx-auto px-[8%]">
+        <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%' }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ function App() {
         <div className="h-16 bg-gradient-to-b from-[var(--bg)] to-[#FFF5E0]" />
         <div className="stripe-bar-thick" />
         <div className="bg-[var(--primary)] text-white py-16 text-center">
-          <div className="max-w-[480px] mx-auto px-[8%]">
+          <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%' }}>
             <motion.div
               className="flex justify-center"
               initial={{ opacity: 0 }}
