@@ -25,7 +25,7 @@ function ContactCard({ delay = 0 }) {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: delay * 0.1, ease: 'easeOut' }}
-      className="bg-[rgba(230,237,255,0.55)] backdrop-blur-sm border border-white/40 rounded-2xl p-7 mb-8 shadow-[var(--shadow)]"
+      className="bg-[rgba(255,253,245,0.7)] backdrop-blur-sm border border-[rgba(0,51,160,0.06)] rounded-2xl p-7 mb-10 shadow-[var(--shadow)]"
     >
       {/* Header */}
       <div className="flex items-center gap-3 mb-4">
@@ -39,20 +39,20 @@ function ContactCard({ delay = 0 }) {
 
       {/* Description */}
       <p className="text-[0.74rem] text-[var(--text-muted)] mb-5">
-        {t('info.receptionVal')} · Mobile: +90 252 313 22 07
+        {t('info.receptionVal')} · +90 252 275 05 50
       </p>
 
       {/* Action buttons */}
       <div className="grid grid-cols-3 gap-3">
         <a
-          href="tel:0"
+          href="tel:+902522750550"
           className="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"
         >
           <span className="text-xl">📱</span>
           <span className="text-[0.7rem] font-medium text-[var(--text-dark)]">Dial 0</span>
         </a>
         <a
-          href="https://wa.me/902523132207"
+          href="https://wa.me/902522750550"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"
