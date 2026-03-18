@@ -17,7 +17,7 @@ export default function Navigation({ activeSection, onSectionChange }) {
           onClick={() => onSectionChange(id)}
           whileTap={{ scale: 0.95 }}
           className={`
-            flex-shrink-0 px-5 py-2.5 rounded-full text-[0.7rem]
+            flex-shrink-0 px-7 py-3 rounded-full text-[0.7rem]
             font-medium whitespace-nowrap cursor-pointer border transition-all duration-300
             ${activeSection === id
               ? 'bg-[var(--primary)] text-white border-[var(--primary)] shadow-lg'

@@ -9,7 +9,7 @@ function InfoRow({ label, value, delay = 0 }) {
       initial={{ opacity: 0, x: -10 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.3, delay: delay * 0.05 }}
-      className="flex justify-between items-start py-3 px-5 rounded-xl bg-white/40 backdrop-blur-md border border-white/50"
+      className="flex justify-between items-start py-3.5 px-5 rounded-xl bg-white/50 backdrop-blur-md border border-white/60"
     >
       <span className="text-[0.76rem] text-[var(--text-muted)] font-medium">{label}</span>
       <span className="text-[0.76rem] text-[var(--primary)] font-semibold text-right ml-4 max-w-[55%]">{value}</span>
@@ -25,7 +25,7 @@ function ContactCard({ delay = 0 }) {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: delay * 0.1, ease: 'easeOut' }}
-      className="bg-[var(--card-cream)] rounded-2xl p-6 mb-7 shadow-[var(--shadow)]"
+      className="bg-[rgba(230,237,255,0.55)] backdrop-blur-sm border border-white/40 rounded-2xl p-7 mb-8 shadow-[var(--shadow)]"
     >
       {/* Header */}
       <div className="flex items-center gap-3 mb-4">
@@ -92,7 +92,7 @@ export default function InfoSection() {
       <ContactCard delay={1} />
 
       <Card delay={2}>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2.5">
           <InfoRow label={t('info.checkin')} value="15:00" delay={0} />
           <InfoRow label={t('info.checkout')} value="12:00" delay={1} />
           <InfoRow label={t('info.concept')} value={t('info.conceptVal')} delay={2} />
