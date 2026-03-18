@@ -22,9 +22,9 @@ export default function DiningSection() {
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-3">
           {t('dining.mainDesc')}
         </p>
-        <div className="space-y-1.5">
+        <div className="space-y-2.5">
           {meals.map((meal, i) => (
-            <div key={i} className="flex justify-between items-center py-2 px-3 rounded-[var(--radius-sm)] bg-[var(--bg-blue)]">
+            <div key={i} className="flex justify-between items-center py-3 px-4 rounded-[var(--radius-sm)] bg-[rgba(230,237,255,0.5)]">
               <span className="text-[0.74rem] text-[var(--primary)] font-medium">{meal.label}</span>
               <span className="text-[0.72rem] text-[var(--gold-dark)] font-semibold">{meal.time}</span>
             </div>
