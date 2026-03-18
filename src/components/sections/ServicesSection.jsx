@@ -50,7 +50,7 @@ export default function ServicesSection() {
       </Card>
 
       {/* Shops */}
-      <div className="mt-4">
+      <div className="mt-10">
         <h3 className="font-['Cormorant_Garamond'] font-normal text-xl text-[var(--primary)] mb-3">
           {t('shops.title')}
         </h3>

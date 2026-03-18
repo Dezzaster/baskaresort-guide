@@ -39,7 +39,7 @@ export default function DiningSection() {
       </Card>
 
       {/* Street Food Section */}
-      <div className="mt-6">
+      <div className="mt-10">
         <h3 className="font-['Cormorant_Garamond'] font-normal text-xl text-[var(--primary)] mb-2">
           {t('streetFood.title')}
         </h3>
