@@ -90,7 +90,7 @@ export default function BeachSection() {
       <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-2">
         {t('beach.title')}
       </h2>
-      <p className="text-[0.74rem] text-[var(--text-muted)] mb-7">{t('beach.subtitle')}</p>
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('beach.subtitle')}</p>
 
       <Card icon="🏖️" title={t('beach.title')} delay={0}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">

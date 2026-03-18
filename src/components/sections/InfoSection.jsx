@@ -25,7 +25,7 @@ export default function InfoSection() {
       <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-2">
         {t('info.title')}
       </h2>
-      <p className="text-[0.74rem] text-[var(--text-muted)] mb-7">{t('info.subtitle')}</p>
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('info.subtitle')}</p>
 
       <Card title="BAŞKA Resort Bodrum" delay={0}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.65]">
