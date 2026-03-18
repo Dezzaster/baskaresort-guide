@@ -87,6 +87,14 @@ h2 {
   display: none;
 }
 
+/* Instagram embed overflow fix */
+.instagram-embed-wrapper iframe,
+.instagram-embed-wrapper .instagram-media {
+  max-width: 100% !important;
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
 /* Line clamp utility */
 .line-clamp-2 {
   display: -webkit-box;

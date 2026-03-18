@@ -22,7 +22,7 @@ function InstagramEmbed({ url, index }) {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: index * 0.15 }}
-      className="flex-shrink-0 w-[280px] instagram-embed-wrapper"
+      className="flex-shrink-0 w-[280px] instagram-embed-wrapper overflow-hidden"
     >
       <blockquote
         className="instagram-media"
