@@ -56,7 +56,7 @@ export default function ServicesSection() {
         </h3>
         {['market', 'boutique', 'artisan', 'florist'].map((key, i) => (
           <Card key={key} title={t(`shops.${key}`)} delay={i + 2}>
-            <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+            <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
               {t(`shops.${key}Desc`)}
             </p>
           </Card>

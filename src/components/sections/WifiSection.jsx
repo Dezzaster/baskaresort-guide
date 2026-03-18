@@ -36,7 +36,7 @@ export default function WifiSection() {
       </Card>
 
       <Card title={t('wifi.coverage')} delay={1}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('wifi.coverageDesc')}
         </p>
       </Card>

@@ -9,10 +9,10 @@ function InfoRow({ label, value, delay = 0 }) {
       initial={{ opacity: 0, x: -10 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.3, delay: delay * 0.05 }}
-      className="flex justify-between items-start py-2.5 px-4 rounded-xl bg-white/40 backdrop-blur-md border border-white/50"
+      className="flex justify-between items-start py-3 px-5 rounded-xl bg-white/40 backdrop-blur-md border border-white/50"
     >
       <span className="text-[0.76rem] text-[var(--text-muted)] font-medium">{label}</span>
-      <span className="text-[0.76rem] text-[var(--primary)] font-semibold text-right ml-3 max-w-[55%]">{value}</span>
+      <span className="text-[0.76rem] text-[var(--primary)] font-semibold text-right ml-4 max-w-[55%]">{value}</span>
     </motion.div>
   )
 }
@@ -25,10 +25,10 @@ function ContactCard({ delay = 0 }) {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: delay * 0.1, ease: 'easeOut' }}
-      className="bg-[var(--card-cream)] rounded-2xl p-6 mb-6 shadow-[var(--shadow)]"
+      className="bg-[var(--card-cream)] rounded-2xl p-6 mb-7 shadow-[var(--shadow)]"
     >
       {/* Header */}
-      <div className="flex items-center gap-3 mb-3">
+      <div className="flex items-center gap-3 mb-4">
         <div className="w-9 h-9 rounded-xl bg-white/70 backdrop-blur-sm flex items-center justify-center text-base flex-shrink-0">
           📞
         </div>
@@ -38,7 +38,7 @@ function ContactCard({ delay = 0 }) {
       </div>
 
       {/* Description */}
-      <p className="text-[0.74rem] text-[var(--text-muted)] mb-4">
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-5">
         {t('info.receptionVal')} · Mobile: +90 252 313 22 07
       </p>
 
@@ -46,26 +46,26 @@ function ContactCard({ delay = 0 }) {
       <div className="grid grid-cols-3 gap-3">
         <a
           href="tel:0"
-          className="flex flex-col items-center gap-1.5 py-3 px-2 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"
+          className="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"
         >
-          <span className="text-lg">📱</span>
-          <span className="text-[0.68rem] font-medium text-[var(--text-dark)]">Dial 0</span>
+          <span className="text-xl">📱</span>
+          <span className="text-[0.7rem] font-medium text-[var(--text-dark)]">Dial 0</span>
         </a>
         <a
           href="https://wa.me/902523132207"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center gap-1.5 py-3 px-2 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"
+          className="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"
         >
-          <span className="text-lg">💬</span>
-          <span className="text-[0.68rem] font-medium text-[var(--text-dark)]">WhatsApp</span>
+          <span className="text-xl">💬</span>
+          <span className="text-[0.7rem] font-medium text-[var(--text-dark)]">WhatsApp</span>
         </a>
         <a
           href="mailto:info@baskaresort.com"
-          className="flex flex-col items-center gap-1.5 py-3 px-2 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"
+          className="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"
         >
-          <span className="text-lg">✉️</span>
-          <span className="text-[0.68rem] font-medium text-[var(--text-dark)]">Email</span>
+          <span className="text-xl">✉️</span>
+          <span className="text-[0.7rem] font-medium text-[var(--text-dark)]">Email</span>
         </a>
       </div>
     </motion.div>
@@ -83,7 +83,7 @@ export default function InfoSection() {
       <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('info.subtitle')}</p>
 
       <Card title="BAŞKA Resort Bodrum" delay={0}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.65]">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('info.description')}
         </p>
       </Card>
@@ -92,7 +92,7 @@ export default function InfoSection() {
       <ContactCard delay={1} />
 
       <Card delay={2}>
-        <div className="flex flex-col gap-1.5">
+        <div className="flex flex-col gap-2">
           <InfoRow label={t('info.checkin')} value="15:00" delay={0} />
           <InfoRow label={t('info.checkout')} value="12:00" delay={1} />
           <InfoRow label={t('info.concept')} value={t('info.conceptVal')} delay={2} />
@@ -107,7 +107,7 @@ export default function InfoSection() {
       </Card>
 
       <Card title={t('info.location')} delay={3}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.65]">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('info.locationVal')}
         </p>
       </Card>

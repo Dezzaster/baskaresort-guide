@@ -46,13 +46,11 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--bg)]">
       {/* Header — full width */}
-      <header className="relative text-center pt-16 pb-10 px-10 bg-gradient-to-b from-white to-[var(--bg)]">
-        {/* Decorative stripe at top */}
+      <header className="relative text-center pt-16 pb-10 px-8 bg-gradient-to-b from-white to-[var(--bg)]">
         <div className="absolute top-0 left-0 right-0 h-[6px]" style={{
           background: 'repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px)'
         }} />
 
-        {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -66,7 +64,6 @@ function App() {
           />
         </motion.div>
 
-        {/* Resort subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,17 +73,15 @@ function App() {
           RESORT — BODRUM
         </motion.p>
 
-        {/* Tagline */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          className="font-['Cormorant_Garamond'] text-[1.15rem] text-[var(--primary)] mt-8 italic leading-relaxed"
+          className="font-['Cormorant_Garamond'] text-[1.15rem] text-[var(--primary)] mt-8 italic leading-relaxed max-w-[380px] mx-auto"
         >
           {t('hero.tagline')}
         </motion.p>
 
-        {/* Guest Guide */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -96,7 +91,6 @@ function App() {
           {t('hero.subtitle')}
         </motion.p>
 
-        {/* Language Selector */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -110,14 +104,14 @@ function App() {
       {/* Yellow stripe — full width */}
       <div className="stripe-bar" />
 
-      {/* Spacer */}
-      <div className="h-4" />
+      {/* Spacer between stripe and nav */}
+      <div className="h-3" />
 
-      {/* Navigation — full width */}
+      {/* Sticky Navigation — full width, centered on desktop */}
       <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
 
-      {/* Content — centered on all screens */}
-      <main className="max-w-[600px] mx-auto px-6 sm:px-10 pt-10 pb-12">
+      {/* Content — centered, generous side margins */}
+      <main className="max-w-[520px] mx-auto px-8 pt-10 pb-14">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}

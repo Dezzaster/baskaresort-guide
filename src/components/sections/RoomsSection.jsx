@@ -25,14 +25,14 @@ export default function RoomsSection() {
       <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('rooms.subtitle')}</p>
 
       <Card title="Standard Amenities" delay={0}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('rooms.description')}
         </p>
       </Card>
 
       {rooms.map((room, i) => (
         <Card key={room.key} title={t(`rooms.${room.key}`)} delay={i + 1}>
-          <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed mb-2">
+          <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-2">
             {t(`rooms.${room.key}Desc`)}
           </p>
           <div className="flex gap-2 flex-wrap">
