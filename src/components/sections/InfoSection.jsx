@@ -25,7 +25,8 @@ function ContactCard({ delay = 0 }) {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: delay * 0.1, ease: 'easeOut' }}
-      className="bg-white/60 backdrop-blur-sm border border-[rgba(0,51,160,0.06)] rounded-2xl p-9 mb-10 shadow-[var(--shadow)]"
+      style={{ padding: '32px 28px' }}
+      className="bg-white/60 backdrop-blur-sm border border-[rgba(0,51,160,0.06)] rounded-2xl mb-10 shadow-[var(--shadow)]"
     >
       {/* Header */}
       <div className="flex items-center gap-3 mb-4">
