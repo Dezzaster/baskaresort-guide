@@ -116,8 +116,8 @@ function App() {
       {/* Navigation — full width */}
       <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
 
-      {/* Content — centered, generous padding */}
-      <main className="max-w-[600px] mx-auto px-10 pt-10 pb-12">
+      {/* Content — centered on all screens */}
+      <main className="max-w-[600px] mx-auto px-6 sm:px-10 pt-10 pb-12">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}

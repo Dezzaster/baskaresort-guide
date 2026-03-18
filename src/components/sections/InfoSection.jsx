@@ -17,6 +17,61 @@ function InfoRow({ label, value, delay = 0 }) {
   )
 }
 
+function ContactCard({ delay = 0 }) {
+  const { t } = useTranslation()
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: delay * 0.1, ease: 'easeOut' }}
+      className="bg-[var(--card-cream)] rounded-2xl p-6 mb-6 shadow-[var(--shadow)]"
+    >
+      {/* Header */}
+      <div className="flex items-center gap-3 mb-3">
+        <div className="w-9 h-9 rounded-xl bg-white/70 backdrop-blur-sm flex items-center justify-center text-base flex-shrink-0">
+          📞
+        </div>
+        <div className="font-semibold text-[0.85rem] text-[var(--text-dark)]">
+          {t('info.phone')}
+        </div>
+      </div>
+
+      {/* Description */}
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-4">
+        {t('info.receptionVal')} · Mobile: +90 252 313 22 07
+      </p>
+
+      {/* Action buttons */}
+      <div className="grid grid-cols-3 gap-3">
+        <a
+          href="tel:0"
+          className="flex flex-col items-center gap-1.5 py-3 px-2 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"
+        >
+          <span className="text-lg">📱</span>
+          <span className="text-[0.68rem] font-medium text-[var(--text-dark)]">Dial 0</span>
+        </a>
+        <a
+          href="https://wa.me/902523132207"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col items-center gap-1.5 py-3 px-2 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"
+        >
+          <span className="text-lg">💬</span>
+          <span className="text-[0.68rem] font-medium text-[var(--text-dark)]">WhatsApp</span>
+        </a>
+        <a
+          href="mailto:info@baskaresort.com"
+          className="flex flex-col items-center gap-1.5 py-3 px-2 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"
+        >
+          <span className="text-lg">✉️</span>
+          <span className="text-[0.68rem] font-medium text-[var(--text-dark)]">Email</span>
+        </a>
+      </div>
+    </motion.div>
+  )
+}
+
 export default function InfoSection() {
   const { t } = useTranslation()
 
@@ -33,25 +88,25 @@ export default function InfoSection() {
         </p>
       </Card>
 
-      <Card delay={1}>
+      {/* Contact Card */}
+      <ContactCard delay={1} />
+
+      <Card delay={2}>
         <div className="flex flex-col gap-1.5">
-          <InfoRow label={t('info.phone')} value="+90 252 3132207" delay={0} />
-          <InfoRow label={t('info.reception')} value={t('info.receptionVal')} delay={1} />
-          <InfoRow label={t('info.email')} value="info@baskaresort.com" delay={2} />
-          <InfoRow label={t('info.checkin')} value="15:00" delay={3} />
-          <InfoRow label={t('info.checkout')} value="12:00" delay={4} />
-          <InfoRow label={t('info.concept')} value={t('info.conceptVal')} delay={5} />
-          <InfoRow label={t('info.area')} value="57.000 m²" delay={6} />
-          <InfoRow label={t('info.renovation')} value={t('info.renovationVal')} delay={7} />
-          <InfoRow label={t('info.payment')} value={t('info.paymentVal')} delay={8} />
-          <InfoRow label={t('info.currency')} value={t('info.currencyVal')} delay={9} />
-          <InfoRow label={t('info.wifi')} value={t('info.wifiVal')} delay={10} />
-          <InfoRow label={t('info.parking')} value={t('info.parkingVal')} delay={11} />
-          <InfoRow label={t('info.petFriendly')} value={t('info.petVal')} delay={12} />
+          <InfoRow label={t('info.checkin')} value="15:00" delay={0} />
+          <InfoRow label={t('info.checkout')} value="12:00" delay={1} />
+          <InfoRow label={t('info.concept')} value={t('info.conceptVal')} delay={2} />
+          <InfoRow label={t('info.area')} value="57.000 m²" delay={3} />
+          <InfoRow label={t('info.renovation')} value={t('info.renovationVal')} delay={4} />
+          <InfoRow label={t('info.payment')} value={t('info.paymentVal')} delay={5} />
+          <InfoRow label={t('info.currency')} value={t('info.currencyVal')} delay={6} />
+          <InfoRow label={t('info.wifi')} value={t('info.wifiVal')} delay={7} />
+          <InfoRow label={t('info.parking')} value={t('info.parkingVal')} delay={8} />
+          <InfoRow label={t('info.petFriendly')} value={t('info.petVal')} delay={9} />
         </div>
       </Card>
 
-      <Card title={t('info.location')} delay={2}>
+      <Card title={t('info.location')} delay={3}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.65]">
           {t('info.locationVal')}
         </p>
