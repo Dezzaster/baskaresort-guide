@@ -10,13 +10,13 @@ export default function Navigation({ activeSection, onSectionChange }) {
   const { t } = useTranslation()
 
   return (
-    <nav className="sticky top-0 z-50 bg-[var(--bg)]/95 backdrop-blur-xl py-3 px-4 overflow-x-auto nav-scroll flex gap-2 justify-start md:justify-center max-w-[680px] mx-auto">
+    <nav className="sticky top-0 z-50 bg-[var(--bg)]/95 backdrop-blur-xl py-3 px-4 overflow-x-auto md:overflow-x-visible nav-scroll flex md:flex-wrap gap-2 justify-start md:justify-center max-w-[900px] mx-auto">
       {sections.map((id) => (
         <motion.button
           key={id}
           onClick={() => onSectionChange(id)}
           whileTap={{ scale: 0.95 }}
-          style={{ padding: '14px 36px' }}
+          style={{ padding: '10px 24px' }}
           className={`
             flex-shrink-0 rounded-full text-[0.7rem]
             font-medium whitespace-nowrap cursor-pointer border transition-all duration-300
