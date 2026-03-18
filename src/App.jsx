@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--bg)]">
       {/* Header — full width, centered content */}
-      <header className="relative text-center pt-16 pb-10 bg-gradient-to-b from-white to-[var(--bg)]">
+      <header className="relative text-center pt-16 pb-10 bg-gradient-to-b from-[#FFFEF9] via-[#FFF9EE] to-[var(--bg)]">
         <div className="absolute top-0 left-0 right-0 h-[6px]" style={{
           background: 'repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px)'
         }} />
@@ -113,7 +113,7 @@ function App() {
       <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
 
       {/* Content — centered with proportional side padding */}
-      <main className="content-container">
+      <main className="content-container" style={{ background: 'linear-gradient(180deg, var(--bg) 0%, #FFF8EC 30%, #FFF8EC 70%, var(--bg) 100%)' }}>
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}
@@ -129,6 +129,7 @@ function App() {
 
       {/* Footer — full width, centered content */}
       <footer className="mt-10">
+        <div className="h-16 bg-gradient-to-b from-[var(--bg)] to-[#FFF5E0]" />
         <div className="stripe-bar-thick" />
         <div className="bg-[var(--primary)] text-white py-16 text-center">
           <div className="max-w-[480px] mx-auto px-[8%]">
