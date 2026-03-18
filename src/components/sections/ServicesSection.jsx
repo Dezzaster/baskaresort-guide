@@ -13,7 +13,7 @@ export default function ServicesSection() {
       <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-2">
         {t('services.title')}
       </h2>
-      <p className="text-[0.74rem] text-[var(--text-muted)] mb-7">{t('services.subtitle')}</p>
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('services.subtitle')}</p>
 
       <Card title={t('services.freeTitle')} delay={0}>
         <div className="space-y-1.5">

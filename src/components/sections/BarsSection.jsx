@@ -20,7 +20,7 @@ export default function BarsSection() {
       <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-2">
         {t('bars.title')}
       </h2>
-      <p className="text-[0.74rem] text-[var(--text-muted)] mb-7">{t('bars.subtitle')}</p>
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('bars.subtitle')}</p>
 
       {bars.map((bar, i) => (
         <Card key={bar.key} icon={bar.icon} title={t(`bars.${bar.key}`)} delay={i}>

@@ -27,7 +27,7 @@ export default function LanguageSelector() {
     <button
       onClick={() => i18n.changeLanguage(lang.code)}
       className={`
-        px-4 py-2 rounded-full text-[0.72rem]
+        px-5 py-2.5 rounded-full text-[0.72rem]
         font-medium transition-all duration-300 cursor-pointer border
         ${isActive(lang.code)
           ? 'border-[var(--primary)] text-[var(--primary)] bg-[var(--bg-blue)] scale-105 shadow-sm'
