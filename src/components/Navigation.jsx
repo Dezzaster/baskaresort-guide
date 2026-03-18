@@ -10,7 +10,7 @@ export default function Navigation({ activeSection, onSectionChange }) {
   const { t } = useTranslation()
 
   return (
-    <nav className="sticky top-0 z-50 bg-[var(--bg)]/95 backdrop-blur-xl py-3 px-4 overflow-x-auto md:overflow-x-visible nav-scroll flex md:flex-wrap gap-2 justify-start md:justify-center max-w-[900px] mx-auto">
+    <nav style={{ maxWidth: '900px', margin: '0 auto' }} className="sticky top-0 z-50 bg-[var(--bg)]/95 backdrop-blur-xl py-3 px-4 overflow-x-auto md:overflow-x-visible nav-scroll flex md:flex-wrap gap-2 justify-start md:justify-center">
       {sections.map((id) => (
         <motion.button
           key={id}

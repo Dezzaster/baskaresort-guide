@@ -26,7 +26,7 @@ export default function LanguageSelector() {
   const LangButton = ({ lang }) => (
     <button
       onClick={() => i18n.changeLanguage(lang.code)}
-      style={{ padding: '10px 28px' }}
+      style={{ padding: '8px 18px' }}
       className={`
         rounded-full text-[0.72rem]
         font-medium transition-all duration-300 cursor-pointer border
