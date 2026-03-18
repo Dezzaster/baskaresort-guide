@@ -24,7 +24,7 @@ export default function BarsSection() {
 
       {bars.map((bar, i) => (
         <Card key={bar.key} icon={bar.icon} title={t(`bars.${bar.key}`)} delay={i}>
-          <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+          <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
             {t(`bars.${bar.key}Desc`)}
           </p>
         </Card>

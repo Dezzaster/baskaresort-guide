@@ -26,7 +26,7 @@ export default function ImportantSection() {
               <span className="w-5 h-5 rounded-full bg-[rgba(245,197,24,0.2)] border border-[var(--gold)] flex items-center justify-center text-[0.6rem] text-[var(--gold-dark)] font-bold flex-shrink-0 mt-0.5">
                 {i + 1}
               </span>
-              <span className="text-[0.74rem] text-[var(--text-muted)] leading-relaxed">{item}</span>
+              <span className="text-[0.74rem] text-[var(--text-muted)] leading-[1.7]">{item}</span>
             </motion.div>
           ))}
         </div>

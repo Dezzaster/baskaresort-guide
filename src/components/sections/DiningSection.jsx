@@ -19,7 +19,7 @@ export default function DiningSection() {
       <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('dining.subtitle')}</p>
 
       <Card title={t('dining.mainRestaurant')} delay={0}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed mb-3">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-3">
           {t('dining.mainDesc')}
         </p>
         <div className="space-y-1.5">
@@ -33,7 +33,7 @@ export default function DiningSection() {
       </Card>
 
       <Card title="" delay={1}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed italic">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] italic">
           {t('dining.concept')}
         </p>
       </Card>

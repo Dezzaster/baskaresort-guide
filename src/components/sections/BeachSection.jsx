@@ -4,7 +4,7 @@ import Card from '../Card'
 
 function PoolSplash() {
   return (
-    <div className="relative overflow-hidden rounded-xl bg-gradient-to-b from-[#e8f4fd] to-[#d0ebff] p-5 mb-5">
+    <div className="relative overflow-hidden rounded-xl bg-gradient-to-b from-[#e8f4fd] to-[#d0ebff] p-6 mb-7">
       {/* Left splash */}
       <motion.div
         className="absolute left-0 top-1/2 -translate-y-1/2"
@@ -93,13 +93,13 @@ export default function BeachSection() {
       <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('beach.subtitle')}</p>
 
       <Card icon="🏖️" title={t('beach.title')} delay={0}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('beach.beachDesc')}
         </p>
       </Card>
 
       <Card icon="🛖" title={t('beach.pavilion')} delay={1}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('beach.pavilionDesc')}
         </p>
       </Card>
@@ -108,14 +108,14 @@ export default function BeachSection() {
       <div className="relative">
         <PoolSplash />
         <Card icon="🏊" title={t('beach.pool')} delay={2}>
-          <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+          <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
             {t('beach.poolDesc')}
           </p>
         </Card>
       </div>
 
       <Card icon="🚌" title={t('beach.shuttle')} delay={3}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('beach.shuttleDesc')}
         </p>
       </Card>

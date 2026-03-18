@@ -22,7 +22,7 @@ export default function AlacarteSection() {
 
       {restaurants.map((r, i) => (
         <Card key={r.key} title={t(`alacarte.${r.key}`)} label={r.code} delay={i}>
-          <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed mb-2">
+          <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-2">
             {t(`alacarte.${r.key}Desc`)}
           </p>
           <div className="space-y-1">

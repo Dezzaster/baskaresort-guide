@@ -12,19 +12,19 @@ export default function KidsSection() {
       <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('kids.subtitle')}</p>
 
       <Card title={t('kids.miniClub')} delay={0}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('kids.miniClubDesc')}
         </p>
       </Card>
 
       <Card title={t('kids.babysitting')} delay={1}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('kids.babysittingDesc')}
         </p>
       </Card>
 
       <Card title={t('kids.stroller')} delay={2}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-relaxed">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('kids.strollerDesc')}
         </p>
       </Card>
