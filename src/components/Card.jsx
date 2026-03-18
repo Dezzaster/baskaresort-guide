@@ -7,7 +7,8 @@ export default function Card({ children, icon, title, label, className = '', del
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: delay * 0.1, ease: 'easeOut' }}
       whileHover={{ y: -2 }}
-      className={`bg-white/60 backdrop-blur-sm border border-[rgba(0,51,160,0.06)] rounded-2xl p-9 mb-10 shadow-[var(--shadow)] transition-all duration-300 hover:shadow-[var(--shadow-hover)] ${className}`}
+      style={{ padding: '32px 28px' }}
+      className={`bg-white/60 backdrop-blur-sm border border-[rgba(0,51,160,0.06)] rounded-2xl mb-10 shadow-[var(--shadow)] transition-all duration-300 hover:shadow-[var(--shadow-hover)] ${className}`}
     >
       {(icon || title) && (
         <div className="flex items-center gap-3 mb-4">
