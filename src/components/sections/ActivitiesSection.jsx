@@ -35,7 +35,7 @@ export default function ActivitiesSection() {
         </p>
       </Card>
 
-      <div className="grid grid-cols-3 gap-3 mt-4">
+      <div className="grid grid-cols-2 gap-3 mt-4">
         {[
           { label: t('activities.padel') },
           { label: t('activities.tableTennis') },
@@ -45,9 +45,10 @@ export default function ActivitiesSection() {
         ].map((act, i) => (
           <div
             key={i}
-            className="p-3 rounded-[var(--radius-sm)] bg-[var(--bg-blue)] text-center transition-all duration-300 hover:scale-105 hover:bg-[rgba(0,51,160,0.08)]"
+            style={{ padding: '16px 20px' }}
+            className="rounded-[var(--radius)] bg-[var(--bg-blue)] text-center transition-all duration-300 hover:scale-105 hover:bg-[rgba(0,51,160,0.08)]"
           >
-            <div className="text-[0.72rem] text-[var(--primary)] font-medium">{act.label}</div>
+            <div className="text-[0.8rem] text-[var(--primary)] font-medium">{act.label}</div>
           </div>
         ))}
       </div>
