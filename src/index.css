@@ -52,6 +52,20 @@ body {
   background: repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 14px, #fff 14px, #fff 28px);
 }
 
+/* Content container — proportional responsive centering */
+.content-container {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 8% 56px;
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    padding: 48px 40px 64px;
+  }
+}
+
 /* Elegant section titles */
 h2 {
   letter-spacing: 0.01em;
