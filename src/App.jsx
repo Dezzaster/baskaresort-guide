@@ -54,7 +54,7 @@ function App() {
 
         {/* Decorative thick vertical stripes background */}
         <div className="absolute inset-0" style={{
-          background: 'repeating-linear-gradient(90deg, rgba(245,197,24,0.04) 0px, rgba(245,197,24,0.04) 45px, transparent 45px, transparent 100px)',
+          background: 'repeating-linear-gradient(90deg, rgba(245,197,24,0.04) 0px, rgba(245,197,24,0.04) 45px, transparent 45px, transparent 90px)',
           pointerEvents: 'none'
         }} />
 
