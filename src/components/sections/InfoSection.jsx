@@ -1,19 +1,13 @@
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
 import Card from '../Card'
 import InstagramFeed from '../InstagramFeed'
 
-function InfoRow({ label, value, delay = 0 }) {
+function InfoRow({ label, value }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -10 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.3, delay: delay * 0.05 }}
-      className="flex justify-between items-start py-3.5 px-5 rounded-xl bg-white/50 backdrop-blur-md border border-white/60"
-    >
+    <div className="flex justify-between items-start py-3.5 px-5 rounded-xl bg-white/50 backdrop-blur-md border border-white/60">
       <span className="text-[0.76rem] text-[var(--text-muted)] font-medium">{label}</span>
       <span className="text-[0.76rem] text-[var(--primary)] font-semibold text-right ml-4 max-w-[55%]">{value}</span>
-    </motion.div>
+    </div>
   )
 }
 
@@ -21,10 +15,7 @@ function ContactCard({ delay = 0 }) {
   const { t } = useTranslation()
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: delay * 0.1, ease: 'easeOut' }}
+    <div
       style={{ padding: '32px 28px' }}
       className="bg-white/60 backdrop-blur-sm border border-[rgba(0,51,160,0.06)] rounded-2xl mb-10 shadow-[var(--shadow)]"
     >
@@ -69,7 +60,7 @@ function ContactCard({ delay = 0 }) {
           <span className="text-[0.7rem] font-medium text-[var(--text-dark)]">Email</span>
         </a>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -83,35 +74,35 @@ export default function InfoSection() {
       </h2>
       <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('info.subtitle')}</p>
 
-      <Card title="BAŞKA Resort Bodrum" delay={0}>
+      <Card title="BAŞKA Resort Bodrum" animate={false}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('info.description')}
         </p>
       </Card>
 
       {/* Contact Card */}
-      <ContactCard delay={1} />
+      <ContactCard />
 
-      <Card delay={2}>
+      <Card animate={false}>
         <div className="flex flex-col gap-2.5">
-          <InfoRow label={t('info.checkin')} value="15:00" delay={0} />
-          <InfoRow label={t('info.checkout')} value="12:00" delay={1} />
+          <InfoRow label={t('info.checkin')} value="15:00" />
+          <InfoRow label={t('info.checkout')} value="12:00" />
 
           <div className="h-2" />
-          <InfoRow label={t('info.concept')} value={t('info.conceptVal')} delay={2} />
-          <InfoRow label={t('info.area')} value="57.000 m²" delay={3} />
-          <InfoRow label={t('info.renovation')} value={t('info.renovationVal')} delay={4} />
-          <InfoRow label={t('info.payment')} value={t('info.paymentVal')} delay={5} />
-          <InfoRow label={t('info.currency')} value={t('info.currencyVal')} delay={6} />
-          <InfoRow label={t('info.wifi')} value={t('info.wifiVal')} delay={7} />
-          <InfoRow label={t('info.parking')} value={t('info.parkingVal')} delay={8} />
+          <InfoRow label={t('info.concept')} value={t('info.conceptVal')} />
+          <InfoRow label={t('info.area')} value="57.000 m²" />
+          <InfoRow label={t('info.renovation')} value={t('info.renovationVal')} />
+          <InfoRow label={t('info.payment')} value={t('info.paymentVal')} />
+          <InfoRow label={t('info.currency')} value={t('info.currencyVal')} />
+          <InfoRow label={t('info.wifi')} value={t('info.wifiVal')} />
+          <InfoRow label={t('info.parking')} value={t('info.parkingVal')} />
 
           <div className="h-2" />
-          <InfoRow label={t('info.petFriendly')} value={t('info.petVal')} delay={9} />
+          <InfoRow label={t('info.petFriendly')} value={t('info.petVal')} />
         </div>
       </Card>
 
-      <Card title={t('info.location')} delay={3}>
+      <Card title={t('info.location')} animate={false}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('info.locationVal')}
         </p>

@@ -1,12 +1,18 @@
 import { motion } from 'framer-motion'
 
-export default function Card({ children, icon, title, label, className = '', delay = 0 }) {
+export default function Card({ children, icon, title, label, className = '', delay = 0, animate: shouldAnimate = true }) {
+  const motionProps = shouldAnimate
+    ? {
+        initial: { opacity: 0, y: 24 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.5, delay: delay * 0.1, ease: 'easeOut' },
+        whileHover: { y: -2 },
+      }
+    : {}
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: delay * 0.1, ease: 'easeOut' }}
-      whileHover={{ y: -2 }}
+      {...motionProps}
       style={{ padding: '32px 28px' }}
       className={`bg-white/60 backdrop-blur-sm border border-[rgba(0,51,160,0.06)] rounded-2xl mb-10 shadow-[var(--shadow)] transition-all duration-300 hover:shadow-[var(--shadow-hover)] ${className}`}
     >
