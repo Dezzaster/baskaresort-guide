@@ -46,16 +46,23 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--bg)]">
       {/* Header — full width, centered content */}
-      <header className="relative text-center pt-16 pb-10 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]">
+      <header className="relative text-center pt-16 pb-10 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
+        {/* Top gold stripe */}
         <div className="absolute top-0 left-0 right-0 h-[6px]" style={{
           background: 'repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px)'
         }} />
 
-        <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%' }}>
+        {/* Decorative thick diagonal stripes background */}
+        <div className="absolute inset-0" style={{
+          background: 'repeating-linear-gradient(120deg, rgba(245,197,24,0.04) 0px, rgba(245,197,24,0.04) 18px, transparent 18px, transparent 40px)',
+          pointerEvents: 'none'
+        }} />
+
+        <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%', position: 'relative' }}>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 2, delay: 0.2, ease: 'easeOut' }}
             className="flex justify-center"
           >
             <img
@@ -69,15 +76,16 @@ function App() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-[0.72rem] text-[var(--text-muted)] tracking-[0.3em] uppercase mt-2"
+            className="text-[0.72rem] text-[var(--text-muted)] tracking-[0.3em] uppercase"
+            style={{ marginTop: '-4px' }}
           >
             RESORT — BODRUM
           </motion.p>
 
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
+            initial={{ clipPath: 'inset(0 100% 0 0)' }}
+            animate={{ clipPath: 'inset(0 0% 0 0)' }}
+            transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="font-['Cormorant_Garamond'] text-[1.15rem] text-[var(--primary)] mt-8 italic leading-relaxed"
           >
             {t('hero.tagline')}
@@ -135,9 +143,9 @@ function App() {
           <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%' }}>
             <motion.div
               className="flex justify-center"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 2, ease: 'easeOut' }}
             >
               <img
                 src={`${basePath}logobaska.png`}

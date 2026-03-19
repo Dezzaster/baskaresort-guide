@@ -39,11 +39,17 @@ export default function DiningSection() {
       </Card>
 
       {/* Street Food Section */}
-      <div style={{ marginTop: '64px' }}>
-        <h3 className="font-['Cormorant_Garamond'] font-normal text-xl text-[var(--primary)] mb-2">
-          {t('streetFood.title')}
-        </h3>
-        <p className="text-[0.74rem] text-[var(--text-muted)] mb-4">{t('streetFood.subtitle')}</p>
+      <div style={{ marginTop: '72px' }}>
+        <div className="text-center" style={{ marginBottom: '32px' }}>
+          <div className="flex items-center gap-4 justify-center" style={{ marginBottom: '10px' }}>
+            <div style={{ height: '1px', width: '40px', background: 'rgba(0,51,160,0.12)' }} />
+            <h3 className="font-['Cormorant_Garamond'] font-normal text-xl text-[var(--primary)]">
+              {t('streetFood.title')}
+            </h3>
+            <div style={{ height: '1px', width: '40px', background: 'rgba(0,51,160,0.12)' }} />
+          </div>
+          <p className="text-[0.74rem] text-[var(--text-muted)]">{t('streetFood.subtitle')}</p>
+        </div>
 
         <div className="grid grid-cols-2 gap-3">
           {[
