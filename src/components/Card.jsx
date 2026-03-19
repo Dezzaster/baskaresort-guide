@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion'
 
 export default function Card({ children, icon, title, label, className = '', delay = 0, animate: shouldAnimate = true }) {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
   const motionProps = shouldAnimate
     ? {
-        initial: { opacity: 0, y: 24 },
+        initial: { opacity: 0, y: isMobile ? 12 : 24 },
         animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.5, delay: delay * 0.1, ease: 'easeOut' },
-        whileHover: { y: -2 },
+        transition: { duration: isMobile ? 0.35 : 0.5, delay: delay * 0.08, ease: 'easeOut' },
+        whileHover: isMobile ? {} : { y: -2 },
       }
     : {}
 

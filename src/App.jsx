@@ -52,9 +52,9 @@ function App() {
           background: 'repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px)'
         }} />
 
-        {/* Decorative thick diagonal stripes background */}
+        {/* Decorative thick vertical stripes background */}
         <div className="absolute inset-0" style={{
-          background: 'repeating-linear-gradient(120deg, rgba(245,197,24,0.04) 0px, rgba(245,197,24,0.04) 18px, transparent 18px, transparent 40px)',
+          background: 'repeating-linear-gradient(90deg, rgba(245,197,24,0.04) 0px, rgba(245,197,24,0.04) 45px, transparent 45px, transparent 100px)',
           pointerEvents: 'none'
         }} />
 
@@ -125,10 +125,10 @@ function App() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.4, ease: 'easeOut' }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
           >
             {ActiveComponent && <ActiveComponent />}
           </motion.div>
