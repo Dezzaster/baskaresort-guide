@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import './App.css'
@@ -39,9 +39,27 @@ const sectionComponents = {
 function App() {
   const { t } = useTranslation()
   const [activeSection, setActiveSection] = useState('info')
+  const [videoVisible, setVideoVisible] = useState(false)
+  const videoRef = useRef(null)
 
   const ActiveComponent = sectionComponents[activeSection]
   const basePath = import.meta.env.BASE_URL
+
+  // Start video fade-in after all text animations complete (~2s)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVideoVisible(true)
+      if (videoRef.current) {
+        videoRef.current.play().catch(() => {})
+      }
+    }, 2200)
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Handle video end — fade out
+  const handleVideoEnd = () => {
+    setVideoVisible(false)
+  }
 
   return (
     <div className="min-h-screen bg-[var(--bg)]">
@@ -49,16 +67,38 @@ function App() {
       <header className="relative text-center pt-16 pb-10 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
         {/* Top gold stripe */}
         <div className="absolute top-0 left-0 right-0 h-[6px]" style={{
-          background: 'repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px)'
+          background: 'repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px)',
+          zIndex: 3
         }} />
 
-        {/* Decorative thick vertical stripes background */}
+        {/* Background video — behind stripes */}
+        <video
+          ref={videoRef}
+          src={`${basePath}baskavideo.mp4`}
+          muted
+          playsInline
+          onEnded={handleVideoEnd}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: 0,
+            opacity: videoVisible ? 0.18 : 0,
+            transition: 'opacity 1.5s ease',
+            pointerEvents: 'none',
+          }}
+        />
+
+        {/* Decorative thick vertical stripes background — above video */}
         <div className="absolute inset-0" style={{
           background: 'repeating-linear-gradient(90deg, rgba(245,197,24,0.04) 0px, rgba(245,197,24,0.04) 45px, transparent 45px, transparent 90px)',
-          pointerEvents: 'none'
+          pointerEvents: 'none',
+          zIndex: 1
         }} />
 
-        <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%', position: 'relative' }}>
+        <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%', position: 'relative', zIndex: 2 }}>
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
