@@ -54,7 +54,7 @@ export default function MapSection() {
         style={{ marginBottom: '20px' }}
       >
         <img
-          src={`${basePath}baskamap.png`}
+          src={`${basePath}BaşkaMap.png`}
           alt="BAŞKA Resort Bodrum — Resort Map"
           className="w-full h-auto"
           style={{ display: 'block' }}
