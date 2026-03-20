@@ -267,7 +267,8 @@
   },
   "map": {
     "title": "Resort Map",
-    "subtitle": "Coming soon"
+    "subtitle": "Explore the resort grounds",
+    "legend": "Map Legend"
   },
   "important": {
     "title": "Important Information",
