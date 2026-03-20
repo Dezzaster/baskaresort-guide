@@ -266,8 +266,9 @@
     "floristDesc": "Fleurs fraîches & compositions, 09:00–22:00"
   },
   "map": {
-    "title": "Plan du complexe",
-    "subtitle": "Bientôt disponible"
+    "title": "Plan du Resort",
+    "subtitle": "Découvrez le complexe",
+    "legend": "Légende de la carte"
   },
   "important": {
     "title": "Informations importantes",

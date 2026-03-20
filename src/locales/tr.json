@@ -267,7 +267,8 @@
   },
   "map": {
     "title": "Tesis Haritası",
-    "subtitle": "Yakında"
+    "subtitle": "Tesisi keşfedin",
+    "legend": "Harita Lejandı"
   },
   "important": {
     "title": "Önemli Bilgiler",

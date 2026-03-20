@@ -266,8 +266,9 @@
     "floristDesc": "Frische Blumen & Arrangements, 09:00–22:00"
   },
   "map": {
-    "title": "Lageplan der Anlage",
-    "subtitle": "Demnächst"
+    "title": "Resort-Karte",
+    "subtitle": "Erkunden Sie das Resort",
+    "legend": "Kartenlegende"
   },
   "important": {
     "title": "Wichtige Informationen",
