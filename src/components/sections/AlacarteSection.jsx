@@ -6,8 +6,7 @@ const restaurants = [
   { key: 'teppanyaki', code: 'A-2' },
   { key: 'italian', code: 'A-3' },
   { key: 'theme', code: 'A-4' },
-  { key: 'gulet', code: 'A-5' },
-  { key: 'bistro', code: 'A-6' }
+  { key: 'bistro', code: 'A-5' }
 ]
 
 export default function AlacarteSection() {
