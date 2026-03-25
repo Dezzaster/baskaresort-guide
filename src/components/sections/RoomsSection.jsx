@@ -2,8 +2,8 @@ import { useTranslation } from 'react-i18next'
 import Card from '../Card'
 
 const rooms = [
-  { key: 'ege', size: '20–30 m²', beds: '1 Single' },
-  { key: 'begonvil', size: '20–24 m²', beds: '1 Single' },
+  { key: 'ege', size: '20–30 m²', beds: '1 French / 2 Single' },
+  { key: 'begonvil', size: '20–24 m²', beds: '1 French / 2 Single' },
   { key: 'egeFamily', size: '36–42 m²', beds: '1 French + 2 Single' },
   { key: 'egeClub', size: '19–30 m²', beds: '1 French / 2 Single' },
   { key: 'egeBegonvil', size: '19–22 m²', beds: '1 French / 2 Single' },
