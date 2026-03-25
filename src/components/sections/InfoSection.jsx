@@ -44,7 +44,7 @@ function ContactCard({ delay = 0 }) {
           <span className="text-[0.65rem] font-medium text-[var(--text-dark)]">+90 252 275 05 50</span>
         </a>
         <a
-          href="https://wa.me/902522750550"
+          href="https://wa.me/905307387764"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"
