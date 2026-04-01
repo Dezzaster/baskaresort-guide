@@ -29,51 +29,56 @@ export default function LanguageSelector() {
       whileTap={{ scale: 0.92 }}
       transition={{ type: 'spring', stiffness: 400, damping: 20 }}
       className={`
-        rounded-full text-[0.72rem] font-medium cursor-pointer border-2 transition-all duration-300
+        rounded-full text-[0.7rem] font-medium cursor-pointer border-2 transition-all duration-300 flex-1 min-w-0
         ${isActive(lang.code)
           ? 'border-[var(--primary)] bg-[var(--primary)] text-white shadow-[0_2px_12px_rgba(0,51,160,0.35)]'
           : 'border-[var(--primary)] bg-[var(--primary)] text-white/90 hover:shadow-[0_2px_12px_rgba(0,51,160,0.25)]'
         }
       `}
-      style={{ padding: '8px 20px', minWidth: '80px' }}
+      style={{ padding: '8px 4px' }}
     >
       {lang.label}
     </motion.button>
   )
 
   return (
-    <div className="flex flex-col items-center gap-3 px-4">
-      <div className="flex justify-center gap-2.5 flex-wrap">
-        {primaryLanguages.map((lang) => (
-          <LangButton key={lang.code} lang={lang} />
-        ))}
-      </div>
+    <div className="flex flex-col items-center gap-3">
+      {/* Blue background panel behind buttons */}
+      <div className="w-full rounded-2xl bg-[var(--bg-blue)] border border-[var(--card-border)] p-3">
+        <div className="grid grid-cols-4 gap-2">
+          {primaryLanguages.map((lang) => (
+            <LangButton key={lang.code} lang={lang} />
+          ))}
+        </div>
 
-      {!showMore && (
-        <button
-          onClick={() => setShowMore(true)}
-          className="text-[0.68rem] text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors duration-300 flex items-center gap-1"
-        >
-          <span>+4</span>
-          <span className="opacity-60">more languages</span>
-        </button>
-      )}
-
-      <AnimatePresence>
-        {showMore && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="flex justify-center gap-2.5 flex-wrap overflow-hidden"
+        {!showMore && (
+          <button
+            onClick={() => setShowMore(true)}
+            className="w-full text-[0.68rem] text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors duration-300 flex items-center justify-center gap-1 mt-2.5"
           >
-            {secondaryLanguages.map((lang) => (
-              <LangButton key={lang.code} lang={lang} />
-            ))}
-          </motion.div>
+            <span>+4</span>
+            <span className="opacity-60">more languages</span>
+          </button>
         )}
-      </AnimatePresence>
+
+        <AnimatePresence>
+          {showMore && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden mt-2"
+            >
+              <div className="grid grid-cols-4 gap-2">
+                {secondaryLanguages.map((lang) => (
+                  <LangButton key={lang.code} lang={lang} />
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   )
 }
