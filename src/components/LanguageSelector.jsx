@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 const primaryLanguages = [
   { code: 'en', label: 'English' },
   { code: 'tr', label: 'Türkçe' },
-  { code: 'ru', label: 'Русский' },
-  { code: 'de', label: 'Deutsch' }
+  { code: 'de', label: 'Deutsch' },
+  { code: 'fr', label: 'Français' }
 ]
 
 const secondaryLanguages = [
-  { code: 'fr', label: 'Français' },
+  { code: 'ru', label: 'Русский' },
   { code: 'ar', label: 'العربية' },
   { code: 'pl', label: 'Polski' },
   { code: 'nl', label: 'Nederlands' }
@@ -24,20 +24,21 @@ export default function LanguageSelector() {
     i18n.language === code || i18n.language.startsWith(code)
 
   const LangButton = ({ lang }) => (
-    <button
+    <motion.button
       onClick={() => i18n.changeLanguage(lang.code)}
-      style={{ padding: '8px 18px' }}
+      whileTap={{ scale: 0.92 }}
+      transition={{ type: 'spring', stiffness: 400, damping: 20 }}
       className={`
-        rounded-full text-[0.72rem]
-        font-medium transition-all duration-300 cursor-pointer border
+        rounded-full text-[0.72rem] font-medium cursor-pointer border-2 transition-all duration-300
         ${isActive(lang.code)
-          ? 'border-[var(--primary)] text-[var(--primary)] bg-[var(--bg-blue)] scale-105 shadow-sm'
-          : 'border-[var(--card-border)] text-[var(--text-muted)] bg-transparent hover:border-[var(--primary)] hover:text-[var(--primary)]'
+          ? 'border-[var(--primary)] bg-[var(--primary)] text-white shadow-[0_2px_12px_rgba(0,51,160,0.35)]'
+          : 'border-[var(--primary)] bg-[var(--primary)] text-white/90 hover:shadow-[0_2px_12px_rgba(0,51,160,0.25)]'
         }
       `}
+      style={{ padding: '8px 20px', minWidth: '80px' }}
     >
       {lang.label}
-    </button>
+    </motion.button>
   )
 
   return (

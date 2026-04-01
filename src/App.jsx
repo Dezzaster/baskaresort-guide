@@ -36,14 +36,27 @@ const sectionComponents = {
   important: ImportantSection
 }
 
+// Tagline font per language group
+const taglineFontMap = {
+  en: "'Dancing Script'", de: "'Dancing Script'", fr: "'Dancing Script'", pl: "'Dancing Script'", nl: "'Dancing Script'",
+  tr: "'Caveat'", ru: "'Caveat'",
+  ar: "'Aref Ruqaa'"
+}
+
+function getTaglineFont(lang) {
+  const base = lang?.split('-')[0] || 'en'
+  return taglineFontMap[base] || taglineFontMap.en
+}
+
 function App() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [activeSection, setActiveSection] = useState('info')
   const [videoVisible, setVideoVisible] = useState(false)
   const videoRef = useRef(null)
 
   const ActiveComponent = sectionComponents[activeSection]
   const basePath = import.meta.env.BASE_URL
+  const taglineFont = getTaglineFont(i18n.language)
 
   // Start video fade-in after all text animations complete (~2s)
   useEffect(() => {
@@ -65,11 +78,6 @@ function App() {
     <div className="min-h-screen bg-[var(--bg)]">
       {/* Header — full width, centered content */}
       <header className="relative text-center pt-16 pb-10 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
-        {/* Top gold stripe */}
-        <div className="absolute top-0 left-0 right-0 h-[6px]" style={{
-          background: 'repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 12px, #fff 12px, #fff 24px)',
-          zIndex: 3
-        }} />
 
         {/* Background video — behind stripes */}
         <video
@@ -91,9 +99,9 @@ function App() {
           }}
         />
 
-        {/* Decorative thick vertical stripes background — above video */}
+        {/* Saturated vertical stripes background */}
         <div className="absolute inset-0" style={{
-          background: 'repeating-linear-gradient(90deg, rgba(245,197,24,0.04) 0px, rgba(245,197,24,0.04) 45px, transparent 45px, transparent 90px)',
+          background: 'repeating-linear-gradient(90deg, rgba(245,197,24,0.18) 0px, rgba(245,197,24,0.18) 45px, transparent 45px, transparent 90px)',
           pointerEvents: 'none',
           zIndex: 1
         }} />
@@ -113,20 +121,11 @@ function App() {
           </motion.div>
 
           <motion.p
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-            className="text-[0.72rem] text-[var(--text-muted)] tracking-[0.3em] uppercase"
-            style={{ marginTop: '-4px' }}
-          >
-            RESORT — BODRUM
-          </motion.p>
-
-          <motion.p
             initial={{ clipPath: 'inset(0 100% 0 0)' }}
             animate={{ clipPath: 'inset(0 0% 0 0)' }}
             transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="font-['Cormorant_Garamond'] text-[1.15rem] text-[var(--primary)] mt-8 italic leading-relaxed"
+            className="text-[1.35rem] text-[var(--primary)] mt-6 italic leading-relaxed"
+            style={{ fontFamily: taglineFont }}
           >
             {t('hero.tagline')}
           </motion.p>
@@ -178,7 +177,7 @@ function App() {
       {/* Footer — full width, centered content */}
       <footer className="mt-10">
         <div className="h-16 bg-gradient-to-b from-[var(--bg)] to-[#FFF5E0]" />
-        <div className="stripe-bar-thick" />
+        <div className="stripe-bar-footer" />
         <div className="bg-[var(--primary)] text-white py-16 text-center">
           <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%' }}>
             <motion.div
@@ -189,14 +188,12 @@ function App() {
             >
               <img
                 src={`${basePath}logobaska.png`}
-                alt="BAŞKA"
+                alt="BAŞKA Resort Bodrum"
                 className="h-24 w-auto brightness-0 invert"
               />
             </motion.div>
-            <p className="text-[0.72rem] tracking-[0.25em] uppercase mt-5 opacity-50">
-              RESORT — BODRUM
-            </p>
-            <p className="font-['Cormorant_Garamond'] text-lg italic mt-6 opacity-70">
+
+            <p className="italic mt-6 opacity-70" style={{ fontFamily: taglineFont, fontSize: '1.15rem' }}>
               {t('footer.tagline')}
             </p>
 
@@ -209,7 +206,7 @@ function App() {
               www.baskaresort.com
             </a>
 
-            <p className="text-[0.65rem] opacity-30 mt-10">
+            <p className="text-[0.65rem] mt-10" style={{ color: 'var(--gold-light)', opacity: 0.85 }}>
               © {new Date().getFullYear()} BAŞKA Resort Bodrum. {t('footer.rights')}
             </p>
           </div>

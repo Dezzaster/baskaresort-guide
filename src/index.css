@@ -52,6 +52,11 @@ body {
   background: repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 14px, #fff 14px, #fff 28px);
 }
 
+.stripe-bar-footer {
+  height: 12px;
+  background: repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 18px, #fff 18px, #fff 36px);
+}
+
 /* Content container — proportional responsive centering */
 .content-container {
   max-width: 580px;
