@@ -38,7 +38,7 @@ const sectionComponents = {
 
 // Tagline font per language group
 const taglineFontMap = {
-  en: "'Dancing Script'", de: "'Dancing Script'", fr: "'Dancing Script'", pl: "'Dancing Script'", nl: "'Dancing Script'",
+  en: "'Californian Signature', 'Dancing Script'", de: "'Californian Signature', 'Dancing Script'", fr: "'Californian Signature', 'Dancing Script'", pl: "'Californian Signature', 'Dancing Script'", nl: "'Californian Signature', 'Dancing Script'",
   tr: "'Caveat'", ru: "'Caveat'",
   ar: "'Aref Ruqaa'"
 }
@@ -52,21 +52,23 @@ function App() {
   const { t, i18n } = useTranslation()
   const [activeSection, setActiveSection] = useState('info')
   const [videoVisible, setVideoVisible] = useState(false)
+  const [stripesReady, setStripesReady] = useState(false)
   const videoRef = useRef(null)
 
   const ActiveComponent = sectionComponents[activeSection]
   const basePath = import.meta.env.BASE_URL
   const taglineFont = getTaglineFont(i18n.language)
 
-  // Start video fade-in after all text animations complete (~2s)
+  // After animations complete, make stripes vivid
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const stripeTimer = setTimeout(() => setStripesReady(true), 2800)
+    const videoTimer = setTimeout(() => {
       setVideoVisible(true)
       if (videoRef.current) {
         videoRef.current.play().catch(() => {})
       }
     }, 2200)
-    return () => clearTimeout(timer)
+    return () => { clearTimeout(stripeTimer); clearTimeout(videoTimer) }
   }, [])
 
   // Handle video end — fade out
@@ -77,7 +79,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--bg)]">
       {/* Header — full width, centered content */}
-      <header className="relative text-center pt-16 pb-10 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
+      <header className="relative text-center pt-14 pb-10 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
 
         {/* Background video — behind stripes */}
         <video
@@ -99,11 +101,13 @@ function App() {
           }}
         />
 
-        {/* Saturated vertical stripes background */}
+        {/* Vertical stripes — animate from subtle to vivid after intro */}
         <div className="absolute inset-0" style={{
-          background: 'repeating-linear-gradient(90deg, rgba(245,197,24,0.18) 0px, rgba(245,197,24,0.18) 45px, transparent 45px, transparent 90px)',
+          background: `repeating-linear-gradient(90deg, rgba(245,197,24,${stripesReady ? 0.45 : 0.08}) 0px, rgba(245,197,24,${stripesReady ? 0.45 : 0.08}) 42px, transparent 42px, transparent 84px)`,
+          backgroundPositionX: '50%',
           pointerEvents: 'none',
-          zIndex: 1
+          zIndex: 1,
+          transition: 'background 1.5s ease'
         }} />
 
         <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%', position: 'relative', zIndex: 2 }}>
@@ -114,9 +118,9 @@ function App() {
             className="flex justify-center"
           >
             <img
-              src={`${basePath}logobaska.png`}
+              src={`${basePath}BASKA RESORT-LOGO.png`}
               alt="BAŞKA Resort Bodrum"
-              className="h-36 w-auto object-contain"
+              className="h-40 w-auto object-contain"
             />
           </motion.div>
 
@@ -124,7 +128,7 @@ function App() {
             initial={{ clipPath: 'inset(0 100% 0 0)' }}
             animate={{ clipPath: 'inset(0 0% 0 0)' }}
             transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[1.35rem] text-[var(--primary)] mt-6 italic leading-relaxed"
+            className="text-[1.4rem] text-[var(--primary)] mt-5 leading-relaxed"
             style={{ fontFamily: taglineFont }}
           >
             {t('hero.tagline')}
@@ -187,9 +191,9 @@ function App() {
               transition={{ duration: 2, ease: 'easeOut' }}
             >
               <img
-                src={`${basePath}logobaska.png`}
+                src={`${basePath}BASKA RESORT-LOGO.png`}
                 alt="BAŞKA Resort Bodrum"
-                className="h-24 w-auto brightness-0 invert"
+                className="h-28 w-auto brightness-0 invert"
               />
             </motion.div>
 
