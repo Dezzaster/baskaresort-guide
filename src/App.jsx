@@ -101,13 +101,14 @@ function App() {
           }}
         />
 
-        {/* Vertical stripes — animate from subtle to vivid after intro */}
+        {/* Solid vertical stripes — centered so tree sits on white band, fade in smoothly */}
         <div className="absolute inset-0" style={{
-          background: `repeating-linear-gradient(90deg, rgba(245,197,24,${stripesReady ? 0.45 : 0.08}) 0px, rgba(245,197,24,${stripesReady ? 0.45 : 0.08}) 42px, transparent 42px, transparent 84px)`,
-          backgroundPositionX: '50%',
+          background: 'repeating-linear-gradient(90deg, rgba(245,197,24,0.82) 0px, rgba(245,197,24,0.82) 52px, transparent 52px, transparent 104px)',
+          backgroundPositionX: 'calc(50% + 26px)',
           pointerEvents: 'none',
           zIndex: 1,
-          transition: 'background 1.5s ease'
+          opacity: stripesReady ? 1 : 0,
+          transition: 'opacity 2s ease'
         }} />
 
         <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%', position: 'relative', zIndex: 2 }}>
@@ -138,7 +139,8 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.1 }}
-            className="text-[0.78rem] text-[var(--text-muted)] tracking-[0.35em] uppercase mt-8"
+            className="text-[0.72rem] text-[var(--text-muted)] tracking-[0.25em] uppercase mt-6 whitespace-nowrap"
+            style={{ fontFamily: 'var(--font-sans)' }}
           >
             {t('hero.subtitle')}
           </motion.p>
@@ -182,7 +184,7 @@ function App() {
       <footer className="mt-10">
         <div className="h-16 bg-gradient-to-b from-[var(--bg)] to-[#FFF5E0]" />
         <div className="stripe-bar-footer" />
-        <div className="bg-[var(--primary)] text-white py-16 text-center">
+        <div className="bg-[var(--primary)] text-white pt-20 pb-12 text-center">
           <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%' }}>
             <motion.div
               className="flex justify-center"
@@ -193,11 +195,11 @@ function App() {
               <img
                 src={`${basePath}BASKA RESORT-LOGO.png`}
                 alt="BAŞKA Resort Bodrum"
-                className="h-28 w-auto brightness-0 invert"
+                className="h-32 w-auto brightness-0 invert"
               />
             </motion.div>
 
-            <p className="italic mt-6 opacity-70" style={{ fontFamily: taglineFont, fontSize: '1.15rem' }}>
+            <p className="italic mt-8 opacity-70" style={{ fontFamily: taglineFont, fontSize: '1.2rem' }}>
               {t('footer.tagline')}
             </p>
 
@@ -205,12 +207,12 @@ function App() {
               href="https://www.baskaresort.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-8 px-7 py-2.5 rounded-full border border-white/30 text-[0.74rem] tracking-wider uppercase text-white/80 hover:bg-white/10 transition-all duration-300"
+              className="inline-block mt-10 px-7 py-2.5 rounded-full border border-white/30 text-[0.74rem] tracking-wider uppercase text-white/80 hover:bg-white/10 transition-all duration-300"
             >
               www.baskaresort.com
             </a>
 
-            <p className="text-[0.65rem] mt-10" style={{ color: 'var(--gold-light)', opacity: 0.85 }}>
+            <p className="text-[0.68rem] mt-12" style={{ color: 'var(--gold-light)', opacity: 0.85 }}>
               © {new Date().getFullYear()} BAŞKA Resort Bodrum. {t('footer.rights')}
             </p>
           </div>
