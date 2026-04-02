@@ -104,7 +104,7 @@ function App() {
         {/* Solid vertical stripes — white band centered on tree */}
         <div className="absolute inset-0" style={{
           background: 'repeating-linear-gradient(90deg, transparent 0px, transparent 52px, rgba(245,197,24,0.82) 52px, rgba(245,197,24,0.82) 104px)',
-          backgroundPositionX: 'calc(50% - 34px)',
+          backgroundPositionX: 'calc(50% - 20px)',
           pointerEvents: 'none',
           zIndex: 1,
           opacity: stripesReady ? 1 : 0,
