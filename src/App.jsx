@@ -79,7 +79,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--bg)]">
       {/* Header — full width, centered content */}
-      <header className="relative text-center pt-16 pb-12 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
+      <header className="relative text-center pt-10 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
 
         {/* Background video — behind stripes */}
         <video
@@ -101,17 +101,18 @@ function App() {
           }}
         />
 
-        {/* Solid vertical stripes — white band centered on tree */}
+        {/* Solid vertical stripes — white band centered on viewport center */}
         <div className="absolute inset-0" style={{
           background: 'repeating-linear-gradient(90deg, transparent 0px, transparent 52px, rgba(245,197,24,0.82) 52px, rgba(245,197,24,0.82) 104px)',
-          backgroundPositionX: 'calc(50% - 20px)',
+          backgroundPositionX: 'calc(50% - 26px)',
           pointerEvents: 'none',
           zIndex: 1,
           opacity: stripesReady ? 1 : 0,
           transition: 'opacity 2s ease'
         }} />
 
-        <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%', position: 'relative', zIndex: 2 }}>
+        {/* Content — above stripes */}
+        <div className="header-content" style={{ position: 'relative', zIndex: 2 }}>
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -121,7 +122,7 @@ function App() {
             <img
               src={`${basePath}BASKA RESORT-LOGO.png`}
               alt="BAŞKA Resort Bodrum"
-              className="h-44 w-auto object-contain"
+              className="header-logo"
             />
           </motion.div>
 
@@ -129,12 +130,13 @@ function App() {
             initial={{ clipPath: 'inset(0 100% 0 0)' }}
             animate={{ clipPath: 'inset(0 0% 0 0)' }}
             transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[var(--primary)] mt-5 text-center"
+            className="text-[var(--primary)] mt-3 text-center"
+            style={{ position: 'relative', zIndex: 3 }}
           >
-            <p className="text-[1.4rem] leading-relaxed" style={{ fontFamily: taglineFont }}>
+            <p className="header-tagline" style={{ fontFamily: taglineFont }}>
               {t('hero.tagline').split('...')[0]}...
             </p>
-            <p className="text-[0.8rem] tracking-[0.15em] uppercase mt-1" style={{ fontFamily: 'var(--font-sans)' }}>
+            <p className="header-motto">
               {t('hero.tagline').split('...').slice(1).join('...').trim()}
             </p>
           </motion.div>
@@ -145,12 +147,12 @@ function App() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.3 }}
-          className="relative mt-6"
+          className="relative mt-4"
           style={{ zIndex: 2 }}
         >
-          <div className="bg-[var(--primary)] pt-5 pb-5 px-4" style={{ marginLeft: 0, marginRight: 0 }}>
-            <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 4%' }}>
-              <p className="text-[0.7rem] text-white/60 tracking-[0.3em] uppercase mb-4 text-center">
+          <div className="bg-[var(--primary)] pt-4 pb-6">
+            <div className="header-content">
+              <p className="text-[0.7rem] text-white/60 tracking-[0.3em] uppercase mb-3 text-center">
                 {t('hero.subtitle')}
               </p>
               <LanguageSelector />
@@ -188,7 +190,7 @@ function App() {
         <div className="h-16 bg-gradient-to-b from-[var(--bg)] to-[#FFF5E0]" />
         <div className="stripe-bar-footer" />
         <div className="bg-[var(--primary)] text-white pt-20 pb-12 text-center">
-          <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 8%' }}>
+          <div className="header-content">
             <motion.div
               className="flex justify-center"
               initial={{ opacity: 0, scale: 0.95 }}

@@ -65,6 +65,32 @@ body {
   background: repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 18px, #fff 18px, #fff 36px);
 }
 
+/* Header content — responsive centering */
+.header-content {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 0 6%;
+}
+
+.header-logo {
+  height: 10rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-tagline {
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+
+.header-motto {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 2px;
+  font-family: var(--font-sans);
+}
+
 /* Content container — proportional responsive centering */
 .content-container {
   max-width: 580px;
@@ -84,6 +110,24 @@ body {
 }
 
 @media (min-width: 768px) {
+  .header-content {
+    max-width: 600px;
+    padding: 0 40px;
+  }
+
+  .header-logo {
+    height: 14rem;
+  }
+
+  .header-tagline {
+    font-size: 1.8rem;
+  }
+
+  .header-motto {
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+
   .content-container {
     max-width: 680px;
     padding: 48px 40px 64px;
