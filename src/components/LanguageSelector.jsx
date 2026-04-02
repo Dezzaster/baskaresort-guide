@@ -67,7 +67,7 @@ export default function LanguageSelector() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="overflow-hidden mt-3"
+            className="overflow-hidden mt-4 pt-1"
           >
             <div className="grid grid-cols-4 gap-2.5">
               {secondaryLanguages.map((lang) => (
