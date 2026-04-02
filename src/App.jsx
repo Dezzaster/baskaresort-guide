@@ -39,7 +39,7 @@ const sectionComponents = {
 // Tagline font per language group
 const taglineFontMap = {
   en: "'Californian Signature', 'Dancing Script'", de: "'Californian Signature', 'Dancing Script'", fr: "'Californian Signature', 'Dancing Script'", pl: "'Californian Signature', 'Dancing Script'", nl: "'Californian Signature', 'Dancing Script'",
-  tr: "'Caveat'", ru: "'Caveat'",
+  tr: "'Californian Signature', 'Caveat'", ru: "'Caveat'",
   ar: "'Aref Ruqaa'"
 }
 
@@ -104,7 +104,7 @@ function App() {
         {/* Solid vertical stripes — centered so tree sits on white band, fade in smoothly */}
         <div className="absolute inset-0" style={{
           background: 'repeating-linear-gradient(90deg, rgba(245,197,24,0.82) 0px, rgba(245,197,24,0.82) 52px, transparent 52px, transparent 104px)',
-          backgroundPositionX: 'calc(50% + 26px)',
+          backgroundPositionX: 'calc(50% + 38px)',
           pointerEvents: 'none',
           zIndex: 1,
           opacity: stripesReady ? 1 : 0,
@@ -134,26 +134,25 @@ function App() {
           >
             {t('hero.tagline')}
           </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1.1 }}
-            className="text-[0.72rem] text-[var(--text-muted)] tracking-[0.25em] uppercase mt-6 whitespace-nowrap"
-            style={{ fontFamily: 'var(--font-sans)' }}
-          >
-            {t('hero.subtitle')}
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.3 }}
-            className="mt-10"
-          >
-            <LanguageSelector />
-          </motion.div>
         </div>
+
+        {/* Blue language section — includes subtitle */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.3 }}
+          className="relative mt-6"
+          style={{ zIndex: 2 }}
+        >
+          <div className="bg-[var(--primary)] pt-5 pb-5 px-4" style={{ marginLeft: 0, marginRight: 0 }}>
+            <div style={{ maxWidth: '480px', margin: '0 auto', padding: '0 4%' }}>
+              <p className="text-[0.7rem] text-white/60 tracking-[0.3em] uppercase mb-4 text-center">
+                {t('hero.subtitle')}
+              </p>
+              <LanguageSelector />
+            </div>
+          </div>
+        </motion.div>
       </header>
 
       {/* Yellow stripe — full width */}
