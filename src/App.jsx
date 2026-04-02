@@ -79,7 +79,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--bg)]">
       {/* Header — full width, centered content */}
-      <header className="relative text-center pt-14 pb-10 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
+      <header className="relative text-center pt-16 pb-12 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
 
         {/* Background video — behind stripes */}
         <video
@@ -104,7 +104,7 @@ function App() {
         {/* Solid vertical stripes — white band centered on tree */}
         <div className="absolute inset-0" style={{
           background: 'repeating-linear-gradient(90deg, transparent 0px, transparent 52px, rgba(245,197,24,0.82) 52px, rgba(245,197,24,0.82) 104px)',
-          backgroundPositionX: 'calc(50% - 26px)',
+          backgroundPositionX: 'calc(50% - 34px)',
           pointerEvents: 'none',
           zIndex: 1,
           opacity: stripesReady ? 1 : 0,
@@ -121,7 +121,7 @@ function App() {
             <img
               src={`${basePath}BASKA RESORT-LOGO.png`}
               alt="BAŞKA Resort Bodrum"
-              className="h-40 w-auto object-contain"
+              className="h-44 w-auto object-contain"
             />
           </motion.div>
 
