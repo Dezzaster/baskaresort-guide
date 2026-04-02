@@ -59,7 +59,6 @@ function App() {
   const basePath = import.meta.env.BASE_URL
   const taglineFont = getTaglineFont(i18n.language)
 
-  // After animations complete, make stripes vivid
   useEffect(() => {
     const stripeTimer = setTimeout(() => setStripesReady(true), 2800)
     const videoTimer = setTimeout(() => {
@@ -71,17 +70,16 @@ function App() {
     return () => { clearTimeout(stripeTimer); clearTimeout(videoTimer) }
   }, [])
 
-  // Handle video end — fade out
   const handleVideoEnd = () => {
     setVideoVisible(false)
   }
 
   return (
     <div className="min-h-screen bg-[var(--bg)]">
-      {/* Header — full width, centered content */}
+      {/* Header */}
       <header className="relative text-center pt-10 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
 
-        {/* Background video — behind stripes */}
+        {/* Background video */}
         <video
           ref={videoRef}
           src={`${basePath}baskavideo.mp4`}
@@ -101,18 +99,14 @@ function App() {
           }}
         />
 
-        {/* Solid vertical stripes — white band centered on viewport center */}
-        <div className="absolute inset-0" style={{
-          background: 'repeating-linear-gradient(90deg, transparent 0px, transparent 52px, rgba(245,197,24,0.82) 52px, rgba(245,197,24,0.82) 104px)',
-          backgroundPositionX: 'calc(50% - 26px)',
-          pointerEvents: 'none',
-          zIndex: 1,
-          opacity: stripesReady ? 1 : 0,
-          transition: 'opacity 2s ease'
-        }} />
+        {/* Vertical stripes — vw-based, always centered */}
+        <div
+          className="header-stripes"
+          style={{ opacity: stripesReady ? 1 : 0 }}
+        />
 
-        {/* Content — above stripes */}
-        <div className="header-content" style={{ position: 'relative', zIndex: 2 }}>
+        {/* Content above stripes */}
+        <div className="header-inner">
           <motion.div
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -130,7 +124,7 @@ function App() {
             initial={{ clipPath: 'inset(0 100% 0 0)' }}
             animate={{ clipPath: 'inset(0 0% 0 0)' }}
             transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[var(--primary)] mt-3 text-center"
+            className="text-[var(--primary)] mt-2 text-center"
             style={{ position: 'relative', zIndex: 3 }}
           >
             <p className="header-tagline" style={{ fontFamily: taglineFont }}>
@@ -142,17 +136,17 @@ function App() {
           </motion.div>
         </div>
 
-        {/* Blue language section — includes subtitle */}
+        {/* Blue language section — full width edge to edge */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.3 }}
-          className="relative mt-4"
+          className="relative mt-4 w-full"
           style={{ zIndex: 2 }}
         >
-          <div className="bg-[var(--primary)] pt-4 pb-6">
-            <div className="header-content">
-              <p className="text-[0.7rem] text-white/60 tracking-[0.3em] uppercase mb-3 text-center">
+          <div className="bg-[var(--primary)] w-full pt-4 pb-5">
+            <div className="header-inner">
+              <p className="text-[0.68rem] text-white/55 tracking-[0.3em] uppercase mb-3 text-center">
                 {t('hero.subtitle')}
               </p>
               <LanguageSelector />
@@ -161,16 +155,14 @@ function App() {
         </motion.div>
       </header>
 
-      {/* Yellow stripe — full width */}
+      {/* Yellow stripe */}
       <div className="stripe-bar" />
-
-      {/* Spacer */}
       <div className="h-3" />
 
-      {/* Sticky Navigation — full width, centered */}
+      {/* Navigation */}
       <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
 
-      {/* Content — centered with proportional side padding */}
+      {/* Content */}
       <main className="content-container" style={{ background: 'linear-gradient(180deg, var(--bg) 0%, #FFF8EC 30%, #FFF8EC 70%, var(--bg) 100%)' }}>
         <AnimatePresence mode="wait">
           <motion.div
@@ -185,12 +177,12 @@ function App() {
         </AnimatePresence>
       </main>
 
-      {/* Footer — full width, centered content */}
+      {/* Footer */}
       <footer className="mt-10">
         <div className="h-16 bg-gradient-to-b from-[var(--bg)] to-[#FFF5E0]" />
         <div className="stripe-bar-footer" />
         <div className="bg-[var(--primary)] text-white pt-20 pb-12 text-center">
-          <div className="header-content">
+          <div className="header-inner">
             <motion.div
               className="flex justify-center"
               initial={{ opacity: 0, scale: 0.95 }}
