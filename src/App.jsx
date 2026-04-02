@@ -101,10 +101,10 @@ function App() {
           }}
         />
 
-        {/* Solid vertical stripes — centered so tree sits on white band, fade in smoothly */}
+        {/* Solid vertical stripes — white band centered on tree */}
         <div className="absolute inset-0" style={{
-          background: 'repeating-linear-gradient(90deg, rgba(245,197,24,0.82) 0px, rgba(245,197,24,0.82) 52px, transparent 52px, transparent 104px)',
-          backgroundPositionX: 'calc(50% + 38px)',
+          background: 'repeating-linear-gradient(90deg, transparent 0px, transparent 52px, rgba(245,197,24,0.82) 52px, rgba(245,197,24,0.82) 104px)',
+          backgroundPositionX: 'calc(50% - 26px)',
           pointerEvents: 'none',
           zIndex: 1,
           opacity: stripesReady ? 1 : 0,
@@ -125,15 +125,19 @@ function App() {
             />
           </motion.div>
 
-          <motion.p
+          <motion.div
             initial={{ clipPath: 'inset(0 100% 0 0)' }}
             animate={{ clipPath: 'inset(0 0% 0 0)' }}
             transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[1.4rem] text-[var(--primary)] mt-5 leading-relaxed"
-            style={{ fontFamily: taglineFont }}
+            className="text-[var(--primary)] mt-5 text-center"
           >
-            {t('hero.tagline')}
-          </motion.p>
+            <p className="text-[1.4rem] leading-relaxed" style={{ fontFamily: taglineFont }}>
+              {t('hero.tagline').split('...')[0]}...
+            </p>
+            <p className="text-[0.8rem] tracking-[0.15em] uppercase mt-1" style={{ fontFamily: 'var(--font-sans)' }}>
+              {t('hero.tagline').split('...').slice(1).join('...').trim()}
+            </p>
+          </motion.div>
         </div>
 
         {/* Blue language section — includes subtitle */}
