@@ -93,7 +93,7 @@ export default function LanguageSelector() {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <div className="h-2" />
+            <div className="h-1.5" />
             <div className="grid grid-cols-4 gap-2.5">
               {secondaryLanguages.map((lang) => (
                 <LangButton key={lang.code} lang={lang} />
