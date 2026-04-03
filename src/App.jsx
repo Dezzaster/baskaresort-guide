@@ -54,6 +54,7 @@ function App() {
   const [videoVisible, setVideoVisible] = useState(false)
   const [stripesReady, setStripesReady] = useState(false)
   const [stripeStyle, setStripeStyle] = useState({})
+  const [stripeFaded, setStripeFaded] = useState(false)
   const videoRef = useRef(null)
   const logoRef = useRef(null)
   const headerRef = useRef(null)
@@ -96,23 +97,27 @@ function App() {
 
   useEffect(() => {
     const stripeTimer = setTimeout(() => setStripesReady(true), 2800)
+    // Video starts at 2.2s, stripes fade for video at 2.8s, stripes recover at 5.5s
     const videoTimer = setTimeout(() => {
       setVideoVisible(true)
       if (videoRef.current) {
         videoRef.current.play().catch(() => {})
       }
     }, 2200)
+    const stripeFadeTimer = setTimeout(() => setStripeFaded(true), 2800)
+    const stripeRecoverTimer = setTimeout(() => setStripeFaded(false), 5500)
 
     // Observe logo for resize/layout changes
     const ro = new ResizeObserver(() => updateStripes())
     if (logoRef.current) ro.observe(logoRef.current)
     window.addEventListener('resize', updateStripes)
-    // Initial calc after logo loads
     const imgLoadTimer = setTimeout(updateStripes, 100)
 
     return () => {
       clearTimeout(stripeTimer)
       clearTimeout(videoTimer)
+      clearTimeout(stripeFadeTimer)
+      clearTimeout(stripeRecoverTimer)
       clearTimeout(imgLoadTimer)
       ro.disconnect()
       window.removeEventListener('resize', updateStripes)
@@ -121,6 +126,7 @@ function App() {
 
   const handleVideoEnd = () => {
     setVideoVisible(false)
+    setStripeFaded(false)
   }
 
   return (
@@ -153,8 +159,8 @@ function App() {
           className="header-stripes"
           style={{
             ...stripeStyle,
-            opacity: stripesReady ? (videoVisible ? 0.35 : 1) : 0,
-            transition: 'opacity 2s ease',
+            opacity: stripesReady ? (stripeFaded ? 0.3 : 1) : 0,
+            transition: stripeFaded ? 'opacity 1.5s ease' : 'opacity 2.5s ease',
           }}
         />
 
