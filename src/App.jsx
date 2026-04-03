@@ -53,8 +53,11 @@ function App() {
   const [activeSection, setActiveSection] = useState('info')
   const [videoVisible, setVideoVisible] = useState(false)
   const [stripesReady, setStripesReady] = useState(false)
-  const [stripeStyle, setStripeStyle] = useState({})
-  const [stripeFaded, setStripeFaded] = useState(false)
+  const [goldStripeStyle, setGoldStripeStyle] = useState({})
+  const [whiteStripeStyle, setWhiteStripeStyle] = useState({})
+  const [goldFaded, setGoldFaded] = useState(false)
+  const [whiteFaded, setWhiteFaded] = useState(false)
+  const [videoOpacity, setVideoOpacity] = useState(0)
   const videoRef = useRef(null)
   const logoRef = useRef(null)
   const headerRef = useRef(null)
@@ -72,7 +75,7 @@ function App() {
     return vw * 0.055
   }
 
-  // Generate stripe gradient centered on logo tree
+  // Generate two stripe layers centered on logo tree
   const updateStripes = () => {
     const logo = logoRef.current
     const header = headerRef.current
@@ -82,32 +85,44 @@ function App() {
     const headerRect = header.getBoundingClientRect()
     const logoCenterX = logoRect.left + logoRect.width / 2 - headerRect.left
     const sw = getStripeWidth()
-
-    // Position gradient so white stripe center = logo center
-    // Pattern: gold(sw), white(sw) repeating. White center is at sw*1.5 from origin.
     const bgPosX = logoCenterX - sw * 1.5
 
-    setStripeStyle({
-      background: `repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 ${sw}px, #fff ${sw}px, #fff ${sw * 2}px)`,
+    const common = {
       backgroundPositionX: `${bgPosX}px`,
       backgroundRepeat: 'repeat',
       backgroundSize: `${sw * 2}px 100%`,
+    }
+
+    // Gold layer: gold stripes, transparent gaps
+    setGoldStripeStyle({
+      ...common,
+      background: `repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 ${sw}px, transparent ${sw}px, transparent ${sw * 2}px)`,
+    })
+
+    // White layer: transparent gaps, white stripes
+    setWhiteStripeStyle({
+      ...common,
+      background: `repeating-linear-gradient(90deg, transparent 0px, transparent ${sw}px, #fff ${sw}px, #fff ${sw * 2}px)`,
     })
   }
 
   useEffect(() => {
     const stripeTimer = setTimeout(() => setStripesReady(true), 2800)
-    // Video starts at 2.2s, stripes fade for video at 2.8s, stripes recover at 5.5s
+    // Video fades in at 2.2s
     const videoTimer = setTimeout(() => {
-      setVideoVisible(true)
+      setVideoOpacity(0.2)
       if (videoRef.current) {
         videoRef.current.play().catch(() => {})
       }
     }, 2200)
-    const stripeFadeTimer = setTimeout(() => setStripeFaded(true), 2800)
-    const stripeRecoverTimer = setTimeout(() => setStripeFaded(false), 5500)
+    // Both stripe layers fade when video starts
+    const stripeFadeTimer = setTimeout(() => {
+      setGoldFaded(true)
+      setWhiteFaded(true)
+    }, 2800)
+    // Gold stripes recover mid-video, white stays transparent until end
+    const goldRecoverTimer = setTimeout(() => setGoldFaded(false), 5500)
 
-    // Observe logo for resize/layout changes
     const ro = new ResizeObserver(() => updateStripes())
     if (logoRef.current) ro.observe(logoRef.current)
     window.addEventListener('resize', updateStripes)
@@ -117,16 +132,28 @@ function App() {
       clearTimeout(stripeTimer)
       clearTimeout(videoTimer)
       clearTimeout(stripeFadeTimer)
-      clearTimeout(stripeRecoverTimer)
+      clearTimeout(goldRecoverTimer)
       clearTimeout(imgLoadTimer)
       ro.disconnect()
       window.removeEventListener('resize', updateStripes)
     }
   }, [])
 
+  // Smoothly fade video out near the end; white stripes recover after video ends
+  const handleVideoTimeUpdate = () => {
+    const v = videoRef.current
+    if (!v || !v.duration) return
+    const remaining = v.duration - v.currentTime
+    if (remaining < 3) {
+      // Fade video out over last 3 seconds
+      setVideoOpacity(0.2 * (remaining / 3))
+    }
+  }
+
   const handleVideoEnd = () => {
-    setVideoVisible(false)
-    setStripeFaded(false)
+    setVideoOpacity(0)
+    setGoldFaded(false)
+    setWhiteFaded(false)
   }
 
   return (
@@ -134,13 +161,14 @@ function App() {
       {/* Header */}
       <header ref={headerRef} className="relative text-center pt-8 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
 
-        {/* Background video */}
+        {/* Background video — fades out smoothly near end */}
         <video
           ref={videoRef}
           src={`${basePath}baskavideo.mp4`}
           muted
           playsInline
           onEnded={handleVideoEnd}
+          onTimeUpdate={handleVideoTimeUpdate}
           style={{
             position: 'absolute',
             inset: 0,
@@ -148,19 +176,28 @@ function App() {
             height: '100%',
             objectFit: 'cover',
             zIndex: 0,
-            opacity: videoVisible ? 0.18 : 0,
+            opacity: videoOpacity,
             transition: 'opacity 1.5s ease',
             pointerEvents: 'none',
           }}
         />
 
-        {/* Vertical stripes — JS-generated, centered on logo tree */}
+        {/* Gold stripes layer — recovers faster */}
         <div
           className="header-stripes"
           style={{
-            ...stripeStyle,
-            opacity: stripesReady ? (stripeFaded ? 0.3 : 1) : 0,
-            transition: stripeFaded ? 'opacity 1.5s ease' : 'opacity 2.5s ease',
+            ...goldStripeStyle,
+            opacity: stripesReady ? (goldFaded ? 0.35 : 1) : 0,
+            transition: goldFaded ? 'opacity 1.5s ease' : 'opacity 3s ease',
+          }}
+        />
+        {/* White stripes layer — stays transparent until video ends */}
+        <div
+          className="header-stripes"
+          style={{
+            ...whiteStripeStyle,
+            opacity: stripesReady ? (whiteFaded ? 0.3 : 1) : 0,
+            transition: whiteFaded ? 'opacity 1.5s ease' : 'opacity 3s ease',
           }}
         />
 
