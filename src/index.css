@@ -67,15 +67,10 @@ body {
   background: repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 18px, #fff 18px, #fff 36px);
 }
 
-/* Header stripes — vw-based, always centered */
+/* Header stripes — generated dynamically via JS, class just for transition */
 .header-stripes {
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(90deg,
-    transparent 0, transparent var(--sw),
-    rgba(245,197,24,0.82) var(--sw), rgba(245,197,24,0.82) calc(var(--sw) * 2)
-  );
-  background-position-x: calc(50% - var(--sw) / 2);
   pointer-events: none;
   z-index: 1;
   transition: opacity 2s ease;
@@ -90,11 +85,13 @@ body {
   z-index: 2;
 }
 
-/* Logo width tied to stripe width: BASKA spans 3 stripes, logo ~4.6x stripe */
+/* Logo — 5% smaller, raised slightly */
 .header-logo {
-  width: calc(var(--sw) * 4.6);
+  width: 59vw;
+  max-width: 304px;
   height: auto;
   object-fit: contain;
+  margin-top: -4px;
 }
 
 .header-tagline {
