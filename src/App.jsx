@@ -87,7 +87,7 @@ function App() {
     const bgPosX = logoCenterX - sw * 1.5
 
     setStripeStyle({
-      background: `repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 ${sw}px, #fff ${sw}px, #fff ${sw * 2}px)`,
+      background: `repeating-linear-gradient(90deg, rgba(245,197,24,0.45) 0px, rgba(245,197,24,0.45) ${sw}px, rgba(255,255,255,0.55) ${sw}px, rgba(255,255,255,0.55) ${sw * 2}px)`,
       backgroundPositionX: `${bgPosX}px`,
       backgroundRepeat: 'repeat',
       backgroundSize: `${sw * 2}px 100%`,
