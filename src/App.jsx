@@ -53,11 +53,46 @@ function App() {
   const [activeSection, setActiveSection] = useState('info')
   const [videoVisible, setVideoVisible] = useState(false)
   const [stripesReady, setStripesReady] = useState(false)
+  const [stripeStyle, setStripeStyle] = useState({})
   const videoRef = useRef(null)
+  const logoRef = useRef(null)
+  const headerRef = useRef(null)
 
   const ActiveComponent = sectionComponents[activeSection]
   const basePath = import.meta.env.BASE_URL
   const taglineFont = getTaglineFont(i18n.language)
+
+  // Calculate stripe width based on viewport
+  const getStripeWidth = () => {
+    const vw = window.innerWidth
+    if (vw < 380) return vw * 0.14
+    if (vw < 768) return vw * 0.135
+    if (vw < 1200) return vw * 0.075
+    return vw * 0.055
+  }
+
+  // Generate stripe gradient centered on logo tree
+  const updateStripes = () => {
+    const logo = logoRef.current
+    const header = headerRef.current
+    if (!logo || !header) return
+
+    const logoRect = logo.getBoundingClientRect()
+    const headerRect = header.getBoundingClientRect()
+    const logoCenterX = logoRect.left + logoRect.width / 2 - headerRect.left
+    const sw = getStripeWidth()
+
+    // Position gradient so white stripe center = logo center
+    // Pattern: gold(sw), white(sw) repeating. White center is at sw*1.5 from origin.
+    const bgPosX = logoCenterX - sw * 1.5
+
+    setStripeStyle({
+      background: `repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 ${sw}px, #fff ${sw}px, #fff ${sw * 2}px)`,
+      backgroundPositionX: `${bgPosX}px`,
+      backgroundRepeat: 'repeat',
+      backgroundSize: `${sw * 2}px 100%`,
+    })
+  }
 
   useEffect(() => {
     const stripeTimer = setTimeout(() => setStripesReady(true), 2800)
@@ -67,7 +102,21 @@ function App() {
         videoRef.current.play().catch(() => {})
       }
     }, 2200)
-    return () => { clearTimeout(stripeTimer); clearTimeout(videoTimer) }
+
+    // Observe logo for resize/layout changes
+    const ro = new ResizeObserver(() => updateStripes())
+    if (logoRef.current) ro.observe(logoRef.current)
+    window.addEventListener('resize', updateStripes)
+    // Initial calc after logo loads
+    const imgLoadTimer = setTimeout(updateStripes, 100)
+
+    return () => {
+      clearTimeout(stripeTimer)
+      clearTimeout(videoTimer)
+      clearTimeout(imgLoadTimer)
+      ro.disconnect()
+      window.removeEventListener('resize', updateStripes)
+    }
   }, [])
 
   const handleVideoEnd = () => {
@@ -77,7 +126,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--bg)]">
       {/* Header */}
-      <header className="relative text-center pt-10 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
+      <header ref={headerRef} className="relative text-center pt-8 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
 
         {/* Background video */}
         <video
@@ -99,10 +148,10 @@ function App() {
           }}
         />
 
-        {/* Vertical stripes — vw-based, always centered */}
+        {/* Vertical stripes — JS-generated, centered on logo tree */}
         <div
           className="header-stripes"
-          style={{ opacity: stripesReady ? 1 : 0 }}
+          style={{ ...stripeStyle, opacity: stripesReady ? 1 : 0 }}
         />
 
         {/* Content above stripes */}
@@ -114,9 +163,11 @@ function App() {
             className="flex justify-center"
           >
             <img
+              ref={logoRef}
               src={`${basePath}BASKA RESORT-LOGO.png`}
               alt="BAŞKA Resort Bodrum"
               className="header-logo"
+              onLoad={updateStripes}
             />
           </motion.div>
 
@@ -144,7 +195,7 @@ function App() {
           className="relative mt-4 w-full"
           style={{ zIndex: 2 }}
         >
-          <div className="bg-[var(--primary)] w-full pt-4 pb-5">
+          <div className="bg-[var(--primary)] w-full pt-5 pb-7">
             <div className="header-inner">
               <p className="text-[0.68rem] text-white/55 tracking-[0.3em] uppercase mb-3 text-center">
                 {t('hero.subtitle')}
@@ -155,8 +206,6 @@ function App() {
         </motion.div>
       </header>
 
-      {/* Yellow stripe */}
-      <div className="stripe-bar" />
       <div className="h-3" />
 
       {/* Navigation */}
