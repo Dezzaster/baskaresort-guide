@@ -81,13 +81,11 @@ function App() {
     const headerRect = header.getBoundingClientRect()
     const logoCenterX = logoRect.left + logoRect.width / 2 - headerRect.left
     const sw = getStripeWidth()
-
-    // Position gradient so white stripe center = logo center
-    // Pattern: gold(sw), white(sw) repeating. White center is at sw*1.5 from origin.
     const bgPosX = logoCenterX - sw * 1.5
 
+    // Gold stays bright, white is semi-transparent so video shows through
     setStripeStyle({
-      background: `repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 ${sw}px, #fff ${sw}px, #fff ${sw * 2}px)`,
+      background: `repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 ${sw}px, rgba(255,255,255,0.55) ${sw}px, rgba(255,255,255,0.55) ${sw * 2}px)`,
       backgroundPositionX: `${bgPosX}px`,
       backgroundRepeat: 'repeat',
       backgroundSize: `${sw * 2}px 100%`,
@@ -103,11 +101,9 @@ function App() {
       }
     }, 2200)
 
-    // Observe logo for resize/layout changes
     const ro = new ResizeObserver(() => updateStripes())
     if (logoRef.current) ro.observe(logoRef.current)
     window.addEventListener('resize', updateStripes)
-    // Initial calc after logo loads
     const imgLoadTimer = setTimeout(updateStripes, 100)
 
     return () => {
@@ -148,10 +144,13 @@ function App() {
           }}
         />
 
-        {/* Vertical stripes — JS-generated, centered on logo tree */}
+        {/* Vertical stripes — white semi-transparent so video shows through */}
         <div
           className="header-stripes"
-          style={{ ...stripeStyle, opacity: stripesReady ? 1 : 0 }}
+          style={{
+            ...stripeStyle,
+            opacity: stripesReady ? 1 : 0,
+          }}
         />
 
         {/* Content above stripes */}
