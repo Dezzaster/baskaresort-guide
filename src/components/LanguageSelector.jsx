@@ -6,11 +6,11 @@ const primaryLanguages = [
   { code: 'en', label: 'English', flag: '🇬🇧' },
   { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
   { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
-  { code: 'fr', label: 'Français', flag: '🇫🇷' }
+  { code: 'ru', label: 'Русский', flag: '🇷🇺' }
 ]
 
 const secondaryLanguages = [
-  { code: 'ru', label: 'Русский', flag: '🇷🇺' },
+  { code: 'fr', label: 'Français', flag: '🇫🇷' },
   { code: 'ar', label: 'العربية', flag: '🇸🇦' },
   { code: 'pl', label: 'Polski', flag: '🇵🇱' },
   { code: 'nl', label: 'Nederlands', flag: '🇳🇱' }
@@ -77,10 +77,10 @@ export default function LanguageSelector() {
       {!showMore && (
         <button
           onClick={() => setShowMore(true)}
-          className="w-full text-[0.68rem] text-white/50 hover:text-white/80 transition-colors duration-300 flex items-center justify-center gap-1 mt-3"
+          className="w-full text-[0.75rem] text-white/70 hover:text-white/90 transition-colors duration-300 flex items-center justify-center gap-1.5 mt-3"
         >
           <span>+4</span>
-          <span className="opacity-70">more languages</span>
+          <span>more languages</span>
         </button>
       )}
 
