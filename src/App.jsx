@@ -85,7 +85,7 @@ function App() {
 
     // Gold stays bright, white is semi-transparent so video shows through
     setStripeStyle({
-      background: `repeating-linear-gradient(90deg, #F5C518 0px, #F5C518 ${sw}px, rgba(255,255,255,0.55) ${sw}px, rgba(255,255,255,0.55) ${sw * 2}px)`,
+      background: `repeating-linear-gradient(90deg, rgba(245,197,24,0.9) 0px, rgba(245,197,24,0.9) ${sw}px, rgba(255,255,255,0) ${sw}px, rgba(255,255,255,0) ${sw * 2}px)`,
       backgroundPositionX: `${bgPosX}px`,
       backgroundRepeat: 'repeat',
       backgroundSize: `${sw * 2}px 100%`,
@@ -122,7 +122,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--bg)]">
       {/* Header */}
-      <header ref={headerRef} className="relative text-center pt-8 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
+      <header ref={headerRef} className="relative text-center pt-10 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
 
         {/* Background video */}
         <video
@@ -171,8 +171,8 @@ function App() {
           </motion.div>
 
           <motion.div
-            initial={{ clipPath: 'inset(0 100% 0 0)' }}
-            animate={{ clipPath: 'inset(0 0% 0 0)' }}
+            initial={{ clipPath: 'inset(-10% 100% -10% 0)' }}
+            animate={{ clipPath: 'inset(-10% 0% -10% 0)' }}
             transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-[var(--primary)] mt-2 text-center"
             style={{ position: 'relative', zIndex: 3 }}
