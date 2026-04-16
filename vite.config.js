@@ -10,6 +10,12 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
+      workbox: {
+        // Don't let SW navigation fallback intercept .pdf requests
+        navigateFallbackDenylist: [/\.pdf$/i],
+        // Don't precache the large PDFs (would exceed cache limits anyway)
+        globIgnores: ['**/*.pdf']
+      },
       manifest: {
         name: 'BAŞKA Resort Bodrum — Guest Guide',
         short_name: 'BAŞKA Guide',
