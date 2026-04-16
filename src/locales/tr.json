@@ -284,7 +284,10 @@
       "Çocukları gözetimsiz bırakmayınız",
       "Plaja ara yoldan servis sağlanmaktadır",
       "Farklı soyadlı refakatçilerin yanındaki çocuklar için noter onaylı muvafakat belgesi gereklidir"
-    ]
+    ],
+    "sustainabilityTitle": "Sürdürülebilirlik Raporu",
+    "sustainabilityDesc": "Çevreye, sorumlu turizme ve Ege kültürüne olan bağlılığımız hakkında bilgi edinin.",
+    "sustainabilityCta": "Raporu Görüntüle (PDF)"
   },
   "footer": {
     "address": "Eski Çeşme Mah. Haremtan Sok. No:11, Bodrum, Muğla 48400",

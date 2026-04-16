@@ -284,7 +284,10 @@
       "Do not leave children unattended",
       "Shuttle service to beach from secondary road",
       "Notarized consent letter required for children with different-surname guardians"
-    ]
+    ],
+    "sustainabilityTitle": "Sustainability Report",
+    "sustainabilityDesc": "Learn about our commitment to the environment, responsible tourism and Aegean culture.",
+    "sustainabilityCta": "View Report (PDF)"
   },
   "footer": {
     "address": "Eski Çeşme Mah. Haremtan Sok. No:11, Bodrum, Muğla 48400",

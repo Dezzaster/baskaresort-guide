@@ -2,9 +2,20 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Card from '../Card'
 
+// Map language to the matching sustainability report PDF
+// TR users get Turkish, RU users get Russian, everyone else gets English
+function getReportFile(lang) {
+  const base = (lang || 'en').split('-')[0]
+  if (base === 'tr') return 'sustainability-report-tr.pdf'
+  if (base === 'ru') return 'sustainability-report-ru.pdf'
+  return 'sustainability-report-en.pdf'
+}
+
 export default function ImportantSection() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const items = t('important.items', { returnObjects: true })
+  const basePath = import.meta.env.BASE_URL
+  const reportHref = `${basePath}${getReportFile(i18n.language)}`
 
   return (
     <div>
@@ -30,6 +41,21 @@ export default function ImportantSection() {
             </motion.div>
           ))}
         </div>
+      </Card>
+
+      <Card icon="🌿" title={t('important.sustainabilityTitle')} delay={1}>
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-4">
+          {t('important.sustainabilityDesc')}
+        </p>
+        <a
+          href={reportHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--primary)] text-white text-[0.78rem] font-medium hover:bg-[var(--primary-dark)] transition-colors duration-300"
+        >
+          <span>📄</span>
+          <span>{t('important.sustainabilityCta')}</span>
+        </a>
       </Card>
     </div>
   )
