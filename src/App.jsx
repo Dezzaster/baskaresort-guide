@@ -62,13 +62,13 @@ function App() {
   const basePath = import.meta.env.BASE_URL
   const taglineFont = getTaglineFont(i18n.language)
 
-  // Calculate stripe width based on viewport
+  // Calculate stripe width based on viewport (15% thinner — more stripes visible)
   const getStripeWidth = () => {
     const vw = window.innerWidth
-    if (vw < 380) return vw * 0.14
-    if (vw < 768) return vw * 0.135
-    if (vw < 1200) return vw * 0.075
-    return vw * 0.055
+    if (vw < 380) return vw * 0.119
+    if (vw < 768) return vw * 0.115
+    if (vw < 1200) return vw * 0.064
+    return vw * 0.047
   }
 
   // Generate stripe gradient centered on logo tree

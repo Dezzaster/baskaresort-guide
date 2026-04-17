@@ -47,15 +47,17 @@ export default function ImportantSection() {
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-4">
           {t('important.sustainabilityDesc')}
         </p>
-        <a
-          href={reportHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--primary)] text-white text-[0.78rem] font-medium hover:bg-[var(--primary-dark)] transition-colors duration-300"
+        <button
+          type="button"
+          onClick={(e) => {
+            e.preventDefault()
+            window.open(reportHref, '_blank', 'noopener,noreferrer')
+          }}
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--primary)] text-white text-[0.78rem] font-medium hover:bg-[var(--primary-dark)] transition-colors duration-300 cursor-pointer"
         >
           <span>📄</span>
           <span>{t('important.sustainabilityCta')}</span>
-        </a>
+        </button>
       </Card>
     </div>
   )
