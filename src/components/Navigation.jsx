@@ -2,8 +2,8 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
 const sections = [
-  'info', 'wifi', 'dining', 'alacarte', 'bars', 'beach',
-  'spa', 'activities', 'kids', 'services', 'map', 'rooms', 'important'
+  'info', 'wifi', 'dining', 'alacarte', 'bars', 'requests', 'beach',
+  'spa', 'activities', 'kids', 'services', 'rooms', 'important'
 ]
 
 export default function Navigation({ activeSection, onSectionChange }) {

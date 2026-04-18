@@ -18,7 +18,7 @@
     "activities": "Activités",
     "kids": "Enfants",
     "services": "Services",
-    "map": "Plan",
+    "requests": "Demandes",
     "important": "Important"
   },
   "info": {
@@ -123,7 +123,15 @@
     "bistro": "Restaurant À La Carte 24/7",
     "bistroDesc": "Sélections de cuisine internationale",
     "bistroHours": "24 heures, Tous les jours",
-    "bistroPrice": "Gratuit BAI, sans réservation"
+    "bistroPrice": "Gratuit BAI, sans réservation",
+    "reserve": "Demander une réservation",
+    "reservationTitle": "Demande de réservation",
+    "date": "Date",
+    "time": "Heure",
+    "guests": "Convives",
+    "comment": "Commentaires",
+    "commentPlaceholder": "Demandes spéciales, préférences de table...",
+    "sendWhatsapp": "Envoyer via WhatsApp"
   },
   "bars": {
     "title": "Bars & Cafés",
@@ -257,10 +265,33 @@
     "florist": "Fleuriste",
     "floristDesc": "Fleurs fraîches & compositions, 09:00–22:00"
   },
-  "map": {
-    "title": "Plan du Resort",
-    "subtitle": "Découvrez le complexe",
-    "legend": "Légende de la carte"
+  "requests": {
+    "title": "Demandes de service",
+    "subtitle": "Demandes instantanées via WhatsApp",
+    "towels": "Serviettes supplémentaires",
+    "minibar": "Réapprovisionnement minibar",
+    "cleaning": "Nettoyage de chambre",
+    "maintenance": "Service technique",
+    "pillows": "Oreillers supplémentaires",
+    "wakeup": "Réveil téléphonique",
+    "luggage": "Aide bagages",
+    "taxi": "Taxi / Transfert",
+    "room": "Chambre",
+    "roomPlaceholder": "Entrez le numéro de chambre",
+    "enterRoom": "Entrez votre numéro de chambre",
+    "confirm": "Confirmer",
+    "serviceRequest": "Demande de service",
+    "whatsappNote": "Les demandes sont envoyées via WhatsApp"
+  },
+  "pwa": {
+    "title": "Installer BAŞKA Guide",
+    "subtitle": "Accès rapide depuis l'écran d'accueil",
+    "install": "Installer",
+    "iosTitle": "Ajouter à l'écran d'accueil",
+    "iosStep1": "Appuyez sur le bouton Partager ⬆️ en bas",
+    "iosStep2": "Faites défiler le menu vers le bas",
+    "iosStep3": "Appuyez sur « Sur l'écran d'accueil »",
+    "gotIt": "Compris !"
   },
   "important": {
     "title": "Informations importantes",

@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import Card from '../Card'
 import InstagramFeed from '../InstagramFeed'
+import WeatherWidget from '../WeatherWidget'
 
 function InfoRow({ label, value }) {
   return (
@@ -73,6 +74,8 @@ export default function InfoSection() {
         {t('info.title')}
       </h2>
       <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('info.subtitle')}</p>
+
+      <WeatherWidget />
 
       <Card title="BAŞKA Resort Bodrum" animate={false}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
