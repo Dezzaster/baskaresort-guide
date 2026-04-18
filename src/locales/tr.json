@@ -18,7 +18,7 @@
     "activities": "Aktiviteler",
     "kids": "Çocuklar",
     "services": "Hizmetler",
-    "map": "Harita",
+    "requests": "Talepler",
     "important": "Önemli"
   },
   "info": {
@@ -123,7 +123,15 @@
     "bistro": "DAİMA 7/24 Restoran",
     "bistroDesc": "Uluslararası mutfak seçenekleri",
     "bistroHours": "24 saat, Her Gün",
-    "bistroPrice": "Ücretsiz BAI, rezervasyon gerekmez"
+    "bistroPrice": "Ücretsiz BAI, rezervasyon gerekmez",
+    "reserve": "Rezervasyon Talebi",
+    "reservationTitle": "Rezervasyon Talebi",
+    "date": "Tarih",
+    "time": "Saat",
+    "guests": "Kişi Sayısı",
+    "comment": "Notlar",
+    "commentPlaceholder": "Özel istekler, oturma tercihi...",
+    "sendWhatsapp": "WhatsApp ile Gönder"
   },
   "bars": {
     "title": "Bar & Kafeler",
@@ -257,10 +265,33 @@
     "florist": "FLORA Çiçekçi",
     "floristDesc": "Taze çiçekler & aranjmanlar, 09:00–22:00"
   },
-  "map": {
-    "title": "Tesis Haritası",
-    "subtitle": "Tesisi keşfedin",
-    "legend": "Harita Lejandı"
+  "requests": {
+    "title": "Hizmet Talepleri",
+    "subtitle": "WhatsApp ile anında talep gönderin",
+    "towels": "Ekstra Havlu",
+    "minibar": "Mini Bar Dolumu",
+    "cleaning": "Oda Temizliği",
+    "maintenance": "Teknik Destek",
+    "pillows": "Ekstra Yastık",
+    "wakeup": "Uyandırma Hizmeti",
+    "luggage": "Bagaj Yardımı",
+    "taxi": "Taksi / Transfer",
+    "room": "Oda",
+    "roomPlaceholder": "Oda numaranızı girin",
+    "enterRoom": "Oda Numaranızı Girin",
+    "confirm": "Onayla",
+    "serviceRequest": "Hizmet Talebi",
+    "whatsappNote": "Talepler WhatsApp üzerinden gönderilir"
+  },
+  "pwa": {
+    "title": "BAŞKA Rehber'i Yükle",
+    "subtitle": "Ana ekranınızdan hızlı erişim",
+    "install": "Yükle",
+    "iosTitle": "Ana Ekrana Ekle",
+    "iosStep1": "Alt kısımdaki Paylaş düğmesine ⬆️ dokunun",
+    "iosStep2": "Menüde aşağı kaydırın",
+    "iosStep3": "\"Ana Ekrana Ekle\" seçeneğine dokunun",
+    "gotIt": "Anladım!"
   },
   "important": {
     "title": "Önemli Bilgiler",

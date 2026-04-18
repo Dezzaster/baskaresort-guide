@@ -16,9 +16,10 @@ import SpaSection from './components/sections/SpaSection'
 import ActivitiesSection from './components/sections/ActivitiesSection'
 import KidsSection from './components/sections/KidsSection'
 import ServicesSection from './components/sections/ServicesSection'
-import MapSection from './components/sections/MapSection'
+import RequestsSection from './components/sections/RequestsSection'
 import ImportantSection from './components/sections/ImportantSection'
 import WifiSection from './components/sections/WifiSection'
+import InstallPrompt from './components/InstallPrompt'
 
 const sectionComponents = {
   info: InfoSection,
@@ -26,12 +27,12 @@ const sectionComponents = {
   dining: DiningSection,
   alacarte: AlacarteSection,
   bars: BarsSection,
+  requests: RequestsSection,
   beach: BeachSection,
   spa: SpaSection,
   activities: ActivitiesSection,
   kids: KidsSection,
   services: ServicesSection,
-  map: MapSection,
   rooms: RoomsSection,
   important: ImportantSection
 }
@@ -263,6 +264,7 @@ function App() {
           </div>
         </div>
       </footer>
+      <InstallPrompt />
     </div>
   )
 }

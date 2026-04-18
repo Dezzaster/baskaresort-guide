@@ -18,7 +18,7 @@
     "activities": "Activities",
     "kids": "Kids",
     "services": "Services",
-    "map": "Map",
+    "requests": "Requests",
     "important": "Important"
   },
   "info": {
@@ -123,7 +123,15 @@
     "bistro": "24/7 À La Carte Restaurant",
     "bistroDesc": "International cuisine selections",
     "bistroHours": "24 hours, Daily",
-    "bistroPrice": "Complimentary BAI, no reservation"
+    "bistroPrice": "Complimentary BAI, no reservation",
+    "reserve": "Request Reservation",
+    "reservationTitle": "Reservation Request",
+    "date": "Date",
+    "time": "Time",
+    "guests": "Guests",
+    "comment": "Comments",
+    "commentPlaceholder": "Special requests, seating preferences...",
+    "sendWhatsapp": "Send via WhatsApp"
   },
   "bars": {
     "title": "Bars & Cafes",
@@ -257,10 +265,33 @@
     "florist": "Florist",
     "floristDesc": "Fresh flowers & arrangements, 09:00–22:00"
   },
-  "map": {
-    "title": "Resort Map",
-    "subtitle": "Explore the resort grounds",
-    "legend": "Map Legend"
+  "requests": {
+    "title": "Service Requests",
+    "subtitle": "Instant requests via WhatsApp",
+    "towels": "Extra Towels",
+    "minibar": "Mini Bar Refill",
+    "cleaning": "Room Cleaning",
+    "maintenance": "Maintenance",
+    "pillows": "Extra Pillows",
+    "wakeup": "Wake-Up Call",
+    "luggage": "Luggage Help",
+    "taxi": "Taxi / Transfer",
+    "room": "Room",
+    "roomPlaceholder": "Enter room number",
+    "enterRoom": "Enter Your Room Number",
+    "confirm": "Confirm",
+    "serviceRequest": "Service Request",
+    "whatsappNote": "Requests are sent via WhatsApp"
+  },
+  "pwa": {
+    "title": "Install BAŞKA Guide",
+    "subtitle": "Quick access from your home screen",
+    "install": "Install",
+    "iosTitle": "Add to Home Screen",
+    "iosStep1": "Tap the Share button ⬆️ at the bottom",
+    "iosStep2": "Scroll down in the menu",
+    "iosStep3": "Tap \"Add to Home Screen\"",
+    "gotIt": "Got it!"
   },
   "important": {
     "title": "Important Information",

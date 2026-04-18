@@ -18,7 +18,7 @@
     "activities": "Aktivitäten",
     "kids": "Kinder",
     "services": "Services",
-    "map": "Karte",
+    "requests": "Anfragen",
     "important": "Wichtig"
   },
   "info": {
@@ -123,7 +123,15 @@
     "bistro": "24/7 À La Carte Restaurant",
     "bistroDesc": "Internationale Küche",
     "bistroHours": "24 Stunden, Täglich",
-    "bistroPrice": "Kostenlos BAI, keine Reservierung"
+    "bistroPrice": "Kostenlos BAI, keine Reservierung",
+    "reserve": "Reservierung anfragen",
+    "reservationTitle": "Reservierungsanfrage",
+    "date": "Datum",
+    "time": "Uhrzeit",
+    "guests": "Gäste",
+    "comment": "Kommentare",
+    "commentPlaceholder": "Besondere Wünsche, Sitzplatzpräferenzen...",
+    "sendWhatsapp": "Per WhatsApp senden"
   },
   "bars": {
     "title": "Bars & Cafés",
@@ -257,10 +265,33 @@
     "florist": "Blumenladen",
     "floristDesc": "Frische Blumen & Arrangements, 09:00–22:00"
   },
-  "map": {
-    "title": "Resort-Karte",
-    "subtitle": "Erkunden Sie das Resort",
-    "legend": "Kartenlegende"
+  "requests": {
+    "title": "Serviceanfragen",
+    "subtitle": "Sofortige Anfragen per WhatsApp",
+    "towels": "Zusätzliche Handtücher",
+    "minibar": "Minibar-Nachfüllung",
+    "cleaning": "Zimmerreinigung",
+    "maintenance": "Technischer Service",
+    "pillows": "Zusätzliche Kissen",
+    "wakeup": "Weckruf",
+    "luggage": "Gepäckhilfe",
+    "taxi": "Taxi / Transfer",
+    "room": "Zimmer",
+    "roomPlaceholder": "Zimmernummer eingeben",
+    "enterRoom": "Geben Sie Ihre Zimmernummer ein",
+    "confirm": "Bestätigen",
+    "serviceRequest": "Serviceanfrage",
+    "whatsappNote": "Anfragen werden per WhatsApp gesendet"
+  },
+  "pwa": {
+    "title": "BAŞKA Guide installieren",
+    "subtitle": "Schnellzugriff vom Startbildschirm",
+    "install": "Installieren",
+    "iosTitle": "Zum Startbildschirm hinzufügen",
+    "iosStep1": "Tippen Sie auf die Teilen-Taste ⬆️ unten",
+    "iosStep2": "Scrollen Sie im Menü nach unten",
+    "iosStep3": "Tippen Sie auf \"Zum Home-Bildschirm\"",
+    "gotIt": "Verstanden!"
   },
   "important": {
     "title": "Wichtige Informationen",
