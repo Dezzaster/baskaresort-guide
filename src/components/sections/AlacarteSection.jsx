@@ -93,46 +93,46 @@ export default function AlacarteSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[9999] bg-black/40 flex items-end sm:items-center justify-center"
+            className="fixed inset-0 z-[9999] bg-black/40 flex items-center justify-center p-6"
             onClick={() => setReserving(null)}
           >
             <motion.div
-              initial={{ y: 60 }}
-              animate={{ y: 0 }}
-              exit={{ y: 60 }}
-              className="bg-white rounded-t-2xl sm:rounded-2xl p-6 w-full max-w-md shadow-2xl"
-              style={{ maxHeight: '90vh', overflowY: 'auto' }}
+              initial={{ scale: 0.92, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.92, opacity: 0 }}
+              className="bg-white rounded-3xl w-full max-w-md shadow-2xl"
+              style={{ padding: '36px 32px 32px', maxHeight: '88vh', overflowY: 'auto' }}
               onClick={e => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="font-semibold text-[var(--primary)] text-[0.9rem]">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="font-['Cormorant_Garamond'] font-normal text-[var(--primary)] text-[1.2rem]">
                   {t('alacarte.reservationTitle')}
                 </h3>
-                <button onClick={() => setReserving(null)} className="text-[var(--text-muted)] text-lg cursor-pointer">✕</button>
+                <button onClick={() => setReserving(null)} className="text-[var(--text-muted)]/50 text-lg cursor-pointer">✕</button>
               </div>
 
-              <div className="text-[0.76rem] text-[var(--text-dark)] font-medium mb-4 py-2 px-3 rounded-lg bg-[var(--bg-blue)]">
+              <div className="text-[0.78rem] text-[var(--text-dark)] font-medium mb-6 py-3 px-4 rounded-xl bg-[var(--bg-blue)]">
                 {t(`alacarte.${reserving}`)} ({restaurants.find(r => r.key === reserving)?.code})
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-5">
                 <div>
-                  <label className="text-[0.68rem] text-[var(--text-muted)] mb-1 block">{t('alacarte.date')}</label>
+                  <label className="text-[0.7rem] text-[var(--text-muted)] mb-2 block tracking-wide">{t('alacarte.date')}</label>
                   <input
                     type="date"
                     value={form.date}
                     min={new Date().toISOString().split('T')[0]}
                     onChange={e => setForm({ ...form, date: e.target.value })}
-                    className="w-full border border-[rgba(0,51,160,0.12)] rounded-xl px-4 py-2.5 text-[0.8rem] text-[var(--text-dark)] outline-none focus:border-[var(--primary)]/40"
+                    className="w-full border border-[rgba(0,51,160,0.1)] rounded-xl px-5 py-3 text-[0.82rem] text-[var(--text-dark)] outline-none focus:border-[var(--primary)]/30 transition-colors"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="text-[0.68rem] text-[var(--text-muted)] mb-1 block">{t('alacarte.time')}</label>
+                    <label className="text-[0.7rem] text-[var(--text-muted)] mb-2 block tracking-wide">{t('alacarte.time')}</label>
                     <select
                       value={form.time}
                       onChange={e => setForm({ ...form, time: e.target.value })}
-                      className="w-full border border-[rgba(0,51,160,0.12)] rounded-xl px-4 py-2.5 text-[0.8rem] text-[var(--text-dark)] outline-none bg-white focus:border-[var(--primary)]/40"
+                      className="w-full border border-[rgba(0,51,160,0.1)] rounded-xl px-5 py-3 text-[0.82rem] text-[var(--text-dark)] outline-none bg-white focus:border-[var(--primary)]/30 transition-colors"
                     >
                       {timeSlots.map(slot => (
                         <option key={slot} value={slot}>{slot}</option>
@@ -140,11 +140,11 @@ export default function AlacarteSection() {
                     </select>
                   </div>
                   <div>
-                    <label className="text-[0.68rem] text-[var(--text-muted)] mb-1 block">{t('alacarte.guests')}</label>
+                    <label className="text-[0.7rem] text-[var(--text-muted)] mb-2 block tracking-wide">{t('alacarte.guests')}</label>
                     <select
                       value={form.guests}
                       onChange={e => setForm({ ...form, guests: e.target.value })}
-                      className="w-full border border-[rgba(0,51,160,0.12)] rounded-xl px-4 py-2.5 text-[0.8rem] text-[var(--text-dark)] outline-none bg-white focus:border-[var(--primary)]/40"
+                      className="w-full border border-[rgba(0,51,160,0.1)] rounded-xl px-5 py-3 text-[0.82rem] text-[var(--text-dark)] outline-none bg-white focus:border-[var(--primary)]/30 transition-colors"
                     >
                       {[1,2,3,4,5,6,7,8].map(n => (
                         <option key={n} value={n}>{n}</option>
@@ -153,30 +153,30 @@ export default function AlacarteSection() {
                   </div>
                 </div>
                 <div>
-                  <label className="text-[0.68rem] text-[var(--text-muted)] mb-1 block">{t('requests.room')}</label>
+                  <label className="text-[0.7rem] text-[var(--text-muted)] mb-2 block tracking-wide">{t('requests.room')}</label>
                   <input
                     type="text"
                     value={form.room}
                     onChange={e => setForm({ ...form, room: e.target.value })}
                     placeholder="405"
-                    className="w-full border border-[rgba(0,51,160,0.12)] rounded-xl px-4 py-2.5 text-[0.8rem] text-[var(--text-dark)] outline-none focus:border-[var(--primary)]/40"
+                    className="w-full border border-[rgba(0,51,160,0.1)] rounded-xl px-5 py-3 text-[0.82rem] text-[var(--text-dark)] outline-none focus:border-[var(--primary)]/30 transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="text-[0.68rem] text-[var(--text-muted)] mb-1 block">{t('alacarte.comment')}</label>
+                  <label className="text-[0.7rem] text-[var(--text-muted)] mb-2 block tracking-wide">{t('alacarte.comment')}</label>
                   <textarea
                     value={form.comment}
                     onChange={e => setForm({ ...form, comment: e.target.value })}
                     placeholder={t('alacarte.commentPlaceholder')}
                     rows={2}
-                    className="w-full border border-[rgba(0,51,160,0.12)] rounded-xl px-4 py-2.5 text-[0.8rem] text-[var(--text-dark)] outline-none resize-none focus:border-[var(--primary)]/40"
+                    className="w-full border border-[rgba(0,51,160,0.1)] rounded-xl px-5 py-3 text-[0.82rem] text-[var(--text-dark)] outline-none resize-none focus:border-[var(--primary)]/30 transition-colors"
                   />
                 </div>
               </div>
 
               <button
                 onClick={sendReservation}
-                className="mt-4 w-full py-3 rounded-xl bg-[#25D366] text-white font-semibold text-[0.8rem] flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors cursor-pointer"
+                className="mt-6 w-full py-3.5 rounded-xl bg-[#25D366] text-white font-semibold text-[0.82rem] flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors cursor-pointer"
               >
                 💬 {t('alacarte.sendWhatsapp')}
               </button>

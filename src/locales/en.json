@@ -281,7 +281,16 @@
     "enterRoom": "Enter Your Room Number",
     "confirm": "Confirm",
     "serviceRequest": "Service Request",
-    "whatsappNote": "Requests are sent via WhatsApp"
+    "whatsappNote": "Requests are sent via WhatsApp",
+    "maintenanceSelect": "Select Issue",
+    "mt_ac": "Air Conditioning",
+    "mt_balcony": "Balcony",
+    "mt_shower": "Shower",
+    "mt_water": "Water",
+    "mt_lights": "Lighting",
+    "mt_tv": "TV",
+    "mt_safe": "Safe",
+    "mt_door": "Door / Lock"
   },
   "pwa": {
     "title": "Install BAŞKA Guide",

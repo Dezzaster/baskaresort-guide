@@ -281,7 +281,16 @@
     "enterRoom": "Введите номер вашей комнаты",
     "confirm": "Подтвердить",
     "serviceRequest": "Запрос услуги",
-    "whatsappNote": "Запросы отправляются через WhatsApp"
+    "whatsappNote": "Запросы отправляются через WhatsApp",
+    "maintenanceSelect": "Выберите проблему",
+    "mt_ac": "Кондиционер",
+    "mt_balcony": "Балкон",
+    "mt_shower": "Душевая",
+    "mt_water": "Вода",
+    "mt_lights": "Освещение",
+    "mt_tv": "Телевизор",
+    "mt_safe": "Сейф",
+    "mt_door": "Дверь / Замок"
   },
   "pwa": {
     "title": "Установите BAŞKA Guide",

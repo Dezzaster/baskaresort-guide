@@ -281,7 +281,16 @@
     "enterRoom": "أدخل رقم غرفتك",
     "confirm": "تأكيد",
     "serviceRequest": "طلب خدمة",
-    "whatsappNote": "يتم إرسال الطلبات عبر واتساب"
+    "whatsappNote": "يتم إرسال الطلبات عبر واتساب",
+    "maintenanceSelect": "اختر المشكلة",
+    "mt_ac": "مكيف الهواء",
+    "mt_balcony": "الشرفة",
+    "mt_shower": "الدش",
+    "mt_water": "المياه",
+    "mt_lights": "الإضاءة",
+    "mt_tv": "التلفاز",
+    "mt_safe": "الخزنة",
+    "mt_door": "الباب / القفل"
   },
   "pwa": {
     "title": "تثبيت دليل BAŞKA",
