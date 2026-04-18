@@ -281,7 +281,16 @@
     "enterRoom": "Geben Sie Ihre Zimmernummer ein",
     "confirm": "Bestätigen",
     "serviceRequest": "Serviceanfrage",
-    "whatsappNote": "Anfragen werden per WhatsApp gesendet"
+    "whatsappNote": "Anfragen werden per WhatsApp gesendet",
+    "maintenanceSelect": "Problem auswählen",
+    "mt_ac": "Klimaanlage",
+    "mt_balcony": "Balkon",
+    "mt_shower": "Dusche",
+    "mt_water": "Wasser",
+    "mt_lights": "Beleuchtung",
+    "mt_tv": "TV",
+    "mt_safe": "Safe",
+    "mt_door": "Tür / Schloss"
   },
   "pwa": {
     "title": "BAŞKA Guide installieren",

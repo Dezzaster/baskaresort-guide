@@ -55,30 +55,33 @@ export default function WeatherWidget() {
   if (!weather) return null
 
   return (
-    <div className="mb-8 rounded-2xl overflow-hidden border border-[rgba(0,51,160,0.08)]" style={{ background: 'linear-gradient(135deg, rgba(0,51,160,0.06) 0%, rgba(46,196,182,0.06) 100%)' }}>
-      <div className="p-5">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="text-4xl leading-none">{icons[weather.code] ?? '🌤️'}</span>
-            <div>
-              <div className="text-[1.6rem] font-semibold text-[var(--primary)] leading-tight">{weather.temp}°C</div>
-              <div className="text-[0.68rem] text-[var(--text-muted)] mt-0.5">Bodrum, Türkiye</div>
-            </div>
-          </div>
+    <div
+      className="mb-10 rounded-3xl border border-[rgba(0,51,160,0.06)] backdrop-blur-sm"
+      style={{
+        padding: '28px 32px 24px',
+        background: 'linear-gradient(145deg, rgba(0,51,160,0.04) 0%, rgba(46,196,182,0.04) 50%, rgba(245,197,24,0.03) 100%)',
+      }}
+    >
+      <div className="flex items-center gap-5">
+        <span className="text-[2.8rem] leading-none">{icons[weather.code] ?? '🌤️'}</span>
+        <div>
+          <div className="text-[2rem] font-light text-[var(--primary)] leading-none tracking-tight">{weather.temp}°</div>
+          <div className="text-[0.7rem] text-[var(--text-muted)] mt-1.5 tracking-wide uppercase">Bodrum</div>
         </div>
-        <div className="flex gap-5 mt-4 pt-3 border-t border-[rgba(0,51,160,0.06)]">
-          <div className="flex items-center gap-1.5">
-            <span className="text-sm">💧</span>
-            <span className="text-[0.72rem] text-[var(--text-muted)]">{weather.humidity}%</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="text-sm">💨</span>
-            <span className="text-[0.72rem] text-[var(--text-muted)]">{weather.wind} km/h</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="text-sm">🌊</span>
-            <span className="text-[0.72rem] text-[var(--text-muted)]">~{weather.water}°C</span>
-          </div>
+      </div>
+
+      <div className="flex gap-6 mt-5 pt-4 border-t border-[rgba(0,51,160,0.05)]">
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-[0.65rem] text-[var(--text-muted)] uppercase tracking-wider">Humidity</span>
+          <span className="text-[0.82rem] font-medium text-[var(--primary)]">{weather.humidity}%</span>
+        </div>
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-[0.65rem] text-[var(--text-muted)] uppercase tracking-wider">Wind</span>
+          <span className="text-[0.82rem] font-medium text-[var(--primary)]">{weather.wind} km/h</span>
+        </div>
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-[0.65rem] text-[var(--text-muted)] uppercase tracking-wider">Sea</span>
+          <span className="text-[0.82rem] font-medium text-[var(--primary)]">~{weather.water}°</span>
         </div>
       </div>
     </div>

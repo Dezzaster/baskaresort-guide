@@ -58,22 +58,23 @@ export default function InstallPrompt() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="fixed bottom-0 left-0 right-0 z-[9999] p-4"
-            style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}
+            className="fixed bottom-0 left-0 right-0 z-[9999] flex justify-center"
+            style={{ paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}
           >
-            <div className="max-w-md mx-auto bg-[var(--primary)] text-white rounded-2xl p-4 shadow-2xl flex items-center gap-3">
-              <span className="text-2xl flex-shrink-0">📱</span>
-              <div className="flex-1 min-w-0">
-                <div className="font-semibold text-[0.8rem]">{t('pwa.title')}</div>
-                <div className="text-[0.68rem] text-white/70">{t('pwa.subtitle')}</div>
+            <div className="bg-[var(--primary)] text-white rounded-2xl shadow-2xl flex flex-col items-center gap-3" style={{ padding: '20px 28px', width: '42%', minWidth: '200px', maxWidth: '320px' }}>
+              <div className="text-center">
+                <div className="font-semibold text-[0.78rem]">{t('pwa.title')}</div>
+                <div className="text-[0.65rem] text-white/60 mt-1">{t('pwa.subtitle')}</div>
               </div>
-              <button
-                onClick={handleInstall}
-                className="bg-white text-[var(--primary)] px-4 py-2 rounded-xl text-[0.72rem] font-semibold flex-shrink-0 cursor-pointer"
-              >
-                {t('pwa.install')}
-              </button>
-              <button onClick={dismiss} className="text-white/50 text-lg flex-shrink-0 ml-1 cursor-pointer">✕</button>
+              <div className="flex items-center gap-3 w-full">
+                <button
+                  onClick={handleInstall}
+                  className="flex-1 bg-white text-[var(--primary)] py-2.5 rounded-xl text-[0.72rem] font-semibold cursor-pointer"
+                >
+                  {t('pwa.install')}
+                </button>
+                <button onClick={dismiss} className="text-white/40 text-sm cursor-pointer px-1">✕</button>
+              </div>
             </div>
           </motion.div>
         )}
@@ -85,35 +86,35 @@ export default function InstallPrompt() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[10000] bg-black/50 flex items-end justify-center p-4"
+            className="fixed inset-0 z-[10000] bg-black/50 flex items-center justify-center p-6"
             onClick={dismiss}
           >
             <motion.div
-              initial={{ y: 60, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 60, opacity: 0 }}
-              className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl"
-              style={{ marginBottom: 'env(safe-area-inset-bottom)' }}
+              initial={{ scale: 0.92, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.92, opacity: 0 }}
+              className="bg-white rounded-3xl max-w-sm w-full shadow-2xl"
+              style={{ padding: '36px 32px 28px' }}
               onClick={e => e.stopPropagation()}
             >
-              <h3 className="font-semibold text-[var(--primary)] text-center text-[0.95rem] mb-5">{t('pwa.iosTitle')}</h3>
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center gap-3">
-                  <span className="w-7 h-7 rounded-full bg-[var(--primary)]/10 flex items-center justify-center text-xs font-bold text-[var(--primary)] flex-shrink-0">1</span>
+              <h3 className="font-semibold text-[var(--primary)] text-center text-[0.95rem] mb-6">{t('pwa.iosTitle')}</h3>
+              <div className="space-y-5 mb-8">
+                <div className="flex items-center gap-4">
+                  <span className="w-8 h-8 rounded-full bg-[var(--primary)]/8 flex items-center justify-center text-xs font-bold text-[var(--primary)] flex-shrink-0">1</span>
                   <span className="text-[0.8rem] text-[var(--text-dark)]">{t('pwa.iosStep1')}</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="w-7 h-7 rounded-full bg-[var(--primary)]/10 flex items-center justify-center text-xs font-bold text-[var(--primary)] flex-shrink-0">2</span>
+                <div className="flex items-center gap-4">
+                  <span className="w-8 h-8 rounded-full bg-[var(--primary)]/8 flex items-center justify-center text-xs font-bold text-[var(--primary)] flex-shrink-0">2</span>
                   <span className="text-[0.8rem] text-[var(--text-dark)]">{t('pwa.iosStep2')}</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="w-7 h-7 rounded-full bg-[var(--primary)]/10 flex items-center justify-center text-xs font-bold text-[var(--primary)] flex-shrink-0">3</span>
+                <div className="flex items-center gap-4">
+                  <span className="w-8 h-8 rounded-full bg-[var(--primary)]/8 flex items-center justify-center text-xs font-bold text-[var(--primary)] flex-shrink-0">3</span>
                   <span className="text-[0.8rem] text-[var(--text-dark)]">{t('pwa.iosStep3')}</span>
                 </div>
               </div>
               <button
                 onClick={dismiss}
-                className="w-full py-3 rounded-xl bg-[var(--primary)] text-white text-[0.8rem] font-semibold cursor-pointer"
+                className="w-full py-3.5 rounded-xl bg-[var(--primary)] text-white text-[0.8rem] font-semibold cursor-pointer"
               >
                 {t('pwa.gotIt')}
               </button>

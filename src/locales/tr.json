@@ -281,7 +281,16 @@
     "enterRoom": "Oda Numaranızı Girin",
     "confirm": "Onayla",
     "serviceRequest": "Hizmet Talebi",
-    "whatsappNote": "Talepler WhatsApp üzerinden gönderilir"
+    "whatsappNote": "Talepler WhatsApp üzerinden gönderilir",
+    "maintenanceSelect": "Sorun Seçin",
+    "mt_ac": "Klima",
+    "mt_balcony": "Balkon",
+    "mt_shower": "Duş",
+    "mt_water": "Su",
+    "mt_lights": "Aydınlatma",
+    "mt_tv": "TV",
+    "mt_safe": "Kasa",
+    "mt_door": "Kapı / Kilit"
   },
   "pwa": {
     "title": "BAŞKA Rehber'i Yükle",
