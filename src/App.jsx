@@ -60,19 +60,10 @@ function App() {
   const videoRef = useRef(null)
   const logoRef = useRef(null)
   const headerRef = useRef(null)
-  const splashMinReady = useRef(false)
-  const splashVideoReady = useRef(false)
 
   const ActiveComponent = sectionComponents[activeSection]
   const basePath = import.meta.env.BASE_URL
   const taglineFont = getTaglineFont(i18n.language)
-
-  const dismissSplash = () => {
-    if (splashMinReady.current && splashVideoReady.current) {
-      setSplashFading(true)
-      setTimeout(() => setSplashVisible(false), 600)
-    }
-  }
 
   // Calculate stripe width based on viewport (15% thinner — more stripes visible)
   const getStripeWidth = () => {
@@ -113,25 +104,11 @@ function App() {
       }
     }, 2200)
 
-    // Splash: minimum 1.5s display
+    // Splash: show for 1.5s then fade out
     const splashTimer = setTimeout(() => {
-      splashMinReady.current = true
-      dismissSplash()
+      setSplashFading(true)
+      setTimeout(() => setSplashVisible(false), 600)
     }, 1500)
-
-    // Splash: max wait 5s even if video never loads
-    const splashMax = setTimeout(() => {
-      splashVideoReady.current = true
-      dismissSplash()
-    }, 5000)
-
-    // Splash: video ready handler
-    const vid = videoRef.current
-    const onCanPlay = () => {
-      splashVideoReady.current = true
-      dismissSplash()
-    }
-    if (vid) vid.addEventListener('canplaythrough', onCanPlay)
 
     const ro = new ResizeObserver(() => updateStripes())
     if (logoRef.current) ro.observe(logoRef.current)
@@ -142,8 +119,6 @@ function App() {
       clearTimeout(stripeTimer)
       clearTimeout(videoTimer)
       clearTimeout(splashTimer)
-      clearTimeout(splashMax)
-      if (vid) vid.removeEventListener('canplaythrough', onCanPlay)
       clearTimeout(imgLoadTimer)
       ro.disconnect()
       window.removeEventListener('resize', updateStripes)
@@ -185,6 +160,7 @@ function App() {
         <video
           ref={videoRef}
           src={`${basePath}baskavideo.mp4`}
+          preload="auto"
           muted
           playsInline
           onEnded={handleVideoEnd}
