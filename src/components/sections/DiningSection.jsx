@@ -32,7 +32,19 @@ export default function DiningSection() {
         </div>
       </Card>
 
-      <Card title="" delay={1}>
+      <Card icon="🌿" title={t('dining.leziz')} delay={1}>
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
+          {t('dining.lezizDesc')}
+        </p>
+      </Card>
+
+      <Card icon="🕐" title={t('dining.daima')} delay={2}>
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
+          {t('dining.daimaDesc')}
+        </p>
+      </Card>
+
+      <Card title="" delay={3}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] italic">
           {t('dining.concept')}
         </p>
@@ -54,13 +66,12 @@ export default function DiningSection() {
         <div className="grid grid-cols-2 gap-3">
           {[
             { key: 'fishSandwich' },
-            { key: 'musselBar' },
             { key: 'fruitStand' },
             { key: 'chickenRice' },
             { key: 'meatballKokorec' },
             { key: 'gelato' }
           ].map((item, i) => (
-            <Card key={item.key} title={t(`streetFood.${item.key}`)} delay={i + 2}>
+            <Card key={item.key} title={t(`streetFood.${item.key}`)} delay={i + 4}>
               <p className="text-[0.65rem] text-[var(--gold-dark)] font-medium">
                 {t(`streetFood.${item.key}Time`)}
               </p>

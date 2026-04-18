@@ -29,12 +29,6 @@ export default function ActivitiesSection() {
         </p>
       </Card>
 
-      <Card title={t('activities.nightclub')} delay={3}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
-          {t('activities.nightclubDesc')}
-        </p>
-      </Card>
-
       <div className="grid grid-cols-2 gap-3" style={{ marginTop: '24px' }}>
         {[
           { label: t('activities.padel') },
