@@ -3,13 +3,13 @@ import Card from '../Card'
 
 const bars = [
   { key: 'lobbyBar', icon: '🍸' },
+  { key: 'manzaraPatisserie', icon: '🍰' },
   { key: 'coffeeHouse', icon: '☕' },
-  { key: 'aegeanBar', icon: '🌊' },
   { key: 'cafeBodrum', icon: '🫖' },
-  { key: 'bistroBodrum', icon: '🌮' },
   { key: 'pubFistik', icon: '🍺' },
   { key: 'poolLounge', icon: '🏊' },
-  { key: 'espresso', icon: '☕' }
+  { key: 'loungeBar', icon: '🍹' },
+  { key: 'beachPastane', icon: '🥐' }
 ]
 
 export default function BarsSection() {
