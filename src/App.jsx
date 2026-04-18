@@ -55,13 +55,24 @@ function App() {
   const [videoVisible, setVideoVisible] = useState(false)
   const [stripesReady, setStripesReady] = useState(false)
   const [stripeStyle, setStripeStyle] = useState({})
+  const [splashVisible, setSplashVisible] = useState(true)
+  const [splashFading, setSplashFading] = useState(false)
   const videoRef = useRef(null)
   const logoRef = useRef(null)
   const headerRef = useRef(null)
+  const splashMinReady = useRef(false)
+  const splashVideoReady = useRef(false)
 
   const ActiveComponent = sectionComponents[activeSection]
   const basePath = import.meta.env.BASE_URL
   const taglineFont = getTaglineFont(i18n.language)
+
+  const dismissSplash = () => {
+    if (splashMinReady.current && splashVideoReady.current) {
+      setSplashFading(true)
+      setTimeout(() => setSplashVisible(false), 600)
+    }
+  }
 
   // Calculate stripe width based on viewport (15% thinner — more stripes visible)
   const getStripeWidth = () => {
@@ -102,6 +113,26 @@ function App() {
       }
     }, 2200)
 
+    // Splash: minimum 1.5s display
+    const splashTimer = setTimeout(() => {
+      splashMinReady.current = true
+      dismissSplash()
+    }, 1500)
+
+    // Splash: max wait 5s even if video never loads
+    const splashMax = setTimeout(() => {
+      splashVideoReady.current = true
+      dismissSplash()
+    }, 5000)
+
+    // Splash: video ready handler
+    const vid = videoRef.current
+    const onCanPlay = () => {
+      splashVideoReady.current = true
+      dismissSplash()
+    }
+    if (vid) vid.addEventListener('canplaythrough', onCanPlay)
+
     const ro = new ResizeObserver(() => updateStripes())
     if (logoRef.current) ro.observe(logoRef.current)
     window.addEventListener('resize', updateStripes)
@@ -110,6 +141,9 @@ function App() {
     return () => {
       clearTimeout(stripeTimer)
       clearTimeout(videoTimer)
+      clearTimeout(splashTimer)
+      clearTimeout(splashMax)
+      if (vid) vid.removeEventListener('canplaythrough', onCanPlay)
       clearTimeout(imgLoadTimer)
       ro.disconnect()
       window.removeEventListener('resize', updateStripes)
@@ -122,6 +156,28 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[var(--bg)]">
+      {/* Splash Screen */}
+      {splashVisible && (
+        <div
+          className="fixed inset-0 z-[99999] flex items-center justify-center"
+          style={{
+            background: 'linear-gradient(180deg, #FFFFFF 0%, #FFFBF0 50%, #FFF8EC 100%)',
+            opacity: splashFading ? 0 : 1,
+            transition: 'opacity 0.6s ease-out',
+            pointerEvents: splashFading ? 'none' : 'auto',
+          }}
+        >
+          <motion.img
+            src={`${basePath}BASKA RESORT-LOGO.png`}
+            alt="BAŞKA Resort Bodrum"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="h-28 w-auto"
+          />
+        </div>
+      )}
+
       {/* Header */}
       <header ref={headerRef} className="relative text-center pt-10 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
 
