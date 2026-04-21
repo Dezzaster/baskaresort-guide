@@ -98,7 +98,7 @@ export default function InstallPrompt() {
               onClick={e => e.stopPropagation()}
             >
               <h3 className="font-semibold text-[var(--primary)] text-center text-[0.95rem] mb-6">{t('pwa.iosTitle')}</h3>
-              <div className="space-y-5 mb-8">
+              <div className="space-y-5 mb-6">
                 <div className="flex items-center gap-4">
                   <span className="w-8 h-8 rounded-full bg-[var(--primary)]/8 flex items-center justify-center text-xs font-bold text-[var(--primary)] flex-shrink-0">1</span>
                   <span className="text-[0.8rem] text-[var(--text-dark)]">{t('pwa.iosStep1')}</span>
@@ -111,6 +111,11 @@ export default function InstallPrompt() {
                   <span className="w-8 h-8 rounded-full bg-[var(--primary)]/8 flex items-center justify-center text-xs font-bold text-[var(--primary)] flex-shrink-0">3</span>
                   <span className="text-[0.8rem] text-[var(--text-dark)]">{t('pwa.iosStep3')}</span>
                 </div>
+              </div>
+              <div className="py-3 px-4 rounded-xl bg-[var(--bg-warm)] mb-6">
+                <p className="text-[0.72rem] text-[var(--gold-dark)] leading-[1.6] text-center">
+                  {t('pwa.notificationNote')}
+                </p>
               </div>
               <button
                 onClick={dismiss}

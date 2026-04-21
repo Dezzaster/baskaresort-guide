@@ -60,7 +60,8 @@
     "network": "Netwerk",
     "password": "Wachtwoord",
     "coverage": "Dekking",
-    "coverageDesc": "Gratis Wi-Fi in het hele resort — kamers, lobby, zwembad, strand en alle openbare ruimtes."
+    "coverageDesc": "Gratis Wi-Fi in het hele resort — kamers, lobby, zwembad, strand en alle openbare ruimtes.",
+    "captivePortal": "Verbind met het netwerk \"Başka Resort\" — de inlogpagina opent automatisch"
   },
   "rooms": {
     "title": "Kamertypes",
@@ -313,7 +314,8 @@
     "iosStep1": "Tik op de deelknop ⬆️ onderaan",
     "iosStep2": "Scroll naar beneden in het menu",
     "iosStep3": "Tik op \"Zet op beginscherm\"",
-    "gotIt": "Begrepen!"
+    "gotIt": "Begrepen!",
+    "notificationNote": "Sta meldingen toe voor restaurantherinneringen"
   },
   "important": {
     "title": "Belangrijke informatie",
@@ -361,7 +363,7 @@
   },
   "flight": {
     "title": "Vlucht volgen",
-    "subtitle": "Volg uw vertrek",
+    "subtitle": "Volg uw vertrekvlucht",
     "flightNumber": "Vluchtnummer",
     "flightPlaceholder": "bijv. TK1234",
     "departureDate": "Vertrekdatum",
@@ -371,7 +373,15 @@
     "hours": "uren",
     "minutes": "minuten",
     "clear": "Wissen",
-    "departed": "Vlucht is vertrokken"
+    "departed": "Vlucht is vertrokken",
+    "trackLive": "Live volgen",
+    "trackDesc": "Voer uw vluchtnummer in om uw vertrek te volgen",
+    "setDeparture": "Stel vertrektijd in voor aftellen",
+    "transferTitle": "Luchthaventransfer",
+    "transferDesc": "Boek uw luchthaventransfer via WhatsApp",
+    "transferIntro": "Ik wil graag een transfer boeken",
+    "requestTaxi": "Taxi aanvragen",
+    "requestVip": "VIP-transfer"
   },
   "weather": {
     "swimOk": "Geschikt om te zwemmen",

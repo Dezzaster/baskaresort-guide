@@ -17,9 +17,10 @@ export default function WifiSection() {
             <span className="text-[0.76rem] text-[var(--text-muted)] font-medium">{t('wifi.network')}</span>
             <span className="text-[0.82rem] text-[var(--primary)] font-bold tracking-wide">Başka Resort</span>
           </div>
-          <div className="flex justify-between items-center py-3 px-4 rounded-xl bg-white/70">
-            <span className="text-[0.76rem] text-[var(--text-muted)] font-medium">{t('wifi.password')}</span>
-            <span className="text-[0.82rem] text-[var(--primary)] font-bold tracking-wide font-mono">Bodrum2026</span>
+          <div className="py-3 px-4 rounded-xl bg-[var(--bg-warm)]">
+            <p className="text-[0.76rem] text-[var(--gold-dark)] font-medium leading-[1.6]">
+              {t('wifi.captivePortal')}
+            </p>
           </div>
         </div>
       </Card>

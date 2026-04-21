@@ -14,13 +14,10 @@ const maintenanceItems = ['ac', 'balcony', 'shower', 'water', 'lights', 'tv', 's
 
 export default function RequestsSection() {
   const { t } = useTranslation()
-  const [room, setRoom] = useState(() => localStorage.getItem('baska_room') || '')
-  const [showRoomInput, setShowRoomInput] = useState(false)
   const [showMaintenance, setShowMaintenance] = useState(false)
   const [showPillowSelect, setShowPillowSelect] = useState(false)
   const [showLaundry, setShowLaundry] = useState(false)
   const [laundryComment, setLaundryComment] = useState('')
-  const [pendingRequest, setPendingRequest] = useState(null)
 
   const bi = (key) => {
     const u = t(key), tr = t(key, { lng: 'tr' })
@@ -33,7 +30,6 @@ export default function RequestsSection() {
       `🏨 ${bi('requests.serviceRequest')} ${ticket}`,
       '',
       `📋 ${label}`,
-      `🚪 ${bi('requests.room')}: ${room.trim()}`,
       extra ? `💬 ${extra}` : '',
       '',
       '— BAŞKA Guest Guide'
@@ -42,25 +38,9 @@ export default function RequestsSection() {
   }
 
   const handleRequest = (key) => {
-    const needsRoom = !room.trim()
-
-    if (key === 'maintenance') {
-      if (needsRoom) { setPendingRequest('__maintenance__'); setShowRoomInput(true); return }
-      setShowMaintenance(true)
-      return
-    }
-    if (key === 'pillows') {
-      if (needsRoom) { setPendingRequest('__pillows__'); setShowRoomInput(true); return }
-      setShowPillowSelect(true)
-      return
-    }
-    if (key === 'laundry') {
-      if (needsRoom) { setPendingRequest('__laundry__'); setShowRoomInput(true); return }
-      setShowLaundry(true)
-      return
-    }
-    if (needsRoom) { setPendingRequest(key); setShowRoomInput(true); return }
-
+    if (key === 'maintenance') { setShowMaintenance(true); return }
+    if (key === 'pillows') { setShowPillowSelect(true); return }
+    if (key === 'laundry') { setShowLaundry(true); return }
     if (key === 'lateCheckout') {
       doSend(`${bi('requests.lateCheckout')} — €20/h`)
     } else {
@@ -82,20 +62,6 @@ export default function RequestsSection() {
     setShowLaundry(false)
     doSend(bi('requests.laundry'), laundryComment.trim())
     setLaundryComment('')
-  }
-
-  const handleRoomSubmit = () => {
-    if (!room.trim()) return
-    localStorage.setItem('baska_room', room.trim())
-    setShowRoomInput(false)
-    const pending = pendingRequest
-    setPendingRequest(null)
-
-    if (pending === '__maintenance__') setTimeout(() => setShowMaintenance(true), 150)
-    else if (pending === '__pillows__') setTimeout(() => setShowPillowSelect(true), 150)
-    else if (pending === '__laundry__') setTimeout(() => setShowLaundry(true), 150)
-    else if (pending === 'lateCheckout') setTimeout(() => doSend(`${bi('requests.lateCheckout')} — €20/h`), 100)
-    else if (pending) setTimeout(() => doSend(bi(`requests.${pending}`)), 100)
   }
 
   return (
@@ -127,35 +93,6 @@ export default function RequestsSection() {
       <p className="text-[0.65rem] text-[var(--text-muted)] opacity-60 text-center mt-8 tracking-wide">
         {t('requests.whatsappNote')}
       </p>
-
-      {/* Room Number Modal */}
-      <AnimatePresence>
-        {showRoomInput && (
-          <motion.div
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[9999] bg-black/40 flex items-center justify-center p-6"
-            onClick={() => { setShowRoomInput(false); setPendingRequest(null) }}
-          >
-            <motion.div
-              initial={{ scale: 0.92, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.92, opacity: 0 }}
-              className="bg-white rounded-3xl max-w-xs w-full shadow-2xl"
-              style={{ padding: '36px 32px 28px' }}
-              onClick={e => e.stopPropagation()}
-            >
-              <h3 className="font-['Cormorant_Garamond'] font-normal text-[var(--primary)] text-[1.1rem] mb-5">{t('requests.enterRoom')}</h3>
-              <input
-                type="text" value={room} onChange={e => setRoom(e.target.value)}
-                onKeyDown={e => e.key === 'Enter' && handleRoomSubmit()}
-                placeholder="405" autoFocus
-                className="w-full border border-[rgba(0,51,160,0.12)] rounded-xl px-5 py-3.5 text-center text-lg font-semibold text-[var(--primary)] outline-none focus:border-[var(--primary)]/30 mb-5 transition-colors"
-              />
-              <button onClick={handleRoomSubmit} className="w-full py-3.5 rounded-xl bg-[var(--primary)] text-white font-semibold text-[0.8rem] cursor-pointer">
-                {t('requests.confirm')}
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* Maintenance Modal */}
       <AnimatePresence>

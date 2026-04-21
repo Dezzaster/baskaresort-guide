@@ -60,7 +60,8 @@
     "network": "Netzwerk",
     "password": "Passwort",
     "coverage": "Abdeckung",
-    "coverageDesc": "Kostenloses WLAN in der gesamten Anlage — Zimmer, Lobby, Pool, Strand und alle öffentlichen Bereiche."
+    "coverageDesc": "Kostenloses WLAN in der gesamten Anlage — Zimmer, Lobby, Pool, Strand und alle öffentlichen Bereiche.",
+    "captivePortal": "Verbinden Sie sich mit dem Netzwerk \"Başka Resort\" — die Anmeldeseite öffnet sich automatisch"
   },
   "rooms": {
     "title": "Zimmertypen & Ausstattung",
@@ -313,7 +314,8 @@
     "iosStep1": "Tippen Sie auf die Teilen-Taste ⬆️ unten",
     "iosStep2": "Scrollen Sie im Menü nach unten",
     "iosStep3": "Tippen Sie auf \"Zum Home-Bildschirm\"",
-    "gotIt": "Verstanden!"
+    "gotIt": "Verstanden!",
+    "notificationNote": "Benachrichtigungen für Restauranterinnerungen erlauben"
   },
   "important": {
     "title": "Wichtige Informationen",
@@ -371,7 +373,15 @@
     "hours": "Stunden",
     "minutes": "Minuten",
     "clear": "Löschen",
-    "departed": "Flug ist abgeflogen"
+    "departed": "Flug ist abgeflogen",
+    "trackLive": "Live verfolgen",
+    "trackDesc": "Geben Sie Ihre Flugnummer ein, um Ihren Abflug zu verfolgen",
+    "setDeparture": "Abflugzeit für Countdown festlegen",
+    "transferTitle": "Flughafentransfer",
+    "transferDesc": "Buchen Sie Ihren Flughafentransfer per WhatsApp",
+    "transferIntro": "Ich möchte einen Transfer buchen",
+    "requestTaxi": "Taxi anfordern",
+    "requestVip": "VIP-Transfer"
   },
   "weather": {
     "swimOk": "Zum Schwimmen geeignet",

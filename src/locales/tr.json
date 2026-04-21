@@ -60,7 +60,8 @@
     "network": "Ağ Adı",
     "password": "Şifre",
     "coverage": "Kapsama",
-    "coverageDesc": "Tesis genelinde ücretsiz Wi-Fi — odalar, lobi, havuz, plaj ve tüm ortak alanlarda."
+    "coverageDesc": "Tesis genelinde ücretsiz Wi-Fi — odalar, lobi, havuz, plaj ve tüm ortak alanlarda.",
+    "captivePortal": "\"Başka Resort\" ağına bağlanın — giriş sayfası otomatik açılacaktır"
   },
   "rooms": {
     "title": "Oda Tipleri ve Özellikleri",
@@ -313,7 +314,8 @@
     "iosStep1": "Alt kısımdaki Paylaş düğmesine ⬆️ dokunun",
     "iosStep2": "Menüde aşağı kaydırın",
     "iosStep3": "\"Ana Ekrana Ekle\" seçeneğine dokunun",
-    "gotIt": "Anladım!"
+    "gotIt": "Anladım!",
+    "notificationNote": "Restoran hatırlatmaları için bildirimlere izin verin"
   },
   "important": {
     "title": "Önemli Bilgiler",
@@ -361,7 +363,7 @@
   },
   "flight": {
     "title": "Uçuş Takibi",
-    "subtitle": "Kalkış zamanınızı takip edin",
+    "subtitle": "Kalkış uçuşunuzu takip edin",
     "flightNumber": "Uçuş Numarası",
     "flightPlaceholder": "ör. TK1234",
     "departureDate": "Kalkış Tarihi",
@@ -371,7 +373,15 @@
     "hours": "saat",
     "minutes": "dakika",
     "clear": "Temizle",
-    "departed": "Uçuş gerçekleşti"
+    "departed": "Uçuş gerçekleşti",
+    "trackLive": "Canlı Takip",
+    "trackDesc": "Kalkış bilgilerinizi takip etmek için uçuş numaranızı girin",
+    "setDeparture": "Geri sayım için kalkış saati belirleyin",
+    "transferTitle": "Havalimanı Transferi",
+    "transferDesc": "WhatsApp ile havalimanı transferi talep edin",
+    "transferIntro": "Transfer talep etmek istiyorum",
+    "requestTaxi": "Taksi Talebi",
+    "requestVip": "VIP Transfer"
   },
   "weather": {
     "swimOk": "Yüzme için uygun",
