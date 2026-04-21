@@ -19,7 +19,8 @@
     "kids": "Kinder",
     "services": "Services",
     "requests": "Anfragen",
-    "important": "Wichtig"
+    "important": "Wichtig",
+    "flight": "Flug-Tracker"
   },
   "info": {
     "title": "Willkommen im BAŞKA",
@@ -131,7 +132,8 @@
     "guests": "Gäste",
     "comment": "Kommentare",
     "commentPlaceholder": "Besondere Wünsche, Sitzplatzpräferenzen...",
-    "sendWhatsapp": "Per WhatsApp senden"
+    "sendWhatsapp": "Per WhatsApp senden",
+    "reserveIntro": "Ich möchte eine Reservierung vornehmen bei"
   },
   "bars": {
     "title": "Bars & Cafés",
@@ -177,7 +179,10 @@
     "pool": "Außenpool",
     "poolDesc": "Geöffnet 08:00–20:00. Beheizt in der Vor- und Nachsaison",
     "shuttle": "Strandshuttle",
-    "shuttleDesc": "Service von der Nebenstraße"
+    "shuttleDesc": "Service von der Nebenstraße",
+    "cabana": "Strandcabanas",
+    "cabanaDesc": "Private Strandcabanas auf Reservierung verfügbar",
+    "reserveCabana": "Cabana reservieren"
   },
   "spa": {
     "title": "Soul Spa & Fitness",
@@ -290,7 +295,15 @@
     "mt_lights": "Beleuchtung",
     "mt_tv": "TV",
     "mt_safe": "Safe",
-    "mt_door": "Tür / Schloss"
+    "mt_door": "Tür / Schloss",
+    "lateCheckout": "Später Check-out",
+    "lateCheckoutNote": "€20 pro Stunde",
+    "laundry": "Wäscheservice",
+    "laundryComment": "Angaben",
+    "laundryPlaceholder": "Beschreiben Sie die Wäsche...",
+    "pillowSelect": "Kissentyp wählen",
+    "pillowRegular": "Normales Kissen",
+    "pillowOrthopedic": "Orthopädisches Kissen"
   },
   "pwa": {
     "title": "BAŞKA Guide installieren",
@@ -345,5 +358,32 @@
     "address": "Eski Çeşme Mah. Haremtan Sok. No:11, Bodrum, Muğla 48400",
     "rights": "Alle Rechte vorbehalten",
     "tagline": "Wie die Ägäis..."
+  },
+  "flight": {
+    "title": "Flug-Tracker",
+    "subtitle": "Verfolgen Sie Ihren Abflug",
+    "flightNumber": "Flugnummer",
+    "flightPlaceholder": "z.B. TK1234",
+    "departureDate": "Abflugdatum",
+    "departureTime": "Abflugzeit",
+    "save": "Speichern",
+    "days": "Tage",
+    "hours": "Stunden",
+    "minutes": "Minuten",
+    "clear": "Löschen",
+    "departed": "Flug ist abgeflogen"
+  },
+  "weather": {
+    "swimOk": "Zum Schwimmen geeignet",
+    "swimCaution": "Vorsicht beim Schwimmen",
+    "swimNo": "Schwimmen nicht empfohlen"
+  },
+  "menu": {
+    "close": "Schließen"
+  },
+  "meal": {
+    "breakfastSoon": "Frühstück beginnt bald um 07:00!",
+    "lunchSoon": "Mittagessen beginnt bald um 12:30!",
+    "dinnerSoon": "Abendessen beginnt bald um 19:00!"
   }
 }

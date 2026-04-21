@@ -19,7 +19,8 @@
     "kids": "Kids",
     "services": "Services",
     "requests": "Requests",
-    "important": "Important"
+    "important": "Important",
+    "flight": "Flight Tracker"
   },
   "info": {
     "title": "Welcome to BAŞKA",
@@ -131,7 +132,8 @@
     "guests": "Guests",
     "comment": "Comments",
     "commentPlaceholder": "Special requests, seating preferences...",
-    "sendWhatsapp": "Send via WhatsApp"
+    "sendWhatsapp": "Send via WhatsApp",
+    "reserveIntro": "I would like to make a reservation at"
   },
   "bars": {
     "title": "Bars & Cafes",
@@ -177,7 +179,10 @@
     "pool": "Outdoor Pool",
     "poolDesc": "Open 08:00–20:00. Heated during pre- and post-season",
     "shuttle": "Beach Shuttle",
-    "shuttleDesc": "Service provided from secondary road"
+    "shuttleDesc": "Service provided from secondary road",
+    "cabana": "Beach Cabanas",
+    "cabanaDesc": "Private beachfront cabanas available by reservation",
+    "reserveCabana": "Reserve Cabana"
   },
   "spa": {
     "title": "Soul Spa & Fitness",
@@ -290,7 +295,15 @@
     "mt_lights": "Lighting",
     "mt_tv": "TV",
     "mt_safe": "Safe",
-    "mt_door": "Door / Lock"
+    "mt_door": "Door / Lock",
+    "lateCheckout": "Late Check-Out",
+    "lateCheckoutNote": "€20 per hour",
+    "laundry": "Laundry Service",
+    "laundryComment": "Specifications",
+    "laundryPlaceholder": "Describe items...",
+    "pillowSelect": "Choose Pillow Type",
+    "pillowRegular": "Regular Pillow",
+    "pillowOrthopedic": "Orthopedic Pillow"
   },
   "pwa": {
     "title": "Install BAŞKA Guide",
@@ -345,5 +358,32 @@
     "address": "Eski Çeşme Mah. Haremtan Sok. No:11, Bodrum, Muğla 48400",
     "rights": "All rights reserved",
     "tagline": "As the Aegean Is..."
+  },
+  "flight": {
+    "title": "Flight Tracker",
+    "subtitle": "Track your departure",
+    "flightNumber": "Flight Number",
+    "flightPlaceholder": "e.g. TK1234",
+    "departureDate": "Departure Date",
+    "departureTime": "Departure Time",
+    "save": "Save Flight",
+    "days": "days",
+    "hours": "hours",
+    "minutes": "minutes",
+    "clear": "Clear",
+    "departed": "Flight has departed"
+  },
+  "weather": {
+    "swimOk": "Suitable for swimming",
+    "swimCaution": "Swim with caution",
+    "swimNo": "Swimming not recommended"
+  },
+  "menu": {
+    "close": "Close"
+  },
+  "meal": {
+    "breakfastSoon": "Breakfast opens soon at 07:00!",
+    "lunchSoon": "Lunch opens soon at 12:30!",
+    "dinnerSoon": "Dinner opens soon at 19:00!"
   }
 }

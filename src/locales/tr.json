@@ -19,7 +19,8 @@
     "kids": "Çocuklar",
     "services": "Hizmetler",
     "requests": "Talepler",
-    "important": "Önemli"
+    "important": "Önemli",
+    "flight": "Uçuş Takibi"
   },
   "info": {
     "title": "BAŞKA'ya Hoş Geldiniz",
@@ -131,7 +132,8 @@
     "guests": "Kişi Sayısı",
     "comment": "Notlar",
     "commentPlaceholder": "Özel istekler, oturma tercihi...",
-    "sendWhatsapp": "WhatsApp ile Gönder"
+    "sendWhatsapp": "WhatsApp ile Gönder",
+    "reserveIntro": "Rezervasyon yapmak istiyorum"
   },
   "bars": {
     "title": "Bar & Kafeler",
@@ -177,7 +179,10 @@
     "pool": "Açık Havuz",
     "poolDesc": "08:00–20:00 arası açık. Sezon öncesi ve sonrasında ısıtılır",
     "shuttle": "Plaj Servisi",
-    "shuttleDesc": "Ara yoldan servis sağlanır"
+    "shuttleDesc": "Ara yoldan servis sağlanır",
+    "cabana": "Plaj Kabanaları",
+    "cabanaDesc": "Rezervasyonla özel plaj kabanaları mevcuttur",
+    "reserveCabana": "Kabana Rezervasyonu"
   },
   "spa": {
     "title": "NEFES Spa & Fitness",
@@ -290,7 +295,15 @@
     "mt_lights": "Aydınlatma",
     "mt_tv": "TV",
     "mt_safe": "Kasa",
-    "mt_door": "Kapı / Kilit"
+    "mt_door": "Kapı / Kilit",
+    "lateCheckout": "Geç Çıkış",
+    "lateCheckoutNote": "Saati €20",
+    "laundry": "Çamaşır Hizmeti",
+    "laundryComment": "Açıklama",
+    "laundryPlaceholder": "Kıyafetleri belirtin...",
+    "pillowSelect": "Yastık Tipi Seçin",
+    "pillowRegular": "Normal Yastık",
+    "pillowOrthopedic": "Ortopedik Yastık"
   },
   "pwa": {
     "title": "BAŞKA Rehber'i Yükle",
@@ -345,5 +358,32 @@
     "address": "Eski Çeşme Mah. Haremtan Sok. No:11, Bodrum, Muğla 48400",
     "rights": "Tüm hakları saklıdır",
     "tagline": "Ege'nin Olduğu Gibi..."
+  },
+  "flight": {
+    "title": "Uçuş Takibi",
+    "subtitle": "Kalkış zamanınızı takip edin",
+    "flightNumber": "Uçuş Numarası",
+    "flightPlaceholder": "ör. TK1234",
+    "departureDate": "Kalkış Tarihi",
+    "departureTime": "Kalkış Saati",
+    "save": "Kaydet",
+    "days": "gün",
+    "hours": "saat",
+    "minutes": "dakika",
+    "clear": "Temizle",
+    "departed": "Uçuş gerçekleşti"
+  },
+  "weather": {
+    "swimOk": "Yüzme için uygun",
+    "swimCaution": "Dikkatli yüzün",
+    "swimNo": "Yüzme önerilmez"
+  },
+  "menu": {
+    "close": "Kapat"
+  },
+  "meal": {
+    "breakfastSoon": "Kahvaltı 07:00'de başlıyor!",
+    "lunchSoon": "Öğle yemeği 12:30'da başlıyor!",
+    "dinnerSoon": "Akşam yemeği 19:00'da başlıyor!"
   }
 }
