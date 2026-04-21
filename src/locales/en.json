@@ -60,7 +60,8 @@
     "network": "Network",
     "password": "Password",
     "coverage": "Coverage",
-    "coverageDesc": "Free Wi-Fi available throughout the entire resort — rooms, lobby, pool, beach and all public areas."
+    "coverageDesc": "Free Wi-Fi available throughout the entire resort — rooms, lobby, pool, beach and all public areas.",
+    "captivePortal": "Connect to \"Başka Resort\" network — a login page will open automatically"
   },
   "rooms": {
     "title": "Room Types & Features",
@@ -313,7 +314,8 @@
     "iosStep1": "Tap the Share button ⬆️ at the bottom",
     "iosStep2": "Scroll down in the menu",
     "iosStep3": "Tap \"Add to Home Screen\"",
-    "gotIt": "Got it!"
+    "gotIt": "Got it!",
+    "notificationNote": "Allow notifications to receive restaurant opening reminders"
   },
   "important": {
     "title": "Important Information",
@@ -361,7 +363,7 @@
   },
   "flight": {
     "title": "Flight Tracker",
-    "subtitle": "Track your departure",
+    "subtitle": "Track your departure flight",
     "flightNumber": "Flight Number",
     "flightPlaceholder": "e.g. TK1234",
     "departureDate": "Departure Date",
@@ -371,7 +373,15 @@
     "hours": "hours",
     "minutes": "minutes",
     "clear": "Clear",
-    "departed": "Flight has departed"
+    "departed": "Flight has departed",
+    "trackLive": "Track Live",
+    "trackDesc": "Enter your flight number to track your departure",
+    "setDeparture": "Set departure time for countdown",
+    "transferTitle": "Airport Transfer",
+    "transferDesc": "Book your airport transfer via WhatsApp",
+    "transferIntro": "I would like to book a transfer",
+    "requestTaxi": "Request Taxi",
+    "requestVip": "VIP Transfer"
   },
   "weather": {
     "swimOk": "Suitable for swimming",

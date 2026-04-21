@@ -60,7 +60,8 @@
     "network": "Sieć",
     "password": "Hasło",
     "coverage": "Zasięg",
-    "coverageDesc": "Bezpłatne Wi-Fi w całym resorcie — pokoje, lobby, basen, plaża i wszystkie strefy publiczne."
+    "coverageDesc": "Bezpłatne Wi-Fi w całym resorcie — pokoje, lobby, basen, plaża i wszystkie strefy publiczne.",
+    "captivePortal": "Połącz się z siecią \"Başka Resort\" — strona logowania otworzy się automatycznie"
   },
   "rooms": {
     "title": "Typy pokoi",
@@ -313,7 +314,8 @@
     "iosStep1": "Naciśnij przycisk Udostępnij ⬆️ na dole",
     "iosStep2": "Przewiń menu w dół",
     "iosStep3": "Naciśnij \"Dodaj do ekranu początkowego\"",
-    "gotIt": "Rozumiem!"
+    "gotIt": "Rozumiem!",
+    "notificationNote": "Zezwól na powiadomienia o otwarciu restauracji"
   },
   "important": {
     "title": "Ważne informacje",
@@ -361,7 +363,7 @@
   },
   "flight": {
     "title": "Śledzenie lotu",
-    "subtitle": "Śledź czas odlotu",
+    "subtitle": "Śledź swój lot wylotowy",
     "flightNumber": "Numer lotu",
     "flightPlaceholder": "np. TK1234",
     "departureDate": "Data odlotu",
@@ -371,7 +373,15 @@
     "hours": "godzin",
     "minutes": "minut",
     "clear": "Wyczyść",
-    "departed": "Lot się odbył"
+    "departed": "Lot się odbył",
+    "trackLive": "Śledź na żywo",
+    "trackDesc": "Wpisz numer lotu, aby śledzić swój odlot",
+    "setDeparture": "Ustaw czas odlotu dla odliczania",
+    "transferTitle": "Transfer lotniskowy",
+    "transferDesc": "Zamów transfer na lotnisko przez WhatsApp",
+    "transferIntro": "Chciałbym zamówić transfer",
+    "requestTaxi": "Zamów taksówkę",
+    "requestVip": "Transfer VIP"
   },
   "weather": {
     "swimOk": "Odpowiednie do pływania",
