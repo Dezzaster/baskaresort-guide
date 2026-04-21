@@ -26,23 +26,29 @@ export default function AlacarteSection() {
     date: new Date().toISOString().split('T')[0],
     time: '19:00',
     guests: '2',
-    room: localStorage.getItem('baska_room') || '',
     comment: ''
   })
 
+  const bi = (key) => {
+    const u = t(key), tr = t(key, { lng: 'tr' })
+    return u === tr ? u : `${u} / ${tr}`
+  }
+
   const sendReservation = () => {
-    if (!form.room.trim()) return
-    localStorage.setItem('baska_room', form.room.trim())
+    const ticket = '№' + Math.floor(10000 + Math.random() * 90000)
     const restaurant = t(`alacarte.${reserving}`)
+    const restaurantTr = t(`alacarte.${reserving}`, { lng: 'tr' })
     const code = restaurants.find(r => r.key === reserving)?.code || ''
+    const biRestaurant = restaurant === restaurantTr ? restaurant : `${restaurant} / ${restaurantTr}`
+
     const msg = [
-      `🍽️ ${t('alacarte.reservationTitle')}`,
+      `🍽️ ${bi('alacarte.reservationTitle')} ${ticket}`,
       '',
-      `🏪 ${restaurant} (${code})`,
+      bi('alacarte.reserveIntro'),
+      `🏪 ${biRestaurant} (${code})`,
       `📅 ${form.date}`,
       `🕐 ${form.time}`,
       `👥 ${form.guests}`,
-      `🚪 ${t('requests.room')}: ${form.room.trim()}`,
       form.comment.trim() ? `💬 ${form.comment.trim()}` : '',
       '',
       '— BAŞKA Guest Guide'
@@ -75,10 +81,7 @@ export default function AlacarteSection() {
           {r.key !== 'bistro' && (
             <motion.button
               whileTap={{ scale: 0.97 }}
-              onClick={() => {
-                setForm(f => ({ ...f, room: localStorage.getItem('baska_room') || f.room }))
-                setReserving(r.key)
-              }}
+              onClick={() => setReserving(r.key)}
               className="mt-3 w-full py-2.5 rounded-xl bg-[var(--primary)] text-white text-[0.74rem] font-medium cursor-pointer hover:bg-[var(--primary)]/90 transition-colors"
             >
               {t('alacarte.reserve')}
@@ -151,16 +154,6 @@ export default function AlacarteSection() {
                       ))}
                     </select>
                   </div>
-                </div>
-                <div>
-                  <label className="text-[0.7rem] text-[var(--text-muted)] mb-2 block tracking-wide">{t('requests.room')}</label>
-                  <input
-                    type="text"
-                    value={form.room}
-                    onChange={e => setForm({ ...form, room: e.target.value })}
-                    placeholder="405"
-                    className="w-full border border-[rgba(0,51,160,0.1)] rounded-xl px-5 py-3 text-[0.82rem] text-[var(--text-dark)] outline-none focus:border-[var(--primary)]/30 transition-colors"
-                  />
                 </div>
                 <div>
                   <label className="text-[0.7rem] text-[var(--text-muted)] mb-2 block tracking-wide">{t('alacarte.comment')}</label>

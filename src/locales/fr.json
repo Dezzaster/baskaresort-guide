@@ -19,7 +19,8 @@
     "kids": "Enfants",
     "services": "Services",
     "requests": "Demandes",
-    "important": "Important"
+    "important": "Important",
+    "flight": "Vol"
   },
   "info": {
     "title": "Bienvenue au BAŞKA",
@@ -131,7 +132,8 @@
     "guests": "Convives",
     "comment": "Commentaires",
     "commentPlaceholder": "Demandes spéciales, préférences de table...",
-    "sendWhatsapp": "Envoyer via WhatsApp"
+    "sendWhatsapp": "Envoyer via WhatsApp",
+    "reserveIntro": "Je souhaite réserver une table au"
   },
   "bars": {
     "title": "Bars & Cafés",
@@ -177,7 +179,10 @@
     "pool": "Piscine extérieure",
     "poolDesc": "Ouvert 08:00–20:00. Chauffée en pré- et post-saison",
     "shuttle": "Navette plage",
-    "shuttleDesc": "Service depuis la route secondaire"
+    "shuttleDesc": "Service depuis la route secondaire",
+    "cabana": "Cabanas de plage",
+    "cabanaDesc": "Cabanas privées en bord de mer sur réservation",
+    "reserveCabana": "Réserver une cabana"
   },
   "spa": {
     "title": "Soul Spa & Fitness",
@@ -290,7 +295,15 @@
     "mt_lights": "Éclairage",
     "mt_tv": "TV",
     "mt_safe": "Coffre-fort",
-    "mt_door": "Porte / Serrure"
+    "mt_door": "Porte / Serrure",
+    "lateCheckout": "Départ tardif",
+    "lateCheckoutNote": "20€ par heure",
+    "laundry": "Blanchisserie",
+    "laundryComment": "Précisions",
+    "laundryPlaceholder": "Décrivez les articles...",
+    "pillowSelect": "Choisir le type d'oreiller",
+    "pillowRegular": "Oreiller standard",
+    "pillowOrthopedic": "Oreiller orthopédique"
   },
   "pwa": {
     "title": "Installer BAŞKA Guide",
@@ -345,5 +358,32 @@
     "address": "Eski Çeşme Mah. Haremtan Sok. No:11, Bodrum, Muğla 48400",
     "rights": "Tous droits réservés",
     "tagline": "Comme la mer Égée..."
+  },
+  "flight": {
+    "title": "Suivi de vol",
+    "subtitle": "Suivez votre départ",
+    "flightNumber": "Numéro de vol",
+    "flightPlaceholder": "ex. TK1234",
+    "departureDate": "Date de départ",
+    "departureTime": "Heure de départ",
+    "save": "Enregistrer",
+    "days": "jours",
+    "hours": "heures",
+    "minutes": "minutes",
+    "clear": "Effacer",
+    "departed": "Vol effectué"
+  },
+  "weather": {
+    "swimOk": "Baignade possible",
+    "swimCaution": "Baignade avec prudence",
+    "swimNo": "Baignade déconseillée"
+  },
+  "menu": {
+    "close": "Fermer"
+  },
+  "meal": {
+    "breakfastSoon": "Le petit-déjeuner ouvre bientôt à 07:00 !",
+    "lunchSoon": "Le déjeuner ouvre bientôt à 12:30 !",
+    "dinnerSoon": "Le dîner ouvre bientôt à 19:00 !"
   }
 }

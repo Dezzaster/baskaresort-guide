@@ -19,7 +19,8 @@
     "kids": "Детям",
     "services": "Услуги",
     "requests": "Запросы",
-    "important": "Важное"
+    "important": "Важное",
+    "flight": "Авиарейс"
   },
   "info": {
     "title": "Добро пожаловать в BAŞKA",
@@ -131,7 +132,8 @@
     "guests": "Гости",
     "comment": "Комментарии",
     "commentPlaceholder": "Особые пожелания, предпочтения по столу...",
-    "sendWhatsapp": "Отправить через WhatsApp"
+    "sendWhatsapp": "Отправить через WhatsApp",
+    "reserveIntro": "Я хотел бы забронировать столик в"
   },
   "bars": {
     "title": "Бары и кафе",
@@ -177,7 +179,10 @@
     "pool": "Открытый бассейн",
     "poolDesc": "Открыт 08:00–20:00. Подогрев в начале и конце сезона",
     "shuttle": "Пляжный шаттл",
-    "shuttleDesc": "Трансфер от второстепенной дороги"
+    "shuttleDesc": "Трансфер от второстепенной дороги",
+    "cabana": "Пляжные кабаны",
+    "cabanaDesc": "Приватные пляжные кабаны по предварительному бронированию",
+    "reserveCabana": "Забронировать кабану"
   },
   "spa": {
     "title": "Soul Spa & Fitness",
@@ -290,7 +295,15 @@
     "mt_lights": "Освещение",
     "mt_tv": "Телевизор",
     "mt_safe": "Сейф",
-    "mt_door": "Дверь / Замок"
+    "mt_door": "Дверь / Замок",
+    "lateCheckout": "Поздний выезд",
+    "lateCheckoutNote": "€20 в час",
+    "laundry": "Стирка",
+    "laundryComment": "Описание",
+    "laundryPlaceholder": "Опишите вещи...",
+    "pillowSelect": "Выберите тип подушки",
+    "pillowRegular": "Обычная подушка",
+    "pillowOrthopedic": "Ортопедическая подушка"
   },
   "pwa": {
     "title": "Установите BAŞKA Guide",
@@ -345,5 +358,32 @@
     "address": "Eski Çeşme Mah. Haremtan Sok. No:11, Bodrum, Muğla 48400",
     "rights": "Все права защищены",
     "tagline": "Как само Эгейское море..."
+  },
+  "flight": {
+    "title": "Отслеживание рейса",
+    "subtitle": "Следите за временем вылета",
+    "flightNumber": "Номер рейса",
+    "flightPlaceholder": "напр. TK1234",
+    "departureDate": "Дата вылета",
+    "departureTime": "Время вылета",
+    "save": "Сохранить",
+    "days": "дней",
+    "hours": "часов",
+    "minutes": "минут",
+    "clear": "Очистить",
+    "departed": "Рейс состоялся"
+  },
+  "weather": {
+    "swimOk": "Можно купаться",
+    "swimCaution": "Купайтесь осторожно",
+    "swimNo": "Купание не рекомендуется"
+  },
+  "menu": {
+    "close": "Закрыть"
+  },
+  "meal": {
+    "breakfastSoon": "Завтрак скоро в 07:00!",
+    "lunchSoon": "Обед скоро в 12:30!",
+    "dinnerSoon": "Ужин скоро в 19:00!"
   }
 }

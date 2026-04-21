@@ -19,7 +19,10 @@ import ServicesSection from './components/sections/ServicesSection'
 import RequestsSection from './components/sections/RequestsSection'
 import ImportantSection from './components/sections/ImportantSection'
 import WifiSection from './components/sections/WifiSection'
+import FlightTrackerSection from './components/sections/FlightTrackerSection'
 import InstallPrompt from './components/InstallPrompt'
+import HamburgerMenu from './components/HamburgerMenu'
+import MealNotifier from './components/MealNotifier'
 
 const sectionComponents = {
   info: InfoSection,
@@ -34,7 +37,8 @@ const sectionComponents = {
   kids: KidsSection,
   services: ServicesSection,
   rooms: RoomsSection,
-  important: ImportantSection
+  important: ImportantSection,
+  flight: FlightTrackerSection
 }
 
 // Tagline font per language group
@@ -155,6 +159,7 @@ function App() {
 
       {/* Header */}
       <header ref={headerRef} className="relative text-center pt-10 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
+        <HamburgerMenu activeSection={activeSection} onSectionChange={setActiveSection} />
 
         {/* Background video */}
         <video
@@ -297,6 +302,7 @@ function App() {
         </div>
       </footer>
       <InstallPrompt />
+      <MealNotifier />
     </div>
   )
 }

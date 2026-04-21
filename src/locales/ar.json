@@ -19,7 +19,8 @@
     "kids": "الأطفال",
     "services": "الخدمات",
     "requests": "الطلبات",
-    "important": "مهم"
+    "important": "مهم",
+    "flight": "تتبع الرحلة"
   },
   "info": {
     "title": "مرحباً بكم في BAŞKA",
@@ -131,7 +132,8 @@
     "guests": "الضيوف",
     "comment": "ملاحظات",
     "commentPlaceholder": "طلبات خاصة، تفضيلات المقاعد...",
-    "sendWhatsapp": "إرسال عبر واتساب"
+    "sendWhatsapp": "إرسال عبر واتساب",
+    "reserveIntro": "أود حجز طاولة في"
   },
   "bars": {
     "title": "بارات ومقاهي",
@@ -177,7 +179,10 @@
     "pool": "مسبح خارجي",
     "poolDesc": "مفتوح 08:00–20:00. مُدفأ في بداية ونهاية الموسم",
     "shuttle": "حافلة الشاطئ",
-    "shuttleDesc": "خدمة من الطريق الفرعي"
+    "shuttleDesc": "خدمة من الطريق الفرعي",
+    "cabana": "كبائن الشاطئ",
+    "cabanaDesc": "كبائن شاطئية خاصة متاحة بالحجز",
+    "reserveCabana": "حجز كابانا"
   },
   "spa": {
     "title": "Soul Spa & Fitness",
@@ -290,7 +295,15 @@
     "mt_lights": "الإضاءة",
     "mt_tv": "التلفاز",
     "mt_safe": "الخزنة",
-    "mt_door": "الباب / القفل"
+    "mt_door": "الباب / القفل",
+    "lateCheckout": "مغادرة متأخرة",
+    "lateCheckoutNote": "٢٠€ لكل ساعة",
+    "laundry": "خدمة الغسيل",
+    "laundryComment": "التفاصيل",
+    "laundryPlaceholder": "صف الملابس...",
+    "pillowSelect": "اختر نوع الوسادة",
+    "pillowRegular": "وسادة عادية",
+    "pillowOrthopedic": "وسادة طبية"
   },
   "pwa": {
     "title": "تثبيت دليل BAŞKA",
@@ -345,5 +358,32 @@
     "address": "Eski Çeşme Mah. Haremtan Sok. No:11, Bodrum, Muğla 48400",
     "rights": "جميع الحقوق محفوظة",
     "tagline": "كبحر إيجه..."
+  },
+  "flight": {
+    "title": "تتبع الرحلة",
+    "subtitle": "تابع موعد مغادرتك",
+    "flightNumber": "رقم الرحلة",
+    "flightPlaceholder": "مثال TK1234",
+    "departureDate": "تاريخ المغادرة",
+    "departureTime": "وقت المغادرة",
+    "save": "حفظ",
+    "days": "أيام",
+    "hours": "ساعات",
+    "minutes": "دقائق",
+    "clear": "مسح",
+    "departed": "تمت الرحلة"
+  },
+  "weather": {
+    "swimOk": "مناسب للسباحة",
+    "swimCaution": "السباحة بحذر",
+    "swimNo": "السباحة غير مستحسنة"
+  },
+  "menu": {
+    "close": "إغلاق"
+  },
+  "meal": {
+    "breakfastSoon": "الإفطار يفتح قريباً في 07:00!",
+    "lunchSoon": "الغداء يفتح قريباً في 12:30!",
+    "dinnerSoon": "العشاء يفتح قريباً في 19:00!"
   }
 }

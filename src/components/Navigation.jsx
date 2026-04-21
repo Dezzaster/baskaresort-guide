@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const sections = [
   'info', 'wifi', 'dining', 'alacarte', 'bars', 'requests', 'beach',
-  'spa', 'activities', 'kids', 'services', 'rooms', 'important'
+  'spa', 'activities', 'kids', 'services', 'rooms', 'important', 'flight'
 ]
 
 export default function Navigation({ activeSection, onSectionChange }) {
