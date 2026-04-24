@@ -4,9 +4,9 @@ import Card from '../Card'
 const basePath = import.meta.env.BASE_URL
 
 const snackRestaurants = [
-  { key: 'leziz', charged: true },
+  { key: 'leziz', charged: false },
   { key: 'kiyida', charged: true },
-  { key: 'lento', charged: true },
+  { key: 'lento', charged: false },
   { key: 'koyKahvesi', charged: false },
 ]
 
