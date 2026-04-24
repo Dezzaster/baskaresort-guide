@@ -31,11 +31,9 @@ export default function ActivitiesSection() {
 
       <div className="grid grid-cols-2 gap-3" style={{ marginTop: '24px' }}>
         {[
-          { label: t('activities.padel') },
           { label: t('activities.tableTennis') },
           { label: t('activities.cycling') },
-          { label: t('activities.waterSports') },
-          { label: t('activities.artWorkshop') }
+          { label: t('activities.waterSports') }
         ].map((act, i) => (
           <div
             key={i}

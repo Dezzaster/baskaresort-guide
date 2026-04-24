@@ -17,6 +17,7 @@ import ActivitiesSection from './components/sections/ActivitiesSection'
 import KidsSection from './components/sections/KidsSection'
 import ServicesSection from './components/sections/ServicesSection'
 import RequestsSection from './components/sections/RequestsSection'
+import PlacesSection from './components/sections/PlacesSection'
 import ImportantSection from './components/sections/ImportantSection'
 import WifiSection from './components/sections/WifiSection'
 import FlightTrackerSection from './components/sections/FlightTrackerSection'
@@ -36,6 +37,7 @@ const sectionComponents = {
   activities: ActivitiesSection,
   kids: KidsSection,
   services: ServicesSection,
+  places: PlacesSection,
   rooms: RoomsSection,
   important: ImportantSection,
   flight: FlightTrackerSection
