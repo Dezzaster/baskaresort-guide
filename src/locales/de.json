@@ -87,7 +87,10 @@
     "askA": "AŞK'A (Liebe) Zimmer",
     "askADesc": "Club-Bereich, Meerblick, Romantik-Konzept, 30–35 m²",
     "dome": "DOME Zimmer",
-    "domeDesc": "Club-Bereich, Privatgarten, Butler-Service, 100 m² Terrasse"
+    "domeDesc": "Club-Bereich, Privatgarten, Butler-Service, 100 m² Terrasse",
+    "requestUpgrade": "Upgrade anfragen",
+    "upgradeTitle": "Zimmer-Upgrade-Anfrage",
+    "upgradeIntro": "Ich möchte ein Upgrade anfragen für"
   },
   "dining": {
     "title": "Gastronomie",
@@ -135,7 +138,11 @@
     "comment": "Kommentare",
     "commentPlaceholder": "Besondere Wünsche, Sitzplatzpräferenzen...",
     "sendWhatsapp": "Per WhatsApp senden",
-    "reserveIntro": "Ich möchte eine Reservierung vornehmen bei"
+    "reserveIntro": "Ich möchte eine Reservierung vornehmen bei",
+    "fishType": "Meeresfrüchte",
+    "teppanyakiType": "Teppanyaki & Sushi",
+    "italianType": "Italienische Küche",
+    "placeOrder": "Reservierung aufgeben"
   },
   "bars": {
     "title": "Bars & Cafés",
@@ -412,7 +419,15 @@
     "koyKahvesi": "Köy Kahvesi",
     "koyKahvesiDesc": "Traditionelle türkische Gözleme, Simit & Tee",
     "koyKahvesiHours": "09:00 – 22:00",
-    "charged": "Kostenpflichtig"
+    "charged": "Kostenpflichtig, Reservierung erforderlich",
+    "lezizType": "Snack A La Carte",
+    "lezizCuisine": "International",
+    "kiyidaType": "Snack A La Carte",
+    "kiyidaCuisine": "Meeresfrüchte",
+    "lentoType": "Snack A La Carte",
+    "lentoCuisine": "Italienische Küche",
+    "koyKahvesiType": "Snack",
+    "koyKahvesiCuisine": "Simit, Gözleme, Tee usw."
   },
   "places": {
     "title": "Ausflugsziele",

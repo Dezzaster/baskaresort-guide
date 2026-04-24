@@ -1,6 +1,15 @@
 import { useTranslation } from 'react-i18next'
 import Card from '../Card'
 
+const basePath = import.meta.env.BASE_URL
+
+const snackRestaurants = [
+  { key: 'leziz', charged: true },
+  { key: 'kiyida', charged: true },
+  { key: 'lento', charged: true },
+  { key: 'koyKahvesi', charged: false },
+]
+
 export default function DiningSection() {
   const { t } = useTranslation()
 
@@ -9,13 +18,6 @@ export default function DiningSection() {
     { label: t('dining.lateBreakfast'), time: t('dining.lateBreakfastTime') },
     { label: t('dining.lunch'), time: t('dining.lunchTime') },
     { label: t('dining.dinner'), time: t('dining.dinnerTime') }
-  ]
-
-  const snackRestaurants = [
-    { key: 'leziz', charged: true },
-    { key: 'kiyida', charged: true },
-    { key: 'lento', charged: true },
-    { key: 'koyKahvesi', charged: false },
   ]
 
   return (
@@ -39,19 +41,13 @@ export default function DiningSection() {
         </div>
       </Card>
 
-      <Card icon="🌿" title={t('dining.leziz')} delay={1}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
-          {t('dining.lezizDesc')}
-        </p>
-      </Card>
-
-      <Card icon="🕐" title={t('dining.daima')} delay={2}>
+      <Card icon="🕐" title={t('dining.daima')} delay={1}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('dining.daimaDesc')}
         </p>
       </Card>
 
-      <Card title="" delay={3}>
+      <Card title="" delay={2}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] italic">
           {t('dining.concept')}
         </p>
@@ -70,24 +66,44 @@ export default function DiningSection() {
           <p className="text-[0.74rem] text-[var(--text-muted)]">{t('snacks.subtitle')}</p>
         </div>
 
-        {snackRestaurants.map((r, i) => (
-          <Card key={r.key} title={t(`snacks.${r.key}`)} delay={i + 4}>
-            <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-2">
-              {t(`snacks.${r.key}Desc`)}
-            </p>
-            <div className="space-y-1">
-              <div className="flex justify-between items-center py-1.5 px-3 rounded-lg bg-[var(--bg-blue)]">
-                <span className="text-[0.68rem] text-[var(--text-muted)]">{t('alacarte.time')}</span>
-                <span className="text-[0.7rem] text-[var(--primary)] font-medium">{t(`snacks.${r.key}Hours`)}</span>
-              </div>
-              <div className="flex justify-between items-center py-1.5 px-3 rounded-lg bg-[var(--bg-warm)]">
-                <span className="text-[0.7rem] text-[var(--gold-dark)] font-medium">
-                  {r.charged ? t('snacks.charged') : t('streetFood.bai')}
-                </span>
+        <div className="space-y-3">
+          {snackRestaurants.map((r, i) => (
+            <div
+              key={r.key}
+              className="rounded-2xl border border-[var(--card-border)] bg-white/80 overflow-hidden"
+              style={{ padding: '20px' }}
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex-1">
+                  <h4 className="text-[0.85rem] text-[var(--primary)] font-semibold uppercase tracking-wide mb-2">
+                    {t(`snacks.${r.key}`)}
+                  </h4>
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    <span className="text-[0.65rem] px-2.5 py-1 rounded-full bg-[var(--bg-blue)] text-[var(--primary)] font-medium">
+                      {t(`snacks.${r.key}Type`)}
+                    </span>
+                    <span className="text-[0.65rem] px-2.5 py-1 rounded-full bg-[var(--bg-warm)] text-[var(--gold-dark)] font-medium">
+                      {t(`snacks.${r.key}Cuisine`)}
+                    </span>
+                  </div>
+                  <p className="text-[0.7rem] text-[var(--text-muted)]">
+                    {t(`snacks.${r.key}Hours`)}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center flex-shrink-0">
+                  <img
+                    src={`${basePath}BASKA RESORT-LOGO.png`}
+                    alt=""
+                    className="h-8 w-auto opacity-60"
+                  />
+                  <span className="text-[0.55rem] text-[var(--text-muted)] mt-1 text-center max-w-[80px] leading-tight">
+                    {r.charged ? t('snacks.charged') : t('streetFood.bai')}
+                  </span>
+                </div>
               </div>
             </div>
-          </Card>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Street Food Section */}

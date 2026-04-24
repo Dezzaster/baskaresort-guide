@@ -1,5 +1,6 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import Card from '../Card'
 
 const WHATSAPP = '905307387764'
@@ -12,13 +13,14 @@ const restaurants = [
 
 export default function AlacarteSection() {
   const { t } = useTranslation()
+  const [confirmKey, setConfirmKey] = useState(null)
 
   const bi = (key) => {
     const u = t(key), tr = t(key, { lng: 'tr' })
     return u === tr ? u : `${u} / ${tr}`
   }
 
-  const handleReserve = (key) => {
+  const sendReservation = (key) => {
     const ticket = '№' + Math.floor(10000 + Math.random() * 90000)
     const restaurant = t(`alacarte.${key}`)
     const restaurantTr = t(`alacarte.${key}`, { lng: 'tr' })
@@ -34,6 +36,7 @@ export default function AlacarteSection() {
       '— BAŞKA Guest Guide'
     ].join('\n')
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank')
+    setConfirmKey(null)
   }
 
   return (
@@ -45,7 +48,10 @@ export default function AlacarteSection() {
 
       {restaurants.map((r, i) => (
         <Card key={r.key} title={t(`alacarte.${r.key}`)} label={r.code} delay={i}>
-          <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-2">
+          <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-1">
+            {t(`alacarte.${r.key}Type`)}
+          </p>
+          <p className="text-[0.72rem] text-[var(--text-muted)] leading-[1.7] mb-2 opacity-70">
             {t(`alacarte.${r.key}Desc`)}
           </p>
           <div className="space-y-1">
@@ -59,13 +65,61 @@ export default function AlacarteSection() {
           </div>
           <motion.button
             whileTap={{ scale: 0.97 }}
-            onClick={() => handleReserve(r.key)}
+            onClick={() => setConfirmKey(r.key)}
             className="mt-3 w-full py-2.5 rounded-xl bg-[var(--primary)] text-white text-[0.74rem] font-medium cursor-pointer hover:bg-[var(--primary)]/90 transition-colors"
           >
             {t('alacarte.reserve')}
           </motion.button>
         </Card>
       ))}
+
+      <AnimatePresence>
+        {confirmKey && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/40 backdrop-blur-sm"
+            onClick={() => setConfirmKey(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.92, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.92, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="bg-white rounded-2xl shadow-2xl mx-6 w-full max-w-sm overflow-hidden"
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="bg-[var(--primary)] px-6 py-5 text-center">
+                <p className="text-white text-[0.9rem] font-medium">
+                  {t('alacarte.reservationTitle')}
+                </p>
+              </div>
+              <div className="px-6 py-5">
+                <p className="text-[0.8rem] text-[var(--text-muted)] text-center mb-1">
+                  {t('alacarte.reserveIntro')}
+                </p>
+                <p className="text-[0.95rem] text-[var(--primary)] font-semibold text-center mb-5">
+                  {t(`alacarte.${confirmKey}`)}
+                </p>
+                <motion.button
+                  whileTap={{ scale: 0.97 }}
+                  onClick={() => sendReservation(confirmKey)}
+                  className="w-full py-3 rounded-xl bg-[#25D366] text-white text-[0.8rem] font-semibold cursor-pointer hover:bg-[#20bd5a] transition-colors flex items-center justify-center gap-2"
+                >
+                  <span>📲</span> {t('alacarte.placeOrder')}
+                </motion.button>
+                <button
+                  onClick={() => setConfirmKey(null)}
+                  className="w-full mt-2 py-2.5 text-[0.74rem] text-[var(--text-muted)] cursor-pointer hover:text-[var(--primary)] transition-colors"
+                >
+                  {t('menu.close')}
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

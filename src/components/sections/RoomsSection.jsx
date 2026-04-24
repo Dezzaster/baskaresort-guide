@@ -1,5 +1,8 @@
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 import Card from '../Card'
+
+const WHATSAPP = '905307387764'
 
 const rooms = [
   { key: 'ege', size: '20–30 m²', beds: '1 French / 2 Single' },
@@ -16,6 +19,28 @@ const rooms = [
 
 export default function RoomsSection() {
   const { t } = useTranslation()
+
+  const bi = (key) => {
+    const u = t(key), tr = t(key, { lng: 'tr' })
+    return u === tr ? u : `${u} / ${tr}`
+  }
+
+  const handleUpgrade = (key) => {
+    const ticket = '№' + Math.floor(10000 + Math.random() * 90000)
+    const roomName = t(`rooms.${key}`)
+    const roomNameTr = t(`rooms.${key}`, { lng: 'tr' })
+    const biRoom = roomName === roomNameTr ? roomName : `${roomName} / ${roomNameTr}`
+
+    const msg = [
+      `🏨 ${bi('rooms.upgradeTitle')} ${ticket}`,
+      '',
+      `${bi('rooms.upgradeIntro')}`,
+      `🔑 ${biRoom}`,
+      '',
+      '— BAŞKA Guest Guide'
+    ].join('\n')
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank')
+  }
 
   return (
     <div>
@@ -35,7 +60,7 @@ export default function RoomsSection() {
           <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-2">
             {t(`rooms.${room.key}Desc`)}
           </p>
-          <div className="flex gap-2 flex-wrap">
+          <div className="flex gap-2 flex-wrap mb-3">
             <span className="text-[0.65rem] px-2.5 py-1 rounded-full bg-[var(--bg-blue)] text-[var(--primary)] font-medium">
               {room.size}
             </span>
@@ -43,6 +68,13 @@ export default function RoomsSection() {
               {room.beds}
             </span>
           </div>
+          <motion.button
+            whileTap={{ scale: 0.97 }}
+            onClick={() => handleUpgrade(room.key)}
+            className="w-full py-2 rounded-xl border border-[var(--primary)]/30 text-[var(--primary)] text-[0.7rem] font-medium cursor-pointer hover:bg-[var(--primary)] hover:text-white transition-all duration-300"
+          >
+            {t('rooms.requestUpgrade')}
+          </motion.button>
         </Card>
       ))}
     </div>

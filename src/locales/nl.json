@@ -87,7 +87,10 @@
     "askA": "AŞK'A (Liefde) Kamers",
     "askADesc": "Clubzone, zeezicht, romantisch concept, 30–35 m²",
     "dome": "DOME Kamer",
-    "domeDesc": "Clubzone, privétuin, butlerservice, terras 100 m²"
+    "domeDesc": "Clubzone, privétuin, butlerservice, terras 100 m²",
+    "requestUpgrade": "Upgrade aanvragen",
+    "upgradeTitle": "Kamer upgrade verzoek",
+    "upgradeIntro": "Ik wil graag een upgrade aanvragen naar"
   },
   "dining": {
     "title": "Dineren",
@@ -135,7 +138,11 @@
     "comment": "Opmerkingen",
     "commentPlaceholder": "Speciale wensen, zitplaatsvoorkeur...",
     "sendWhatsapp": "Verstuur via WhatsApp",
-    "reserveIntro": "Ik wil graag reserveren bij"
+    "reserveIntro": "Ik wil graag reserveren bij",
+    "fishType": "Zeevruchten",
+    "teppanyakiType": "Teppanyaki & Sushi",
+    "italianType": "Italiaanse keuken",
+    "placeOrder": "Reservering plaatsen"
   },
   "bars": {
     "title": "Bars & Cafés",
@@ -412,7 +419,15 @@
     "koyKahvesi": "Köy Kahvesi",
     "koyKahvesiDesc": "Traditionele Turkse gözleme, simit en thee",
     "koyKahvesiHours": "09:00 – 22:00",
-    "charged": "Betaald"
+    "charged": "Betaald, reservering vereist",
+    "lezizType": "Snack A La Carte",
+    "lezizCuisine": "Internationaal",
+    "kiyidaType": "Snack A La Carte",
+    "kiyidaCuisine": "Zeevruchten",
+    "lentoType": "Snack A La Carte",
+    "lentoCuisine": "Italiaanse keuken",
+    "koyKahvesiType": "Snack",
+    "koyKahvesiCuisine": "Simit, gözleme, thee enz."
   },
   "places": {
     "title": "Bezienswaardigheden",
