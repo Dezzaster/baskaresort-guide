@@ -5,14 +5,14 @@ const basePath = import.meta.env.BASE_URL
 const HOTEL_ORIGIN = 'Baska+Resort+Bodrum+(ex.+Holiday+Inn+Bodrum)'
 
 const places = [
-  { key: 'castle', dist: '1.5 km', dest: 'Bodrum+Castle', img: 'castle', gradient: 'from-[#1a3a6b] to-[#2d5f9e]' },
-  { key: 'theatre', dist: '2 km', dest: 'Bodrum+Ancient+Theatre', img: 'theatre', gradient: 'from-[#5a3a2a] to-[#8b6e4c]' },
-  { key: 'mausoleum', dist: '1.5 km', dest: 'Mausoleum+at+Halicarnassus+Bodrum', img: 'mausoleum', gradient: 'from-[#3d5a3e] to-[#6b8f5e]' },
-  { key: 'marina', dist: '1.2 km', dest: 'Bodrum+Marina', img: 'marina', gradient: 'from-[#1a4a6b] to-[#3d8ab5]' },
-  { key: 'windmills', dist: '1.8 km', dest: 'Bodrum+Windmills', img: 'windmills', gradient: 'from-[#7a6a2a] to-[#b5963d]' },
-  { key: 'gumusluk', dist: '25 km', dest: 'Gumusluk+Bodrum', img: 'gumusluk', gradient: 'from-[#2a4a5a] to-[#4a8a9e]' },
-  { key: 'yalikavak', dist: '20 km', dest: 'Yalikavak+Marina+Bodrum', img: 'yalikavak', gradient: 'from-[#1a3a5b] to-[#3a7abd]' },
-  { key: 'turkbuku', dist: '18 km', dest: 'Turkbuku+Bodrum', img: 'turkbuku', gradient: 'from-[#5a4a3a] to-[#9a7a5a]' },
+  { key: 'castle', dist: '1.5 km', dest: 'Bodrum+Castle', img: 'castle.jpg', gradient: 'from-[#1a3a6b] to-[#2d5f9e]' },
+  { key: 'theatre', dist: '2 km', dest: 'Bodrum+Ancient+Theatre', img: 'theatre.jpg', gradient: 'from-[#5a3a2a] to-[#8b6e4c]' },
+  { key: 'mausoleum', dist: '1.5 km', dest: 'Mausoleum+at+Halicarnassus+Bodrum', img: 'mausoleum.png', gradient: 'from-[#3d5a3e] to-[#6b8f5e]' },
+  { key: 'marina', dist: '1.2 km', dest: 'Bodrum+Marina', img: 'marina.png', gradient: 'from-[#1a4a6b] to-[#3d8ab5]' },
+  { key: 'windmills', dist: '1.8 km', dest: 'Bodrum+Windmills', img: 'windmills.jpg', gradient: 'from-[#7a6a2a] to-[#b5963d]' },
+  { key: 'gumusluk', dist: '25 km', dest: 'Gumusluk+Bodrum', img: 'gumusluk.png', gradient: 'from-[#2a4a5a] to-[#4a8a9e]' },
+  { key: 'yalikavak', dist: '20 km', dest: 'Yalikavak+Marina+Bodrum', img: 'yalikavlak marina.jpg', gradient: 'from-[#1a3a5b] to-[#3a7abd]' },
+  { key: 'turkbuku', dist: '18 km', dest: 'Turkbuku+Bodrum', img: 'turkbuku.jpg', gradient: 'from-[#5a4a3a] to-[#9a7a5a]' },
 ]
 
 export default function PlacesSection() {
@@ -36,7 +36,7 @@ export default function PlacesSection() {
             style={{ minHeight: '200px' }}
           >
             <img
-              src={`${basePath}${place.img}.jpg`}
+              src={`${basePath}${encodeURI(place.img)}`}
               alt={t(`places.${place.key}`)}
               className="absolute inset-0 w-full h-full object-cover"
               onError={(e) => { e.target.style.display = 'none' }}
