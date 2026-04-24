@@ -87,7 +87,10 @@
     "askA": "Chambres AŞK'A (Amour)",
     "askADesc": "Espace Club, vue mer, concept romantique, 30–35 m²",
     "dome": "Chambre DOME",
-    "domeDesc": "Espace Club, jardin privé, service de majordome, terrasse 100 m²"
+    "domeDesc": "Espace Club, jardin privé, service de majordome, terrasse 100 m²",
+    "requestUpgrade": "Demander un surclassement",
+    "upgradeTitle": "Demande de surclassement",
+    "upgradeIntro": "Je souhaite demander un surclassement vers"
   },
   "dining": {
     "title": "Restauration",
@@ -135,7 +138,11 @@
     "comment": "Commentaires",
     "commentPlaceholder": "Demandes spéciales, préférences de table...",
     "sendWhatsapp": "Envoyer via WhatsApp",
-    "reserveIntro": "Je souhaite réserver une table au"
+    "reserveIntro": "Je souhaite réserver une table au",
+    "fishType": "Fruits de mer",
+    "teppanyakiType": "Teppanyaki & Sushi",
+    "italianType": "Cuisine italienne",
+    "placeOrder": "Passer la commande de réservation"
   },
   "bars": {
     "title": "Bars & Cafés",
@@ -412,7 +419,15 @@
     "koyKahvesi": "Köy Kahvesi",
     "koyKahvesiDesc": "Gözleme, simit et thé traditionnels turcs",
     "koyKahvesiHours": "09:00 – 22:00",
-    "charged": "Payant"
+    "charged": "Payant, réservation obligatoire",
+    "lezizType": "Snack A La Carte",
+    "lezizCuisine": "International",
+    "kiyidaType": "Snack A La Carte",
+    "kiyidaCuisine": "Fruits de mer",
+    "lentoType": "Snack A La Carte",
+    "lentoCuisine": "Cuisine italienne",
+    "koyKahvesiType": "Snack",
+    "koyKahvesiCuisine": "Simit, gözleme, thé, etc."
   },
   "places": {
     "title": "Lieux à visiter",

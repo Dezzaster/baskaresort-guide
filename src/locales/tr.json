@@ -87,7 +87,10 @@
     "askA": "AŞK'A Odaları",
     "askADesc": "Club Alan, Deniz Manzarası, Romantik Konsept, 30–35 m²",
     "dome": "DOME Oda",
-    "domeDesc": "Club Alan, Özel Bahçe, Butler Hizmeti, 100 m² Teras"
+    "domeDesc": "Club Alan, Özel Bahçe, Butler Hizmeti, 100 m² Teras",
+    "requestUpgrade": "Yükseltme Talebi",
+    "upgradeTitle": "Oda Yükseltme Talebi",
+    "upgradeIntro": "Yükseltme talep etmek istiyorum"
   },
   "dining": {
     "title": "Yeme-İçme",
@@ -135,7 +138,11 @@
     "comment": "Notlar",
     "commentPlaceholder": "Özel istekler, oturma tercihi...",
     "sendWhatsapp": "WhatsApp ile Gönder",
-    "reserveIntro": "Rezervasyon yapmak istiyorum"
+    "reserveIntro": "Rezervasyon yapmak istiyorum",
+    "fishType": "Deniz Ürünleri",
+    "teppanyakiType": "Teppanyaki & Sushi",
+    "italianType": "İtalyan Mutfağı",
+    "placeOrder": "Rezervasyon Talebi Gönder"
   },
   "bars": {
     "title": "Bar & Kafeler",
@@ -412,7 +419,15 @@
     "koyKahvesi": "Köy Kahvesi",
     "koyKahvesiDesc": "Geleneksel gözleme, simit ve çay",
     "koyKahvesiHours": "09:00 – 22:00",
-    "charged": "Ücretli"
+    "charged": "Menü ücreti, Rezervasyon gerekli",
+    "lezizType": "Snack A La Carte",
+    "lezizCuisine": "Uluslararası",
+    "kiyidaType": "Snack A La Carte",
+    "kiyidaCuisine": "Deniz Ürünleri",
+    "lentoType": "Snack A La Carte",
+    "lentoCuisine": "İtalyan Mutfağı",
+    "koyKahvesiType": "Snack",
+    "koyKahvesiCuisine": "Simit, Gözleme, Çay vb."
   },
   "places": {
     "title": "Gezilecek Yerler",

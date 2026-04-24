@@ -87,7 +87,10 @@
     "askA": "Pokoje AŞK'A (Miłość)",
     "askADesc": "Strefa Club, widok na morze, koncept romantyczny, 30–35 m²",
     "dome": "Pokój DOME",
-    "domeDesc": "Strefa Club, prywatny ogród, obsługa kamerdynera, taras 100 m²"
+    "domeDesc": "Strefa Club, prywatny ogród, obsługa kamerdynera, taras 100 m²",
+    "requestUpgrade": "Poproś o upgrade",
+    "upgradeTitle": "Prośba o upgrade pokoju",
+    "upgradeIntro": "Chciałbym poprosić o upgrade do"
   },
   "dining": {
     "title": "Gastronomia",
@@ -135,7 +138,11 @@
     "comment": "Komentarze",
     "commentPlaceholder": "Specjalne życzenia, preferencje miejsc...",
     "sendWhatsapp": "Wyślij przez WhatsApp",
-    "reserveIntro": "Chciałbym zarezerwować stolik w"
+    "reserveIntro": "Chciałbym zarezerwować stolik w",
+    "fishType": "Owoce morza",
+    "teppanyakiType": "Teppanyaki & Sushi",
+    "italianType": "Kuchnia włoska",
+    "placeOrder": "Złóż zamówienie rezerwacji"
   },
   "bars": {
     "title": "Bary i kawiarnie",
@@ -412,7 +419,15 @@
     "koyKahvesi": "Köy Kahvesi",
     "koyKahvesiDesc": "Tradycyjne tureckie gözleme, simit i herbata",
     "koyKahvesiHours": "09:00 – 22:00",
-    "charged": "Płatne"
+    "charged": "Płatne, rezerwacja wymagana",
+    "lezizType": "Snack A La Carte",
+    "lezizCuisine": "Międzynarodowa",
+    "kiyidaType": "Snack A La Carte",
+    "kiyidaCuisine": "Owoce morza",
+    "lentoType": "Snack A La Carte",
+    "lentoCuisine": "Kuchnia włoska",
+    "koyKahvesiType": "Snack",
+    "koyKahvesiCuisine": "Simit, gözleme, herbata itp."
   },
   "places": {
     "title": "Miejsca do odwiedzenia",

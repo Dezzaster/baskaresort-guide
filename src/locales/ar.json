@@ -87,7 +87,10 @@
     "askA": "غرف AŞK'A (الحب)",
     "askADesc": "منطقة النادي، إطلالة بحرية، مفهوم رومانسي، ٣٠–٣٥ م²",
     "dome": "غرفة DOME",
-    "domeDesc": "منطقة النادي، حديقة خاصة، خدمة كبير الخدم، تراس ١٠٠ م²"
+    "domeDesc": "منطقة النادي، حديقة خاصة، خدمة كبير الخدم، تراس ١٠٠ م²",
+    "requestUpgrade": "طلب ترقية",
+    "upgradeTitle": "طلب ترقية الغرفة",
+    "upgradeIntro": "أود طلب ترقية إلى"
   },
   "dining": {
     "title": "المطاعم",
@@ -135,7 +138,11 @@
     "comment": "ملاحظات",
     "commentPlaceholder": "طلبات خاصة، تفضيلات المقاعد...",
     "sendWhatsapp": "إرسال عبر واتساب",
-    "reserveIntro": "أود حجز طاولة في"
+    "reserveIntro": "أود حجز طاولة في",
+    "fishType": "مأكولات بحرية",
+    "teppanyakiType": "تيبانياكي وسوشي",
+    "italianType": "مطبخ إيطالي",
+    "placeOrder": "إرسال طلب الحجز"
   },
   "bars": {
     "title": "بارات ومقاهي",
@@ -412,7 +419,15 @@
     "koyKahvesi": "كوي كاهفسي",
     "koyKahvesiDesc": "غوزليمة وسميت وشاي تركي تقليدي",
     "koyKahvesiHours": "09:00 – 22:00",
-    "charged": "مدفوع"
+    "charged": "مدفوع حسب القائمة، الحجز مطلوب",
+    "lezizType": "سناك A La Carte",
+    "lezizCuisine": "عالمي",
+    "kiyidaType": "سناك A La Carte",
+    "kiyidaCuisine": "مأكولات بحرية",
+    "lentoType": "سناك A La Carte",
+    "lentoCuisine": "مطبخ إيطالي",
+    "koyKahvesiType": "سناك",
+    "koyKahvesiCuisine": "سميت، غوزليمة، شاي، إلخ."
   },
   "places": {
     "title": "أماكن للزيارة",
