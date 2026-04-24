@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const sections = [
   'info', 'wifi', 'dining', 'alacarte', 'bars', 'requests', 'beach',
-  'spa', 'activities', 'kids', 'services', 'rooms', 'important', 'flight'
+  'spa', 'activities', 'kids', 'services', 'places', 'rooms', 'important', 'flight'
 ]
 
 export default function HamburgerMenu({ activeSection, onSectionChange }) {
