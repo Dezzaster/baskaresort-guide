@@ -19,15 +19,10 @@ export default function RequestsSection() {
   const [showLaundry, setShowLaundry] = useState(false)
   const [laundryComment, setLaundryComment] = useState('')
 
-  const bi = (key) => {
-    const u = t(key), tr = t(key, { lng: 'tr' })
-    return u === tr ? u : `${u} / ${tr}`
-  }
-
   const doSend = (label, extra = '') => {
     const ticket = '№' + Math.floor(10000 + Math.random() * 90000)
     const msg = [
-      `🏨 ${bi('requests.serviceRequest')} ${ticket}`,
+      `🏨 ${t('requests.serviceRequest')} ${ticket}`,
       '',
       `📋 ${label}`,
       extra ? `💬 ${extra}` : '',
@@ -42,25 +37,25 @@ export default function RequestsSection() {
     if (key === 'pillows') { setShowPillowSelect(true); return }
     if (key === 'laundry') { setShowLaundry(true); return }
     if (key === 'lateCheckout') {
-      doSend(`${bi('requests.lateCheckout')} — €20/h`)
+      doSend(`${t('requests.lateCheckout')} — €20/h`)
     } else {
-      doSend(bi(`requests.${key}`))
+      doSend(t(`requests.${key}`))
     }
   }
 
   const handleMaintenanceSelect = (item) => {
     setShowMaintenance(false)
-    doSend(`${bi('requests.maintenance')} — ${bi(`requests.mt_${item}`)}`)
+    doSend(`${t('requests.maintenance')} — ${t(`requests.mt_${item}`)}`)
   }
 
   const handlePillowSelect = (type) => {
     setShowPillowSelect(false)
-    doSend(`${bi('requests.pillows')} — ${bi(`requests.pillow${type}`)}`)
+    doSend(`${t('requests.pillows')} — ${t(`requests.pillow${type}`)}`)
   }
 
   const handleLaundrySend = () => {
     setShowLaundry(false)
-    doSend(bi('requests.laundry'), laundryComment.trim())
+    doSend(t('requests.laundry'), laundryComment.trim())
     setLaundryComment('')
   }
 

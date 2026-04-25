@@ -20,10 +20,7 @@ export default function FlightTrackerSection() {
   const [manualTime, setManualTime] = useState('12:00')
   const [countdown, setCountdown] = useState(null)
 
-  const bi = (key) => {
-    const u = t(key), tr = t(key, { lng: 'tr' })
-    return u === tr ? u : `${u} / ${tr}`
-  }
+
 
   useEffect(() => {
     if (!flight?.date || !flight?.time) { setCountdown(null); return }
@@ -73,11 +70,11 @@ export default function FlightTrackerSection() {
   const sendTransfer = (type) => {
     const ticket = '№' + Math.floor(10000 + Math.random() * 90000)
     const emoji = type === 'taxi' ? '🚕' : '🚐'
-    const label = type === 'taxi' ? bi('flight.requestTaxi') : bi('flight.requestVip')
+    const label = type === 'taxi' ? t('flight.requestTaxi') : t('flight.requestVip')
     const msg = [
       `${emoji} ${label} ${ticket}`,
       '',
-      bi('flight.transferIntro'),
+      t('flight.transferIntro'),
       flight ? `✈️ ${flight.number}` : '',
       flight?.date ? `📅 ${flight.date}` : '',
       flight?.time ? `🕐 ${flight.time}` : '',

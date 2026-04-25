@@ -90,7 +90,8 @@
     "domeDesc": "Club Area, Private Garden, Butler Service, 100 m² Terrace",
     "requestUpgrade": "Request Upgrade",
     "upgradeTitle": "Room Upgrade Request",
-    "upgradeIntro": "I would like to request an upgrade to"
+    "upgradeIntro": "I would like to request an upgrade to",
+    "upgradeNote": "Room upgrades are subject to availability and extra payment"
   },
   "dining": {
     "title": "Dining",
@@ -161,7 +162,7 @@
     "poolLoungeDesc": "Poolside refreshments. 09:00–23:00, BAI",
     "loungeBar": "Lounge Bar",
     "loungeBarDesc": "Cocktails & drinks. 18:00–00:00, BAI",
-    "beachPastane": "Beach Pastane",
+    "beachPastane": "Beach Patisserie",
     "beachPastaneDesc": "Pastries, sweets & hot drinks. 12:00–18:00, BAI"
   },
   "streetFood": {
@@ -402,7 +403,7 @@
   "meal": {
     "breakfastSoon": "Breakfast opens soon at 07:00!",
     "lunchSoon": "Lunch opens soon at 12:30!",
-    "dinnerSoon": "Dinner opens soon at 19:00!"
+    "dinnerSoon": "Dinner opens soon at 18:30!"
   },
   "snacks": {
     "title": "Snack Restaurants",

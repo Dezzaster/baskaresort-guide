@@ -90,7 +90,8 @@
     "domeDesc": "Club-Bereich, Privatgarten, Butler-Service, 100 m² Terrasse",
     "requestUpgrade": "Upgrade anfragen",
     "upgradeTitle": "Zimmer-Upgrade-Anfrage",
-    "upgradeIntro": "Ich möchte ein Upgrade anfragen für"
+    "upgradeIntro": "Ich möchte ein Upgrade anfragen für",
+    "upgradeNote": "Zimmer-Upgrades sind verfügbarkeitsabhängig und kostenpflichtig"
   },
   "dining": {
     "title": "Gastronomie",
@@ -402,7 +403,7 @@
   "meal": {
     "breakfastSoon": "Frühstück beginnt bald um 07:00!",
     "lunchSoon": "Mittagessen beginnt bald um 12:30!",
-    "dinnerSoon": "Abendessen beginnt bald um 19:00!"
+    "dinnerSoon": "Abendessen beginnt bald um 18:30!"
   },
   "snacks": {
     "title": "Snack-Restaurants",

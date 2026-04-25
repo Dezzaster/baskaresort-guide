@@ -15,23 +15,14 @@ export default function AlacarteSection() {
   const { t } = useTranslation()
   const [confirmKey, setConfirmKey] = useState(null)
 
-  const bi = (key) => {
-    const u = t(key), tr = t(key, { lng: 'tr' })
-    return u === tr ? u : `${u} / ${tr}`
-  }
-
   const sendReservation = (key) => {
     const ticket = '№' + Math.floor(10000 + Math.random() * 90000)
-    const restaurant = t(`alacarte.${key}`)
-    const restaurantTr = t(`alacarte.${key}`, { lng: 'tr' })
     const code = restaurants.find(r => r.key === key)?.code || ''
-    const biRestaurant = restaurant === restaurantTr ? restaurant : `${restaurant} / ${restaurantTr}`
-
     const msg = [
-      `🍽️ ${bi('alacarte.reservationTitle')} ${ticket}`,
+      `🍽️ ${t('alacarte.reservationTitle')} ${ticket}`,
       '',
-      `${bi('alacarte.reserveIntro')}`,
-      `🏪 ${biRestaurant} (${code})`,
+      t('alacarte.reserveIntro'),
+      `🏪 ${t(`alacarte.${key}`)} (${code})`,
       '',
       '— BAŞKA Guest Guide'
     ].join('\n')
