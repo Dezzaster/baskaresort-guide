@@ -20,22 +20,13 @@ const rooms = [
 export default function RoomsSection() {
   const { t } = useTranslation()
 
-  const bi = (key) => {
-    const u = t(key), tr = t(key, { lng: 'tr' })
-    return u === tr ? u : `${u} / ${tr}`
-  }
-
   const handleUpgrade = (key) => {
     const ticket = '№' + Math.floor(10000 + Math.random() * 90000)
-    const roomName = t(`rooms.${key}`)
-    const roomNameTr = t(`rooms.${key}`, { lng: 'tr' })
-    const biRoom = roomName === roomNameTr ? roomName : `${roomName} / ${roomNameTr}`
-
     const msg = [
-      `🏨 ${bi('rooms.upgradeTitle')} ${ticket}`,
+      `🏨 ${t('rooms.upgradeTitle')} ${ticket}`,
       '',
-      `${bi('rooms.upgradeIntro')}`,
-      `🔑 ${biRoom}`,
+      t('rooms.upgradeIntro'),
+      `🔑 ${t(`rooms.${key}`)}`,
       '',
       '— BAŞKA Guest Guide'
     ].join('\n')
@@ -47,7 +38,12 @@ export default function RoomsSection() {
       <h2 className="font-['Cormorant_Garamond'] font-normal text-[1.5rem] text-[var(--primary)] mb-2">
         {t('rooms.title')}
       </h2>
-      <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('rooms.subtitle')}</p>
+      <p className="text-[0.74rem] text-[var(--text-muted)] mb-4">{t('rooms.subtitle')}</p>
+
+      <div className="flex items-center gap-2 mb-8 py-2.5 px-4 rounded-xl bg-[var(--bg-warm)]">
+        <span className="text-[0.85rem]">💎</span>
+        <p className="text-[0.68rem] text-[var(--gold-dark)] font-medium">{t('rooms.upgradeNote')}</p>
+      </div>
 
       <Card title="Standard Amenities" delay={0}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
@@ -71,9 +67,9 @@ export default function RoomsSection() {
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={() => handleUpgrade(room.key)}
-            className="w-full py-2 rounded-xl border border-[var(--primary)]/30 text-[var(--primary)] text-[0.7rem] font-medium cursor-pointer hover:bg-[var(--primary)] hover:text-white transition-all duration-300"
+            className="w-full py-2 rounded-xl border border-[var(--primary)]/30 text-[var(--primary)] text-[0.7rem] font-medium cursor-pointer hover:bg-[var(--primary)] hover:text-white transition-all duration-300 flex items-center justify-center gap-1.5"
           >
-            {t('rooms.requestUpgrade')}
+            <span>💎</span> {t('rooms.requestUpgrade')}
           </motion.button>
         </Card>
       ))}

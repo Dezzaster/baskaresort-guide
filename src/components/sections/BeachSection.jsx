@@ -61,15 +61,11 @@ export default function BeachSection() {
 
   const handleReserveCabana = () => {
     const ticket = '№' + Math.floor(10000 + Math.random() * 90000)
-    const bi = (key) => {
-      const u = t(key), tr = t(key, { lng: 'tr' })
-      return u === tr ? u : `${u} / ${tr}`
-    }
     const msg = [
-      `🏖️ ${bi('beach.reserveCabana')} ${ticket}`,
+      `🏖️ ${t('beach.reserveCabana')} ${ticket}`,
       '',
-      bi('alacarte.reserveIntro'),
-      `🏪 ${bi('beach.cabana')}`,
+      t('alacarte.reserveIntro'),
+      `🏪 ${t('beach.cabana')}`,
       '',
       '— BAŞKA Guest Guide'
     ].join('\n')

@@ -90,7 +90,8 @@
     "domeDesc": "Strefa Club, prywatny ogród, obsługa kamerdynera, taras 100 m²",
     "requestUpgrade": "Poproś o upgrade",
     "upgradeTitle": "Prośba o upgrade pokoju",
-    "upgradeIntro": "Chciałbym poprosić o upgrade do"
+    "upgradeIntro": "Chciałbym poprosić o upgrade do",
+    "upgradeNote": "Podwyższenie kategorii pokoju zależy od dostępności i wymaga dopłaty"
   },
   "dining": {
     "title": "Gastronomia",
@@ -402,7 +403,7 @@
   "meal": {
     "breakfastSoon": "Śniadanie zaczyna się wkrótce o 07:00!",
     "lunchSoon": "Obiad zaczyna się wkrótce o 12:30!",
-    "dinnerSoon": "Kolacja zaczyna się wkrótce o 19:00!"
+    "dinnerSoon": "Kolacja otwiera się wkrótce o 18:30!"
   },
   "snacks": {
     "title": "Restauracje snackowe",

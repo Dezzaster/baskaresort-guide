@@ -90,7 +90,8 @@
     "domeDesc": "Espace Club, jardin privé, service de majordome, terrasse 100 m²",
     "requestUpgrade": "Demander un surclassement",
     "upgradeTitle": "Demande de surclassement",
-    "upgradeIntro": "Je souhaite demander un surclassement vers"
+    "upgradeIntro": "Je souhaite demander un surclassement vers",
+    "upgradeNote": "Les surclassements sont soumis à disponibilité et supplément"
   },
   "dining": {
     "title": "Restauration",
@@ -402,7 +403,7 @@
   "meal": {
     "breakfastSoon": "Le petit-déjeuner ouvre bientôt à 07:00 !",
     "lunchSoon": "Le déjeuner ouvre bientôt à 12:30 !",
-    "dinnerSoon": "Le dîner ouvre bientôt à 19:00 !"
+    "dinnerSoon": "Le dîner ouvre bientôt à 18h30 !"
   },
   "snacks": {
     "title": "Restaurants snack",

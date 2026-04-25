@@ -90,7 +90,8 @@
     "domeDesc": "Clubzone, privétuin, butlerservice, terras 100 m²",
     "requestUpgrade": "Upgrade aanvragen",
     "upgradeTitle": "Kamer upgrade verzoek",
-    "upgradeIntro": "Ik wil graag een upgrade aanvragen naar"
+    "upgradeIntro": "Ik wil graag een upgrade aanvragen naar",
+    "upgradeNote": "Kamerupgrades zijn afhankelijk van beschikbaarheid en extra betaling"
   },
   "dining": {
     "title": "Dineren",
@@ -402,7 +403,7 @@
   "meal": {
     "breakfastSoon": "Ontbijt begint binnenkort om 07:00!",
     "lunchSoon": "Lunch begint binnenkort om 12:30!",
-    "dinnerSoon": "Diner begint binnenkort om 19:00!"
+    "dinnerSoon": "Diner opent spoedig om 18:30!"
   },
   "snacks": {
     "title": "Snackrestaurants",
