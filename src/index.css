@@ -8,6 +8,8 @@
   font-display: swap;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 :root {
   --primary: #0033A0;
   --primary-light: #1a4dbf;
@@ -91,6 +93,7 @@ body {
   height: auto;
   object-fit: contain;
   margin-top: -4px;
+  margin-left: 2px;
 }
 
 .header-tagline {
@@ -102,8 +105,9 @@ body {
   font-size: 0.68rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-top: 2px;
-  font-family: var(--font-sans);
+  margin-top: -2px;
+  font-family: 'Montserrat', var(--font-sans);
+  font-weight: 300;
 }
 
 /* Content container — proportional responsive centering */

@@ -144,7 +144,7 @@ function App() {
       )}
 
       {/* Header */}
-      <header ref={headerRef} className="relative text-center pt-10 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
+      <header ref={headerRef} className="relative text-center pt-12 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
         <HamburgerMenu activeSection={activeSection} onSectionChange={setActiveSection} />
 
         {/* Vertical stripes */}
@@ -177,14 +177,14 @@ function App() {
             initial={{ clipPath: 'inset(-10% 100% -10% 0)' }}
             animate={{ clipPath: 'inset(-10% 0% -10% 0)' }}
             transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[var(--primary)] mt-2 text-center"
+            className="text-[var(--primary)] mt-0 text-center"
             style={{ position: 'relative', zIndex: 3 }}
           >
             <p className="header-tagline" style={{ fontFamily: taglineFont }}>
-              {t('hero.tagline').split('...')[0]}...
+              {t('hero.tagline').split('...')[0]}
             </p>
             <p className="header-motto">
-              {t('hero.tagline').split('...').slice(1).join('...').trim()}
+              {t('hero.tagline').split('...').slice(1).join('...').replace(/\.\s*$/, '').trim()}
             </p>
           </motion.div>
         </div>
@@ -197,9 +197,9 @@ function App() {
           className="relative mt-4 w-full"
           style={{ zIndex: 2 }}
         >
-          <div className="bg-[var(--primary)] w-full pt-8 pb-8">
+          <div className="bg-[var(--primary)] w-full pt-10 pb-10">
             <div className="header-inner">
-              <p className="text-[0.68rem] text-white/55 tracking-[0.3em] uppercase mb-3 text-center">
+              <p className="text-[0.68rem] text-white/55 tracking-[0.3em] uppercase mb-4 text-center">
                 {t('hero.subtitle')}
               </p>
               <LanguageSelector />
@@ -232,8 +232,8 @@ function App() {
       <footer className="mt-10">
         <div className="h-16 bg-gradient-to-b from-[var(--bg)] to-[#FFF5E0]" />
         <div className="stripe-bar-footer" />
-        <div className="bg-[var(--primary)] text-white pt-20 pb-20 text-center">
-          <div className="header-inner flex flex-col items-center" style={{ gap: '28px' }}>
+        <div className="bg-[var(--primary)] text-white pt-20 pb-16 text-center">
+          <div className="header-inner flex flex-col items-center" style={{ gap: '24px' }}>
             <motion.div
               className="flex justify-center"
               initial={{ opacity: 0, scale: 0.95 }}
