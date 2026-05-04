@@ -1,7 +1,7 @@
 {
   "hero": {
     "subtitle": "Guest Guide",
-    "tagline": "As the Aegean Is... Simple. Natural. Vibrant."
+    "tagline": "as the Aegean is... Simple. Natural. Vibrant."
   },
   "lang": {
     "select": "Select Language"
@@ -368,7 +368,7 @@
   "footer": {
     "address": "Eski Çeşme Mah. Haremtan Sok. No:11, Bodrum, Muğla 48400",
     "rights": "All rights reserved",
-    "tagline": "As the Aegean Is..."
+    "tagline": "as the Aegean is..."
   },
   "flight": {
     "title": "Flight Tracker",

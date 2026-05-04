@@ -1,7 +1,7 @@
 {
   "hero": {
     "subtitle": "Misafir Rehberi",
-    "tagline": "Ege'nin Olduğu Gibi... Sade. Doğal. Canlı."
+    "tagline": "Ege gibi... Sade. Doğal. Canlı."
   },
   "lang": {
     "select": "Dil Seçin"
@@ -368,7 +368,7 @@
   "footer": {
     "address": "Eski Çeşme Mah. Haremtan Sok. No:11, Bodrum, Muğla 48400",
     "rights": "Tüm hakları saklıdır",
-    "tagline": "Ege'nin Olduğu Gibi..."
+    "tagline": "Ege gibi..."
   },
   "flight": {
     "title": "Uçuş Takibi",

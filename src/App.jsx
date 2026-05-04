@@ -58,12 +58,10 @@ function getTaglineFont(lang) {
 function App() {
   const { t, i18n } = useTranslation()
   const [activeSection, setActiveSection] = useState('info')
-  const [videoVisible, setVideoVisible] = useState(false)
   const [stripesReady, setStripesReady] = useState(false)
   const [stripeStyle, setStripeStyle] = useState({})
   const [splashVisible, setSplashVisible] = useState(true)
   const [splashFading, setSplashFading] = useState(false)
-  const videoRef = useRef(null)
   const logoRef = useRef(null)
   const headerRef = useRef(null)
 
@@ -71,13 +69,12 @@ function App() {
   const basePath = import.meta.env.BASE_URL
   const taglineFont = getTaglineFont(i18n.language)
 
-  // Calculate stripe width based on viewport (15% thinner — more stripes visible)
   const getStripeWidth = () => {
     const vw = window.innerWidth
-    if (vw < 380) return vw * 0.119
-    if (vw < 768) return vw * 0.115
-    if (vw < 1200) return vw * 0.064
-    return vw * 0.047
+    if (vw < 380) return vw * 0.071
+    if (vw < 768) return vw * 0.069
+    if (vw < 1200) return vw * 0.038
+    return vw * 0.028
   }
 
   // Generate stripe gradient centered on logo tree
@@ -92,9 +89,8 @@ function App() {
     const sw = getStripeWidth()
     const bgPosX = logoCenterX - sw * 1.5
 
-    // Gold stays bright, white is semi-transparent so video shows through
     setStripeStyle({
-      background: `repeating-linear-gradient(90deg, rgba(245,197,24,0.9) 0px, rgba(245,197,24,0.9) ${sw}px, rgba(255,255,255,0) ${sw}px, rgba(255,255,255,0) ${sw * 2}px)`,
+      background: `repeating-linear-gradient(90deg, rgba(245,197,24,0.9) 0px, rgba(245,197,24,0.9) ${sw}px, transparent ${sw}px, transparent ${sw * 2}px)`,
       backgroundPositionX: `${bgPosX}px`,
       backgroundRepeat: 'repeat',
       backgroundSize: `${sw * 2}px 100%`,
@@ -103,14 +99,7 @@ function App() {
 
   useEffect(() => {
     const stripeTimer = setTimeout(() => setStripesReady(true), 2800)
-    const videoTimer = setTimeout(() => {
-      setVideoVisible(true)
-      if (videoRef.current) {
-        videoRef.current.play().catch(() => {})
-      }
-    }, 2200)
 
-    // Splash: show for 1.5s then fade out
     const splashTimer = setTimeout(() => {
       setSplashFading(true)
       setTimeout(() => setSplashVisible(false), 600)
@@ -123,17 +112,12 @@ function App() {
 
     return () => {
       clearTimeout(stripeTimer)
-      clearTimeout(videoTimer)
       clearTimeout(splashTimer)
       clearTimeout(imgLoadTimer)
       ro.disconnect()
       window.removeEventListener('resize', updateStripes)
     }
   }, [])
-
-  const handleVideoEnd = () => {
-    setVideoVisible(false)
-  }
 
   return (
     <div className="min-h-screen bg-[var(--bg)]">
@@ -163,28 +147,7 @@ function App() {
       <header ref={headerRef} className="relative text-center pt-10 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
         <HamburgerMenu activeSection={activeSection} onSectionChange={setActiveSection} />
 
-        {/* Background video */}
-        <video
-          ref={videoRef}
-          src={`${basePath}baskavideo.mp4`}
-          preload="auto"
-          muted
-          playsInline
-          onEnded={handleVideoEnd}
-          style={{
-            position: 'absolute',
-            inset: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: 0,
-            opacity: videoVisible ? 0.18 : 0,
-            transition: 'opacity 1.5s ease',
-            pointerEvents: 'none',
-          }}
-        />
-
-        {/* Vertical stripes — white semi-transparent so video shows through */}
+        {/* Vertical stripes */}
         <div
           className="header-stripes"
           style={{
@@ -234,7 +197,7 @@ function App() {
           className="relative mt-4 w-full"
           style={{ zIndex: 2 }}
         >
-          <div className="bg-[var(--primary)] w-full pt-5 pb-7">
+          <div className="bg-[var(--primary)] w-full pt-8 pb-8">
             <div className="header-inner">
               <p className="text-[0.68rem] text-white/55 tracking-[0.3em] uppercase mb-3 text-center">
                 {t('hero.subtitle')}
@@ -269,8 +232,8 @@ function App() {
       <footer className="mt-10">
         <div className="h-16 bg-gradient-to-b from-[var(--bg)] to-[#FFF5E0]" />
         <div className="stripe-bar-footer" />
-        <div className="bg-[var(--primary)] text-white pt-20 pb-12 text-center">
-          <div className="header-inner">
+        <div className="bg-[var(--primary)] text-white pt-20 pb-20 text-center">
+          <div className="header-inner flex flex-col items-center" style={{ gap: '28px' }}>
             <motion.div
               className="flex justify-center"
               initial={{ opacity: 0, scale: 0.95 }}
@@ -280,11 +243,12 @@ function App() {
               <img
                 src={`${basePath}BASKA RESORT-LOGO.png`}
                 alt="BAŞKA Resort Bodrum"
-                className="h-32 w-auto brightness-0 invert"
+                className="w-auto brightness-0 invert"
+                style={{ height: '108px' }}
               />
             </motion.div>
 
-            <p className="italic mt-8 opacity-70" style={{ fontFamily: taglineFont, fontSize: '1.2rem' }}>
+            <p className="italic opacity-70" style={{ fontFamily: taglineFont, fontSize: '1.3rem' }}>
               {t('footer.tagline')}
             </p>
 
@@ -292,12 +256,12 @@ function App() {
               href="https://www.baskaresort.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-10 px-7 py-2.5 rounded-full border border-white/30 text-[0.74rem] tracking-wider uppercase text-white/80 hover:bg-white/10 transition-all duration-300"
+              className="inline-block px-7 py-2.5 rounded-full border border-white/30 text-[0.81rem] tracking-wider uppercase text-white/80 hover:bg-white/10 transition-all duration-300"
             >
               www.baskaresort.com
             </a>
 
-            <p className="text-[0.68rem] mt-12" style={{ color: 'var(--gold-light)', opacity: 0.85 }}>
+            <p className="text-[0.75rem]" style={{ color: 'var(--gold-light)', opacity: 0.85 }}>
               © {new Date().getFullYear()} BAŞKA Resort Bodrum. {t('footer.rights')}
             </p>
           </div>
