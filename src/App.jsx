@@ -144,7 +144,7 @@ function App() {
       )}
 
       {/* Header */}
-      <header ref={headerRef} className="relative text-center pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden', paddingTop: '60px' }}>
+      <header ref={headerRef} className="relative text-center pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden', paddingTop: '44px' }}>
         <HamburgerMenu activeSection={activeSection} onSectionChange={setActiveSection} />
 
         {/* Vertical stripes */}
@@ -178,7 +178,7 @@ function App() {
             animate={{ clipPath: 'inset(-10% 0% -10% 0)' }}
             transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-[var(--primary)] text-center"
-            style={{ position: 'relative', zIndex: 3, marginTop: '-6px' }}
+            style={{ position: 'relative', zIndex: 3, marginTop: '2px' }}
           >
             <p className="header-tagline" style={{ fontFamily: taglineFont }}>
               {t('hero.tagline').split('...')[0]}
@@ -195,11 +195,11 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.3 }}
           className="relative w-full"
-          style={{ zIndex: 2, marginTop: '20px' }}
+          style={{ zIndex: 2, marginTop: '14px' }}
         >
-          <div className="bg-[var(--primary)] w-full" style={{ paddingTop: '44px', paddingBottom: '48px' }}>
+          <div className="bg-[var(--primary)] w-full" style={{ paddingTop: '24px', paddingBottom: '28px' }}>
             <div className="header-inner">
-              <p className="text-white/55 tracking-[0.3em] uppercase text-center" style={{ fontSize: '0.68rem', marginBottom: '22px' }}>
+              <p className="text-white/55 tracking-[0.3em] uppercase text-center" style={{ fontSize: '0.68rem', marginBottom: '14px' }}>
                 {t('hero.subtitle')}
               </p>
               <LanguageSelector />
@@ -232,8 +232,8 @@ function App() {
       <footer className="mt-10">
         <div className="h-16 bg-gradient-to-b from-[var(--bg)] to-[#FFF5E0]" />
         <div className="stripe-bar-footer" />
-        <div className="bg-[var(--primary)] text-white text-center" style={{ paddingTop: '80px', paddingBottom: '60px' }}>
-          <div className="header-inner flex flex-col items-center" style={{ gap: '24px' }}>
+        <div className="bg-[var(--primary)] text-white text-center" style={{ paddingTop: '48px', paddingBottom: '36px' }}>
+          <div className="header-inner flex flex-col items-center" style={{ gap: '20px' }}>
             <motion.div
               className="flex justify-center"
               initial={{ opacity: 0, scale: 0.95 }}
@@ -244,11 +244,11 @@ function App() {
                 src={`${basePath}BASKA RESORT-LOGO.png`}
                 alt="BAŞKA Resort Bodrum"
                 className="w-auto brightness-0 invert"
-                style={{ height: '108px' }}
+                style={{ height: '100px' }}
               />
             </motion.div>
 
-            <p className="italic opacity-70" style={{ fontFamily: taglineFont, fontSize: '1.3rem' }}>
+            <p className="italic opacity-70" style={{ fontFamily: taglineFont, fontSize: '1.15rem' }}>
               {t('footer.tagline')}
             </p>
 
@@ -256,12 +256,12 @@ function App() {
               href="https://www.baskaresort.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-7 py-2.5 rounded-full border border-white/30 text-[0.81rem] tracking-wider uppercase text-white/80 hover:bg-white/10 transition-all duration-300"
+              className="inline-block px-7 py-2.5 rounded-full border border-white/30 text-[0.74rem] tracking-wider uppercase text-white/80 hover:bg-white/10 transition-all duration-300"
             >
               www.baskaresort.com
             </a>
 
-            <p className="text-[0.75rem]" style={{ color: 'var(--gold-light)', opacity: 0.85 }}>
+            <p className="text-[0.68rem]" style={{ color: 'var(--gold-light)', opacity: 0.85 }}>
               © {new Date().getFullYear()} BAŞKA Resort Bodrum. {t('footer.rights')}
             </p>
           </div>
