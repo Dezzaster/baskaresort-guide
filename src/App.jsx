@@ -144,7 +144,7 @@ function App() {
       )}
 
       {/* Header */}
-      <header ref={headerRef} className="relative text-center pt-14 pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden' }}>
+      <header ref={headerRef} className="relative text-center pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden', paddingTop: '60px' }}>
         <HamburgerMenu activeSection={activeSection} onSectionChange={setActiveSection} />
 
         {/* Vertical stripes */}
@@ -194,12 +194,12 @@ function App() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.3 }}
-          className="relative mt-4 w-full"
-          style={{ zIndex: 2 }}
+          className="relative w-full"
+          style={{ zIndex: 2, marginTop: '20px' }}
         >
-          <div className="bg-[var(--primary)] w-full pt-11 pb-12">
+          <div className="bg-[var(--primary)] w-full" style={{ paddingTop: '44px', paddingBottom: '48px' }}>
             <div className="header-inner">
-              <p className="text-[0.68rem] text-white/55 tracking-[0.3em] uppercase mb-5 text-center">
+              <p className="text-white/55 tracking-[0.3em] uppercase text-center" style={{ fontSize: '0.68rem', marginBottom: '22px' }}>
                 {t('hero.subtitle')}
               </p>
               <LanguageSelector />
@@ -232,7 +232,7 @@ function App() {
       <footer className="mt-10">
         <div className="h-16 bg-gradient-to-b from-[var(--bg)] to-[#FFF5E0]" />
         <div className="stripe-bar-footer" />
-        <div className="bg-[var(--primary)] text-white pt-20 pb-24 text-center">
+        <div className="bg-[var(--primary)] text-white text-center" style={{ paddingTop: '80px', paddingBottom: '60px' }}>
           <div className="header-inner flex flex-col items-center" style={{ gap: '24px' }}>
             <motion.div
               className="flex justify-center"
