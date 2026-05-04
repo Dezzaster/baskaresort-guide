@@ -144,7 +144,7 @@ function App() {
       )}
 
       {/* Header */}
-      <header ref={headerRef} className="relative text-center pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden', paddingTop: '44px' }}>
+      <header ref={headerRef} className="relative text-center pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden', paddingTop: '38px' }}>
         <HamburgerMenu activeSection={activeSection} onSectionChange={setActiveSection} />
 
         {/* Vertical stripes */}
@@ -197,7 +197,7 @@ function App() {
           className="relative w-full"
           style={{ zIndex: 2, marginTop: '14px' }}
         >
-          <div className="bg-[var(--primary)] w-full" style={{ paddingTop: '24px', paddingBottom: '28px' }}>
+          <div className="bg-[var(--primary)] w-full" style={{ paddingTop: '18px', paddingBottom: '22px' }}>
             <div className="header-inner">
               <p className="text-white/55 tracking-[0.3em] uppercase text-center" style={{ fontSize: '0.68rem', marginBottom: '14px' }}>
                 {t('hero.subtitle')}
@@ -232,8 +232,8 @@ function App() {
       <footer className="mt-10">
         <div className="h-16 bg-gradient-to-b from-[var(--bg)] to-[#FFF5E0]" />
         <div className="stripe-bar-footer" />
-        <div className="bg-[var(--primary)] text-white text-center" style={{ paddingTop: '48px', paddingBottom: '36px' }}>
-          <div className="header-inner flex flex-col items-center" style={{ gap: '20px' }}>
+        <div className="bg-[var(--primary)] text-white text-center" style={{ paddingTop: '40px', paddingBottom: '28px' }}>
+          <div className="header-inner flex flex-col items-center" style={{ gap: '18px' }}>
             <motion.div
               className="flex justify-center"
               initial={{ opacity: 0, scale: 0.95 }}
