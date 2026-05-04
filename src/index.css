@@ -88,12 +88,12 @@ body {
 }
 
 .header-logo {
-  width: 47vw;
-  max-width: 243px;
+  width: 45vw;
+  max-width: 231px;
   height: auto;
   object-fit: contain;
   margin-top: -4px;
-  margin-left: 2px;
+  margin-left: 3px;
 }
 
 .header-tagline {
@@ -105,7 +105,7 @@ body {
   font-size: 0.68rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-top: -2px;
+  margin-top: -4px;
   font-family: 'Montserrat', var(--font-sans);
   font-weight: 300;
 }
