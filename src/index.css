@@ -85,10 +85,9 @@ body {
   z-index: 2;
 }
 
-/* Logo — 5% smaller, raised slightly */
 .header-logo {
-  width: 59vw;
-  max-width: 304px;
+  width: 47vw;
+  max-width: 243px;
   height: auto;
   object-fit: contain;
   margin-top: -4px;

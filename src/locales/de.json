@@ -1,7 +1,7 @@
 {
   "hero": {
     "subtitle": "Gästeguide",
-    "tagline": "Wie die Ägäis... Schlicht. Natürlich. Lebendig."
+    "tagline": "wie die Ägäis... Einfach. Natürlich. Lebendig."
   },
   "lang": {
     "select": "Sprache wählen"
@@ -368,7 +368,7 @@
   "footer": {
     "address": "Eski Çeşme Mah. Haremtan Sok. No:11, Bodrum, Muğla 48400",
     "rights": "Alle Rechte vorbehalten",
-    "tagline": "Wie die Ägäis..."
+    "tagline": "wie die Ägäis..."
   },
   "flight": {
     "title": "Flug-Tracker",

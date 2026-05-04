@@ -2,14 +2,11 @@ import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const primaryLanguages = [
+const languages = [
   { code: 'en', label: 'English', flag: '🇬🇧' },
   { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
   { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
-  { code: 'ru', label: 'Русский', flag: '🇷🇺' }
-]
-
-const secondaryLanguages = [
+  { code: 'ru', label: 'Русский', flag: '🇷🇺' },
   { code: 'fr', label: 'Français', flag: '🇫🇷' },
   { code: 'ar', label: 'العربية', flag: '🇸🇦' },
   { code: 'pl', label: 'Polski', flag: '🇵🇱' },
@@ -18,7 +15,6 @@ const secondaryLanguages = [
 
 export default function LanguageSelector() {
   const { i18n } = useTranslation()
-  const [showMore, setShowMore] = useState(false)
   const [flashingFlag, setFlashingFlag] = useState(null)
   const flashTimerRef = useRef(null)
 
@@ -67,42 +63,10 @@ export default function LanguageSelector() {
   )
 
   return (
-    <div>
-      <div className="grid grid-cols-4 gap-2.5">
-        {primaryLanguages.map((lang) => (
-          <LangButton key={lang.code} lang={lang} />
-        ))}
-      </div>
-
-      {!showMore && (
-        <button
-          onClick={() => setShowMore(true)}
-          className="w-full text-[0.75rem] text-white/70 hover:text-white/90 transition-colors duration-300 flex items-center justify-center gap-1.5 mt-3"
-        >
-          <span>+4</span>
-          <span>more languages</span>
-        </button>
-      )}
-
-      <AnimatePresence>
-        {showMore && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-          >
-            <div className="h-2" />
-            <div className="grid grid-cols-4 gap-2.5">
-              {secondaryLanguages.map((lang) => (
-                <LangButton key={lang.code} lang={lang} />
-              ))}
-            </div>
-            <div className="h-1" />
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <div className="grid grid-cols-4 gap-2 gap-y-2.5">
+      {languages.map((lang) => (
+        <LangButton key={lang.code} lang={lang} />
+      ))}
     </div>
   )
 }
