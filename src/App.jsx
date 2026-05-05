@@ -144,7 +144,7 @@ function App() {
       )}
 
       {/* Header */}
-      <header ref={headerRef} className="relative text-center pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden', paddingTop: '38px' }}>
+      <header ref={headerRef} className="relative text-center pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden', paddingTop: '34px' }}>
         <HamburgerMenu activeSection={activeSection} onSectionChange={setActiveSection} />
 
         {/* Vertical stripes */}
@@ -178,7 +178,7 @@ function App() {
             animate={{ clipPath: 'inset(-10% 0% -10% 0)' }}
             transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-[var(--primary)] text-center"
-            style={{ position: 'relative', zIndex: 3, marginTop: '2px' }}
+            style={{ position: 'relative', zIndex: 3, marginTop: '-2px' }}
           >
             <p className="header-tagline" style={{ fontFamily: taglineFont }}>
               {t('hero.tagline').split('...')[0]}
@@ -197,9 +197,9 @@ function App() {
           className="relative w-full"
           style={{ zIndex: 2, marginTop: '14px' }}
         >
-          <div className="bg-[var(--primary)] w-full" style={{ paddingTop: '18px', paddingBottom: '22px' }}>
+          <div className="bg-[var(--primary)] w-full" style={{ paddingTop: '16px', paddingBottom: '18px' }}>
             <div className="header-inner">
-              <p className="text-white/55 tracking-[0.3em] uppercase text-center" style={{ fontSize: '0.68rem', marginBottom: '14px' }}>
+              <p className="text-white/55 tracking-[0.3em] uppercase text-center" style={{ fontSize: '0.68rem', marginBottom: '10px' }}>
                 {t('hero.subtitle')}
               </p>
               <LanguageSelector />
@@ -232,7 +232,7 @@ function App() {
       <footer className="mt-10">
         <div className="h-16 bg-gradient-to-b from-[var(--bg)] to-[#FFF5E0]" />
         <div className="stripe-bar-footer" />
-        <div className="bg-[var(--primary)] text-white text-center" style={{ paddingTop: '40px', paddingBottom: '28px' }}>
+        <div className="bg-[var(--primary)] text-white text-center" style={{ paddingTop: '34px', paddingBottom: '32px' }}>
           <div className="header-inner flex flex-col items-center" style={{ gap: '18px' }}>
             <motion.div
               className="flex justify-center"
