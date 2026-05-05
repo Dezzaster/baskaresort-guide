@@ -92,7 +92,7 @@ body {
   max-width: 231px;
   height: auto;
   object-fit: contain;
-  margin-top: -18px;
+  margin-top: -12px;
   margin-left: 3px;
 }
 
@@ -105,7 +105,7 @@ body {
   font-size: 0.68rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-top: 1px;
+  margin-top: 8px;
   font-family: 'Montserrat', var(--font-sans);
   font-weight: 300;
 }
