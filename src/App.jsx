@@ -174,11 +174,11 @@ function App() {
           </motion.div>
 
           <motion.div
-            initial={{ clipPath: 'inset(-10% 100% -10% 0)' }}
-            animate={{ clipPath: 'inset(-10% 0% -10% 0)' }}
+            initial={{ clipPath: 'inset(-30% 100% -10% 0)' }}
+            animate={{ clipPath: 'inset(-30% 0% -10% 0)' }}
             transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-[var(--primary)] text-center"
-            style={{ position: 'relative', zIndex: 3, marginTop: '-3px' }}
+            style={{ position: 'relative', zIndex: 3, marginTop: '-7px' }}
           >
             <p className="header-tagline" style={{ fontFamily: taglineFont }}>
               {t('hero.tagline').split('...')[0]}
