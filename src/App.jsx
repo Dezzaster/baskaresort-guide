@@ -178,7 +178,7 @@ function App() {
             animate={{ clipPath: 'inset(-30% 0% -10% 0)' }}
             transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-[var(--primary)] text-center"
-            style={{ position: 'relative', zIndex: 3, marginTop: '-14px' }}
+            style={{ position: 'relative', zIndex: 3, marginTop: '-6px' }}
           >
             <p className="header-tagline" style={{ fontFamily: taglineFont }}>
               {t('hero.tagline').split('...')[0]}
@@ -195,7 +195,7 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.3 }}
           className="relative w-full"
-          style={{ zIndex: 2, marginTop: '18px' }}
+          style={{ zIndex: 2, marginTop: '24px' }}
         >
           <div className="bg-[var(--primary)] w-full" style={{ paddingTop: '14px', paddingBottom: '16px' }}>
             <div className="header-inner">
