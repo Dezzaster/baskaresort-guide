@@ -178,7 +178,7 @@ function App() {
             animate={{ clipPath: 'inset(-10% 0% -10% 0)' }}
             transition={{ duration: 2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-[var(--primary)] text-center"
-            style={{ position: 'relative', zIndex: 3, marginTop: '-2px' }}
+            style={{ position: 'relative', zIndex: 3, marginTop: '-6px' }}
           >
             <p className="header-tagline" style={{ fontFamily: taglineFont }}>
               {t('hero.tagline').split('...')[0]}
@@ -197,7 +197,7 @@ function App() {
           className="relative w-full"
           style={{ zIndex: 2, marginTop: '14px' }}
         >
-          <div className="bg-[var(--primary)] w-full" style={{ paddingTop: '16px', paddingBottom: '18px' }}>
+          <div className="bg-[var(--primary)] w-full" style={{ paddingTop: '14px', paddingBottom: '16px' }}>
             <div className="header-inner">
               <p className="text-white/55 tracking-[0.3em] uppercase text-center" style={{ fontSize: '0.68rem', marginBottom: '10px' }}>
                 {t('hero.subtitle')}
