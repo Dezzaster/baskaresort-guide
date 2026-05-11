@@ -45,8 +45,8 @@ const sectionComponents = {
 
 // Tagline font per language group
 const taglineFontMap = {
-  en: "'Californian Signature', 'Dancing Script'", de: "'Californian Signature', 'Dancing Script'", fr: "'Californian Signature', 'Dancing Script'", pl: "'Californian Signature', 'Dancing Script'", nl: "'Californian Signature', 'Dancing Script'",
-  tr: "'Californian Signature', 'Caveat'", ru: "'Caveat'",
+  en: "'Californian Signature', 'Dancing Script'", de: "'Californian Signature', 'Dancing Script'", fr: "'Californian Signature', 'Dancing Script'", pl: "'Californian Signature', 'Dancing Script'",
+  tr: "'Californian Signature', 'Caveat'", ru: "'Caveat'", uk: "'Caveat'",
   ar: "'Aref Ruqaa'"
 }
 

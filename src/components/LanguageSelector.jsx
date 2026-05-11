@@ -7,10 +7,10 @@ const languages = [
   { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
   { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
   { code: 'ru', label: 'Русский', flag: '🇷🇺' },
-  { code: 'fr', label: 'Français', flag: '🇫🇷' },
+  { code: 'uk', label: 'Українська', flag: '🇺🇦' },
   { code: 'ar', label: 'العربية', flag: '🇸🇦' },
-  { code: 'pl', label: 'Polski', flag: '🇵🇱' },
-  { code: 'nl', label: 'Nederlands', flag: '🇳🇱' }
+  { code: 'fr', label: 'Français', flag: '🇫🇷' },
+  { code: 'pl', label: 'Polski', flag: '🇵🇱' }
 ]
 
 export default function LanguageSelector() {
