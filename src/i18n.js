@@ -9,7 +9,7 @@ import de from './locales/de.json'
 import fr from './locales/fr.json'
 import ar from './locales/ar.json'
 import pl from './locales/pl.json'
-import nl from './locales/nl.json'
+import uk from './locales/uk.json'
 
 i18n
   .use(LanguageDetector)
@@ -23,7 +23,7 @@ i18n
       fr: { translation: fr },
       ar: { translation: ar },
       pl: { translation: pl },
-      nl: { translation: nl }
+      uk: { translation: uk }
     },
     fallbackLng: 'en',
     interpolation: { escapeValue: false },
