@@ -19,6 +19,14 @@ export default function WelcomePopup({ show }) {
         style={{ background: 'rgba(0,0,0,0.85)' }}
         onClick={() => setDismissed(true)}
       >
+        <button
+          onClick={() => setDismissed(true)}
+          className="fixed top-5 right-5 z-[99999] text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
+          style={{ fontSize: '2.5rem', lineHeight: 1, background: 'none', border: 'none', padding: '8px' }}
+        >
+          ✕
+        </button>
+
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -28,17 +36,11 @@ export default function WelcomePopup({ show }) {
           onClick={e => e.stopPropagation()}
         >
           <img
-            src={`${basePath}popup1.jpeg`}
+            src={`${basePath}popup1.png`}
             alt="Welcome to BAŞKA Resort"
             className="w-full rounded-2xl shadow-2xl"
-            style={{ maxHeight: '80vh', objectFit: 'contain' }}
+            style={{ maxHeight: '85vh', objectFit: 'contain' }}
           />
-          <button
-            onClick={() => setDismissed(true)}
-            className="mt-5 px-10 py-3.5 rounded-full bg-white text-[var(--primary)] font-semibold text-[0.9rem] tracking-wider uppercase shadow-lg hover:bg-white/90 transition-all duration-300 cursor-pointer"
-          >
-            ✕
-          </button>
         </motion.div>
       </motion.div>
     </AnimatePresence>
