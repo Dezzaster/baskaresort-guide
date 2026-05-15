@@ -24,6 +24,7 @@ import FlightTrackerSection from './components/sections/FlightTrackerSection'
 import InstallPrompt from './components/InstallPrompt'
 import HamburgerMenu from './components/HamburgerMenu'
 import MealNotifier from './components/MealNotifier'
+import WelcomePopup from './components/WelcomePopup'
 
 const sectionComponents = {
   info: InfoSection,
@@ -269,6 +270,7 @@ function App() {
       </footer>
       <InstallPrompt />
       <MealNotifier />
+      <WelcomePopup />
     </div>
   )
 }
