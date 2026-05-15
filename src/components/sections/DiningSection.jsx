@@ -122,7 +122,6 @@ export default function DiningSection() {
         <div className="grid grid-cols-2 gap-3">
           {[
             { key: 'fishSandwich' },
-            { key: 'chickenRice' },
             { key: 'meatballKokorec' },
             { key: 'gelato' }
           ].map((item, i) => (
