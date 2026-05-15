@@ -270,7 +270,7 @@ function App() {
       </footer>
       <InstallPrompt />
       <MealNotifier />
-      <WelcomePopup />
+      <WelcomePopup show={!splashVisible} />
     </div>
   )
 }
