@@ -398,7 +398,12 @@
     "swimNo": "Swimming not recommended"
   },
   "menu": {
-    "close": "Close"
+    "close": "Close",
+    "viewMenu": "View Menu",
+    "dinnerMenu": "Dinner Menu",
+    "lunchMenu": "Lunch Menu",
+    "wineMenu": "Wine Menu",
+    "beverageMenu": "Beverage Menu"
   },
   "meal": {
     "breakfastSoon": "Breakfast opens soon at 07:00!",

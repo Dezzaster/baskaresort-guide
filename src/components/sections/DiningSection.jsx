@@ -42,9 +42,17 @@ export default function DiningSection() {
       </Card>
 
       <Card icon="🕐" title={t('dining.daima')} delay={1}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-3">
           {t('dining.daimaDesc')}
         </p>
+        <a
+          href={`${basePath}Daima Restaurant Menu.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 py-2 px-4 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.72rem] font-medium hover:bg-[var(--bg-blue)] transition-colors"
+        >
+          📋 {t('menu.viewMenu')}
+        </a>
       </Card>
 
       <Card title="" delay={2}>
