@@ -398,7 +398,12 @@
     "swimNo": "Yüzme önerilmez"
   },
   "menu": {
-    "close": "Kapat"
+    "close": "Kapat",
+    "viewMenu": "Menüyü Görüntüle",
+    "dinnerMenu": "Akşam Yemeği Menüsü",
+    "lunchMenu": "Öğle Yemeği Menüsü",
+    "wineMenu": "Şarap Menüsü",
+    "beverageMenu": "İçecek Menüsü"
   },
   "meal": {
     "breakfastSoon": "Kahvaltı 07:00'de başlıyor!",

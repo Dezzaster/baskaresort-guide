@@ -398,7 +398,12 @@
     "swimNo": "Pływanie niezalecane"
   },
   "menu": {
-    "close": "Zamknij"
+    "close": "Zamknij",
+    "viewMenu": "Zobacz menu",
+    "dinnerMenu": "Menu kolacji",
+    "lunchMenu": "Menu lunchu",
+    "wineMenu": "Karta win",
+    "beverageMenu": "Karta napojów"
   },
   "meal": {
     "breakfastSoon": "Śniadanie zaczyna się wkrótce o 07:00!",

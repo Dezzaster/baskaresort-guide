@@ -398,7 +398,12 @@
     "swimNo": "Baignade déconseillée"
   },
   "menu": {
-    "close": "Fermer"
+    "close": "Fermer",
+    "viewMenu": "Voir le menu",
+    "dinnerMenu": "Menu du dîner",
+    "lunchMenu": "Menu du déjeuner",
+    "wineMenu": "Carte des vins",
+    "beverageMenu": "Carte des boissons"
   },
   "meal": {
     "breakfastSoon": "Le petit-déjeuner ouvre bientôt à 07:00 !",

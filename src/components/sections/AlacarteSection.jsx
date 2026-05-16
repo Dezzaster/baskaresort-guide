@@ -4,11 +4,28 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Card from '../Card'
 
 const WHATSAPP = '905307387764'
+const basePath = import.meta.env.BASE_URL
 
 const restaurants = [
-  { key: 'fish', code: 'A-1' },
-  { key: 'teppanyaki', code: 'A-2' },
-  { key: 'italian', code: 'A-3' }
+  {
+    key: 'fish', code: 'A-1',
+    menus: [
+      { label: 'dinnerMenu', file: 'Kıyıda A La Carte Dinner Menu Kopyası.pdf' },
+      { label: 'lunchMenu', file: 'Kıyıda A La Carte Lunch Menu.pdf' }
+    ]
+  },
+  {
+    key: 'teppanyaki', code: 'A-2',
+    menus: [
+      { label: 'dinnerMenu', file: 'Kai Teppanyaki A La Carte Dinner Menu.pdf' }
+    ]
+  },
+  {
+    key: 'italian', code: 'A-3',
+    menus: [
+      { label: 'dinnerMenu', file: 'Lento Italian A La Carte Dinner Menu.pdf' }
+    ]
+  }
 ]
 
 export default function AlacarteSection() {
@@ -51,10 +68,23 @@ export default function AlacarteSection() {
               <span className="text-[0.7rem] text-[var(--gold-dark)] font-medium">{t(`alacarte.${r.key}Price`)}</span>
             </div>
           </div>
+          <div className="flex gap-2 mt-3">
+            {r.menus.map(m => (
+              <a
+                key={m.file}
+                href={`${basePath}${m.file}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-2 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.68rem] font-medium text-center hover:bg-[var(--bg-blue)] transition-colors"
+              >
+                📋 {t(`menu.${m.label}`)}
+              </a>
+            ))}
+          </div>
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={() => setConfirmKey(r.key)}
-            className="mt-3 w-full py-2.5 rounded-xl bg-[var(--primary)] text-white text-[0.74rem] font-medium cursor-pointer hover:bg-[var(--primary)]/90 transition-colors"
+            className="mt-2 w-full py-2.5 rounded-xl bg-[var(--primary)] text-white text-[0.74rem] font-medium cursor-pointer hover:bg-[var(--primary)]/90 transition-colors"
           >
             {t('alacarte.reserve')}
           </motion.button>
