@@ -6,7 +6,6 @@ const spaItems = [
   { key: 'sauna', icon: '🧖' },
   { key: 'fitness', icon: '💪' },
   { key: 'massage', icon: '💆' },
-  { key: 'skincare', icon: '✨' }
 ]
 
 export default function SpaSection() {
