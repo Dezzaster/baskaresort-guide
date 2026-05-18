@@ -24,7 +24,7 @@ export default function BarsSection() {
       </h2>
       <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('bars.subtitle')}</p>
 
-      <div className="flex gap-2 mb-6">
+      <div className="flex gap-2 mb-6 mt-2" style={{ paddingTop: '4px', paddingBottom: '4px' }}>
         <a
           href={`${basePath}Beverage Menu.pdf`}
           target="_blank"

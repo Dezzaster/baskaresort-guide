@@ -151,7 +151,7 @@
     "lobbyBar": "Manzara Lobby Bar",
     "lobbyBarDesc": "24/7, Kostenlos BAI",
     "manzaraPatisserie": "Manzara Patisserie",
-    "manzaraPatisserieDesc": "Gebäck, Kuchen & süße Leckereien. 10:00–23:00, BAI",
+    "manzaraPatisserieDesc": "Gebäck, Kuchen & süße Leckereien. 12:00–18:00, BAI",
     "coffeeHouse": "Zeytinaltı Village Coffee House",
     "coffeeHouseDesc": "Frischer Simit, türkische Fladenbrote & Tee. 09:00–22:00",
     "cafeBodrum": "Meltem Beach Bar",
@@ -163,7 +163,7 @@
     "loungeBar": "Lounge Bar",
     "loungeBarDesc": "Cocktails & Getränke. 18:00–00:00, BAI",
     "beachPastane": "Beach Pastane",
-    "beachPastaneDesc": "Gebäck, Süßes & Heißgetränke. 12:00–18:00, BAI"
+    "beachPastaneDesc": "Gebäck, Süßes & Heißgetränke. 11:00–16:00, BAI"
   },
   "streetFood": {
     "title": "Street Food & Mobil",

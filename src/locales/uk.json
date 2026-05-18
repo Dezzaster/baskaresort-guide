@@ -151,7 +151,7 @@
     "lobbyBar": "Manzara Lobby Bar",
     "lobbyBarDesc": "24/7, Безкоштовно BAI",
     "manzaraPatisserie": "Manzara Кондитерська",
-    "manzaraPatisserieDesc": "Випічка, торти та солодощі. 10:00–23:00, BAI",
+    "manzaraPatisserieDesc": "Випічка, торти та солодощі. 12:00–18:00, BAI",
     "coffeeHouse": "Zeytinaltı Village Coffee House",
     "coffeeHouseDesc": "Свіжий сіміт, турецькі коржі та чай. 09:00–22:00",
     "cafeBodrum": "Meltem Beach Bar",
@@ -163,7 +163,7 @@
     "loungeBar": "Lounge Bar",
     "loungeBarDesc": "Коктейлі та напої. 18:00–00:00, BAI",
     "beachPastane": "Beach Patisserie",
-    "beachPastaneDesc": "Випічка, солодощі та гарячі напої. 12:00–18:00, BAI"
+    "beachPastaneDesc": "Випічка, солодощі та гарячі напої. 11:00–16:00, BAI"
   },
   "streetFood": {
     "title": "Вулична їжа та мобільні точки",
