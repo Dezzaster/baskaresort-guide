@@ -151,7 +151,7 @@
     "lobbyBar": "Manzara Lobby Bar",
     "lobbyBarDesc": "24/7, Ücretsiz BAI",
     "manzaraPatisserie": "Manzara Pastane",
-    "manzaraPatisserieDesc": "Pastalar, kekler & tatlı lezzetler. 10:00–23:00, BAI",
+    "manzaraPatisserieDesc": "Pastalar, kekler & tatlı lezzetler. 12:00–18:00, BAI",
     "coffeeHouse": "ZEYTİNALTI Köy Kahvesi",
     "coffeeHouseDesc": "Taze simit, gözleme & çay. 09:00–22:00",
     "cafeBodrum": "MELTEM Sahil Bar",
@@ -163,7 +163,7 @@
     "loungeBar": "Lounge Bar",
     "loungeBarDesc": "Kokteyller & içecekler. 18:00–00:00, BAI",
     "beachPastane": "Beach Pastane",
-    "beachPastaneDesc": "Hamur işleri, tatlılar & sıcak içecekler. 12:00–18:00, BAI"
+    "beachPastaneDesc": "Hamur işleri, tatlılar & sıcak içecekler. 11:00–16:00, BAI"
   },
   "streetFood": {
     "title": "Sokak Lezzetleri & Mobil",

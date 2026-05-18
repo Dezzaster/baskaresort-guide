@@ -151,7 +151,7 @@
     "lobbyBar": "Manzara Lobby Bar",
     "lobbyBarDesc": "24/7, Бесплатно BAI",
     "manzaraPatisserie": "Manzara Кондитерская",
-    "manzaraPatisserieDesc": "Выпечка, торты и сладости. 10:00–23:00, BAI",
+    "manzaraPatisserieDesc": "Выпечка, торты и сладости. 12:00–18:00, BAI",
     "coffeeHouse": "Зейтиналты Village Coffee House",
     "coffeeHouseDesc": "Свежий симит, турецкие лепёшки и чай. 09:00–22:00",
     "cafeBodrum": "Мелтем Beach Bar",
@@ -163,7 +163,7 @@
     "loungeBar": "Lounge Bar",
     "loungeBarDesc": "Коктейли и напитки. 18:00–00:00, BAI",
     "beachPastane": "Beach Pastane",
-    "beachPastaneDesc": "Выпечка, сладости и горячие напитки. 12:00–18:00, BAI"
+    "beachPastaneDesc": "Выпечка, сладости и горячие напитки. 11:00–16:00, BAI"
   },
   "streetFood": {
     "title": "Уличная еда и мобильные точки",

@@ -68,14 +68,14 @@ export default function AlacarteSection() {
               <span className="text-[0.7rem] text-[var(--gold-dark)] font-medium">{t(`alacarte.${r.key}Price`)}</span>
             </div>
           </div>
-          <div className="flex gap-2 mt-3">
+          <div className="flex gap-2 mt-4 mb-1">
             {r.menus.map(m => (
               <a
                 key={m.file}
                 href={`${basePath}${m.file}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-2 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.68rem] font-medium text-center hover:bg-[var(--bg-blue)] transition-colors"
+                className="flex-1 py-2.5 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.68rem] font-medium text-center hover:bg-[var(--bg-blue)] transition-colors"
               >
                 📋 {t(`menu.${m.label}`)}
               </a>

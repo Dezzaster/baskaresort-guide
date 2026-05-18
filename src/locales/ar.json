@@ -151,7 +151,7 @@
     "lobbyBar": "Manzara Lobby Bar",
     "lobbyBarDesc": "على مدار الساعة، مجاني BAI",
     "manzaraPatisserie": "Manzara Patisserie",
-    "manzaraPatisserieDesc": "معجنات وكعك وحلويات. 10:00–23:00، BAI",
+    "manzaraPatisserieDesc": "معجنات وكعك وحلويات. 12:00–18:00، BAI",
     "coffeeHouse": "زيتينالتي Village Coffee House",
     "coffeeHouseDesc": "سميت طازج وخبز تركي وشاي. 09:00–22:00",
     "cafeBodrum": "ملتم Beach Bar",
@@ -163,7 +163,7 @@
     "loungeBar": "Lounge Bar",
     "loungeBarDesc": "كوكتيلات ومشروبات. 18:00–00:00، BAI",
     "beachPastane": "Beach Pastane",
-    "beachPastaneDesc": "معجنات وحلويات ومشروبات ساخنة. 12:00–18:00، BAI"
+    "beachPastaneDesc": "معجنات وحلويات ومشروبات ساخنة. 11:00–16:00، BAI"
   },
   "streetFood": {
     "title": "طعام الشارع والمتنقل",
