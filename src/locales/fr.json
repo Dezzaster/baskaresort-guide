@@ -195,19 +195,26 @@
     "reserveCabana": "Réserver une cabana"
   },
   "spa": {
-    "title": "Soul Spa & Fitness",
+    "title": "Nefes Spa & Fitness",
     "subtitle": "Bien-être inspiré de la mer Égée",
-    "spaDesc": "Programmes de soins raffinés et minimalistes inspirés de la culture spa égéenne. Ouvert 09:00–19:00.",
+    "spaDesc": "Inspiré par le rythme calme de la mer Égée, Nefes Spa propose des rituels de hammam, des huiles aromatiques, sauna, des soins du corps et du visage avec la touche personnalisée de thérapeutes experts.",
+    "hours": "Tous les jours 09:00 – 20:00",
+    "cancellation": "Annulation : au moins 4 heures avant le soin",
+    "ageNote": "Espace spa : à partir de 16 ans",
+    "arriveNote": "Merci d'arriver 20 min. avant votre soin",
     "hammam": "Hammam turc",
     "hammamDesc": "Rituel de bain turc traditionnel — gratuit",
     "sauna": "Sauna",
     "saunaDesc": "Gratuit",
     "fitness": "Centre de fitness",
-    "fitnessDesc": "Gratuit, ouvert 09:00–20:00 (séances personnelles payantes)",
-    "massage": "Massage & thérapie",
-    "massageDesc": "Divers soins disponibles (payant)",
-    "skincare": "Soins de la peau & coiffure",
-    "skincareDesc": "Services de beauté professionnels (payant)"
+    "fitnessDesc": "Gratuit, ouvert 07:00–20:00",
+    "viewBrochure": "Voir la brochure spa",
+    "bookTreatment": "Réserver via WhatsApp",
+    "signatureTitle": "Signature & Couples",
+    "ritualsTitle": "Rituels & Forfaits",
+    "massagesTitle": "Massages",
+    "facialTitle": "Soins du visage",
+    "hammamBodyTitle": "Hammam & Corps"
   },
   "activities": {
     "title": "Activités & divertissements",

@@ -195,19 +195,26 @@
     "reserveCabana": "Kabana Rezervasyonu"
   },
   "spa": {
-    "title": "NEFES Spa & Fitness",
+    "title": "Nefes Spa & Fitness",
     "subtitle": "Ege esintili sağlıklı yaşam",
-    "spaDesc": "Ege spa kültüründen ilham alan rafine ve minimalist kişisel bakım programları. 09:00–19:00 arası açık.",
+    "spaDesc": "Ege'nin sakin ritminden ilham alan Nefes Spa, hamam ritüelleri, aromatik yağlar, sauna, vücut ve yüz bakımlarını uzman terapistlerin kişiselleştirilmiş dokunuşuyla sunar.",
+    "hours": "Her gün 09:00 – 20:00",
+    "cancellation": "İptal: tedaviden en az 4 saat önce",
+    "ageNote": "Spa alanı: 16 yaş ve üzeri",
+    "arriveNote": "Lütfen tedavinizden 20 dk. önce gelin",
     "hammam": "Türk Hamamı",
     "hammamDesc": "Geleneksel Türk hamamı ritüeli — ücretsiz",
     "sauna": "Sauna",
     "saunaDesc": "Ücretsiz",
     "fitness": "Fitness Merkezi",
-    "fitnessDesc": "Ücretsiz, 09:00–20:00 arası açık (özel seanslar ücretli)",
-    "massage": "Masaj & Terapi",
-    "massageDesc": "Çeşitli tedaviler mevcuttur (ücretli)",
-    "skincare": "Cilt Bakımı & Kuaför",
-    "skincareDesc": "Profesyonel güzellik hizmetleri (ücretli)"
+    "fitnessDesc": "Ücretsiz, 07:00–20:00 arası açık",
+    "viewBrochure": "Spa Broşürünü Görüntüle",
+    "bookTreatment": "WhatsApp ile Rezervasyon",
+    "signatureTitle": "Özel & Çift Deneyimleri",
+    "ritualsTitle": "Ritüeller & Paketler",
+    "massagesTitle": "Masajlar",
+    "facialTitle": "Yüz Bakımları",
+    "hammamBodyTitle": "Hamam & Vücut"
   },
   "activities": {
     "title": "Aktiviteler & Eğlence",

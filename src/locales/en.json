@@ -195,19 +195,26 @@
     "reserveCabana": "Reserve Cabana"
   },
   "spa": {
-    "title": "Soul Spa & Fitness",
+    "title": "Nefes Spa & Fitness",
     "subtitle": "Aegean-inspired wellness",
-    "spaDesc": "Refined and minimalist self-care programs inspired by Aegean spa culture. Open 09:00–19:00.",
+    "spaDesc": "Inspired by the calm rhythm of the Aegean, Nefes Spa offers hammam rituals, aromatic oils, sauna, body and facial treatments with the personalized touch of expert therapists.",
+    "hours": "Daily 09:00 – 20:00",
+    "cancellation": "Cancellation: at least 4 hours before treatment",
+    "ageNote": "Spa area: guests aged 16+",
+    "arriveNote": "Please arrive 20 min. before your treatment",
     "hammam": "Turkish Hammam",
     "hammamDesc": "Traditional Turkish bath ritual — complimentary",
     "sauna": "Sauna",
     "saunaDesc": "Complimentary",
     "fitness": "Fitness Center",
-    "fitnessDesc": "Complimentary, open 09:00–20:00 (personal sessions chargeable)",
-    "massage": "Massage & Therapy",
-    "massageDesc": "Various treatments available (chargeable)",
-    "skincare": "Skincare & Hairdressing",
-    "skincareDesc": "Professional beauty services (chargeable)"
+    "fitnessDesc": "Complimentary, open 07:00–20:00",
+    "viewBrochure": "View Spa Brochure",
+    "bookTreatment": "Book via WhatsApp",
+    "signatureTitle": "Signature & Couples",
+    "ritualsTitle": "Rituals & Packages",
+    "massagesTitle": "Massages",
+    "facialTitle": "Facial Treatments",
+    "hammamBodyTitle": "Hammam & Body"
   },
   "activities": {
     "title": "Activities & Entertainment",
