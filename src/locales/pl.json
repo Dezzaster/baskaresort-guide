@@ -195,19 +195,26 @@
     "reserveCabana": "Zarezerwuj kabanę"
   },
   "spa": {
-    "title": "Soul Spa i fitness",
+    "title": "Nefes Spa i fitness",
     "subtitle": "Wellness inspirowany Morzem Egejskim",
-    "spaDesc": "Wyrafinowane i minimalistyczne programy pielęgnacyjne inspirowane egejską kulturą spa. Otwarte 09:00–19:00.",
+    "spaDesc": "Inspirowany spokojnym rytmem Morza Egejskiego, Nefes Spa oferuje rytuały hammamu, olejki aromatyczne, saunę, zabiegi na ciało i twarz z indywidualnym podejściem doświadczonych terapeutów.",
+    "hours": "Codziennie 09:00 – 20:00",
+    "cancellation": "Anulowanie: minimum 4 godziny przed zabiegiem",
+    "ageNote": "Strefa spa: goście od 16 lat",
+    "arriveNote": "Prosimy o przybycie 20 min. przed zabiegiem",
     "hammam": "Łaźnia turecka",
     "hammamDesc": "Tradycyjny rytuał hammamu — bezpłatnie",
     "sauna": "Sauna",
     "saunaDesc": "Bezpłatnie",
     "fitness": "Centrum fitness",
-    "fitnessDesc": "Bezpłatnie, otwarte 09:00–20:00 (sesje indywidualne płatne)",
-    "massage": "Masaż i terapia",
-    "massageDesc": "Różne zabiegi (płatne)",
-    "skincare": "Pielęgnacja i fryzjer",
-    "skincareDesc": "Profesjonalne usługi beauty (płatne)"
+    "fitnessDesc": "Bezpłatnie, otwarte 07:00–20:00",
+    "viewBrochure": "Zobacz broszurę spa",
+    "bookTreatment": "Zarezerwuj przez WhatsApp",
+    "signatureTitle": "Signature i dla par",
+    "ritualsTitle": "Rytuały i pakiety",
+    "massagesTitle": "Masaże",
+    "facialTitle": "Zabiegi na twarz",
+    "hammamBodyTitle": "Hammam i ciało"
   },
   "activities": {
     "title": "Aktywności i rozrywka",

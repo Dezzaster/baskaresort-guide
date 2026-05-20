@@ -195,19 +195,26 @@
     "reserveCabana": "Cabana reservieren"
   },
   "spa": {
-    "title": "Soul Spa & Fitness",
+    "title": "Nefes Spa & Fitness",
     "subtitle": "Wellness im ägäischen Stil",
-    "spaDesc": "Raffinierte und minimalistische Wellness-Programme, inspiriert von der ägäischen Spa-Kultur. Geöffnet 09:00–19:00.",
+    "spaDesc": "Inspiriert vom ruhigen Rhythmus der Ägäis bietet Nefes Spa Hamam-Rituale, aromatische Öle, Sauna, Körper- und Gesichtsbehandlungen mit der persönlichen Note erfahrener Therapeuten.",
+    "hours": "Täglich 09:00 – 20:00",
+    "cancellation": "Stornierung: mindestens 4 Stunden vor der Behandlung",
+    "ageNote": "Spa-Bereich: Gäste ab 16 Jahren",
+    "arriveNote": "Bitte kommen Sie 20 Min. vor Ihrer Behandlung",
     "hammam": "Türkisches Hamam",
     "hammamDesc": "Traditionelles türkisches Baderitual — kostenlos",
     "sauna": "Sauna",
     "saunaDesc": "Kostenlos",
     "fitness": "Fitnesscenter",
-    "fitnessDesc": "Kostenlos, geöffnet 09:00–20:00 (Personaltraining kostenpflichtig)",
-    "massage": "Massage & Therapie",
-    "massageDesc": "Verschiedene Behandlungen verfügbar (kostenpflichtig)",
-    "skincare": "Hautpflege & Friseur",
-    "skincareDesc": "Professionelle Beauty-Services (kostenpflichtig)"
+    "fitnessDesc": "Kostenlos, geöffnet 07:00–20:00",
+    "viewBrochure": "Spa-Broschüre ansehen",
+    "bookTreatment": "Über WhatsApp buchen",
+    "signatureTitle": "Signature & Paare",
+    "ritualsTitle": "Rituale & Pakete",
+    "massagesTitle": "Massagen",
+    "facialTitle": "Gesichtsbehandlungen",
+    "hammamBodyTitle": "Hamam & Körper"
   },
   "activities": {
     "title": "Aktivitäten & Unterhaltung",
