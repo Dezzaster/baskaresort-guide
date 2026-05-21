@@ -135,11 +135,15 @@ export default function SpaSection() {
             <span className="text-[0.68rem] text-[var(--text-muted)]">🕐</span>
             <span className="text-[0.7rem] text-[var(--primary)] font-medium">{t('spa.hours')}</span>
           </div>
-          <div className="py-2 px-3 rounded-lg bg-[var(--bg-warm)]">
-            <p className="text-[0.65rem] text-[var(--gold-dark)]">{t('spa.cancellation')}</p>
+          <div className="flex justify-between items-center py-2 px-3 rounded-lg bg-[var(--bg-warm)]">
+            <span className="text-[0.68rem] text-[var(--text-muted)]">📞</span>
+            <span className="text-[0.7rem] text-[var(--gold-dark)] font-medium">9500</span>
           </div>
           <div className="py-2 px-3 rounded-lg bg-[var(--bg-blue)]">
-            <p className="text-[0.65rem] text-[var(--text-muted)]">{t('spa.ageNote')} · {t('spa.arriveNote')}</p>
+            <p className="text-[0.65rem] text-[var(--text-muted)]">{t('spa.cancellation')}</p>
+          </div>
+          <div className="py-2 px-3 rounded-lg bg-[var(--bg-warm)]">
+            <p className="text-[0.65rem] text-[var(--gold-dark)]">{t('spa.ageNote')} · {t('spa.arriveNote')}</p>
           </div>
         </div>
         <a
