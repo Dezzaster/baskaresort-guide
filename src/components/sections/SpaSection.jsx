@@ -168,7 +168,7 @@ export default function SpaSection() {
           </div>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-4">
           {categories.map((cat) => (
             <div key={cat.key} className="rounded-2xl overflow-hidden border border-[var(--card-border)]">
               {/* Category header with background image */}
@@ -183,7 +183,7 @@ export default function SpaSection() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(0,30,80,0.35) 0%, rgba(0,20,60,0.65) 100%)' }} />
-                <div className="relative z-10 h-full flex items-center justify-between px-7">
+                <div className="relative z-10 h-full flex items-center justify-between" style={{ paddingLeft: '28px', paddingRight: '28px' }}>
                   <div className="flex items-center gap-3">
                     <span className="text-white font-semibold text-[0.88rem] drop-shadow-sm">
                       {t(`spa.${cat.key}`)}
