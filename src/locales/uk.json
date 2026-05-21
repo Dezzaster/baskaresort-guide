@@ -214,7 +214,9 @@
     "ritualsTitle": "Ритуали та пакети",
     "massagesTitle": "Масажі",
     "facialTitle": "Догляд за обличчям",
-    "hammamBodyTitle": "Хамам та тіло"
+    "hammamBodyTitle": "Хамам та тіло",
+    "add": "Додати",
+    "bookSelected": "Забронювати обране"
   },
   "activities": {
     "title": "Активності та розваги",

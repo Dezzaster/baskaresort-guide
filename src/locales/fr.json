@@ -214,7 +214,9 @@
     "ritualsTitle": "Rituels & Forfaits",
     "massagesTitle": "Massages",
     "facialTitle": "Soins du visage",
-    "hammamBodyTitle": "Hammam & Corps"
+    "hammamBodyTitle": "Hammam & Corps",
+    "add": "Ajouter",
+    "bookSelected": "Réserver la sélection"
   },
   "activities": {
     "title": "Activités & divertissements",
