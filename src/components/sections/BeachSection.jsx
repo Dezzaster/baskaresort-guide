@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Card from '../Card'
 
-const WHATSAPP = '905307387764'
+const WHATSAPP = '905421789246'
 
 function PoolSplash() {
   return (

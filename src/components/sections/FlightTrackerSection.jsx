@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Card from '../Card'
 
 const STORAGE_KEY = 'baska_flight'
-const WHATSAPP = '905307387764'
+const WHATSAPP = '905421789246'
 
 export default function FlightTrackerSection() {
   const { t } = useTranslation()

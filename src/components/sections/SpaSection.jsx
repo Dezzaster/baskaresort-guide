@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Card from '../Card'
 
 const basePath = import.meta.env.BASE_URL
-const WHATSAPP = '905307387764'
+const WHATSAPP = '905421789246'
 
 const brochureMap = {
   tr: 'SPA_BROCHURE_TR.pdf',

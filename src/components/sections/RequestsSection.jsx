@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const WHATSAPP = '905307387764'
+const WHATSAPP = '905421789246'
 
 const requestKeys = [
   'towels', 'minibar', 'cleaning', 'maintenance',
