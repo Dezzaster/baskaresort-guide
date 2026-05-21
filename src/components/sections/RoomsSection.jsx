@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Card from '../Card'
 
-const WHATSAPP = '905307387764'
+const WHATSAPP = '905421789246'
 
 const rooms = [
   { key: 'ege', size: '20–30 m²', beds: '1 French / 2 Single' },
