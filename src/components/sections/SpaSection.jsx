@@ -171,7 +171,7 @@ export default function SpaSection() {
               <button
                 onClick={() => setOpenCategory(openCategory === cat.key ? null : cat.key)}
                 className="w-full relative cursor-pointer overflow-hidden"
-                style={{ height: '100px' }}
+                style={{ height: '110px' }}
               >
                 <img
                   src={`${basePath}${cat.image}`}
@@ -179,7 +179,7 @@ export default function SpaSection() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(0,30,80,0.35) 0%, rgba(0,20,60,0.65) 100%)' }} />
-                <div className="relative z-10 h-full flex items-center justify-between px-5">
+                <div className="relative z-10 h-full flex items-center justify-between px-7">
                   <div className="flex items-center gap-3">
                     <span className="text-white font-semibold text-[0.88rem] drop-shadow-sm">
                       {t(`spa.${cat.key}`)}
