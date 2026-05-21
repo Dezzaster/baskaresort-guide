@@ -214,7 +214,9 @@
     "ritualsTitle": "Ritüeller & Paketler",
     "massagesTitle": "Masajlar",
     "facialTitle": "Yüz Bakımları",
-    "hammamBodyTitle": "Hamam & Vücut"
+    "hammamBodyTitle": "Hamam & Vücut",
+    "add": "Ekle",
+    "bookSelected": "Seçilenleri Rezerve Et"
   },
   "activities": {
     "title": "Aktiviteler & Eğlence",

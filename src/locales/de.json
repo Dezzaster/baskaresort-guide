@@ -214,7 +214,9 @@
     "ritualsTitle": "Rituale & Pakete",
     "massagesTitle": "Massagen",
     "facialTitle": "Gesichtsbehandlungen",
-    "hammamBodyTitle": "Hamam & Körper"
+    "hammamBodyTitle": "Hamam & Körper",
+    "add": "Hinzufügen",
+    "bookSelected": "Auswahl buchen"
   },
   "activities": {
     "title": "Aktivitäten & Unterhaltung",
