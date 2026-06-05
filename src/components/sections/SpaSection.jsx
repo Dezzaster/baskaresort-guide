@@ -6,13 +6,16 @@ import Card from '../Card'
 const basePath = import.meta.env.BASE_URL
 const WHATSAPP = '905421789246'
 
+// Toggle to show/hide prices across the spa menu. Set to true to restore prices.
+const SHOW_PRICES = false
+
 const brochureMap = {
-  tr: 'SPA_BROCHURE_TR.pdf',
-  ru: 'SPA_BROCHURE_RU.pdf',
+  tr: 'Nefes-Spa-Brochure-TR-noprice.pdf',
+  ru: 'Nefes-Spa-Brochure-RU-noprice.pdf',
 }
 
 function getBrochure(lang) {
-  return brochureMap[lang?.split('-')[0]] || 'SPA_BROCHURE_EN.pdf'
+  return brochureMap[lang?.split('-')[0]] || 'Nefes-Spa-Brochure-EN-noprice.pdf'
 }
 
 const spaItems = [
@@ -109,10 +112,10 @@ export default function SpaSection() {
       const item = allItems.find(i => i.id === id)
       if (!item) return
       const label = item.priceLabel || `€${item.price}`
-      lines.push(`${qty}× ${item.name} (${item.duration}) — ${label}`)
+      lines.push(`${qty}× ${item.name} (${item.duration})${SHOW_PRICES ? ` — ${label}` : ''}`)
       total += item.price * qty
     })
-    if (total > 0) lines.push('', `💰 ~€${total}`)
+    if (SHOW_PRICES && total > 0) lines.push('', `💰 ~€${total}`)
     lines.push('', '— BAŞKA Guest Guide')
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank')
     setCart({})
@@ -230,9 +233,11 @@ export default function SpaSection() {
                               <h4 className="text-[0.76rem] text-[var(--text-dark)] font-medium leading-tight flex-1">
                                 {item.name}
                               </h4>
-                              <span className="text-[0.76rem] text-[var(--gold-dark)] font-semibold whitespace-nowrap">
-                                {label}
-                              </span>
+                              {SHOW_PRICES && (
+                                <span className="text-[0.76rem] text-[var(--gold-dark)] font-semibold whitespace-nowrap">
+                                  {label}
+                                </span>
+                              )}
                             </div>
                             <p className="text-[0.65rem] text-[var(--text-muted)] mb-1">
                               ⏱ {item.duration}
