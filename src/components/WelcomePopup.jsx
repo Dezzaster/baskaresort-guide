@@ -11,7 +11,7 @@ const langPopupMap = {
   ru: 'popupru.png',
 }
 
-function PopupOverlay({ image, onClose }) {
+export function PopupOverlay({ image, onClose }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}

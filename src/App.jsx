@@ -24,7 +24,7 @@ import FlightTrackerSection from './components/sections/FlightTrackerSection'
 import InstallPrompt from './components/InstallPrompt'
 import HamburgerMenu from './components/HamburgerMenu'
 import MealNotifier from './components/MealNotifier'
-import WelcomePopup from './components/WelcomePopup'
+import WelcomePopup, { PopupOverlay } from './components/WelcomePopup'
 
 const sectionComponents = {
   info: InfoSection,
@@ -63,8 +63,14 @@ function App() {
   const [stripeStyle, setStripeStyle] = useState({})
   const [splashVisible, setSplashVisible] = useState(true)
   const [splashFading, setSplashFading] = useState(false)
+  const [spaPopup, setSpaPopup] = useState(false)
   const logoRef = useRef(null)
   const headerRef = useRef(null)
+
+  const handleSectionChange = (section) => {
+    setActiveSection(section)
+    if (section === 'spa') setSpaPopup(true)
+  }
 
   const ActiveComponent = sectionComponents[activeSection]
   const basePath = import.meta.env.BASE_URL
@@ -146,7 +152,7 @@ function App() {
 
       {/* Header */}
       <header ref={headerRef} className="relative text-center pb-0 bg-gradient-to-b from-white via-[#FFFBF0] to-[var(--bg)]" style={{ overflow: 'hidden', paddingTop: '42px' }}>
-        <HamburgerMenu activeSection={activeSection} onSectionChange={setActiveSection} />
+        <HamburgerMenu activeSection={activeSection} onSectionChange={handleSectionChange} />
 
         {/* Vertical stripes */}
         <div
@@ -212,7 +218,7 @@ function App() {
       <div className="h-3" />
 
       {/* Navigation */}
-      <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
+      <Navigation activeSection={activeSection} onSectionChange={handleSectionChange} />
 
       {/* Content */}
       <main className="content-container" style={{ background: 'linear-gradient(180deg, var(--bg) 0%, #FFF8EC 30%, #FFF8EC 70%, var(--bg) 100%)' }}>
@@ -271,6 +277,11 @@ function App() {
       <InstallPrompt />
       <MealNotifier />
       <WelcomePopup show={!splashVisible} />
+      <AnimatePresence>
+        {spaPopup && (
+          <PopupOverlay image="spa_message.jpg" onClose={() => setSpaPopup(false)} />
+        )}
+      </AnimatePresence>
     </div>
   )
 }
