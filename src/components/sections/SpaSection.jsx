@@ -19,6 +19,7 @@ function getBrochure(lang) {
 }
 
 const spaItems = [
+  { key: 'hammam', icon: '🛁' },
   { key: 'sauna', icon: '🧖' },
   { key: 'fitness', icon: '💪' },
 ]
