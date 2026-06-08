@@ -6,9 +6,9 @@ import Card from '../Card'
 // TR users get Turkish, RU users get Russian, everyone else gets English
 function getReportFile(lang) {
   const base = (lang || 'en').split('-')[0]
-  if (base === 'tr') return 'Sürdürebilirlik Raporu TR.pptx'
-  if (base === 'ru') return 'Sürdürebilirlik Raporu Rusça.pptx'
-  return 'Sürdürebilirlik Raporu İngilizce.pptx'
+  if (base === 'tr') return 'sustainability-report-tr.pdf'
+  if (base === 'ru') return 'sustainability-report-ru.pdf'
+  return 'sustainability-report-en.pdf'
 }
 
 export default function ImportantSection() {
