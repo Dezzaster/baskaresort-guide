@@ -30,6 +30,7 @@ export default function BarsSection() {
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 py-3 rounded-xl border border-[var(--primary)]/20 bg-white/80 text-[var(--primary)] text-[0.74rem] font-medium text-center hover:bg-[var(--bg-blue)] transition-colors"
+          style={{ paddingTop: '24px', paddingBottom: '24px' }}
         >
           🍹 {t('menu.beverageMenu')}
         </a>
@@ -38,6 +39,7 @@ export default function BarsSection() {
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 py-3 rounded-xl border border-[var(--primary)]/20 bg-white/80 text-[var(--primary)] text-[0.74rem] font-medium text-center hover:bg-[var(--bg-blue)] transition-colors"
+          style={{ paddingTop: '24px', paddingBottom: '24px' }}
         >
           🍷 {t('menu.wineMenu')}
         </a>
