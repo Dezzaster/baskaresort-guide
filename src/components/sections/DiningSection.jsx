@@ -50,6 +50,7 @@ export default function DiningSection() {
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 py-2 px-4 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.72rem] font-medium hover:bg-[var(--bg-blue)] transition-colors"
+          style={{ paddingTop: '16px', paddingBottom: '16px' }}
         >
           📋 {t('menu.viewMenu')}
         </a>

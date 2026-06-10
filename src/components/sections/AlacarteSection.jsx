@@ -76,6 +76,7 @@ export default function AlacarteSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 py-2.5 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.68rem] font-medium text-center hover:bg-[var(--bg-blue)] transition-colors"
+                style={{ paddingTop: '20px', paddingBottom: '20px' }}
               >
                 📋 {t(`menu.${m.label}`)}
               </a>
