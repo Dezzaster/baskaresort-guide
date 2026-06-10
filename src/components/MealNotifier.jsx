@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 const MEALS = [
   { key: 'breakfast', hour: 7, minute: 0 },
   { key: 'lunch', hour: 12, minute: 30 },
-  { key: 'dinner', hour: 18, minute: 30 },
+  { key: 'dinner', hour: 19, minute: 0 },
 ]
 
 const NOTIFY_BEFORE = 15

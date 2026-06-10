@@ -105,7 +105,7 @@
     "lunch": "Öğle Yemeği Büfesi",
     "lunchTime": "12:30 – 14:30",
     "dinner": "Akşam Yemeği Büfesi",
-    "dinnerTime": "18:30 – 21:00",
+    "dinnerTime": "19:00 – 21:30",
     "leziz": "LEZİZ Ege Gurme",
     "lezizDesc": "Sahilde Ege gurme — kahvaltı ve gündüz lezzetleri. 08:00–17:00",
     "daima": "DAİMA 7/24 Restoran",
@@ -417,7 +417,7 @@
   "meal": {
     "breakfastSoon": "Kahvaltı 07:00'de başlıyor!",
     "lunchSoon": "Öğle yemeği 12:30'da başlıyor!",
-    "dinnerSoon": "Akşam yemeği 18:30'da başlıyor!"
+    "dinnerSoon": "Akşam yemeği 19:00'da başlıyor!"
   },
   "snacks": {
     "title": "Snack Restoranlar",

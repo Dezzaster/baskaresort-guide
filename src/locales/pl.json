@@ -105,7 +105,7 @@
     "lunch": "Obiad",
     "lunchTime": "12:30 – 14:30",
     "dinner": "Kolacja",
-    "dinnerTime": "18:30 – 21:00",
+    "dinnerTime": "19:00 – 21:30",
     "leziz": "LEZİZ Egejski Gourmet",
     "lezizDesc": "Egejski gourmet nad morzem — śniadanie i specjały dnia. 08:00–17:00",
     "daima": "DAİMA Restauracja 7/24",
@@ -417,7 +417,7 @@
   "meal": {
     "breakfastSoon": "Śniadanie zaczyna się wkrótce o 07:00!",
     "lunchSoon": "Obiad zaczyna się wkrótce o 12:30!",
-    "dinnerSoon": "Kolacja otwiera się wkrótce o 18:30!"
+    "dinnerSoon": "Kolacja otwiera się wkrótce o 19:00!"
   },
   "snacks": {
     "title": "Restauracje snackowe",

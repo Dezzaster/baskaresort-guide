@@ -105,7 +105,7 @@
     "lunch": "Lunch Buffet",
     "lunchTime": "12:30 – 14:30",
     "dinner": "Dinner Buffet",
-    "dinnerTime": "18:30 – 21:00",
+    "dinnerTime": "19:00 – 21:30",
     "leziz": "LEZİZ Aegean Gourmet",
     "lezizDesc": "Beachfront Aegean gourmet with breakfast and daytime specialties. 08:00–17:00",
     "daima": "DAİMA 7/24 Restaurant",
@@ -417,7 +417,7 @@
   "meal": {
     "breakfastSoon": "Breakfast opens soon at 07:00!",
     "lunchSoon": "Lunch opens soon at 12:30!",
-    "dinnerSoon": "Dinner opens soon at 18:30!"
+    "dinnerSoon": "Dinner opens soon at 19:00!"
   },
   "snacks": {
     "title": "Snack Restaurants",
