@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import Card from '../Card'
 
 const WHATSAPP = '905421789246'
+const basePath = import.meta.env.BASE_URL
 
 function PoolSplash() {
   return (
@@ -89,10 +90,19 @@ export default function BeachSection() {
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-3">
           {t('beach.cabanaDesc')}
         </p>
+        <a
+          href={`${basePath}cabana_menu.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full flex items-center justify-center gap-1.5 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.74rem] font-medium hover:bg-[var(--bg-blue)] transition-colors"
+          style={{ paddingTop: '20px', paddingBottom: '20px' }}
+        >
+          📋 {t('menu.viewMenu')}
+        </a>
         <motion.button
           whileTap={{ scale: 0.97 }}
           onClick={handleReserveCabana}
-          className="w-full py-2.5 rounded-xl bg-[var(--primary)] text-white text-[0.74rem] font-medium cursor-pointer hover:bg-[var(--primary)]/90 transition-colors"
+          className="w-full mt-2 py-2.5 rounded-xl bg-[var(--primary)] text-white text-[0.74rem] font-medium cursor-pointer hover:bg-[var(--primary)]/90 transition-colors"
         >
           {t('beach.reserveCabana')}
         </motion.button>
