@@ -468,6 +468,11 @@
   "menuPage": {
     "title": "Restaurantmenüs",
     "subtitle": "Alle Speisekarten durchstöbern",
-    "backToGuide": "Zurück zum Gästeführer"
+    "backToGuide": "Zurück zum Gästeführer",
+    "drinkMenu": "Getränkekarte",
+    "wineMenu": "Weinkarte",
+    "back": "Zurück",
+    "loadError": "Menü konnte nicht geladen werden",
+    "openExternal": "In neuem Tab öffnen"
   }
 }

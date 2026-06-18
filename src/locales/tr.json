@@ -468,6 +468,11 @@
   "menuPage": {
     "title": "Restoran Menüleri",
     "subtitle": "Tüm yemek menülerine göz atın",
-    "backToGuide": "Misafir Rehberine Dön"
+    "backToGuide": "Misafir Rehberine Dön",
+    "drinkMenu": "İçecek Menüsü",
+    "wineMenu": "Şarap Menüsü",
+    "back": "Geri",
+    "loadError": "Menü yüklenemedi",
+    "openExternal": "Yeni sekmede aç"
   }
 }
