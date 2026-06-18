@@ -232,7 +232,8 @@
     "cycling": "Location de vélos",
     "cyclingNote": "Hôtel certifié vélo-friendly",
     "waterSports": "Sports nautiques",
-    "waterSportsDesc": "Motorisés & non motorisés (certains payants)",
+    "waterSportsDesc": "Motorisés & non motorisés (supplément applicable)",
+    "waterSportsNote": "Sports nautiques soumis à un supplément",
     "artWorkshop": "Atelier d'art",
     "artWorkshopDesc": "Séances créatives (payant)"
   },

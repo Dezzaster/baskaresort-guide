@@ -32,7 +32,6 @@ export default function ActivitiesSection() {
       <div className="grid grid-cols-2 gap-3" style={{ marginTop: '24px' }}>
         {[
           { label: t('activities.tableTennis') },
-          { label: t('activities.cycling') },
           { label: t('activities.waterSports') }
         ].map((act, i) => (
           <div
@@ -46,7 +45,7 @@ export default function ActivitiesSection() {
       </div>
 
       <p className="text-[0.62rem] text-[var(--text-muted)] text-center mt-2 italic">
-        {t('activities.cyclingNote')}
+        {t('activities.waterSportsNote')}
       </p>
     </div>
   )
