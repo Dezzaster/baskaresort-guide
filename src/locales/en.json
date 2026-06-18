@@ -464,5 +464,10 @@
     "yalikavakDesc": "An upscale marina village with designer boutiques, fine dining and vibrant nightlife",
     "turkbuku": "Türkbükü",
     "turkbukuDesc": "An exclusive bay known as the St. Tropez of Turkey, famous for beach clubs and celebrity culture"
+  },
+  "menuPage": {
+    "title": "Restaurant Menus",
+    "subtitle": "Browse all dining menus",
+    "backToGuide": "Back to Guest Guide"
   }
 }

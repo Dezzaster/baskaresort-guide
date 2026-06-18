@@ -464,5 +464,10 @@
     "yalikavakDesc": "Ein exklusives Marina-Dorf mit Designerboutiquen, feiner Küche und pulsierendem Nachtleben",
     "turkbuku": "Türkbükü",
     "turkbukuDesc": "Eine exklusive Bucht, bekannt als das St. Tropez der Türkei, berühmt für Strandclubs und Prominenz"
+  },
+  "menuPage": {
+    "title": "Restaurantmenüs",
+    "subtitle": "Alle Speisekarten durchstöbern",
+    "backToGuide": "Zurück zum Gästeführer"
   }
 }

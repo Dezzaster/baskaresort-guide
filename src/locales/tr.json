@@ -464,5 +464,10 @@
     "yalikavakDesc": "Tasarım butikleri, gurme restoranlar ve canlı gece hayatıyla lüks bir marina köyü",
     "turkbuku": "Türkbükü",
     "turkbukuDesc": "Türkiye'nin St. Tropez'i olarak bilinen, plaj kulüpleri ve ünlü kültürüyle özel bir koy"
+  },
+  "menuPage": {
+    "title": "Restoran Menüleri",
+    "subtitle": "Tüm yemek menülerine göz atın",
+    "backToGuide": "Misafir Rehberine Dön"
   }
 }
