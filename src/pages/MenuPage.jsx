@@ -319,15 +319,68 @@ function Listing({ onSelectMenu, t }) {
   )
 }
 
+function FishPicker({ onSelect }) {
+  return (
+    <div
+      className="min-h-screen flex flex-col items-center justify-center"
+      style={{ background: 'linear-gradient(180deg, #fff 0%, #FFFBF0 50%, #FFF8EC 100%)' }}
+    >
+      <img
+        src={`${basePath}BASKA RESORT-LOGO.png`}
+        alt="BAŞKA Resort Bodrum"
+        style={{ height: '64px', width: 'auto', marginBottom: '32px' }}
+      />
+      <h2
+        className="font-['Cormorant_Garamond'] font-normal text-[var(--primary)] text-center"
+        style={{ fontSize: '1.4rem', marginBottom: '6px' }}
+      >
+        Kıyıda A La Carte
+      </h2>
+      <span className="text-[0.65rem] text-[var(--text-muted)]" style={{ marginBottom: '36px' }}>A-1</span>
+
+      <div className="flex flex-col gap-4 w-full px-8" style={{ maxWidth: 360 }}>
+        <button
+          onClick={() => onSelect('fish-lunch')}
+          className="w-full rounded-2xl text-white cursor-pointer transition-all hover:shadow-lg"
+          style={{
+            padding: '22px 16px',
+            background: 'var(--primary)',
+            border: 'none',
+          }}
+        >
+          <span className="block text-[0.9rem] font-medium">Lunch Menu</span>
+          <span className="block text-[0.65rem] opacity-60 mt-1">Öğle Yemeği Menüsü · Меню обеда</span>
+        </button>
+        <button
+          onClick={() => onSelect('fish-dinner')}
+          className="w-full rounded-2xl text-white cursor-pointer transition-all hover:shadow-lg"
+          style={{
+            padding: '22px 16px',
+            background: 'var(--primary)',
+            border: 'none',
+          }}
+        >
+          <span className="block text-[0.9rem] font-medium">Dinner Menu</span>
+          <span className="block text-[0.65rem] opacity-60 mt-1">Akşam Yemeği Menüsü · Меню ужина</span>
+        </button>
+      </div>
+    </div>
+  )
+}
+
 export default function MenuPage() {
   const { t } = useTranslation()
   const [currentMenu, setCurrentMenu] = useState(null)
   const [originalMenu, setOriginalMenu] = useState(null)
   const [fromHash, setFromHash] = useState(false)
+  const [showFishPicker, setShowFishPicker] = useState(false)
 
   useEffect(() => {
     const hash = window.location.hash.slice(1)
-    if (hash && menuData[hash]) {
+    if (hash === 'fish' || hash === 'fish-dinner' || hash === 'fish-lunch') {
+      setShowFishPicker(true)
+      setFromHash(true)
+    } else if (hash && menuData[hash]) {
       setCurrentMenu(hash)
       if (!menuData[hash].isDrink) setOriginalMenu(hash)
       setFromHash(true)
@@ -351,6 +404,16 @@ export default function MenuPage() {
   const handleBackToListing = () => {
     setCurrentMenu(null)
     setOriginalMenu(null)
+  }
+
+  const handleFishSelect = (id) => {
+    setShowFishPicker(false)
+    setCurrentMenu(id)
+    setOriginalMenu(id)
+  }
+
+  if (showFishPicker) {
+    return <FishPicker onSelect={handleFishSelect} />
   }
 
   if (currentMenu) {
