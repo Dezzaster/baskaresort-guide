@@ -232,7 +232,8 @@
     "cycling": "تأجير دراجات",
     "cyclingNote": "فندق معتمد صديق للدراجات",
     "waterSports": "رياضات مائية",
-    "waterSportsDesc": "آلية وغير آلية (بعضها مدفوع)",
+    "waterSportsDesc": "آلية وغير آلية (تُطبَّق رسوم إضافية)",
+    "waterSportsNote": "الرياضات المائية تخضع لرسوم إضافية",
     "artWorkshop": "ورشة فنية",
     "artWorkshopDesc": "جلسات إبداعية (مدفوعة)"
   },

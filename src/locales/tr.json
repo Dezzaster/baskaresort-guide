@@ -232,7 +232,8 @@
     "cycling": "Bisiklet Kiralama",
     "cyclingNote": "Bisiklet Dostu Otel Sertifikalı",
     "waterSports": "Su Sporları",
-    "waterSportsDesc": "Motorlu & motorsuz (bazıları ücretli)",
+    "waterSportsDesc": "Motorlu & motorsuz (ek ücrete tabidir)",
+    "waterSportsNote": "Su sporları ek ücrete tabidir",
     "artWorkshop": "Sanat Atölyesi",
     "artWorkshopDesc": "Yaratıcı seanslar (ücretli)"
   },

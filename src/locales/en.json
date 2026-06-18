@@ -232,7 +232,8 @@
     "cycling": "Bicycle Rental",
     "cyclingNote": "Bike-Friendly Hotel Certified",
     "waterSports": "Water Sports",
-    "waterSportsDesc": "Motorized & non-motorized (some chargeable)",
+    "waterSportsDesc": "Motorized & non-motorized (subject to extra charge)",
+    "waterSportsNote": "Water sports are subject to extra charge",
     "artWorkshop": "Art Workshop",
     "artWorkshopDesc": "Creative sessions (chargeable)"
   },

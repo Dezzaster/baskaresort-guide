@@ -232,7 +232,8 @@
     "cycling": "Wypożyczalnia rowerów",
     "cyclingNote": "Hotel z certyfikatem Bike-Friendly",
     "waterSports": "Sporty wodne",
-    "waterSportsDesc": "Z silnikiem i bez (niektóre płatne)",
+    "waterSportsDesc": "Z silnikiem i bez (za dodatkową opłatą)",
+    "waterSportsNote": "Sporty wodne za dodatkową opłatą",
     "artWorkshop": "Warsztaty artystyczne",
     "artWorkshopDesc": "Sesje kreatywne (płatne)"
   },

@@ -232,7 +232,8 @@
     "cycling": "Fahrradverleih",
     "cyclingNote": "Fahrradfreundliches Hotel zertifiziert",
     "waterSports": "Wassersport",
-    "waterSportsDesc": "Motorisiert & nicht-motorisiert (teilweise kostenpflichtig)",
+    "waterSportsDesc": "Motorisiert & nicht-motorisiert (gegen Aufpreis)",
+    "waterSportsNote": "Wassersport gegen Aufpreis",
     "artWorkshop": "Kunstworkshop",
     "artWorkshopDesc": "Kreativkurse (kostenpflichtig)"
   },
