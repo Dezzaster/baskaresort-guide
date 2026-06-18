@@ -464,5 +464,10 @@
     "yalikavakDesc": "Un village marina haut de gamme avec boutiques de créateurs, gastronomie et vie nocturne animée",
     "turkbuku": "Türkbükü",
     "turkbukuDesc": "Une baie exclusive surnommée le St-Tropez de Turquie, célèbre pour ses beach clubs"
+  },
+  "menuPage": {
+    "title": "Menus des restaurants",
+    "subtitle": "Parcourir tous les menus",
+    "backToGuide": "Retour au guide"
   }
 }

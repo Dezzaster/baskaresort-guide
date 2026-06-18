@@ -464,5 +464,10 @@
     "yalikavakDesc": "Ekskluzywna marina z butików designerskimi, wykwintną kuchnią i tętniącym życiem nocnym",
     "turkbuku": "Türkbükü",
     "turkbukuDesc": "Ekskluzywna zatoka znana jako St. Tropez Turcji, słynąca z klubów plażowych"
+  },
+  "menuPage": {
+    "title": "Menu restauracji",
+    "subtitle": "Przeglądaj wszystkie menu",
+    "backToGuide": "Powrót do przewodnika"
   }
 }

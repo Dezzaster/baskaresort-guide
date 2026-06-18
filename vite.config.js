@@ -11,10 +11,9 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       workbox: {
-        // Don't let SW navigation fallback intercept .pdf requests
-        navigateFallbackDenylist: [/\.pdf$/i],
-        // Don't precache the large PDFs (would exceed cache limits anyway)
-        globIgnores: ['**/*.pdf']
+        navigateFallback: '/index.html',
+        navigateFallbackDenylist: [/\.pdf$/i, /\.pptx$/i],
+        globIgnores: ['**/*.pdf', '**/*.pptx']
       },
       manifest: {
         name: 'BAŞKA Resort Bodrum — Guest Guide',
