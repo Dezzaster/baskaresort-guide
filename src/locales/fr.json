@@ -468,6 +468,11 @@
   "menuPage": {
     "title": "Menus des restaurants",
     "subtitle": "Parcourir tous les menus",
-    "backToGuide": "Retour au guide"
+    "backToGuide": "Retour au guide",
+    "drinkMenu": "Carte des boissons",
+    "wineMenu": "Carte des vins",
+    "back": "Retour",
+    "loadError": "Impossible de charger le menu",
+    "openExternal": "Ouvrir dans un nouvel onglet"
   }
 }

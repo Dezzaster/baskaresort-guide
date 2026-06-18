@@ -468,6 +468,11 @@
   "menuPage": {
     "title": "Restaurant Menus",
     "subtitle": "Browse all dining menus",
-    "backToGuide": "Back to Guest Guide"
+    "backToGuide": "Back to Guest Guide",
+    "drinkMenu": "Drink Menu",
+    "wineMenu": "Wine Menu",
+    "back": "Back",
+    "loadError": "Could not load the menu",
+    "openExternal": "Open in new tab"
   }
 }
