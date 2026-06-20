@@ -46,7 +46,7 @@ export default function DiningSection() {
           {t('dining.daimaDesc')}
         </p>
         <a
-          href={`${basePath}Daima Restaurant Menu.pdf`}
+          href={`${basePath}Daima Restaurant Menu new.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 py-2 px-4 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.72rem] font-medium hover:bg-[var(--bg-blue)] transition-colors"
