@@ -10,20 +10,20 @@ const restaurants = [
   {
     key: 'fish', code: 'A-1',
     menus: [
-      { label: 'dinnerMenu', file: 'Kıyıda A La Carte Dinner Menu Kopyası.pdf' },
-      { label: 'lunchMenu', file: 'Kıyıda A La Carte Lunch Menu.pdf' }
+      { label: 'dinnerMenu', file: 'Kıyıda A La Carte Dinner Menu new.pdf' },
+      { label: 'lunchMenu', file: 'Kıyıda A La Carte Lunch Menu new.pdf' }
     ]
   },
   {
     key: 'teppanyaki', code: 'A-2',
     menus: [
-      { label: 'dinnerMenu', file: 'Kai Teppanyaki A La Carte Dinner Menu.pdf' }
+      { label: 'dinnerMenu', file: 'Kai Teppanyaki A La Carte Dinner Menu new.pdf' }
     ]
   },
   {
     key: 'italian', code: 'A-3',
     menus: [
-      { label: 'dinnerMenu', file: 'Lento Italian A La Carte Dinner Menu.pdf' }
+      { label: 'dinnerMenu', file: 'Lento Italian A La Carte Dinner Menu new.pdf' }
     ]
   }
 ]

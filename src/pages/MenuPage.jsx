@@ -8,13 +8,14 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.vers
 const basePath = import.meta.env.BASE_URL
 
 const menuData = {
-  'fish-dinner':       { file: 'Kıyıda A La Carte Dinner Menu Kopyası.pdf', isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'fish' },
-  'fish-lunch':        { file: 'Kıyıda A La Carte Lunch Menu.pdf',          isDrink: false, labelKey: 'lunchMenu',  restaurantKey: 'fish' },
-  'teppanyaki-dinner': { file: 'Kai Teppanyaki A La Carte Dinner Menu.pdf',  isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'teppanyaki' },
-  'italian-dinner':    { file: 'Lento Italian A La Carte Dinner Menu.pdf',   isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'italian' },
-  'daima':             { file: 'Daima Restaurant Menu new.pdf',              isDrink: false, labelKey: 'viewMenu',   restaurantKey: 'daima', hideDrinkButtons: true },
-  'beverages':         { file: 'Beverage Menu.pdf',                          isDrink: true,  labelKey: 'drinkMenu' },
-  'wine':              { file: 'Wine Menu.pdf',                              isDrink: true,  labelKey: 'wineMenu' },
+  'fish-dinner':       { file: 'Kıyıda A La Carte Dinner Menu new.pdf',          isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'fish' },
+  'fish-lunch':        { file: 'Kıyıda A La Carte Lunch Menu new.pdf',           isDrink: false, labelKey: 'lunchMenu',  restaurantKey: 'fish' },
+  'teppanyaki-dinner': { file: 'Kai Teppanyaki A La Carte Dinner Menu new.pdf',   isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'teppanyaki' },
+  'italian-dinner':    { file: 'Lento Italian A La Carte Dinner Menu new.pdf',    isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'italian' },
+  'daima':             { file: 'Daima Restaurant Menu new.pdf',                   isDrink: false, labelKey: 'viewMenu',   restaurantKey: 'daima' },
+  'leziz':             { file: 'Leziz Snack A La Carte Lunch Menu new.pdf',       isDrink: false, labelKey: 'viewMenu',   restaurantKey: 'leziz' },
+  'beverages':         { file: 'Beverage Menu.pdf',                               isDrink: true,  labelKey: 'drinkMenu' },
+  'wine':              { file: 'Wine Menu.pdf',                                   isDrink: true,  labelKey: 'wineMenu' },
 }
 
 const restaurantList = [
@@ -22,13 +23,16 @@ const restaurantList = [
   { nameKey: 'teppanyaki', code: 'A-2', items: ['teppanyaki-dinner'] },
   { nameKey: 'italian', code: 'A-3', items: ['italian-dinner'] },
   { nameKey: 'daima', code: '', items: ['daima'] },
+  { nameKey: 'leziz', code: '', items: ['leziz'] },
 ]
 
 function getMenuName(id, t) {
   const m = menuData[id]
   if (!m) return ''
   if (m.isDrink) return t(`menuPage.${m.labelKey}`)
-  const rName = m.restaurantKey === 'daima' ? 'Daima Restaurant' : t(`alacarte.${m.restaurantKey}`)
+  if (m.restaurantKey === 'daima') return 'Daima Restaurant'
+  if (m.restaurantKey === 'leziz') return 'Leziz Snack'
+  const rName = t(`alacarte.${m.restaurantKey}`)
   return `${rName} — ${t(`menu.${m.labelKey}`)}`
 }
 
@@ -59,7 +63,7 @@ function Viewer({ menuId, originalMenuId, onSwitchDrink, onBack, onBackToListing
 
   const menu = menuData[menuId]
   const isDrink = menu?.isDrink
-  const showDrinkButtons = !isDrink && !menu?.hideDrinkButtons
+  const showDrinkButtons = !isDrink
   const showBackButton = isDrink && !!originalMenuId
 
   useEffect(() => {
@@ -319,50 +323,143 @@ function Listing({ onSelectMenu, t }) {
   )
 }
 
-function FishPicker({ onSelect }) {
-  return (
-    <div
-      className="min-h-screen flex flex-col items-center justify-center"
-      style={{ background: 'linear-gradient(180deg, #fff 0%, #FFFBF0 50%, #FFF8EC 100%)' }}
-    >
-      <img
-        src={`${basePath}BASKA RESORT-LOGO.png`}
-        alt="BAŞKA Resort Bodrum"
-        style={{ height: '64px', width: 'auto', marginBottom: '32px' }}
-      />
-      <h2
-        className="font-['Cormorant_Garamond'] font-normal text-[var(--primary)] text-center"
-        style={{ fontSize: '1.4rem', marginBottom: '6px' }}
-      >
-        Kıyıda A La Carte
-      </h2>
-      <span className="text-[0.65rem] text-[var(--text-muted)]" style={{ marginBottom: '36px' }}>A-1</span>
+function FishDualViewer({ onSwitchDrink }) {
+  const { t } = useTranslation()
+  const [activeTab, setActiveTab] = useState('lunch')
+  const [drinkMenu, setDrinkMenu] = useState(null)
+  const [numPages, setNumPages] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const containerRef = useRef(null)
+  const [width, setWidth] = useState(0)
 
-      <div className="flex flex-col gap-4 w-full px-8" style={{ maxWidth: 360 }}>
-        <button
-          onClick={() => onSelect('fish-lunch')}
-          className="w-full rounded-2xl text-white cursor-pointer transition-all hover:shadow-lg"
-          style={{
-            padding: '22px 16px',
-            background: 'var(--primary)',
-            border: 'none',
-          }}
+  const currentId = drinkMenu || (activeTab === 'lunch' ? 'fish-lunch' : 'fish-dinner')
+  const currentFile = menuData[currentId]?.file
+
+  useEffect(() => {
+    setLoading(true)
+    setNumPages(null)
+  }, [currentId])
+
+  useEffect(() => {
+    const measure = () => {
+      if (containerRef.current) setWidth(containerRef.current.clientWidth)
+    }
+    measure()
+    window.addEventListener('resize', measure)
+    return () => window.removeEventListener('resize', measure)
+  }, [])
+
+  return (
+    <div className="fixed inset-0 z-50 flex flex-col" style={{ background: '#f5f5f5' }}>
+      {/* Header */}
+      <div
+        className="flex items-center justify-between flex-shrink-0"
+        style={{ background: 'var(--primary)', padding: '10px 16px', minHeight: 48 }}
+      >
+        <span className="text-white text-[0.78rem] font-medium truncate flex-1">
+          {drinkMenu ? getMenuName(drinkMenu, t) : 'Kıyıda A La Carte — A-1'}
+        </span>
+        <div className="flex gap-2 flex-shrink-0 ml-3">
+          {drinkMenu ? (
+            <button
+              onClick={() => setDrinkMenu(null)}
+              className="text-[0.65rem] font-medium cursor-pointer"
+              style={{
+                background: 'rgba(255,255,255,0.15)',
+                border: '1px solid rgba(255,255,255,0.25)',
+                color: '#fff', borderRadius: 8,
+                padding: '6px 10px', whiteSpace: 'nowrap',
+              }}
+            >
+              ← {t('menuPage.back')}
+            </button>
+          ) : (
+            <>
+              <button
+                onClick={() => setDrinkMenu('wine')}
+                className="text-[0.65rem] font-medium cursor-pointer"
+                style={{
+                  background: 'rgba(255,255,255,0.15)',
+                  border: '1px solid rgba(255,255,255,0.25)',
+                  color: '#fff', borderRadius: 8,
+                  padding: '6px 10px', whiteSpace: 'nowrap',
+                }}
+              >
+                {t('menuPage.wineMenu')}
+              </button>
+              <button
+                onClick={() => setDrinkMenu('beverages')}
+                className="text-[0.65rem] font-medium cursor-pointer"
+                style={{
+                  background: 'rgba(255,255,255,0.15)',
+                  border: '1px solid rgba(255,255,255,0.25)',
+                  color: '#fff', borderRadius: 8,
+                  padding: '6px 10px', whiteSpace: 'nowrap',
+                }}
+              >
+                {t('menuPage.drinkMenu')}
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+
+      {/* Lunch / Dinner tabs — only show when not viewing a drink menu */}
+      {!drinkMenu && (
+        <div className="flex flex-shrink-0" style={{ borderBottom: '1px solid rgba(0,51,160,0.1)' }}>
+          <button
+            onClick={() => setActiveTab('lunch')}
+            className="flex-1 text-center text-[0.78rem] font-medium cursor-pointer transition-colors"
+            style={{
+              padding: '12px 0',
+              background: activeTab === 'lunch' ? '#fff' : '#f0f4ff',
+              color: activeTab === 'lunch' ? 'var(--primary)' : 'var(--text-muted)',
+              borderBottom: activeTab === 'lunch' ? '2px solid var(--primary)' : '2px solid transparent',
+              border: 'none',
+              borderBottomStyle: 'solid',
+            }}
+          >
+            Lunch · Öğle · Обед
+          </button>
+          <button
+            onClick={() => setActiveTab('dinner')}
+            className="flex-1 text-center text-[0.78rem] font-medium cursor-pointer transition-colors"
+            style={{
+              padding: '12px 0',
+              background: activeTab === 'dinner' ? '#fff' : '#f0f4ff',
+              color: activeTab === 'dinner' ? 'var(--primary)' : 'var(--text-muted)',
+              borderBottom: activeTab === 'dinner' ? '2px solid var(--primary)' : '2px solid transparent',
+              border: 'none',
+              borderBottomStyle: 'solid',
+            }}
+          >
+            Dinner · Akşam · Ужин
+          </button>
+        </div>
+      )}
+
+      {/* PDF */}
+      <div ref={containerRef} className="flex-1 overflow-y-auto overflow-x-hidden">
+        {loading && <Spinner />}
+        <Document
+          key={currentId}
+          file={`${basePath}${currentFile}`}
+          onLoadSuccess={({ numPages: n }) => { setNumPages(n); setLoading(false) }}
+          onLoadError={() => setLoading(false)}
+          loading=""
         >
-          <span className="block text-[0.9rem] font-medium">Lunch Menu</span>
-          <span className="block text-[0.65rem] opacity-60 mt-1">Öğle Yemeği Menüsü · Меню обеда</span>
-        </button>
-        <button
-          onClick={() => onSelect('fish-dinner')}
-          className="w-full rounded-2xl text-white cursor-pointer transition-all hover:shadow-lg"
-          style={{
-            padding: '22px 16px',
-            background: 'var(--primary)',
-            border: 'none',
-          }}
-        >
-          <span className="block text-[0.9rem] font-medium">Dinner Menu</span>
-          <span className="block text-[0.65rem] opacity-60 mt-1">Akşam Yemeği Menüsü · Меню ужина</span>
-        </button>
+          {numPages && Array.from({ length: numPages }, (_, i) => (
+            <Page
+              key={`${currentId}-${i}`}
+              pageNumber={i + 1}
+              width={width || undefined}
+              renderTextLayer={false}
+              renderAnnotationLayer={false}
+              loading=""
+              className="pdf-page"
+            />
+          ))}
+        </Document>
       </div>
     </div>
   )
@@ -373,12 +470,12 @@ export default function MenuPage() {
   const [currentMenu, setCurrentMenu] = useState(null)
   const [originalMenu, setOriginalMenu] = useState(null)
   const [fromHash, setFromHash] = useState(false)
-  const [showFishPicker, setShowFishPicker] = useState(false)
+  const [showFishDual, setShowFishDual] = useState(false)
 
   useEffect(() => {
     const hash = window.location.hash.slice(1)
     if (hash === 'fish' || hash === 'fish-dinner' || hash === 'fish-lunch') {
-      setShowFishPicker(true)
+      setShowFishDual(true)
       setFromHash(true)
     } else if (hash && menuData[hash]) {
       setCurrentMenu(hash)
@@ -388,6 +485,11 @@ export default function MenuPage() {
   }, [])
 
   const handleSelectMenu = (id) => {
+    if (id === 'fish-dinner' || id === 'fish-lunch') {
+      setShowFishDual(true)
+      setFromHash(false)
+      return
+    }
     setCurrentMenu(id)
     if (!menuData[id].isDrink) setOriginalMenu(id)
     setFromHash(false)
@@ -404,16 +506,11 @@ export default function MenuPage() {
   const handleBackToListing = () => {
     setCurrentMenu(null)
     setOriginalMenu(null)
+    setShowFishDual(false)
   }
 
-  const handleFishSelect = (id) => {
-    setShowFishPicker(false)
-    setCurrentMenu(id)
-    setOriginalMenu(id)
-  }
-
-  if (showFishPicker) {
-    return <FishPicker onSelect={handleFishSelect} />
+  if (showFishDual) {
+    return <FishDualViewer onSwitchDrink={handleSwitchDrink} />
   }
 
   if (currentMenu) {
