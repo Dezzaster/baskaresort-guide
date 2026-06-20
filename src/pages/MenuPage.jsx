@@ -12,7 +12,7 @@ const menuData = {
   'fish-lunch':        { file: 'Kıyıda A La Carte Lunch Menu.pdf',          isDrink: false, labelKey: 'lunchMenu',  restaurantKey: 'fish' },
   'teppanyaki-dinner': { file: 'Kai Teppanyaki A La Carte Dinner Menu.pdf',  isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'teppanyaki' },
   'italian-dinner':    { file: 'Lento Italian A La Carte Dinner Menu.pdf',   isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'italian' },
-  'daima':             { file: 'Daima Restaurant Menu.pdf',                  isDrink: false, labelKey: 'viewMenu',   restaurantKey: 'daima' },
+  'daima':             { file: 'Daima Restaurant Menu new.pdf',              isDrink: false, labelKey: 'viewMenu',   restaurantKey: 'daima', hideDrinkButtons: true },
   'beverages':         { file: 'Beverage Menu.pdf',                          isDrink: true,  labelKey: 'drinkMenu' },
   'wine':              { file: 'Wine Menu.pdf',                              isDrink: true,  labelKey: 'wineMenu' },
 }
@@ -59,7 +59,7 @@ function Viewer({ menuId, originalMenuId, onSwitchDrink, onBack, onBackToListing
 
   const menu = menuData[menuId]
   const isDrink = menu?.isDrink
-  const showDrinkButtons = !isDrink
+  const showDrinkButtons = !isDrink && !menu?.hideDrinkButtons
   const showBackButton = isDrink && !!originalMenuId
 
   useEffect(() => {
