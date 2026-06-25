@@ -10,7 +10,7 @@ const restaurants = [
   {
     key: 'fish', code: 'A-1',
     menus: [
-      { label: 'dinnerMenu', file: 'Kıyıda A La Carte Dinner Menu new.pdf' },
+      { label: 'dinnerMenu', file: 'Kıyıda A La Carte Dinner Menu updated.pdf' },
       { label: 'lunchMenu', file: 'Kıyıda A La Carte Lunch Menu new.pdf' }
     ]
   },
