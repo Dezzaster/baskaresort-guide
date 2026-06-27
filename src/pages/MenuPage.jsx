@@ -8,7 +8,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.vers
 const basePath = import.meta.env.BASE_URL
 
 const menuData = {
-  'fish-dinner':       { file: 'Kıyıda A La Carte Dinner Menu new.pdf',          isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'fish' },
+  'fish-dinner':       { file: 'Kıyıda A La Carte Dinner Menu updated.pdf',        isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'fish' },
   'fish-lunch':        { file: 'Kıyıda A La Carte Lunch Menu new.pdf',           isDrink: false, labelKey: 'lunchMenu',  restaurantKey: 'fish' },
   'teppanyaki-dinner': { file: 'Kai Teppanyaki A La Carte Dinner Menu new.pdf',   isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'teppanyaki' },
   'italian-dinner':    { file: 'Lento Italian A La Carte Dinner Menu new.pdf',    isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'italian' },

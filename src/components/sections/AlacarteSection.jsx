@@ -3,14 +3,14 @@ import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import Card from '../Card'
 
-const WHATSAPP = '905421789246'
+const WHATSAPP = '905307387764'
 const basePath = import.meta.env.BASE_URL
 
 const restaurants = [
   {
     key: 'fish', code: 'A-1',
     menus: [
-      { label: 'dinnerMenu', file: 'Kıyıda A La Carte Dinner Menu new.pdf' },
+      { label: 'dinnerMenu', file: 'Kıyıda A La Carte Dinner Menu updated.pdf' },
       { label: 'lunchMenu', file: 'Kıyıda A La Carte Lunch Menu new.pdf' }
     ]
   },
