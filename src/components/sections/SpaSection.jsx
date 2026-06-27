@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Card from '../Card'
 
 const basePath = import.meta.env.BASE_URL
-const WHATSAPP = '905421789246'
+const WHATSAPP = '905307387764'
 
 // Toggle to show/hide prices across the spa menu. Set to true to restore prices.
 const SHOW_PRICES = false
