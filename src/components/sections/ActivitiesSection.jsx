@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import Card from '../Card'
+import PadelBooking from './PadelBooking'
 
 export default function ActivitiesSection() {
   const { t } = useTranslation()
@@ -28,6 +29,8 @@ export default function ActivitiesSection() {
           {t('activities.acousticDesc')}
         </p>
       </Card>
+
+      <PadelBooking />
 
       <div className="grid grid-cols-2 gap-3" style={{ marginTop: '24px' }}>
         {[
