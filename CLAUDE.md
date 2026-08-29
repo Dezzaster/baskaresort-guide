@@ -130,7 +130,7 @@ DevTools → Application → Clear site data.
 | Köy Kahvesi | 10:00 – 16:00 |
 | Padel Court | 09:00 – 24:00 |
 
-**DAİMA 7/24:** шведский стол до 02:00, после 02:00 — обслуживание по меню à la carte.
+**DAİMA 7/24:** шведский стол до 03:00, после 03:00 — обслуживание по меню à la carte.
 
 Время ужина продублировано в `src/components/MealNotifier.jsx`
 (`{ key: 'dinner', hour: 19, minute: 0 }`) — при смене менять и там,
