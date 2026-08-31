@@ -105,7 +105,7 @@
     "lunch": "Déjeuner buffet",
     "lunchTime": "12:30 – 14:30",
     "dinner": "Dîner buffet",
-    "dinnerTime": "19:00 – 21:30",
+    "dinnerTime": "18:30 – 21:00",
     "leziz": "LEZİZ Gourmet Égéen",
     "lezizDesc": "Gourmet égéen en bord de mer — petit-déjeuner et spécialités de la journée. 08:00–17:00",
     "daima": "DAİMA Restaurant 7/24",
@@ -431,14 +431,14 @@
   "meal": {
     "breakfastSoon": "Le petit-déjeuner ouvre bientôt à 07:00 !",
     "lunchSoon": "Le déjeuner ouvre bientôt à 12:30 !",
-    "dinnerSoon": "Le dîner ouvre bientôt à 19h00 !"
+    "dinnerSoon": "Le dîner ouvre bientôt à 18h30 !"
   },
   "snacks": {
     "title": "Restaurants snack",
     "subtitle": "Encas légers tout au long de la journée",
     "leziz": "Leziz",
     "lezizDesc": "Snacks gourmet égéens et plats légers",
-    "lezizHours": "12:00 – 16:00",
+    "lezizHours": "12:00 – 15:30",
     "kiyida": "Kıyıda",
     "kiyidaDesc": "Bouchées de fruits de mer frais au bord de la mer",
     "kiyidaHours": "12:00 – 17:00",

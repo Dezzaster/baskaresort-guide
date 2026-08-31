@@ -119,13 +119,13 @@ DevTools → Application → Clear site data.
 
 | Точка | Часы |
 |---|---|
-| Главный ресторан — ужин | 19:00 – 21:30 |
+| Главный ресторан — ужин | 18:30 – 21:00 |
 | Главный ресторан — завтрак | 07:00 – 10:00 |
 | Главный ресторан — обед | 12:30 – 14:30 |
 | Fitness Center | 08:00 – 20:00 |
 | Manzara Patisserie | 12:00 – 18:00 |
 | Beach Patisserie | 11:00 – 16:00 |
-| Leziz Snack | 12:00 – 16:00 |
+| Leziz Snack | 12:00 – 15:30 |
 | Lento (дневное, snacks) | 12:00 – 16:00 |
 | Köy Kahvesi | 10:00 – 16:00 |
 | Padel Court | 09:00 – 24:00 |
@@ -133,7 +133,7 @@ DevTools → Application → Clear site data.
 **DAİMA 7/24:** шведский стол до 03:00, после 03:00 — обслуживание по меню à la carte.
 
 Время ужина продублировано в `src/components/MealNotifier.jsx`
-(`{ key: 'dinner', hour: 19, minute: 0 }`) — при смене менять и там,
+(`{ key: 'dinner', hour: 18, minute: 30 }`) — при смене менять и там,
 и в ключах `dinnerTime` / `dinnerSoon` во всех локалях.
 
 ---
