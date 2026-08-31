@@ -198,12 +198,11 @@ DevTools → Application → Clear site data.
 
 **Zeytinaltı Köy Kahvesi** фигурирует в двух разделах с разными ключами:
 
-- `bars.coffeeHouseDesc` — «Zeytinaltı Village Coffee House», открытие 09:00
-- `snacks.koyKahvesiHours` — «Köy Kahvesi», открытие 10:00
+- `bars.coffeeHouseDesc` — «Zeytinaltı Village Coffee House»
+- `snacks.koyKahvesiHours` — «Köy Kahvesi»
 
-Это одно и то же место. При изменении часов править **оба** ключа.
-Время открытия в них расходится (09:00 против 10:00) — расхождение досталось
-из старых данных, у заказчика не уточнено.
+Это одно и то же место, часы **10:00 – 13:00**. При изменении часов править
+**оба** ключа, иначе в гиде появятся два разных расписания для одной точки.
 
 ---
 
