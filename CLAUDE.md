@@ -126,7 +126,7 @@ DevTools → Application → Clear site data.
 | Manzara Patisserie | 12:00 – 18:00 |
 | Beach Patisserie | 11:00 – 16:00 |
 | Leziz Snack | 12:00 – 15:30 |
-| Lento (дневное, snacks) | 12:00 – 16:00 |
+| Lento (дневное, snacks) | 12:00 – 15:30 |
 | Köy Kahvesi (Zeytinaltı) | 10:00 – 13:00 |
 | Padel Court | 09:00 – 24:00 |
 
