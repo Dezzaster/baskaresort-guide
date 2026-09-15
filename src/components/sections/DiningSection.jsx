@@ -3,6 +3,10 @@ import Card from '../Card'
 
 const basePath = import.meta.env.BASE_URL
 
+// Раздел Street Food временно скрыт целиком (обе точки сняты).
+// Чтобы вернуть — поставить true; тексты и переводы сохранены.
+const SHOW_STREET_FOOD = false
+
 const snackRestaurants = [
   { key: 'leziz', charged: false },
   { key: 'kiyida', charged: true },
@@ -116,6 +120,7 @@ export default function DiningSection() {
       </div>
 
       {/* Street Food Section */}
+      {SHOW_STREET_FOOD && (
       <div style={{ marginTop: '72px' }}>
         <div className="text-center" style={{ marginBottom: '32px' }}>
           <div className="flex items-center gap-4 justify-center" style={{ marginBottom: '10px' }}>
@@ -142,6 +147,7 @@ export default function DiningSection() {
           ))}
         </div>
       </div>
+      )}
     </div>
   )
 }
