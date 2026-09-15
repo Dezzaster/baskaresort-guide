@@ -168,6 +168,11 @@ DevTools → Application → Clear site data.
 - Chicken & Rice — из Street Food
 - Skincare & Hairdressing — из Spa
 
+**Весь раздел Street Food временно скрыт.** В `DiningSection.jsx` флаг
+**`SHOW_STREET_FOOD = false`** — обе оставшиеся точки (Türk Köftesi & Kokoreç,
+BAŞKA Gelato) сняты, а без них остался бы пустой заголовок, поэтому спрятана
+секция целиком. Чтобы вернуть — поставить `true`; вёрстка и переводы на месте.
+
 ---
 
 ## Попапы
