@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import Card from '../Card'
+import { getWhatsAppNumber } from '../../utils/whatsapp'
 
 const basePath = import.meta.env.BASE_URL
-const WHATSAPP = '905307387764'
 
 // Toggle to show/hide prices across the spa menu. Set to true to restore prices.
 const SHOW_PRICES = false
@@ -117,7 +117,7 @@ export default function SpaSection() {
     })
     if (SHOW_PRICES && total > 0) lines.push('', `💰 ~€${total}`)
     lines.push('', '— BAŞKA Guest Guide')
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank')
+    window.open(`https://wa.me/${getWhatsAppNumber(i18n.language)}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank')
     setCart({})
   }
 

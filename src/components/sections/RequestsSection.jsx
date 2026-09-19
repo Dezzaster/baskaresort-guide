@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
+import { getWhatsAppNumber } from '../../utils/whatsapp'
 
-const WHATSAPP = '905307387764'
 
 const requestKeys = [
   'towels', 'minibar', 'cleaning', 'maintenance',
@@ -13,7 +13,7 @@ const requestKeys = [
 const maintenanceItems = ['ac', 'balcony', 'shower', 'water', 'lights', 'tv', 'safe', 'door']
 
 export default function RequestsSection() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [showMaintenance, setShowMaintenance] = useState(false)
   const [showPillowSelect, setShowPillowSelect] = useState(false)
   const [showLaundry, setShowLaundry] = useState(false)
@@ -29,7 +29,7 @@ export default function RequestsSection() {
       '',
       '— BAŞKA Guest Guide'
     ].filter(Boolean).join('\n')
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank')
+    window.open(`https://wa.me/${getWhatsAppNumber(i18n.language)}?text=${encodeURIComponent(msg)}`, '_blank')
   }
 
   const handleRequest = (key) => {

@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Card from '../Card'
+import { getWhatsAppNumber } from '../../utils/whatsapp'
 
-const WHATSAPP = '905307387764'
 const basePath = import.meta.env.BASE_URL
 
 function PoolSplash() {
@@ -58,7 +58,7 @@ function PoolSplash() {
 }
 
 export default function BeachSection() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const handleReserveCabana = () => {
     const ticket = '№' + Math.floor(10000 + Math.random() * 90000)
@@ -70,7 +70,7 @@ export default function BeachSection() {
       '',
       '— BAŞKA Guest Guide'
     ].join('\n')
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank')
+    window.open(`https://wa.me/${getWhatsAppNumber(i18n.language)}?text=${encodeURIComponent(msg)}`, '_blank')
   }
 
   return (

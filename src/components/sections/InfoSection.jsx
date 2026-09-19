@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import Card from '../Card'
 import InstagramFeed from '../InstagramFeed'
 import WeatherWidget from '../WeatherWidget'
+import { getWhatsAppNumber } from '../../utils/whatsapp'
 
 function InfoRow({ label, value }) {
   return (
@@ -13,7 +14,7 @@ function InfoRow({ label, value }) {
 }
 
 function ContactCard({ delay = 0 }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   return (
     <div
@@ -45,7 +46,7 @@ function ContactCard({ delay = 0 }) {
           <span className="text-[0.65rem] font-medium text-[var(--text-dark)]">+90 252 275 05 50</span>
         </a>
         <a
-          href="https://wa.me/905307387764"
+          href={`https://wa.me/${getWhatsAppNumber(i18n.language)}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-white/60 backdrop-blur-sm border border-white/70 hover:bg-white/80 transition-all duration-300"

@@ -2,8 +2,8 @@ import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import Card from '../Card'
+import { getWhatsAppNumber } from '../../utils/whatsapp'
 
-const WHATSAPP = '905307387764'
 
 const OPEN_HOUR = 9
 const CLOSE_HOUR = 24
@@ -89,7 +89,7 @@ export default function PadelBooking() {
       '',
       '— BAŞKA Guest Guide'
     ].join('\n')
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank')
+    window.open(`https://wa.me/${getWhatsAppNumber(i18n.language)}?text=${encodeURIComponent(msg)}`, '_blank')
     close()
   }
 

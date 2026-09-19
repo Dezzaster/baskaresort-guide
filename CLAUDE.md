@@ -28,13 +28,25 @@ DevTools → Application → Clear site data.
 
 ## Контакты
 
-**WhatsApp (основной): `905307387764`**
+**WhatsApp зависит от выбранного языка:**
 
-Захардкожен в 7 файлах — при смене менять во всех:
-`RequestsSection`, `InfoSection`, `RoomsSection`, `FlightTrackerSection`,
-`SpaSection`, `BeachSection`, `AlacarteSection`.
+| Язык | Номер |
+|---|---|
+| турецкий | `905421789249` |
+| все остальные | `905421789246` |
 
-История номеров: `905307387764` → `905421789246` → обратно `905307387764`.
+Номера заданы в одном месте — **`src/utils/whatsapp.js`**, функция
+`getWhatsAppNumber(lang)`. Больше нигде не хардкодить: раньше номер был
+константой в 8 файлах и правился восемью правками.
+
+**Важно:** вызывать `getWhatsAppNumber(i18n.language)` в момент отправки,
+а не сохранять в переменную при монтировании — иначе при смене языка на лету
+уйдёт номер от первого рендера. Компонент должен брать `i18n` из
+`useTranslation()`: `const { t, i18n } = useTranslation()`.
+
+Используется в 8 местах: `RequestsSection`, `InfoSection`, `RoomsSection`,
+`FlightTrackerSection`, `SpaSection`, `BeachSection`, `AlacarteSection`,
+`PadelBooking`.
 
 Телефон спа: **9500** (внутренний, показан в карточке Nefes Spa).
 
@@ -130,7 +142,7 @@ DevTools → Application → Clear site data.
 | Köy Kahvesi (Zeytinaltı) | 10:00 – 13:00 |
 | Padel Court | 09:00 – 24:00 |
 
-**DAİMA 7/24:** шведский стол до 03:00, после 03:00 — обслуживание по меню à la carte.
+**DAİMA 7/24:** шведский стол до 02:00, после 02:00 — обслуживание по меню à la carte.
 
 Время ужина продублировано в `src/components/MealNotifier.jsx`
 (`{ key: 'dinner', hour: 18, minute: 30 }`) — при смене менять и там,
