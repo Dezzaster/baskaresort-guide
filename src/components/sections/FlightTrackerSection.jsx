@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Card from '../Card'
+import { getWhatsAppNumber } from '../../utils/whatsapp'
 
 const STORAGE_KEY = 'baska_flight'
-const WHATSAPP = '905307387764'
 
 export default function FlightTrackerSection() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [flight, setFlight] = useState(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY)
@@ -81,7 +81,7 @@ export default function FlightTrackerSection() {
       '',
       '— BAŞKA Guest Guide'
     ].filter(Boolean).join('\n')
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank')
+    window.open(`https://wa.me/${getWhatsAppNumber(i18n.language)}?text=${encodeURIComponent(msg)}`, '_blank')
   }
 
   return (

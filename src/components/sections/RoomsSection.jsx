@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Card from '../Card'
+import { getWhatsAppNumber } from '../../utils/whatsapp'
 
-const WHATSAPP = '905307387764'
 
 const rooms = [
   { key: 'ege', size: '20–30 m²', beds: '1 French / 2 Single' },
@@ -18,7 +18,7 @@ const rooms = [
 ]
 
 export default function RoomsSection() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const handleUpgrade = (key) => {
     const ticket = '№' + Math.floor(10000 + Math.random() * 90000)
@@ -30,7 +30,7 @@ export default function RoomsSection() {
       '',
       '— BAŞKA Guest Guide'
     ].join('\n')
-    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank')
+    window.open(`https://wa.me/${getWhatsAppNumber(i18n.language)}?text=${encodeURIComponent(msg)}`, '_blank')
   }
 
   return (
