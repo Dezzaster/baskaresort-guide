@@ -108,8 +108,8 @@
     "dinnerTime": "18:30 – 21:00",
     "leziz": "LEZİZ Egejski Gourmet",
     "lezizDesc": "Egejski gourmet nad morzem — śniadanie i specjały dnia. 08:00–17:00",
-    "daima": "DAİMA Restauracja 7/24",
-    "daimaDesc": "Bufet otwarty do 02:00. Po 02:00 obsługa z menu à la carte. 24 godziny, bezpłatne BAI",
+    "daima": "DAİMA Restauracja",
+    "daimaDesc": "Obsługa nocna 00:00 – 02:00, bezpłatne BAI",
     "concept": "Inspirowane bogatym dziedzictwem kulinarnym Turcji z praktykami zero waste, lokalną i zdrową koncepcją żywienia oraz regionalnym łańcuchem dostaw."
   },
   "alacarte": {
@@ -159,7 +159,7 @@
     "pubFistik": "Pub Fıstık",
     "pubFistikDesc": "Piwo i prażone orzeszki. 12:00–00:00",
     "poolLounge": "Alize Pool Bar",
-    "poolLoungeDesc": "Napoje przy basenie. 10:00–19:00, BAI",
+    "poolLoungeDesc": "Napoje przy basenie. 10:00–18:00, BAI",
     "loungeBar": "Lounge Bar",
     "loungeBarDesc": "Koktajle i drinki. 18:00–00:00, BAI",
     "beachPastane": "Beach Pastane",

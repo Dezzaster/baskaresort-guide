@@ -7,12 +7,19 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.vers
 
 const basePath = import.meta.env.BASE_URL
 
+// Меню Daima временно снято. Чтобы вернуть — поставить true здесь
+// и в src/components/sections/DiningSection.jsx (там тот же флаг).
+// Пока false: QR-код #daima ведёт на общий список меню, а не в никуда.
+const SHOW_DAIMA_MENU = false
+
 const menuData = {
   'fish-dinner':       { file: 'Kıyıda A La Carte Dinner Menu updated.pdf',        isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'fish' },
   'fish-lunch':        { file: 'Kıyıda A La Carte Lunch Menu new.pdf',           isDrink: false, labelKey: 'lunchMenu',  restaurantKey: 'fish' },
   'teppanyaki-dinner': { file: 'Kai Teppanyaki A La Carte Dinner Menu new.pdf',   isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'teppanyaki' },
   'italian-dinner':    { file: 'Lento Italian A La Carte Dinner Menu new.pdf',    isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'italian' },
-  'daima':             { file: 'Daima Restaurant Menu new.pdf',                   isDrink: false, labelKey: 'viewMenu',   restaurantKey: 'daima' },
+  ...(SHOW_DAIMA_MENU
+    ? { 'daima': { file: 'Daima Restaurant Menu new.pdf', isDrink: false, labelKey: 'viewMenu', restaurantKey: 'daima' } }
+    : {}),
   'leziz':             { file: 'Leziz Snack A La Carte Lunch Menu new.pdf',       isDrink: false, labelKey: 'viewMenu',   restaurantKey: 'leziz' },
   'beverages':         { file: 'Beverage Menu.pdf',                               isDrink: true,  labelKey: 'drinkMenu' },
   'wine':              { file: 'Wine Menu.pdf',                                   isDrink: true,  labelKey: 'wineMenu' },
@@ -22,7 +29,7 @@ const restaurantList = [
   { nameKey: 'fish', code: 'A-1', items: ['fish-dinner', 'fish-lunch'] },
   { nameKey: 'teppanyaki', code: 'A-2', items: ['teppanyaki-dinner'] },
   { nameKey: 'italian', code: 'A-3', items: ['italian-dinner'] },
-  { nameKey: 'daima', code: '', items: ['daima'] },
+  ...(SHOW_DAIMA_MENU ? [{ nameKey: 'daima', code: '', items: ['daima'] }] : []),
   { nameKey: 'leziz', code: '', items: ['leziz'] },
 ]
 
