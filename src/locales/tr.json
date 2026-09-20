@@ -108,8 +108,8 @@
     "dinnerTime": "18:30 – 21:00",
     "leziz": "LEZİZ Ege Gurme",
     "lezizDesc": "Sahilde Ege gurme — kahvaltı ve gündüz lezzetleri. 08:00–17:00",
-    "daima": "DAİMA 7/24 Restoran",
-    "daimaDesc": "02:00'a kadar açık büfe. 02:00'dan sonra servis à la carte menüden devam eder. 24 saat, Ücretsiz BAI",
+    "daima": "DAİMA Restoran",
+    "daimaDesc": "Gece servisi 00:00 – 02:00, Ücretsiz BAI",
     "concept": "Türkiye'nin zengin mutfak mirasından ilham alan sıfır atık uygulamaları, yerel ve sağlıklı gıda konsepti ve bölge odaklı tedarik zinciri."
   },
   "alacarte": {
@@ -159,7 +159,7 @@
     "pubFistik": "FISTIK Bar / Pub",
     "pubFistikDesc": "Bira & kavrulmuş fıstık. 12:00–00:00",
     "poolLounge": "ALİZE Pool Bar",
-    "poolLoungeDesc": "Havuz başı içecekler. 10:00–19:00, BAI",
+    "poolLoungeDesc": "Havuz başı içecekler. 10:00–18:00, BAI",
     "loungeBar": "Lounge Bar",
     "loungeBarDesc": "Kokteyller & içecekler. 18:00–00:00, BAI",
     "beachPastane": "Beach Pastane",

@@ -108,8 +108,8 @@
     "dinnerTime": "18:30 – 21:00",
     "leziz": "LEZİZ Aegean Gourmet",
     "lezizDesc": "Beachfront Aegean gourmet with breakfast and daytime specialties. 08:00–17:00",
-    "daima": "DAİMA 7/24 Restaurant",
-    "daimaDesc": "Open buffet until 02:00. After 02:00, service continues from the à la carte menu. 24 hours, complimentary BAI",
+    "daima": "DAİMA Restaurant",
+    "daimaDesc": "Night service 00:00 – 02:00, complimentary BAI",
     "concept": "Inspired by Türkiye's rich culinary heritage with zero-waste practices, local & healthy food concept, and region-focused supply chain."
   },
   "alacarte": {
@@ -159,7 +159,7 @@
     "pubFistik": "Pub Fıstık",
     "pubFistikDesc": "Beer & roasted peanuts. 12:00–00:00",
     "poolLounge": "Alize Pool Bar",
-    "poolLoungeDesc": "Poolside refreshments. 10:00–19:00, BAI",
+    "poolLoungeDesc": "Poolside refreshments. 10:00–18:00, BAI",
     "loungeBar": "Lounge Bar",
     "loungeBarDesc": "Cocktails & drinks. 18:00–00:00, BAI",
     "beachPastane": "Beach Patisserie",

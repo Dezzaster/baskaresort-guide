@@ -7,6 +7,10 @@ const basePath = import.meta.env.BASE_URL
 // Чтобы вернуть — поставить true; тексты и переводы сохранены.
 const SHOW_STREET_FOOD = false
 
+// Меню Daima временно снято. Чтобы вернуть — поставить true здесь
+// и в src/pages/MenuPage.jsx (там тот же флаг для QR-ссылки #daima).
+const SHOW_DAIMA_MENU = false
+
 const snackRestaurants = [
   { key: 'leziz', charged: false },
   { key: 'kiyida', charged: true },
@@ -45,19 +49,22 @@ export default function DiningSection() {
         </div>
       </Card>
 
+      {/* Меню Daima временно снято — см. SHOW_DAIMA_MENU */}
       <Card icon="🕐" title={t('dining.daima')} delay={1}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-3">
+        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('dining.daimaDesc')}
         </p>
-        <a
-          href={`${basePath}Daima Restaurant Menu new.pdf`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 py-2 px-4 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.72rem] font-medium hover:bg-[var(--bg-blue)] transition-colors"
-          style={{ paddingTop: '16px', paddingBottom: '16px' }}
-        >
-          📋 {t('menu.viewMenu')}
-        </a>
+        {SHOW_DAIMA_MENU && (
+          <a
+            href={`${basePath}Daima Restaurant Menu new.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 py-2 px-4 mt-3 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.72rem] font-medium hover:bg-[var(--bg-blue)] transition-colors"
+            style={{ paddingTop: '16px', paddingBottom: '16px' }}
+          >
+            📋 {t('menu.viewMenu')}
+          </a>
+        )}
       </Card>
 
       <Card title="" delay={2}>

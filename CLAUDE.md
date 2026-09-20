@@ -82,7 +82,7 @@ DevTools → Application → Clear site data.
 | Kıyıda (обед + ужин, табы) | `guide.baskaresort.com/menu#fish` |
 | Kai Teppanyaki | `guide.baskaresort.com/menu#teppanyaki-dinner` |
 | Lento Italian | `guide.baskaresort.com/menu#italian-dinner` |
-| Daima Restaurant | `guide.baskaresort.com/menu#daima` |
+| Daima Restaurant | `guide.baskaresort.com/menu#daima` — меню временно снято, ведёт на список |
 | Leziz Snack | `guide.baskaresort.com/menu#leziz` |
 | Beverage Menu | `guide.baskaresort.com/menu#beverages` |
 | Wine Menu | `guide.baskaresort.com/menu#wine` |
@@ -142,7 +142,11 @@ DevTools → Application → Clear site data.
 | Köy Kahvesi (Zeytinaltı) | 10:00 – 13:00 |
 | Padel Court | 09:00 – 24:00 |
 
-**DAİMA 7/24:** шведский стол до 02:00, после 02:00 — обслуживание по меню à la carte.
+**DAİMA:** ночное обслуживание **00:00 – 02:00**. Из названия убрано «7/24»,
+круглосуточной работы больше нет. Меню временно снято — флаг
+**`SHOW_DAIMA_MENU = false`** сразу в двух файлах, `DiningSection.jsx`
+и `MenuPage.jsx`; чтобы вернуть, поставить `true` в обоих.
+Пока меню снято, QR `#daima` ведёт на общий список меню, а не в пустоту.
 
 Время ужина продублировано в `src/components/MealNotifier.jsx`
 (`{ key: 'dinner', hour: 18, minute: 30 }`) — при смене менять и там,
@@ -208,6 +212,25 @@ BAŞKA Gelato) сняты, а без них остался бы пустой з�
 - остальные → `Sürdürebilirlik Raporu İngilizce.pptx`
 
 Старые `sustainability-report-*.pdf` остались в `public`, но не используются.
+
+---
+
+## Аналитика
+
+**Cloudflare Web Analytics**, бикон в `index.html` перед `</body>`.
+
+- Без cookies → баннер согласия по GDPR не нужен (у отеля европейские гости).
+- Токен сайта публичный по своей природе — он и так попадает в HTML,
+  который видит любой посетитель. Прятать его не нужно.
+- Статистика смотрится в dash.cloudflare.com → Web Analytics.
+- Данные появляются с задержкой ~15–30 минут после первых заходов.
+
+GitHub своей статистики посещений сайта не даёт: вкладка Insights → Traffic
+считает просмотры **страницы репозитория**, а не `guide.baskaresort.com`,
+и хранит данные лишь 14 дней. GitHub Pages аналитики не имеет вовсе.
+
+В офлайне (PWA открыт из кэша без сети) бикон молча не отправится — это
+нормально и на работу гида не влияет.
 
 ---
 
