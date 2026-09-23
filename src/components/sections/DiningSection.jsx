@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import Card from '../Card'
+import { SHOW_MENUS } from '../../utils/season'
 
 const basePath = import.meta.env.BASE_URL
 
@@ -54,7 +55,7 @@ export default function DiningSection() {
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
           {t('dining.daimaDesc')}
         </p>
-        {SHOW_DAIMA_MENU && (
+        {SHOW_MENUS && SHOW_DAIMA_MENU && (
           <a
             href={`${basePath}Daima Restaurant Menu new.pdf`}
             target="_blank"

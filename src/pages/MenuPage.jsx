@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Document, Page, pdfjs } from 'react-pdf'
 import LanguageSelector from '../components/LanguageSelector'
+import { SHOW_MENUS } from '../utils/season'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
@@ -472,6 +473,37 @@ function FishDualViewer({ onSwitchDrink }) {
   )
 }
 
+// Конец сезона: все меню скрыты. QR-коды уже напечатаны и висят в ресторанах,
+// поэтому вместо пустой страницы гость видит объяснение, а не поломку.
+function SeasonClosed() {
+  const { t } = useTranslation()
+  return (
+    <div
+      className="min-h-screen flex flex-col items-center justify-center text-center px-8"
+      style={{ background: 'linear-gradient(180deg, #fff 0%, #FFFBF0 50%, #FFF8EC 100%)' }}
+    >
+      <img
+        src={`${basePath}BASKA RESORT-LOGO.png`}
+        alt="BAŞKA Resort Bodrum"
+        style={{ height: '72px', width: 'auto', marginBottom: '28px' }}
+      />
+      <p
+        className="font-['Cormorant_Garamond'] font-normal text-[var(--primary)]"
+        style={{ fontSize: '1.3rem', marginBottom: '10px', lineHeight: 1.4 }}
+      >
+        {t('menuPage.seasonClosed')}
+      </p>
+      <a
+        href={basePath}
+        className="text-[0.72rem] text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors"
+        style={{ marginTop: '18px' }}
+      >
+        ← {t('menuPage.backToGuide')}
+      </a>
+    </div>
+  )
+}
+
 export default function MenuPage() {
   const { t } = useTranslation()
   const [currentMenu, setCurrentMenu] = useState(null)
@@ -480,6 +512,7 @@ export default function MenuPage() {
   const [showFishDual, setShowFishDual] = useState(false)
 
   useEffect(() => {
+    if (!SHOW_MENUS) return
     const hash = window.location.hash.slice(1)
     if (hash === 'fish' || hash === 'fish-dinner' || hash === 'fish-lunch') {
       setShowFishDual(true)
@@ -514,6 +547,10 @@ export default function MenuPage() {
     setCurrentMenu(null)
     setOriginalMenu(null)
     setShowFishDual(false)
+  }
+
+  if (!SHOW_MENUS) {
+    return <SeasonClosed />
   }
 
   if (showFishDual) {

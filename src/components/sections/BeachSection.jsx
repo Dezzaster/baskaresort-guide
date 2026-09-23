@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Card from '../Card'
 import { getWhatsAppNumber } from '../../utils/whatsapp'
+import { SHOW_MENUS } from '../../utils/season'
 
 const basePath = import.meta.env.BASE_URL
 
@@ -90,15 +91,17 @@ export default function BeachSection() {
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-3">
           {t('beach.cabanaDesc')}
         </p>
-        <a
-          href={`${basePath}cabana_menu.pdf`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full flex items-center justify-center gap-1.5 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.74rem] font-medium hover:bg-[var(--bg-blue)] transition-colors"
-          style={{ paddingTop: '20px', paddingBottom: '20px' }}
-        >
-          📋 {t('menu.viewMenu')}
-        </a>
+        {SHOW_MENUS && (
+          <a
+            href={`${basePath}cabana_menu.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-1.5 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.74rem] font-medium hover:bg-[var(--bg-blue)] transition-colors"
+            style={{ paddingTop: '20px', paddingBottom: '20px' }}
+          >
+            📋 {t('menu.viewMenu')}
+          </a>
+        )}
         <motion.button
           whileTap={{ scale: 0.97 }}
           onClick={handleReserveCabana}

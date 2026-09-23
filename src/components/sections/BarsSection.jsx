@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import Card from '../Card'
+import { SHOW_MENUS } from '../../utils/season'
 
 const basePath = import.meta.env.BASE_URL
 
@@ -24,26 +25,28 @@ export default function BarsSection() {
       </h2>
       <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('bars.subtitle')}</p>
 
-      <div className="flex gap-2 mb-6 mt-2" style={{ paddingTop: '4px', paddingBottom: '4px' }}>
-        <a
-          href={`${basePath}Beverage Menu.pdf`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 py-3 rounded-xl border border-[var(--primary)]/20 bg-white/80 text-[var(--primary)] text-[0.74rem] font-medium text-center hover:bg-[var(--bg-blue)] transition-colors"
-          style={{ paddingTop: '24px', paddingBottom: '24px' }}
-        >
-          🍹 {t('menu.beverageMenu')}
-        </a>
-        <a
-          href={`${basePath}Wine Menu.pdf`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 py-3 rounded-xl border border-[var(--primary)]/20 bg-white/80 text-[var(--primary)] text-[0.74rem] font-medium text-center hover:bg-[var(--bg-blue)] transition-colors"
-          style={{ paddingTop: '24px', paddingBottom: '24px' }}
-        >
-          🍷 {t('menu.wineMenu')}
-        </a>
-      </div>
+      {SHOW_MENUS && (
+        <div className="flex gap-2 mb-6 mt-2" style={{ paddingTop: '4px', paddingBottom: '4px' }}>
+          <a
+            href={`${basePath}Beverage Menu.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 py-3 rounded-xl border border-[var(--primary)]/20 bg-white/80 text-[var(--primary)] text-[0.74rem] font-medium text-center hover:bg-[var(--bg-blue)] transition-colors"
+            style={{ paddingTop: '24px', paddingBottom: '24px' }}
+          >
+            🍹 {t('menu.beverageMenu')}
+          </a>
+          <a
+            href={`${basePath}Wine Menu.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 py-3 rounded-xl border border-[var(--primary)]/20 bg-white/80 text-[var(--primary)] text-[0.74rem] font-medium text-center hover:bg-[var(--bg-blue)] transition-colors"
+            style={{ paddingTop: '24px', paddingBottom: '24px' }}
+          >
+            🍷 {t('menu.wineMenu')}
+          </a>
+        </div>
+      )}
 
       {bars.map((bar, i) => (
         <Card key={bar.key} icon={bar.icon} title={t(`bars.${bar.key}`)} delay={i}>

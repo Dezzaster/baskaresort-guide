@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import Card from '../Card'
 import { getWhatsAppNumber } from '../../utils/whatsapp'
+import { SHOW_MENUS } from '../../utils/season'
 
 const basePath = import.meta.env.BASE_URL
 
@@ -68,20 +69,22 @@ export default function AlacarteSection() {
               <span className="text-[0.7rem] text-[var(--gold-dark)] font-medium">{t(`alacarte.${r.key}Price`)}</span>
             </div>
           </div>
-          <div className="flex gap-2 mt-4 mb-1">
-            {r.menus.map(m => (
-              <a
-                key={m.file}
-                href={`${basePath}${m.file}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 py-2.5 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.68rem] font-medium text-center hover:bg-[var(--bg-blue)] transition-colors"
-                style={{ paddingTop: '20px', paddingBottom: '20px' }}
-              >
-                📋 {t(`menu.${m.label}`)}
-              </a>
-            ))}
-          </div>
+          {SHOW_MENUS && (
+            <div className="flex gap-2 mt-4 mb-1">
+              {r.menus.map(m => (
+                <a
+                  key={m.file}
+                  href={`${basePath}${m.file}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-2.5 rounded-xl border border-[var(--primary)]/20 text-[var(--primary)] text-[0.68rem] font-medium text-center hover:bg-[var(--bg-blue)] transition-colors"
+                  style={{ paddingTop: '20px', paddingBottom: '20px' }}
+                >
+                  📋 {t(`menu.${m.label}`)}
+                </a>
+              ))}
+            </div>
+          )}
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={() => setConfirmKey(r.key)}
