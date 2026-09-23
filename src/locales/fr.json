@@ -483,6 +483,7 @@
     "title": "Menus des restaurants",
     "subtitle": "Parcourir tous les menus",
     "backToGuide": "Retour au guide",
+    "seasonClosed": "En raison de la fin de saison, nos cartes ne sont pas disponibles. Au plaisir de vous accueillir la saison prochaine.",
     "drinkMenu": "Carte des boissons",
     "wineMenu": "Carte des vins",
     "back": "Retour",
