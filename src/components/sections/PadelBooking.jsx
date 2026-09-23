@@ -8,6 +8,7 @@ import { getWhatsAppNumber } from '../../utils/whatsapp'
 const OPEN_HOUR = 9
 const CLOSE_HOUR = 24
 const DAYS_AHEAD = 7
+const COURT_PRICE = 45
 
 // Court is bookable in 1-hour blocks: last start is 23:00, ending at midnight.
 function buildSlots() {
@@ -34,11 +35,11 @@ function buildDays() {
 
 export default function PadelBooking() {
   const { t, i18n } = useTranslation()
-  const [mode, setMode] = useState(null) // 'court' | 'lesson'
+  const [isOpen, setIsOpen] = useState(false)
   const [dayIndex, setDayIndex] = useState(0)
   const [slot, setSlot] = useState(null)
 
-  const days = useMemo(() => buildDays(), [mode])
+  const days = useMemo(() => buildDays(), [isOpen])
 
   // For today, hide hours that already passed (with a small booking buffer).
   const availableSlots = useMemo(() => {
@@ -46,16 +47,16 @@ export default function PadelBooking() {
     const now = new Date()
     const cutoff = now.getHours() + (now.getMinutes() > 30 ? 1 : 0)
     return ALL_SLOTS.filter(s => parseInt(s, 10) > cutoff)
-  }, [dayIndex, mode])
+  }, [dayIndex, isOpen])
 
-  const open = (m) => {
-    setMode(m)
+  const open = () => {
+    setIsOpen(true)
     setDayIndex(0)
     setSlot(null)
   }
 
   const close = () => {
-    setMode(null)
+    setIsOpen(false)
     setSlot(null)
   }
 
@@ -77,15 +78,14 @@ export default function PadelBooking() {
     const dateStr = d.toLocaleDateString(i18n.language, {
       weekday: 'long', day: 'numeric', month: 'long'
     })
-    const isLesson = mode === 'lesson'
     const msg = [
       `🎾 ${t('activities.padelBookingTitle')} ${ticket}`,
       '',
       t('alacarte.reserveIntro'),
-      `🏟️ ${t('activities.padel')} — ${isLesson ? t('activities.lesson') : t('activities.court')}`,
+      `🏟️ ${t('activities.padel')} — ${t('activities.court')}`,
       `📅 ${dateStr}`,
       `🕐 ${slot}`,
-      `💰 ${isLesson ? '€50' : '€75'} / ${t('activities.perHour')}`,
+      `💰 €${COURT_PRICE} / ${t('activities.perHour')}`,
       '',
       '— BAŞKA Guest Guide'
     ].join('\n')
@@ -110,38 +110,22 @@ export default function PadelBooking() {
           <div className="flex justify-between items-center py-2 px-3 rounded-lg bg-[var(--bg-warm)]">
             <span className="text-[0.68rem] text-[var(--text-muted)]">{t('activities.court')}</span>
             <span className="text-[0.7rem] text-[var(--gold-dark)] font-medium">
-              €75 / {t('activities.perHour')}
-            </span>
-          </div>
-          <div className="flex justify-between items-center py-2 px-3 rounded-lg bg-[var(--bg-warm)]">
-            <span className="text-[0.68rem] text-[var(--text-muted)]">{t('activities.lesson')}</span>
-            <span className="text-[0.7rem] text-[var(--gold-dark)] font-medium">
-              €50 / {t('activities.perHour')}
+              €{COURT_PRICE} / {t('activities.perHour')}
             </span>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2">
-          <motion.button
-            whileTap={{ scale: 0.97 }}
-            onClick={() => open('court')}
-            className="w-full py-2.5 rounded-xl bg-[var(--primary)] text-white text-[0.72rem] font-medium cursor-pointer hover:bg-[var(--primary)]/90 transition-colors"
-          >
-            {t('activities.reserveCourt')}
-          </motion.button>
-          <motion.button
-            whileTap={{ scale: 0.97 }}
-            onClick={() => open('lesson')}
-            className="w-full py-2.5 rounded-xl border border-[var(--primary)]/25 text-[var(--primary)] text-[0.72rem] font-medium cursor-pointer hover:bg-[var(--bg-blue)] transition-colors"
-            style={{ background: 'none' }}
-          >
-            {t('activities.bookLesson')}
-          </motion.button>
-        </div>
+        <motion.button
+          whileTap={{ scale: 0.97 }}
+          onClick={open}
+          className="w-full py-2.5 rounded-xl bg-[var(--primary)] text-white text-[0.74rem] font-medium cursor-pointer hover:bg-[var(--primary)]/90 transition-colors"
+        >
+          {t('activities.reserveCourt')}
+        </motion.button>
       </Card>
 
       <AnimatePresence>
-        {mode && (
+        {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -162,7 +146,7 @@ export default function PadelBooking() {
                   {t('activities.padelBookingTitle')}
                 </p>
                 <p className="text-white/70 text-[0.68rem] mt-0.5">
-                  {mode === 'lesson' ? t('activities.lesson') : t('activities.court')} · {mode === 'lesson' ? '€50' : '€75'} / {t('activities.perHour')}
+                  {t('activities.court')} · €{COURT_PRICE} / {t('activities.perHour')}
                 </p>
               </div>
 
