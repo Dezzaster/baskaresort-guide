@@ -10,3 +10,13 @@
 //
 // Брошюра спа под этот флаг НЕ попадает — это не меню еды и напитков.
 export const SHOW_MENUS = false
+
+// À la carte рестораны, закрытые на межсезонье: их карточки не показываются
+// ни в разделе A La Carte, ни на странице /menu. Ключи — как в locales
+// (`alacarte.*`) и в restaurantList на странице меню.
+// Открыть обратно — убрать ключ из списка.
+export const CLOSED_ALACARTE = ['teppanyaki', 'italian']
+
+export function isAlacarteOpen(key) {
+  return !CLOSED_ALACARTE.includes(key)
+}
