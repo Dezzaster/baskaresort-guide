@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import Card from '../Card'
 import { getWhatsAppNumber } from '../../utils/whatsapp'
-import { SHOW_MENUS } from '../../utils/season'
+import { SHOW_MENUS, isAlacarteOpen } from '../../utils/season'
 
 const basePath = import.meta.env.BASE_URL
 
@@ -55,7 +55,7 @@ export default function AlacarteSection() {
       </h2>
       <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('alacarte.subtitle')}</p>
 
-      {restaurants.map((r, i) => (
+      {restaurants.filter(r => isAlacarteOpen(r.key)).map((r, i) => (
         <Card key={r.key} title={t(`alacarte.${r.key}`)} label={r.code} delay={i}>
           <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7] mb-2">
             {t(`alacarte.${r.key}Type`)}

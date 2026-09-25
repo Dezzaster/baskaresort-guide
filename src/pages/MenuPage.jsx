@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Document, Page, pdfjs } from 'react-pdf'
 import LanguageSelector from '../components/LanguageSelector'
-import { SHOW_MENUS } from '../utils/season'
+import { SHOW_MENUS, isAlacarteOpen } from '../utils/season'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
@@ -13,7 +13,7 @@ const basePath = import.meta.env.BASE_URL
 // Пока false: QR-код #daima ведёт на общий список меню, а не в никуда.
 const SHOW_DAIMA_MENU = false
 
-const menuData = {
+const allMenuData = {
   'fish-dinner':       { file: 'Kıyıda A La Carte Dinner Menu updated.pdf',        isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'fish' },
   'fish-lunch':        { file: 'Kıyıda A La Carte Lunch Menu new.pdf',           isDrink: false, labelKey: 'lunchMenu',  restaurantKey: 'fish' },
   'teppanyaki-dinner': { file: 'Kai Teppanyaki A La Carte Dinner Menu new.pdf',   isDrink: false, labelKey: 'dinnerMenu', restaurantKey: 'teppanyaki' },
@@ -26,13 +26,19 @@ const menuData = {
   'wine':              { file: 'Wine Menu.pdf',                                   isDrink: true,  labelKey: 'wineMenu' },
 }
 
+// Рестораны, закрытые на межсезонье, выпадают и из данных, и из списка —
+// иначе их QR-ссылки продолжали бы открывать меню закрытого заведения.
+const menuData = Object.fromEntries(
+  Object.entries(allMenuData).filter(([, m]) => !m.restaurantKey || isAlacarteOpen(m.restaurantKey))
+)
+
 const restaurantList = [
   { nameKey: 'fish', code: 'A-1', items: ['fish-dinner', 'fish-lunch'] },
   { nameKey: 'teppanyaki', code: 'A-2', items: ['teppanyaki-dinner'] },
   { nameKey: 'italian', code: 'A-3', items: ['italian-dinner'] },
   ...(SHOW_DAIMA_MENU ? [{ nameKey: 'daima', code: '', items: ['daima'] }] : []),
   { nameKey: 'leziz', code: '', items: ['leziz'] },
-]
+].filter(r => isAlacarteOpen(r.nameKey))
 
 function getMenuName(id, t) {
   const m = menuData[id]
