@@ -136,7 +136,7 @@ DevTools → Application → Clear site data.
 | Главный ресторан — обед | 12:30 – 14:30 |
 | Fitness Center | 08:00 – 20:00 |
 | Manzara Patisserie | 12:00 – 18:00 |
-| Beach Patisserie | 11:00 – 16:00 |
+| Beach Patisserie | 12:00 – 16:00 |
 | Leziz Snack | 12:00 – 15:30 |
 | Lento (дневное, snacks) | 12:00 – 15:30 |
 | Köy Kahvesi (Zeytinaltı) | 10:00 – 13:00 |
