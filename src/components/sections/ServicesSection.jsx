@@ -2,11 +2,17 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Card from '../Card'
 
+// Номера платных услуг (services.paidN), которые сейчас не показываются.
+// 5 — зарядка электромобилей: станцию убрали. Переводы ключа сохранены.
+const HIDDEN_PAID = [5]
+
 export default function ServicesSection() {
   const { t } = useTranslation()
 
   const freeItems = Array.from({ length: 11 }, (_, i) => t(`services.free${i + 1}`))
-  const paidItems = Array.from({ length: 15 }, (_, i) => t(`services.paid${i + 1}`))
+  const paidItems = Array.from({ length: 15 }, (_, i) => i + 1)
+    .filter(n => !HIDDEN_PAID.includes(n))
+    .map(n => t(`services.paid${n}`))
 
   return (
     <div>
