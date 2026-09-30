@@ -50,6 +50,10 @@ DevTools → Application → Clear site data.
 
 Телефон спа: **9500** (внутренний, показан в карточке Nefes Spa).
 
+**Парковка:** платная зарядка электромобилей убрана — и из `info.parkingVal`,
+и из списка платных услуг (`services.paid5` скрыт через `HIDDEN_PAID`
+в `ServicesSection.jsx`; перевод ключа сохранён на случай возврата).
+
 ---
 
 ## Страница меню `/menu`
@@ -135,7 +139,12 @@ DevTools → Application → Clear site data.
 | Главный ресторан — завтрак | 07:00 – 10:00 |
 | Главный ресторан — обед | 12:30 – 14:30 |
 | Fitness Center | 08:00 – 20:00 |
-| Manzara Patisserie | 12:00 – 18:00 |
+| Manzara Patisserie | 12:00 – 16:00 |
+| Alize Pool Bar | 10:00 – 17:00 |
+| Meltem Beach Bar | 10:00 – 18:00 |
+| Pub Fıstık | 12:00 – 16:00 |
+| Manzara Lobby Bar | 24/7 |
+| Kıyıda À La Carte (Fish) | 19:00 – 23:00, только вт · чт · сб |
 | Beach Patisserie | 12:00 – 16:00 |
 | Leziz Snack | 12:00 – 15:30 |
 | Lento (дневное, snacks) | 12:00 – 15:30 |
