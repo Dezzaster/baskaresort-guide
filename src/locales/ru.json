@@ -456,7 +456,11 @@
     "lentoType": "Снэк A La Carte",
     "lentoCuisine": "Итальянская кухня",
     "koyKahvesiType": "Снэк",
-    "koyKahvesiCuisine": "Симит, гёзлеме, чай и др."
+    "koyKahvesiCuisine": "Симит, гёзлеме, чай и др.",
+    "gozleme": "Гёзлеме",
+    "gozlemeType": "Снэк",
+    "gozlemeCuisine": "Турецкая лепёшка с начинкой",
+    "gozlemeHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Достопримечательности",

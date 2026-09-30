@@ -456,7 +456,11 @@
     "lentoType": "سناك A La Carte",
     "lentoCuisine": "مطبخ إيطالي",
     "koyKahvesiType": "سناك",
-    "koyKahvesiCuisine": "سميت، غوزليمة، شاي، إلخ."
+    "koyKahvesiCuisine": "سميت، غوزليمة، شاي، إلخ.",
+    "gozleme": "غوزليمة",
+    "gozlemeType": "سناك",
+    "gozlemeCuisine": "خبز تركي محشو",
+    "gozlemeHours": "12:00 – 16:00"
   },
   "places": {
     "title": "أماكن للزيارة",

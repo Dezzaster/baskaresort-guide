@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Document, Page, pdfjs } from 'react-pdf'
 import LanguageSelector from '../components/LanguageSelector'
-import { SHOW_MENUS, isAlacarteOpen } from '../utils/season'
+import { SHOW_MENUS, isAlacarteOpen, isSnackOpen } from '../utils/season'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`
 
@@ -29,7 +29,7 @@ const allMenuData = {
 // Рестораны, закрытые на межсезонье, выпадают и из данных, и из списка —
 // иначе их QR-ссылки продолжали бы открывать меню закрытого заведения.
 const menuData = Object.fromEntries(
-  Object.entries(allMenuData).filter(([, m]) => !m.restaurantKey || isAlacarteOpen(m.restaurantKey))
+  Object.entries(allMenuData).filter(([, m]) => !m.restaurantKey || (isAlacarteOpen(m.restaurantKey) && isSnackOpen(m.restaurantKey)))
 )
 
 const restaurantList = [
@@ -38,7 +38,7 @@ const restaurantList = [
   { nameKey: 'italian', code: 'A-3', items: ['italian-dinner'] },
   ...(SHOW_DAIMA_MENU ? [{ nameKey: 'daima', code: '', items: ['daima'] }] : []),
   { nameKey: 'leziz', code: '', items: ['leziz'] },
-].filter(r => isAlacarteOpen(r.nameKey))
+].filter(r => isAlacarteOpen(r.nameKey) && isSnackOpen(r.nameKey))
 
 function getMenuName(id, t) {
   const m = menuData[id]

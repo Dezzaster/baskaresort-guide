@@ -456,7 +456,11 @@
     "lentoType": "Снек A La Carte",
     "lentoCuisine": "Італійська кухня",
     "koyKahvesiType": "Снек",
-    "koyKahvesiCuisine": "Сіміт, ґезлеме, чай тощо"
+    "koyKahvesiCuisine": "Сіміт, ґезлеме, чай тощо",
+    "gozleme": "Ґезлеме",
+    "gozlemeType": "Снек",
+    "gozlemeCuisine": "Турецький корж з начинкою",
+    "gozlemeHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Місця для відвідування",

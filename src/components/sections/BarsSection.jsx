@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import Card from '../Card'
-import { SHOW_MENUS } from '../../utils/season'
+import { SHOW_MENUS, isBarOpen } from '../../utils/season'
 
 const basePath = import.meta.env.BASE_URL
 
@@ -48,7 +48,7 @@ export default function BarsSection() {
         </div>
       )}
 
-      {bars.map((bar, i) => (
+      {bars.filter(b => isBarOpen(b.key)).map((bar, i) => (
         <Card key={bar.key} icon={bar.icon} title={t(`bars.${bar.key}`)} delay={i}>
           <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
             {t(`bars.${bar.key}Desc`)}

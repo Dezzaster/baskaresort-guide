@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import Card from '../Card'
-import { SHOW_MENUS } from '../../utils/season'
+import { SHOW_MENUS, isSnackOpen } from '../../utils/season'
 
 const basePath = import.meta.env.BASE_URL
 
@@ -17,6 +17,7 @@ const snackRestaurants = [
   { key: 'kiyida', charged: true },
   { key: 'lento', charged: false },
   { key: 'koyKahvesi', charged: false },
+  { key: 'gozleme', charged: false },
 ]
 
 export default function DiningSection() {
@@ -88,7 +89,7 @@ export default function DiningSection() {
         </div>
 
         <div className="space-y-3">
-          {snackRestaurants.map((r, i) => (
+          {snackRestaurants.filter(r => isSnackOpen(r.key)).map((r, i) => (
             <div
               key={r.key}
               className="rounded-2xl border border-[var(--card-border)] bg-white/80 overflow-hidden"

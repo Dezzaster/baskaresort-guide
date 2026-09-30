@@ -456,7 +456,11 @@
     "lentoType": "Snack A La Carte",
     "lentoCuisine": "Italian Cuisine",
     "koyKahvesiType": "Snack",
-    "koyKahvesiCuisine": "Simit, Gözleme, Tea, etc."
+    "koyKahvesiCuisine": "Simit, Gözleme, Tea, etc.",
+    "gozleme": "Gözleme",
+    "gozlemeType": "Snack",
+    "gozlemeCuisine": "Turkish stuffed flatbread",
+    "gozlemeHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Places to Visit",

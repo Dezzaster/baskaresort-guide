@@ -456,7 +456,11 @@
     "lentoType": "Snack A La Carte",
     "lentoCuisine": "Cuisine italienne",
     "koyKahvesiType": "Snack",
-    "koyKahvesiCuisine": "Simit, gözleme, thé, etc."
+    "koyKahvesiCuisine": "Simit, gözleme, thé, etc.",
+    "gozleme": "Gözleme",
+    "gozlemeType": "Snack",
+    "gozlemeCuisine": "Galette turque farcie",
+    "gozlemeHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Lieux à visiter",

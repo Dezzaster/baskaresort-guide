@@ -456,7 +456,11 @@
     "lentoType": "Snack A La Carte",
     "lentoCuisine": "Italienische Küche",
     "koyKahvesiType": "Snack",
-    "koyKahvesiCuisine": "Simit, Gözleme, Tee usw."
+    "koyKahvesiCuisine": "Simit, Gözleme, Tee usw.",
+    "gozleme": "Gözleme",
+    "gozlemeType": "Snack",
+    "gozlemeCuisine": "Gefülltes türkisches Fladenbrot",
+    "gozlemeHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Ausflugsziele",

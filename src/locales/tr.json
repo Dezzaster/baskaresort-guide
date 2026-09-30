@@ -456,7 +456,11 @@
     "lentoType": "Snack A La Carte",
     "lentoCuisine": "İtalyan Mutfağı",
     "koyKahvesiType": "Snack",
-    "koyKahvesiCuisine": "Simit, Gözleme, Çay vb."
+    "koyKahvesiCuisine": "Simit, Gözleme, Çay vb.",
+    "gozleme": "Gözleme",
+    "gozlemeType": "Snack",
+    "gozlemeCuisine": "Geleneksel Türk gözlemesi",
+    "gozlemeHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Gezilecek Yerler",

@@ -456,7 +456,11 @@
     "lentoType": "Snack A La Carte",
     "lentoCuisine": "Kuchnia włoska",
     "koyKahvesiType": "Snack",
-    "koyKahvesiCuisine": "Simit, gözleme, herbata itp."
+    "koyKahvesiCuisine": "Simit, gözleme, herbata itp.",
+    "gozleme": "Gözleme",
+    "gozlemeType": "Snack",
+    "gozlemeCuisine": "Turecki placek z nadzieniem",
+    "gozlemeHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Miejsca do odwiedzenia",
