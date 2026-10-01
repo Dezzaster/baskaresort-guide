@@ -18,7 +18,7 @@ const snackRestaurants = [
   { key: 'lento', charged: false },
   { key: 'koyKahvesi', charged: false },
   { key: 'gozleme', charged: false },
-  { key: 'fistik', charged: null },
+  { key: 'fistik', charged: false },
 ]
 
 export default function DiningSection() {
