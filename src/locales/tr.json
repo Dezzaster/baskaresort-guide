@@ -460,7 +460,11 @@
     "gozleme": "Gözleme",
     "gozlemeType": "Snack",
     "gozlemeCuisine": "Geleneksel Türk gözlemesi",
-    "gozlemeHours": "12:00 – 16:00"
+    "gozlemeHours": "12:00 – 16:00",
+    "fistik": "Fıstık Döner",
+    "fistikType": "Snack",
+    "fistikCuisine": "Döner",
+    "fistikHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Gezilecek Yerler",

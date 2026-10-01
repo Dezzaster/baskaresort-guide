@@ -9,7 +9,6 @@ const bars = [
   { key: 'manzaraPatisserie', icon: '🍰' },
   { key: 'coffeeHouse', icon: '☕' },
   { key: 'cafeBodrum', icon: '🫖' },
-  { key: 'pubFistik', icon: '🍺' },
   { key: 'poolLounge', icon: '🏊' },
   { key: 'loungeBar', icon: '🍹' },
   { key: 'beachPastane', icon: '🥐' }

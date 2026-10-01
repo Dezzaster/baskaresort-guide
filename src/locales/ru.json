@@ -460,7 +460,11 @@
     "gozleme": "Гёзлеме",
     "gozlemeType": "Снэк",
     "gozlemeCuisine": "Турецкая лепёшка с начинкой",
-    "gozlemeHours": "12:00 – 16:00"
+    "gozlemeHours": "12:00 – 16:00",
+    "fistik": "Fıstık Döner",
+    "fistikType": "Снэк",
+    "fistikCuisine": "Турецкий дёнер",
+    "fistikHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Достопримечательности",
