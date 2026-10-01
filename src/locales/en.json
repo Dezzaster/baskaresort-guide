@@ -460,7 +460,11 @@
     "gozleme": "Gözleme",
     "gozlemeType": "Snack",
     "gozlemeCuisine": "Turkish stuffed flatbread",
-    "gozlemeHours": "12:00 – 16:00"
+    "gozlemeHours": "12:00 – 16:00",
+    "fistik": "Fıstık Döner",
+    "fistikType": "Snack",
+    "fistikCuisine": "Turkish döner",
+    "fistikHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Places to Visit",

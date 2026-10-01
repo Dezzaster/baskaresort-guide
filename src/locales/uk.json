@@ -460,7 +460,11 @@
     "gozleme": "Ґезлеме",
     "gozlemeType": "Снек",
     "gozlemeCuisine": "Турецький корж з начинкою",
-    "gozlemeHours": "12:00 – 16:00"
+    "gozlemeHours": "12:00 – 16:00",
+    "fistik": "Fıstık Döner",
+    "fistikType": "Снек",
+    "fistikCuisine": "Турецький донер",
+    "fistikHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Місця для відвідування",

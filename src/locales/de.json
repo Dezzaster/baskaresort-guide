@@ -460,7 +460,11 @@
     "gozleme": "Gözleme",
     "gozlemeType": "Snack",
     "gozlemeCuisine": "Gefülltes türkisches Fladenbrot",
-    "gozlemeHours": "12:00 – 16:00"
+    "gozlemeHours": "12:00 – 16:00",
+    "fistik": "Fıstık Döner",
+    "fistikType": "Snack",
+    "fistikCuisine": "Türkischer Döner",
+    "fistikHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Ausflugsziele",

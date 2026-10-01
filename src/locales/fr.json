@@ -460,7 +460,11 @@
     "gozleme": "Gözleme",
     "gozlemeType": "Snack",
     "gozlemeCuisine": "Galette turque farcie",
-    "gozlemeHours": "12:00 – 16:00"
+    "gozlemeHours": "12:00 – 16:00",
+    "fistik": "Fıstık Döner",
+    "fistikType": "Snack",
+    "fistikCuisine": "Döner turc",
+    "fistikHours": "12:00 – 16:00"
   },
   "places": {
     "title": "Lieux à visiter",

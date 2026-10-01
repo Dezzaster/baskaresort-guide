@@ -460,7 +460,11 @@
     "gozleme": "غوزليمة",
     "gozlemeType": "سناك",
     "gozlemeCuisine": "خبز تركي محشو",
-    "gozlemeHours": "12:00 – 16:00"
+    "gozlemeHours": "12:00 – 16:00",
+    "fistik": "Fıstık Döner",
+    "fistikType": "سناك",
+    "fistikCuisine": "دونر تركي",
+    "fistikHours": "12:00 – 16:00"
   },
   "places": {
     "title": "أماكن للزيارة",

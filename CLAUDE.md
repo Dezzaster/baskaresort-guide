@@ -142,11 +142,11 @@ DevTools → Application → Clear site data.
 | Manzara Patisserie | 12:00 – 16:00 |
 | Alize Pool Bar | 10:00 – 17:00 |
 | Meltem Beach Bar | 10:00 – 18:00 |
-| Pub Fıstık | 12:00 – 16:00 |
 | Manzara Lobby Bar | 24/7 |
 | Kıyıda À La Carte (Fish) | 19:00 – 23:00, только вт · чт · сб |
 | Beach Patisserie | 12:00 – 16:00 |
-| Gözleme (единственный открытый снэк) | 12:00 – 16:00 |
+| Gözleme (снэк) | 12:00 – 16:00 |
+| Fıstık Döner (снэк) | 12:00 – 16:00 |
 | Padel Court | 09:00 – 24:00 |
 
 **DAİMA:** ночное обслуживание **00:00 – 02:00**. Из названия убрано «7/24»,
@@ -289,9 +289,14 @@ A La Carte и страница `/menu` разошлись бы между соб
   и Lounge Bar. **Lounge Bar у персонала называется «Begonvil Bar»** —
   в списках от отеля он придёт под этим именем.
 - **`CLOSED_SNACKS = ['leziz', 'kiyida', 'lento', 'koyKahvesi']`** — все
-  прежние снэки. В разделе Snack Restaurants осталась одна карточка
-  **Gözleme** (12:00–16:00, BAI) — отдельная точка, ключи `snacks.gozleme*`.
-  Gözleme только в разделе снэков, в барах её нет.
+  прежние снэки. В разделе Snack Restaurants открыты две карточки:
+  - **Gözleme** (12:00–16:00, BAI) — отдельная точка, ключи `snacks.gozleme*`.
+  - **Fıstık Döner** (12:00–16:00) — бывший «Pub Fıstık» из баров, перенесён
+    в Dining и переименован; ключи `snacks.fistik*`. Старые `bars.pubFistik*`
+    остались в локалях, но не используются.
+    **Статус оплаты не подтверждён** — в `snackRestaurants` стоит
+    `charged: null`, и метка «BAI / платно» под карточкой не показывается.
+    Когда отель уточнит — поставить `false` (BAI) или `true` (платно).
 - `leziz` совпадает с ключом ресторана на `/menu`: закрытие снэка убирает
   и его QR-меню.
 

@@ -18,6 +18,7 @@ const snackRestaurants = [
   { key: 'lento', charged: false },
   { key: 'koyKahvesi', charged: false },
   { key: 'gozleme', charged: false },
+  { key: 'fistik', charged: null },
 ]
 
 export default function DiningSection() {
@@ -118,9 +119,12 @@ export default function DiningSection() {
                     alt=""
                     className="h-8 w-auto opacity-60"
                   />
-                  <span className="text-[0.55rem] text-[var(--text-muted)] mt-1 text-center max-w-[80px] leading-tight">
-                    {r.charged ? t('snacks.charged') : t('streetFood.bai')}
-                  </span>
+                  {/* charged: null — статус оплаты не подтверждён, метку не показываем */}
+                  {r.charged !== null && (
+                    <span className="text-[0.55rem] text-[var(--text-muted)] mt-1 text-center max-w-[80px] leading-tight">
+                      {r.charged ? t('snacks.charged') : t('streetFood.bai')}
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
