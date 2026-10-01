@@ -30,10 +30,11 @@ export function isBarOpen(key) {
 }
 
 // Снэк-рестораны, закрытые на межсезонье (ключи `snacks.*`).
-// Из раздела остаётся только Gözleme — отдельная точка, открытая осенью.
+// Из раздела сейчас открыт только Fıstık Döner. Gözleme тоже временно
+// скрыта — убрать 'gozleme' из списка, когда точка откроется.
 // 'leziz' совпадает с ключом ресторана на странице /menu — это то же место,
 // поэтому закрытие убирает и его QR-меню.
-export const CLOSED_SNACKS = ['leziz', 'kiyida', 'lento', 'koyKahvesi']
+export const CLOSED_SNACKS = ['leziz', 'kiyida', 'lento', 'koyKahvesi', 'gozleme']
 
 export function isSnackOpen(key) {
   return !CLOSED_SNACKS.includes(key)
