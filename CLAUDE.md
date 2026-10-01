@@ -145,7 +145,6 @@ DevTools → Application → Clear site data.
 | Manzara Lobby Bar | 24/7 |
 | Kıyıda À La Carte (Fish) | 19:00 – 23:00, только вт · чт · сб |
 | Beach Patisserie | 12:00 – 16:00 |
-| Gözleme (снэк) | 12:00 – 16:00 |
 | Fıstık Döner (снэк) | 12:00 – 16:00 |
 | Padel Court | 09:00 – 24:00 |
 
@@ -288,9 +287,12 @@ A La Carte и страница `/menu` разошлись бы между соб
 - **`CLOSED_BARS = ['coffeeHouse', 'loungeBar']`** — Zeytinaltı Köy Kahvesi
   и Lounge Bar. **Lounge Bar у персонала называется «Begonvil Bar»** —
   в списках от отеля он придёт под этим именем.
-- **`CLOSED_SNACKS = ['leziz', 'kiyida', 'lento', 'koyKahvesi']`** — все
-  прежние снэки. В разделе Snack Restaurants открыты две карточки:
+- **`CLOSED_SNACKS = ['leziz', 'kiyida', 'lento', 'koyKahvesi', 'gozleme']`** —
+  все прежние снэки плюс Gözleme. В разделе Snack Restaurants открыта
+  одна карточка — Fıstık Döner.
   - **Gözleme** (12:00–16:00, BAI) — отдельная точка, ключи `snacks.gozleme*`.
+    **Временно скрыта целиком**; открыть — убрать `'gozleme'` из списка,
+    карточка и переводы на месте.
   - **Fıstık Döner** (12:00–16:00, BAI) — бывший «Pub Fıstık» из баров,
     перенесён в Dining и переименован; ключи `snacks.fistik*`. Старые
     `bars.pubFistik*` остались в локалях, но не используются.
