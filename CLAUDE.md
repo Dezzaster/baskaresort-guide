@@ -307,6 +307,18 @@ A La Carte и страница `/menu` разошлись бы между соб
 В списке от отеля были ещё «Event Area — по погоде» (в гид решили не добавлять)
 и «Main Restaurant — Open» (без изменений).
 
+### Скрытые разделы и услуги
+
+- **`HIDDEN_SECTIONS = ['kids']`** (`season.js`) — раздел Kids убран из обеих
+  навигаций: вкладок (`Navigation.jsx`) и бургер-меню (`HamburgerMenu.jsx`),
+  где список разделов продублирован. Компонент и переводы на месте.
+  Открытый раздел не запоминается между визитами (гид всегда стартует
+  с `info`), так что попасть на скрытую страницу нельзя.
+- **`SHOW_SAILING_ACADEMY = false`** (`season.js`) — карточка BAŞKA Sailing
+  Academy в Activities.
+- **`HIDDEN_FREE = [11]`** в `ServicesSection.jsx` — из бесплатных услуг убрано
+  «Anniversary & birthday celebration set up». Рядом `HIDDEN_PAID` для платных.
+
 ---
 
 ## Заведения, записанные дважды

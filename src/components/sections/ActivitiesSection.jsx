@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import Card from '../Card'
 import PadelBooking from './PadelBooking'
+import { SHOW_SAILING_ACADEMY } from '../../utils/season'
 
 export default function ActivitiesSection() {
   const { t } = useTranslation()
@@ -12,11 +13,13 @@ export default function ActivitiesSection() {
       </h2>
       <p className="text-[0.74rem] text-[var(--text-muted)] mb-8">{t('activities.subtitle')}</p>
 
-      <Card title={t('activities.sailing')} delay={0}>
-        <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
-          {t('activities.sailingDesc')}
-        </p>
-      </Card>
+      {SHOW_SAILING_ACADEMY && (
+        <Card title={t('activities.sailing')} delay={0}>
+          <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">
+            {t('activities.sailingDesc')}
+          </p>
+        </Card>
+      )}
 
       <Card title={t('activities.entertainment')} delay={1}>
         <p className="text-[0.76rem] text-[var(--text-muted)] leading-[1.7]">

@@ -6,10 +6,16 @@ import Card from '../Card'
 // 5 — зарядка электромобилей: станцию убрали. Переводы ключа сохранены.
 const HIDDEN_PAID = [5]
 
+// То же для бесплатных (services.freeN).
+// 11 — оформление годовщин и дней рождения: временно не предоставляется.
+const HIDDEN_FREE = [11]
+
 export default function ServicesSection() {
   const { t } = useTranslation()
 
-  const freeItems = Array.from({ length: 11 }, (_, i) => t(`services.free${i + 1}`))
+  const freeItems = Array.from({ length: 11 }, (_, i) => i + 1)
+    .filter(n => !HIDDEN_FREE.includes(n))
+    .map(n => t(`services.free${n}`))
   const paidItems = Array.from({ length: 15 }, (_, i) => i + 1)
     .filter(n => !HIDDEN_PAID.includes(n))
     .map(n => t(`services.paid${n}`))
