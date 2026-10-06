@@ -39,3 +39,14 @@ export const CLOSED_SNACKS = ['leziz', 'kiyida', 'lento', 'koyKahvesi', 'gozleme
 export function isSnackOpen(key) {
   return !CLOSED_SNACKS.includes(key)
 }
+
+// Разделы гида, скрытые на межсезонье (ключи — как в App.jsx и `nav.*`).
+// Убираются из обеих навигаций: вкладок и бургер-меню.
+export const HIDDEN_SECTIONS = ['kids']
+
+export function isSectionVisible(key) {
+  return !HIDDEN_SECTIONS.includes(key)
+}
+
+// Карточка BAŞKA Sailing Academy в разделе Activities.
+export const SHOW_SAILING_ACADEMY = false
