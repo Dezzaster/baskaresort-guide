@@ -141,11 +141,9 @@ DevTools → Application → Clear site data.
 | Fitness Center | 08:00 – 20:00 |
 | Manzara Patisserie | 12:00 – 16:00 |
 | Alize Pool Bar | 10:00 – 17:00 |
-| Meltem Beach Bar | 10:00 – 18:00 |
+| Meltem Beach Bar | 10:00 – 17:00 |
 | Manzara Lobby Bar | 24/7 |
 | Kıyıda À La Carte (Fish) | 19:00 – 23:00, только вт · чт · сб |
-| Beach Patisserie | 12:00 – 16:00 |
-| Fıstık Döner (снэк) | 12:00 – 16:00 |
 | Padel Court | 09:00 – 24:00 |
 
 **DAİMA:** ночное обслуживание **00:00 – 02:00**. Из названия убрано «7/24»,
@@ -284,16 +282,18 @@ A La Carte и страница `/menu` разошлись бы между соб
 
 Там же, по той же схеме:
 
-- **`CLOSED_BARS = ['coffeeHouse', 'loungeBar']`** — Zeytinaltı Köy Kahvesi
-  и Lounge Bar. **Lounge Bar у персонала называется «Begonvil Bar»** —
+- **`CLOSED_BARS = ['coffeeHouse', 'loungeBar', 'beachPastane']`** —
+  Zeytinaltı Köy Kahvesi, Lounge Bar и Beach Patisserie. **Lounge Bar у персонала называется «Begonvil Bar»** —
   в списках от отеля он придёт под этим именем.
-- **`CLOSED_SNACKS = ['leziz', 'kiyida', 'lento', 'koyKahvesi', 'gozleme']`** —
-  все прежние снэки плюс Gözleme. В разделе Snack Restaurants открыта
-  одна карточка — Fıstık Döner.
+- **`CLOSED_SNACKS = ['leziz', 'kiyida', 'lento', 'koyKahvesi', 'gozleme', 'fistik']`** —
+  закрыты **все** снэки. Раздел Snack Restaurants в Dining поэтому скрыт
+  целиком: он прячется автоматически, когда открытых точек не остаётся
+  (`openSnacks.length > 0`), — пустой заголовок не висит. Открыть любую
+  точку — убрать её ключ из списка, раздел появится сам.
   - **Gözleme** (12:00–16:00, BAI) — отдельная точка, ключи `snacks.gozleme*`.
     **Временно скрыта целиком**; открыть — убрать `'gozleme'` из списка,
     карточка и переводы на месте.
-  - **Fıstık Döner** (12:00–16:00, BAI) — бывший «Pub Fıstık» из баров,
+  - **Fıstık Döner** (12:00–16:00, BAI) — **временно скрыт**; бывший «Pub Fıstık» из баров,
     перенесён в Dining и переименован; ключи `snacks.fistik*`. Старые
     `bars.pubFistik*` остались в локалях, но не используются.
   - Значение `charged: null` в `snackRestaurants` прячет метку «BAI / платно» —
