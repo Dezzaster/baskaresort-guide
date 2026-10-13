@@ -138,12 +138,11 @@ DevTools → Application → Clear site data.
 | Главный ресторан — ужин | 18:30 – 21:00 |
 | Главный ресторан — завтрак | 07:00 – 10:00 |
 | Главный ресторан — обед | 12:30 – 14:30 |
+| Главный ресторан — Snack Buffet | 14:30 – 17:00 |
 | Fitness Center | 08:00 – 20:00 |
 | Manzara Patisserie | 12:00 – 16:00 |
-| Alize Pool Bar | 10:00 – 17:00 |
 | Meltem Beach Bar | 10:00 – 17:00 |
 | Manzara Lobby Bar | 24/7 |
-| Kıyıda À La Carte (Fish) | 19:00 – 23:00, только вт · чт · сб |
 | Padel Court | 09:00 – 24:00 |
 
 **DAİMA:** ночное обслуживание **00:00 – 02:00**. Из названия убрано «7/24»,
@@ -268,11 +267,20 @@ GitHub своей статистики посещений сайта не даё
 
 ### Закрытые à la carte рестораны
 
-В том же файле — **`CLOSED_ALACARTE = ['teppanyaki', 'italian']`**.
-Kai (A-2) и Lento (A-3) закрыты на межсезонье: их карточки не показываются
-ни в разделе A La Carte, ни на странице `/menu`, и их QR-ссылки
-(`#teppanyaki-dinner`, `#italian-dinner`) больше не открывают меню.
-Kıyıda (A-1) работает.
+В том же файле — **`CLOSED_ALACARTE = ['fish', 'teppanyaki', 'italian']`**.
+**Закрыты все три**: Kıyıda (A-1), Kai (A-2), Lento (A-3). Их карточки не
+показываются ни в разделе A La Carte, ни на странице `/menu`, и их QR-ссылки
+(`#fish`, `#teppanyaki-dinner`, `#italian-dinner`) больше не открывают меню.
+
+**Вкладка A La Carte скрыта автоматически** — `isSectionVisible('alacarte')`
+возвращает `false`, когда открытых ресторанов не осталось (сверяется
+со списком `ALL_ALACARTE`). Открыть любой ресторан — убрать ключ из
+`CLOSED_ALACARTE`, вкладка вернётся сама. Вместе с ними скрыта платная
+услуга «À la carte restaurants (reservation)» — `HIDDEN_PAID` содержит `3`;
+при открытии ресторанов убрать `3` оттуда.
+
+Хеши `#fish*` на `/menu` открывают отдельный экран Kıyıda с табами в обход
+общего фильтра, поэтому у них своя проверка `isAlacarteOpen('fish')`.
 
 Открыть ресторан обратно — убрать его ключ из списка, одна правка на оба
 раздела. Список намеренно общий: иначе при возврате `SHOW_MENUS` раздел
@@ -282,8 +290,9 @@ A La Carte и страница `/menu` разошлись бы между соб
 
 Там же, по той же схеме:
 
-- **`CLOSED_BARS = ['coffeeHouse', 'loungeBar', 'beachPastane']`** —
-  Zeytinaltı Köy Kahvesi, Lounge Bar и Beach Patisserie. **Lounge Bar у персонала называется «Begonvil Bar»** —
+- **`CLOSED_BARS = ['coffeeHouse', 'loungeBar', 'beachPastane', 'poolLounge']`** —
+  Zeytinaltı Köy Kahvesi, Lounge Bar, Beach Patisserie и Alize Pool Bar.
+  Открыты: Lobby Bar, Manzara Patisserie, Meltem Beach Bar. **Lounge Bar у персонала называется «Begonvil Bar»** —
   в списках от отеля он придёт под этим именем.
 - **`CLOSED_SNACKS = ['leziz', 'kiyida', 'lento', 'koyKahvesi', 'gozleme', 'fistik']`** —
   закрыты **все** снэки. Раздел Snack Restaurants в Dining поэтому скрыт
@@ -301,8 +310,9 @@ A La Carte и страница `/menu` разошлись бы между соб
 - `leziz` совпадает с ключом ресторана на `/menu`: закрытие снэка убирает
   и его QR-меню.
 
-Не путать: снэк **Kıyıda** (`snacks.kiyida`) закрыт, а à la carte **Kıyıda**
-(`alacarte.fish`, рыбный) работает — вт · чт · сб, 19:00–23:00.
+Не путать: снэк **Kıyıda** (`snacks.kiyida`) и à la carte **Kıyıda**
+(`alacarte.fish`, рыбный) — разные карточки. Сейчас закрыты обе; у à la carte
+в локалях сохранены дни вт · чт · сб, 19:00–23:00.
 
 В списке от отеля были ещё «Event Area — по погоде» (в гид решили не добавлять)
 и «Main Restaurant — Open» (без изменений).
