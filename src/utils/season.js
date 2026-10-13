@@ -22,19 +22,21 @@ export function isAlacarteOpen(key) {
 }
 
 // Бары, закрытые на межсезонье (ключи `bars.*`).
-// coffeeHouse — Zeytinaltı Köy Kahvesi; loungeBar — у персонала «Begonvil Bar».
-export const CLOSED_BARS = ['coffeeHouse', 'loungeBar']
+// coffeeHouse — Zeytinaltı Köy Kahvesi; loungeBar — у персонала «Begonvil Bar»;
+// beachPastane — Beach Patisserie.
+export const CLOSED_BARS = ['coffeeHouse', 'loungeBar', 'beachPastane']
 
 export function isBarOpen(key) {
   return !CLOSED_BARS.includes(key)
 }
 
 // Снэк-рестораны, закрытые на межсезонье (ключи `snacks.*`).
-// Из раздела сейчас открыт только Fıstık Döner. Gözleme тоже временно
-// скрыта — убрать 'gozleme' из списка, когда точка откроется.
+// Сейчас закрыты все, включая Gözleme и Fıstık Döner, — поэтому раздел
+// Snack Restaurants в Dining скрыт целиком (он прячется сам, когда открытых
+// точек не осталось). Открыть точку — убрать её ключ из списка.
 // 'leziz' совпадает с ключом ресторана на странице /menu — это то же место,
 // поэтому закрытие убирает и его QR-меню.
-export const CLOSED_SNACKS = ['leziz', 'kiyida', 'lento', 'koyKahvesi', 'gozleme']
+export const CLOSED_SNACKS = ['leziz', 'kiyida', 'lento', 'koyKahvesi', 'gozleme', 'fistik']
 
 export function isSnackOpen(key) {
   return !CLOSED_SNACKS.includes(key)

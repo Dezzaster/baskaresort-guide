@@ -23,6 +23,7 @@ const snackRestaurants = [
 
 export default function DiningSection() {
   const { t } = useTranslation()
+  const openSnacks = snackRestaurants.filter(r => isSnackOpen(r.key))
 
   const meals = [
     { label: t('dining.breakfast'), time: t('dining.breakfastTime') },
@@ -76,7 +77,9 @@ export default function DiningSection() {
         </p>
       </Card>
 
-      {/* Snack Restaurants */}
+      {/* Snack Restaurants — раздел прячется целиком, когда открытых точек нет,
+          чтобы не оставлять пустой заголовок */}
+      {openSnacks.length > 0 && (
       <div style={{ marginTop: '72px' }}>
         <div className="text-center" style={{ marginBottom: '32px' }}>
           <div className="flex items-center gap-4 justify-center" style={{ marginBottom: '10px' }}>
@@ -90,7 +93,7 @@ export default function DiningSection() {
         </div>
 
         <div className="space-y-3">
-          {snackRestaurants.filter(r => isSnackOpen(r.key)).map((r, i) => (
+          {openSnacks.map((r, i) => (
             <div
               key={r.key}
               className="rounded-2xl border border-[var(--card-border)] bg-white/80 overflow-hidden"
@@ -131,6 +134,7 @@ export default function DiningSection() {
           ))}
         </div>
       </div>
+      )}
 
       {/* Street Food Section */}
       {SHOW_STREET_FOOD && (
