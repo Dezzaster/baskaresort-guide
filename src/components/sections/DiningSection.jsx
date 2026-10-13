@@ -29,6 +29,7 @@ export default function DiningSection() {
     { label: t('dining.breakfast'), time: t('dining.breakfastTime') },
     { label: t('dining.lateBreakfast'), time: t('dining.lateBreakfastTime') },
     { label: t('dining.lunch'), time: t('dining.lunchTime') },
+    { label: t('dining.snackBuffet'), time: t('dining.snackBuffetTime') },
     { label: t('dining.dinner'), time: t('dining.dinnerTime') }
   ]
 

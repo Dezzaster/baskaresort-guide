@@ -520,7 +520,7 @@ export default function MenuPage() {
   useEffect(() => {
     if (!SHOW_MENUS) return
     const hash = window.location.hash.slice(1)
-    if (hash === 'fish' || hash === 'fish-dinner' || hash === 'fish-lunch') {
+    if ((hash === 'fish' || hash === 'fish-dinner' || hash === 'fish-lunch') && isAlacarteOpen('fish')) {
       setShowFishDual(true)
       setFromHash(true)
     } else if (hash && menuData[hash]) {

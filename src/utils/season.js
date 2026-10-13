@@ -15,7 +15,11 @@ export const SHOW_MENUS = false
 // ни в разделе A La Carte, ни на странице /menu. Ключи — как в locales
 // (`alacarte.*`) и в restaurantList на странице меню.
 // Открыть обратно — убрать ключ из списка.
-export const CLOSED_ALACARTE = ['teppanyaki', 'italian']
+// Сейчас закрыты все три — вкладка A La Carte скрывается сама (см. isSectionVisible).
+export const CLOSED_ALACARTE = ['fish', 'teppanyaki', 'italian']
+
+// Все à la carte рестораны гида — нужен, чтобы понять, остался ли хоть один открытый.
+const ALL_ALACARTE = ['fish', 'teppanyaki', 'italian']
 
 export function isAlacarteOpen(key) {
   return !CLOSED_ALACARTE.includes(key)
@@ -23,8 +27,8 @@ export function isAlacarteOpen(key) {
 
 // Бары, закрытые на межсезонье (ключи `bars.*`).
 // coffeeHouse — Zeytinaltı Köy Kahvesi; loungeBar — у персонала «Begonvil Bar»;
-// beachPastane — Beach Patisserie.
-export const CLOSED_BARS = ['coffeeHouse', 'loungeBar', 'beachPastane']
+// beachPastane — Beach Patisserie; poolLounge — Alize Pool Bar.
+export const CLOSED_BARS = ['coffeeHouse', 'loungeBar', 'beachPastane', 'poolLounge']
 
 export function isBarOpen(key) {
   return !CLOSED_BARS.includes(key)
@@ -47,7 +51,11 @@ export function isSnackOpen(key) {
 export const HIDDEN_SECTIONS = ['kids']
 
 export function isSectionVisible(key) {
-  return !HIDDEN_SECTIONS.includes(key)
+  if (HIDDEN_SECTIONS.includes(key)) return false
+  // Вкладка A La Carte прячется сама, когда открытых ресторанов не осталось,
+  // и возвращается, как только хоть один убран из CLOSED_ALACARTE.
+  if (key === 'alacarte') return ALL_ALACARTE.some(isAlacarteOpen)
+  return true
 }
 
 // Карточка BAŞKA Sailing Academy в разделе Activities.
