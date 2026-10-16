@@ -139,6 +139,7 @@ DevTools → Application → Clear site data.
 | Главный ресторан — завтрак | 07:00 – 10:00 |
 | Главный ресторан — обед | 12:30 – 14:30 |
 | Главный ресторан — Snack Buffet | 15:00 – 17:00 |
+| Nefes Spa | 09:00 – 18:00 |
 | Fitness Center | 08:00 – 20:00 |
 | Manzara Patisserie | 12:00 – 16:00 |
 | Meltem Beach Bar | 10:00 – 17:00 |
