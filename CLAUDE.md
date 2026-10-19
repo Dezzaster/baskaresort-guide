@@ -191,6 +191,9 @@ DevTools → Application → Clear site data.
 - Fish Sandwich (Balık Sandviç) — из Street Food
 - Chicken & Rice — из Street Food
 - Skincare & Hairdressing — из Spa
+- Подогрев бассейна — из описания `beach.poolDesc` (осталось только «Open 08:00–20:00»)
+  и пункт «Pool is heated during pre- and post-season» из списка `important.items`
+  (удалён из массива во всех 8 языках, остальные пункты сдвинулись)
 
 **Весь раздел Street Food временно скрыт.** В `DiningSection.jsx` флаг
 **`SHOW_STREET_FOOD = false`** — обе оставшиеся точки (Türk Köftesi & Kokoreç,
